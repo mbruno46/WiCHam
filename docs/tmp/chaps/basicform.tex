@@ -1,0 +1,1556 @@
+\section{Basic Formalism}
+         \label{sec:basicform}
+\subsection{Renormalization of QCD}
+            \label{sec:basicform:renorm}
+As already emphasized in the introduction, the effects of QCD play an
+important role in the phenomenology of weak decays of hadrons. In fact
+in the theoretical analysis of these decays the investigation of
+QCD corrections is the most difficult and extensive part. In the
+present subsection we shall therefore briefly recall basic features
+of perturbative QCD and its renormalization. Thereby we will concentrate
+on those aspects, that will be needed for the present review. We
+will also take the opportunity to introduce for later reference the
+expressions for the running coupling, the running mass and the
+corresponding renormalization group functions.\\
+The Lagrangian density of QCD reads
+\begin{eqnarray}\label{lqcd}
+{\cal L}_{QCD} & = &
+-{1\over 4}(\partial_\mu A^a_\nu-\partial_\nu A^a_\mu)
+(\partial^\mu A^{a\nu}-\partial^\nu A^{a\mu})-{1\over{2\xi}}
+(\partial^\mu A^a_\mu)^2   \nonumber \\
+&&{}+ \bar q(i\not\!\partial-m_q)q+\chi^{a\ast}\partial^\mu
+        \partial_\mu \chi^a  \nonumber \\
+&&{}-{g\over 2}f^{abc}(\partial_\mu A^a_\nu-\partial_\nu A^a_\mu)
+ A^{b\mu}A^{c\nu} - {g^2\over 4}f^{abe}f^{cde}A^a_\mu A^b_\nu
+ A^{c\mu}A^{d\nu} \nonumber \\
+&&{}+ g \bar q_i T^a_{ij}\gamma^\mu q_j A^a_\mu +
+ g f^{abc} (\partial^\mu\chi^{a\ast})\chi^b A^c_\mu
+\end{eqnarray}
+Here $q=(q_1, q_2, q_3)$ is the color triplet of quark flavor $q$,
+$q$ = $u$, $d$, $s$, $c$, $b$, $t$. $g$ is the QCD coupling, $A^a_\mu$
+the gluon field, $\chi^a$ the ghost field and $\xi$ the gauge
+parameter. $T^a$, $f^{abc}$ ($a$, $b$, $c$ = 1,\ldots,8) are the
+generators and structure constants of $SU(3)$, respectively. From
+this Lagrangian one may read off the Feynman rules for QCD, e.g.
+$i g T^a_{ij}\gamma^\mu$ for the quark-gluon vertex.\\
+In order to deal with divergences that appear in quantum (loop)
+corrections to Green functions, the theory has to be regularized
+to have an explicit parametrization
+of the singularities and subsequently renormalized to render
+the Green functions finite. For these purposes we will employ:
+\begin{itemize}
+\item Dimensional regularization (DR) by continuation to $D=4-2\,\eps$
+space-time dimensions \cite{bollini:72a}, \cite{bollini:72b},
+\cite{thooft:72b}, \cite{ashmore:72}, \cite{cicutamontaldi:72}.
+\item Subtraction of divergences in the minimal subtraction scheme $MS$
+\cite{thooft:73} or the modified minimal subtraction scheme
+($\overline{MS}$) \cite{bardeen:78}.
+\end{itemize}
+To eliminate the divergences one has to renormalize the fields and
+parameters in the Lagrangian, in general through
+\begin{equation}\label{zqcd}
+\begin{array}{lclcl}
+A^a_{0\mu}=Z^{1/2}_3 A^a_\mu &\qquad& q_0=Z^{1/2}_q q &\qquad&
+\chi^a_0=\tilde Z^{1/2}_3 \chi^a \\
+g_0=Z_g g\mu^\eps &\qquad& \xi_0=Z_3 \xi &\qquad& m_0=Z_m m
+\end{array}
+\end{equation}
+The index ``0'' indicates unrenormalized quantities. The factors $Z$
+are the renormalization constants. The scale $\mu$ has been introduced
+to make $g$ dimensionless in $D=4-2\,\eps$ dimensions. Since we will
+not consider Green functions with external ghosts, we will not need
+the ghost field renormalization. We also do not need the gauge
+parameter renormalization if we are dealing with gauge independent
+quantities, as e.g. Wilson coefficient functions.\\
+A straightforward way to implement renormalization is provided by
+the coun\-ter\-term method. Thereby the parameters and fields in the
+original Lagrangian, which are to be considered as unrenormalized
+(bare) quantities, are reexpressed through renormalized ones by
+means of \eqn{zqcd} from the very beginning. For instance, the quark
+kinetic term becomes
+\begin{equation}\label{ctm}
+{\cal L}_F=\bar q_0 i\not\!\partial q_0-m_0\bar q_0 q_0\equiv
+\bar q i\not\!\partial q-m\bar q q+(Z_q-1)\bar q i\not\!\partial q-
+(Z_q Z_m-1)m\bar q q     \end{equation}
+The advantage then is, that only renormalized quantities are present
+in the Lagrangian. The counterterms ($\sim(Z-1)$), appearing in
+addition, can be formally treated as interaction terms that contribute
+to Green functions calculated in perturbation theory. The Feynman
+rule for the counterterms in \eqn{ctm}, for example, reads
+($p$ is the quark momentum)
+\begin{equation}\label{ctex}
+i(Z_q-1)\not\! p - i(Z_q Z_m-1) m   \end{equation}
+The constants $Z_i$ are then determined such that they cancel the
+divergences in the Green functions according to the chosen
+renormalization scheme. In an analogous way all renormalization constants
+can be fixed by considering the appropriate Green functions.
+\\
+Of central importance for the study of perturbative QCD effects are
+the renormalization group equations, which govern the dependence of
+renormalized parameters and Green functions on the renormalization
+scale $\mu$. These differential equations are easily derived from the
+definition \eqn{zqcd} by using the fact that bare quantities are
+$\mu$-independent. In this way one finds that the renormalized
+coupling $g(\mu)$ obeys \cite{gross:76}
+\begin{equation}\label{rgbe}
+{d\over d\ln\mu}g(\mu)=\beta(\eps, g(\mu))  \end{equation}
+where
+\begin{equation}\label{bete}
+\beta(\eps, g)=-\eps g-g{1\over Z_g}{d Z_g\over d\ln\mu}\equiv
+-\eps g+\beta(g)  \end{equation}
+which defines the $\beta$ function. \eqn{rgbe} is valid in arbitrary
+dimensions. In four dimensions $\beta(\eps, g)$ reduces to $\beta(g)$.
+Similarly, the anomalous dimension of the mass, $\gamma_m$,
+defined through
+\begin{equation}\label{rggm}
+{d m(\mu)\over d\ln\mu}=-\gamma_m(g) m(\mu)  \end{equation}
+is given by
+\begin{equation}\label{gamz} \gamma_m(g)={1\over Z_m}{d Z_m\over d\ln\mu}  \end{equation}
+In the $MS$ $(\overline{MS})$-scheme, where just the pole terms in $\eps$ are
+present in the renorma\-lization constants $Z_i$, these can be expanded
+as follows
+\begin{equation}\label{ziep}
+Z_i=1+\sum^\infty_{k=1} {1\over \eps^k} Z_{i, k}(g)  \end{equation}
+Using \eqn{rgbe}, \eqn{bete} one finds
+\begin{equation}\label{zi1}
+{1\over Z_i}{d Z_i\over d\ln\mu}=-2 g^2{\partial Z_{i, 1}(g)\over\partial g^2}\end{equation}
+which allows a direct calculation of the renormalization group
+functions from the $1/\eps$-pole part of the renormalization
+constants. Along these lines one obtains at the two loop level,
+required for next-to-leading order calculations,
+\begin{equation}\label{bg01}
+\beta(g)=-\beta_0{g^3\over 16\pi^2}-\beta_1{g^5\over (16\pi^2)^2}  \end{equation}
+In terms of
+\begin{equation}\label{aasg} \as\equiv{g^2\over 4\pi}  \end{equation}
+we have
+\begin{equation}\label{rga}
+{d\as\over d\ln\mu}=-2\beta_0 {\as^2\over 4\pi}-2\beta_1
+  {\as^3\over(4\pi)^2}  \end{equation}
+Similarly, the two-loop expression for the quark mass anomalous
+dimension can be written as
+\begin{equation}\label{gama}
+\gamma_m(\as)=\gamma_{m0}\aspi + \gamma_{m1}\left(\aspi\right)^2
+\end{equation}
+We also give the $1/\eps$-pole part $Z_{q, 1}$ of the quark field
+renormalization constant $Z_1$ to $\ord(\as^2)$, which we will need
+later on
+\begin{equation}\label{zq1a} Z_{q, 1}=a_1\aspi + a_2\left(\aspi\right)^2
+\end{equation}
+The coefficients in eqs. \eqn{rga} -- \eqn{zq1a} read
+\begin{equation}\label{b0b1}
+\beta_0={{11N-2f}\over 3}\qquad
+\beta_1={34\over 3}N^2-{10\over 3}Nf-2C_F f\qquad
+C_F={{N^2-1}\over{2N}}\end{equation}
+\begin{equation}\label{gm01} \gamma_{m0}=6C_F\qquad \gamma_{m1}=C_F\left(
+     3C_F+{97\over 3}N-{10\over 3}f\right)  \end{equation}
+\begin{equation}\label{a1a2} a_1=-C_F\qquad a_2=C_F\left(
+     {3\over 4}C_F-{17\over 4}N+{1\over 2}f\right)  \end{equation}
+$N$ is the number of colors, $f$ the number of quark flavors. The
+coefficients are given in the $MS$ ($\overline{MS}$) scheme.
+However, $\beta_0$, $\beta_1$, $\gamma_{m0}$ and $a_1$ are scheme
+independent. The expressions for $a_1$ and $a_2$ in \eqn{a1a2} are
+valid in Feynman gauge, $\xi=1$.\\
+At two-loop order the solution of the renormalization group equation
+\eqn{rga} for $\as(\mu)$ can always be written in the form
+\begin{equation}\label{amu}
+\as(\mu)={4\pi\over{\beta_0\ln{{\mu^2}\over{\Lambda^2}}}} \left[1-
+ {{\beta_1}\over{\beta_0^2}}{{\ln\ln{{\mu^2}\over{\Lambda^2}}}\over
+    {\ln{{\mu^2}\over{\Lambda^2}}}}\right] \end{equation}
+Eq. \eqn{amu} gives the running coupling constant at NLO. $\as(\mu)$
+vanishes as $\mu/\Lambda\to\infty$ due to asymptotic freedom. We
+remark that, in accordance with the two-loop accuracy, \eqn{amu} is
+valid up to terms of the order $\ord(1/\ln^3\mu^2/\Lambda^2)$.
+For the purpose of counting orders in $1/\ln\mu^2/\Lambda^2$ the
+double logarithmic expression $\ln\ln\mu^2/\Lambda^2$ may formally
+be viewed as a constant. Note that an additional term
+${\rm const.}/\ln^2\mu^2/\Lambda^2$, which is of the same order as
+the next-to-leading correction term in \eqn{amu}, can always be
+absorbed into a multiplicative redefinition of $\Lambda$. Hence the
+choice of the form \eqn{amu} is possible without restriction, but one
+should keep in mind that the definition of $\Lambda$ is related to this
+particular choice. The introduction of the $\overline{MS}$ scheme and
+the corresponding definition of $\Lambda_{\overline{MS}}$ and its
+relation to $\Lambda_{MS}$ is discussed in
+section~\ref{sec:basicform:wc:disc}.
+\\
+Finally we write down the two-loop expression for the running quark
+mass in the $MS$ ($\overline{MS}$) scheme, which results from
+integrating \eqn{rggm}
+\begin{equation}\label{mmu}
+m(\mu)=m(m)\left[{\as(\mu)\over\as(m)}\right]^{\gamma_{m0}\over 2\beta_0}
+\left[1+\left({\gamma_{m1}\over 2\beta_0}-{\beta_1\gamma_{m0}\over
+  2\beta^2_0}\right){\as(\mu)-\as(m)\over 4\pi}\right]  \end{equation}
+
+\subsection{Operator Product Expansion in Weak Decays -- Preliminaries}
+            \label{sec:basicform:prelim}
+Weak decays of hadrons are mediated through the weak interactions of
+their quark constituents, whose strong interactions, binding the
+constituents into hadrons, are characterized by a typical hadronic
+energy scale of the order of $1\gev$. Our goal is therefore to derive
+an effective low energy theory describing the weak interactions of
+quarks. The formal framework to achieve this is provided by the
+operator product expansion (OPE). In order to introduce the main ideas
+behind it, let us consider the simple example of
+the quark level transition $c\to su\bar d$,
+which is relevant for Cabibbo-allowed decays of D mesons.
+Disregarding QCD effects for the moment, the tree-level W-exchange
+amplitude for $c\to su\bar d$ is simply given by
+\begin{eqnarray}\label{aope}
+A&=&i{G_F\over\sqrt{2}}V^*_{cs}V_{ud}^{}{M^2_W\over k^2-M^2_W}
+  (\bar sc)_{V-A}(\bar ud)_{V-A} \nonumber\\
+ &=& -i{G_F\over\sqrt{2}}V^*_{cs}V_{ud}^{}
+  (\bar sc)_{V-A}(\bar ud)_{V-A} + \ord({k^2\over M^2_W})
+\end{eqnarray}
+where $(V-A)$ refers to the Lorentz structure $\gamma_{\mu} (1-\gf)$.
+
+Since $k$, the momentum transfer through the W propagator, is very
+small as compared to the W mass $M_W$, terms of the order
+$\ord(k^2/M^2_W)$ can safely be neg\-lected and the full amplitude $A$
+can be approximated by the first term on the r.h.s. of \eqn{aope}.
+Now this term may obviously be also obtained from an effective
+hamiltonian defined by
+\begin{equation}\label{hc0}
+{\cal H}_{eff}={G_F\over\sqrt{2}}V^*_{cs}V_{ud}^{}
+  (\bar sc)_{V-A}(\bar ud)_{V-A} + \ldots  \end{equation}
+where the ellipsis denotes operators of higher dimensions, typically
+involving derivative terms, which can in principle be chosen so
+as to reproduce the terms of higher order in $k^2/M^2_W$ of the
+full amplitude in \eqn{aope}. This exercise already provides us with
+a simple example of an OPE. The product of two charged current
+operators is expanded into a series of local operators,
+whose contributions are weighted by effective coupling constants,
+the Wilson coefficients.\\
+A more formal basis for this procedure may be given by considering
+the genera\-ting functional for Green functions in the path integral
+formalism. The part of the generating functional relevant for the
+present discussion is, up to an overall normalizing factor, given by
+\begin{equation}\label{zw1}
+Z_W\sim\int [dW^+][dW^-] \exp(i\int d^4x {\cal L}_W)  \end{equation}
+where ${\cal L}_W$ is the Lagrangian density containing the kinetic
+terms of the W boson field and its interaction with charged currents
+\begin{eqnarray}\label{lwjw}
+\lefteqn{{\cal L}_W=
+-{1\over 2}(\partial_\mu W^+_\nu-\partial_\nu W^+_\mu)
+ (\partial^\mu W^{-\nu}-\partial^\nu W^{-\mu})+M^2_W W^+_\mu W^{-\mu}}
+\hspace{3cm} \nonumber\\
+& & +{g_2\over 2\sqrt{2}}(J^+_\mu W^{+\mu}+J^-_\mu W^{-\mu})
+\end{eqnarray}
+\begin{equation}\label{jpn}
+J^+_\mu=V_{pn} \bar p\gamma_\mu(1-\gf)n\qquad p=(u, c, t)
+\quad n=(d, s, b)\qquad J^-_\mu=(J^+_\mu)^\dagger  \end{equation}
+Since we are not interested in Green functions with external W lines,
+we have not introduced external source terms for the W fields. In the
+present argument we will furthermore choose the unitary gauge for
+the W field for definiteness, however physical results do not depend
+on this choice.\\
+Introducing the operator
+\begin{equation}\label{kxy}
+K_{\mu\nu}(x, y)=\delta^{(4)}(x-y)\left(g_{\mu\nu}(\partial^2+
+  M^2_W)-\partial_\mu\partial_\nu\right)   \end{equation}
+we may, after discarding a total derivative in the W kinetic term,
+rewrite \eqn{zw1} as
+\begin{eqnarray}\label{zw2}    \lefteqn{
+Z_W\sim\int [dW^+][dW^-] \exp\biggl[ i\int d^4x d^4y W^+_\mu(x)
+K^{\mu\nu}(x, y) W^-_\nu(y)  } \hspace{3cm}\nonumber\\
+& & {}+i{g_2\over 2\sqrt{2}}\int d^4x
+ J^+_\mu W^{+\mu}+J^-_\mu W^{-\mu} \biggr]
+\end{eqnarray}
+The inverse of $K_{\mu\nu}$, denoted by $\Delta_{\mu\nu}$, and
+defined through
+\begin{equation}\label{kde1}
+\int d^4y K_{\mu\nu}(x, y) \Delta^{\nu\lambda}(y, z)=
+ g^{\ \lambda}_\mu \delta^{(4)}(x-z)  \end{equation}
+is just the W propagator in the unitary gauge
+\begin{equation}\label{dexy}
+\Delta_{\mu\nu}(x, y)=\int{d^4k\over (2\pi)^4}\Delta_{\mu\nu}(k)
+  e^{-i k(x-y)}  \end{equation}
+\begin{equation}\label{dek}
+\Delta_{\mu\nu}(k)={-1\over k^2-M^2_W}\left(g_{\mu\nu}-
+  {k_\mu k_\nu\over M^2_W}\right)   \end{equation}
+Performing the gaussian functional integration over $W^\pm(x)$ in
+\eqn{zw2} explicitly, this expression simplifies to
+\begin{equation}\label{zetw}
+Z_W\sim\exp\left[ -i\int{g^2_2\over 8}J^-_\mu(x)\Delta^{\mu\nu}(x, y)
+J^+_\nu(y) d^4x d^4y \right]   \end{equation}
+This result implies a nonlocal action functional for the quarks
+\begin{equation}\label{snl}
+{\cal S}_{nl}=\int d^4x {\cal L}_{kin}-
+{g^2_2\over 8}\int d^4x d^4y J^-_\mu(x)\Delta^{\mu\nu}(x, y)
+J^+_\nu(y)    \end{equation}
+where the first piece represents the quark kinetic terms and the second
+their charged current interactions.\\
+We can now formally expand this second, nonlocal term in powers of
+$1/M^2_W$ to yield a series of local interaction operators of
+dimensions that increase with the order in $1/M^2_W$. To lowest order
+\begin{equation}\label{dloc}
+\Delta^{\mu\nu}(x, y)\approx{g^{\mu\nu}\over M^2_W}\delta^{(4)}(x-y) \end{equation}
+and the second term in \eqn{snl} becomes
+\begin{equation}\label{jjx}
+-{g^2_2\over 8M^2_W}\int d^4x J^-_\mu(x) J^{+\mu}(x)  \end{equation}
+corresponding to the usual effective charged current interaction
+Lagrangian
+\begin{equation}\label{leff}
+{\cal L}_{int,eff}=-{G_F\over\sqrt{2}} J^-_\mu J^{+\mu}(x)=-
+{G_F\over\sqrt{2}}V^*_{pn}V_{p'n'}^{}(\bar np)_{V-A}
+  (\bar p'n')_{V-A}
+\end{equation}
+which contains, among other terms, the leading contribution to
+\eqn{hc0}.
+
+The simple considerations we have presented so far already illustrate
+several of the basic aspects of the general approach.
+\begin{itemize}
+\item Formally, the procedure to approximate the interaction term in
+\eqn{snl} by \eqn{jjx} is an example of a short-distance OPE. The product
+of the local operators $J^-_\mu(x)$ and $J^+_\nu(y)$, to be taken at
+short-distances due to the convolution with the massive, short-range
+W propagator $\Delta^{\mu\nu}(x, y)$ (compare \eqn{dloc}), is expanded
+into a series of composite local operators, of which the leading term
+is shown in \eqn{jjx}.
+\item The dominant contributions in the short-distance expansion come
+from the operators of lowest dimension. In our case these are
+four-fermion operators of dimension six, whereas operators of higher
+dimensions can usually be neglected in weak decays.
+\item Note that, as far as the charged current weak interaction is
+concerned, no approximation is involved yet in the nonlocal interaction
+term in \eqn{snl}, except that we do not consider higher order weak
+corrections or processes with external W boson states. Correspondingly,
+the OPE series into which the nonlocal interaction is expanded, is
+equivalent to the original theory, when considered to all orders in
+$1/M^2_W$. In other words, the full series will reproduce the complete
+Green functions for the charged current weak interactions of quarks.
+The truncation of the operator series then yields a systematic
+approximation scheme for low energy processes, neglecting contributions
+suppressed by powers of $k^2/M^2_W$. In this way one is able to
+construct low energy effective theories for weak decays.
+\item In going from the full to the effective theory the W boson is
+removed as an explicit, dynamical degree of freedom. This step is
+often refered to as ``integrating out'' the W boson, a terminology
+which is very obvious in the path integral language discussed above.
+Alternatively one could of course use the canonical operator
+formalism, where the W field instead of being intergrated out, gets
+``contracted out'' through the application of Wick's theorem.
+\item The effective local four-fermion interaction terms are a
+modern version of the classic Fermi-theory of weak interactions.
+\item An intuitive interpretation of the OPE formalism discussed so
+far is, that from the point of view of low energy dynamics, the effects
+of a short-range exchange force mediated by a heavy boson
+approximately corresponds to a point interaction.
+\item The presentation we have given illustrates furthermore, that
+the approach of evaluating the relevant Green functions (or amplitudes)
+directly in order to construct the OPE, as in \eqn{aope}, actually gives
+the same result as the more formal technique employing path integrals.
+While the latter can give some useful insight into the general aspects
+of the method, the former is more convenient for practical calculations
+and we will make use of it throughout the discussion to follow.
+\item Up to now we have not talked about the strong interactions
+among quarks, which have of course to be taken into account. They are
+described by QCD and can at short-distances be calculated in
+perturbation theory, due to the property of asymptotic freedom of QCD.
+The corresponding gluon exchange contributions constitute quantum
+corrections to the simplified picture sketched above, which can in this
+sense be viewed as a classical approximation. We will describe the
+incorporation of QCD corrections and related additional features
+they imply for the OPE in the following section.
+\end{itemize}
+
+\subsection{OPE and Short Distance QCD Effects}
+            \label{sec:basicform:ope}
+We will now take up the discussion of QCD quantum corrections at
+short-distances to the OPE for weak decays. A crucial point for this
+enterprise is the property of asymptotic freedom of QCD. This allows
+one to treat the short-distance corrections, that is the contribution
+of hard gluons at energies of the order $\ord(M_W)$ down to hadronic
+scales $\ge 1\gev$, in perturbation theory. In the following, we will
+always restrict ourselves to the leading dimension six operators in
+the OPE and omit the negligible contributions of higher dimensional
+operators. Staying with our example of $c\to su\bar d$ transitions,
+recall that we had for the amplitude without QCD
+\begin{equation}\label{amp0}
+A_0=-i{G_F\over\sqrt{2}}V^*_{cs}V_{ud}^{}
+  (\bar s_ic_i)_{V-A}(\bar u_jd_j)_{V-A}
+\end{equation}
+where the summation over repeated color indices is understood.  This
+result leads directly to the effective hamiltonian of \eqn{hc0} where the
+color indices have been suppressed. If we now include QCD effects, the
+effective hamiltonian, constructed to reproduce the low energy
+approximation of the exact theory, is generalized to
+
+\begin{equation}\label{hq12}
+{\cal H}_{eff}={G_F\over\sqrt{2}}V^\ast_{cs}V_{ud}(C_1 Q_1+C_2 Q_2) \end{equation}
+where
+\begin{equation}\label{q1c} Q_1=(\bar s_ic_j)_{V-A}(\bar u_jd_i)_{V-A}   \end{equation}
+\begin{equation}\label{q2c} Q_2=(\bar s_ic_i)_{V-A}(\bar u_jd_j)_{V-A}   \end{equation}
+The essential features of this hamiltonian are:
+\begin{itemize}
+\item In addition to the original operator $Q_2$ (with index 2 for
+historical reasons) a new operator $Q_1$ with the same flavor form
+but different color structure is generated. This is because a gluon
+linking the two color singlet weak current lines can ``mix'' the color
+indices due to the following relation for the color charges $T^a_{ij}$
+\begin{equation}\label{tata}
+T^a_{ik}T^a_{jl}=-{1\over 2N}\delta_{ik}\delta_{jl}+{1\over 2}
+\delta_{il}\delta_{jk}   \end{equation}
+\item The Wilson coefficients $C_1$ and $C_2$, the coupling constants
+for the interaction terms $Q_1$ and $Q_2$, become calculable nontrivial
+functions of $\as$, $M_W$ and the renormalization scale $\mu$.
+If QCD is neglected they have the trivial form $C_1=0$, $C_2=1$ and
+\eqn{hq12} reduces to \eqn{hc0}.
+\end{itemize}
+In order to obtain the final result for the hamiltonian \eqn{hq12}, we
+have to calculate the coefficients $C_{1, 2}$. These are determined
+by the requirement that the amplitude $A$ in the full theory be
+reproduced by the corresponding amplitude in the effective theory
+\eqn{hq12}, thus
+\begin{equation}\label{acq}
+A=-i{G_F\over\sqrt{2}}V^*_{cs}V_{ud}^{}(C_1\langle Q_1\rangle +
+C_2\langle Q_2\rangle)   \end{equation}
+If we calculate the amplitude $A$ and, to the same order in $\as$,
+the matrix elements of operators $\langle Q_1\rangle$,
+$\langle Q_2\rangle$, we can obtain $C_1$ and $C_2$ via \eqn{acq}.
+This procedure is called {\it matching} the full theory onto the
+effective theory \eqn{hq12}.
+\\
+Here we use the term ``amplitude'' in the meaning of ``amputated Green
+function''. Correspondingly operator matrix elements are -- within this
+perturbative context -- amputated Green functions with operator
+insertion. In a diagrammatic language these amputated Green functions
+are given by Feynman graphs, but without gluonic self energy
+corrections in external legs, like e.g. in figs.~\ref{fig:1loopful} and
+~\ref{fig:1loopeff} for the full and effective theory, respectively.
+In the present example penguin diagrams do not contribute due to the
+flavor structure of the $c \to s u \bar d$ transition.
+
+\begin{figure}[htb]
+\vspace{0.10in}
+\centerline{
+\epsfysize=3in
+\epsffile{ps/fulldiag.ps}
+}
+\vspace{0.08in}
+\caption[]{One-loop current-current (a)--(c), penguin (d) and box (e)
+diagrams in the full theory. For pure QCD corrections as considered in
+this section and e.g.\ in \ref{sec:HeffdF1:66} the $\gamma$- and
+$Z$-contributions in diagram (d) and the diagram (e) are absent.
+Possible left-right or up-down reflected diagrams are not shown.
+\label{fig:1loopful}}
+\end{figure}
+
+Evaluating the current-current diagrams of fig.~\ref{fig:1loopful}\,(a)--(c),
+we find for the full amplitude $A$ to $\ord(\as)$
+\begin{equation}\label{amp}
+A=-i{G_F\over\sqrt{2}}V^\ast_{cs}V_{ud}\left[\left(1+2C_F \aspi
+\ln{\mu^2\over -p^2}\right)S_2+{3\over N}\aspi\ln{M^2_W\over -p^2} S_2-
+3\aspi\ln{M^2_W\over -p^2} S_1\right]   \end{equation}
+Here we have introduced the spinor amplitudes
+\begin{equation}\label{s1c} S_1=(\bar s_ic_j)_{V-A}(\bar u_jd_i)_{V-A}
+\end{equation}
+\begin{equation}\label{s2c} S_2=(\bar s_ic_i)_{V-A}(\bar u_jd_j)_{V-A}
+\end{equation}
+which are just the tree level matrix elements of $Q_1$ and $Q_2$.
+We have employed the Feynman gauge ($\xi=1$) and taken all external
+quark lines massless and carrying the off-shell momentum $p$.
+Furthermore we have kept only logarithmic corrections
+$\sim\as\cdot\log$ and discarded constant contributions of order
+$\ord(\as)$, which corresponds to the leading log approximation.
+The necessary renormalization of the quark fields in the $MS$-scheme
+is already incorporated into \eqn{amp}. It has removed a $1/\eps$
+singularity in the first term of \eqn{amp}, which therefore carries
+an explicit $\mu$-dependence.
+
+\begin{figure}[htb]
+\vspace{0.10in}
+\centerline{
+\epsfysize=3in
+\epsffile{ps/effdiag.ps}
+}
+\vspace{0.08in}
+\caption[]{One loop current-current (a)--(c) and penguin (d) diagrams
+contributing to the LO anomalous dimensions and matching conditions in
+the effective theory. The 4-vertex ``$\otimes\,\,\otimes$'' denotes the
+insertion of a 4-fermion operator $Q_i$. For pure QCD corrections as
+considered in this section and e.g.\ in \ref{sec:HeffdF1:66} the
+contributions from $\gamma$ in diagrams (d.1) and (d.2) are absent.
+Again, possible left-right or up-down reflected diagrams are not
+shown.
+\label{fig:1loopeff}}
+\end{figure}
+
+Under the same conditions, the unrenormalized current-current matrix elements
+of the operators $Q_1$ and $Q_2$ are from fig.~\ref{fig:1loopeff}\,(a)-(c)
+found to be
+\begin{eqnarray}\label{q10}
+\lefteqn{\langle Q_1\rangle^{(0)}=} & & \\
+& & \left(1+2C_F \aspi\left({1\over\eps}+\ln{\mu^2\over -p^2}
+\right)\right)S_1+{3\over N}\aspi\left({1\over\eps}+\ln{\mu^2\over -p^2}\right)S_1-
+3\aspi\left({1\over\eps}+\ln{\mu^2\over -p^2}\right) S_2  \nonumber
+\end{eqnarray}
+\begin{eqnarray}\label{q20}
+\lefteqn{\langle Q_2\rangle^{(0)}=} & & \\
+& & \left(1+2C_F \aspi\left({1\over\eps}+\ln{\mu^2\over -p^2}
+\right)\right)S_2+{3\over N}\aspi\left({1\over\eps}+\ln{\mu^2\over -p^2}\right)S_2-
+3\aspi\left({1\over\eps}+\ln{\mu^2\over -p^2}\right) S_1  \nonumber
+\end{eqnarray}
+Again, the divergences in the first terms are eliminated through field
+renormalization. However, in contrast to the full amplitude, the
+resulting expressions are still divergent. Therefore an additional
+multiplicative renormalization, refered to as {\em operator renormalization},
+is necessary:
+\begin{equation}
+Q_i^{(0)} = Z_{ij} Q_j
+\label{AL}
+\end{equation}
+Since \eqn{q10} and \eqn{q20} each involve both $S_1$ and
+$S_2$, the renormalization constant is in this case a $2\times 2$
+matrix $Z$. The relation between the unrenormalized
+($\langle Q_i\rangle^{(0)}$) and the renormalized amputated Green
+functions ($\langle Q_i\rangle$) is then
+\begin{equation}\label{q0zq}
+\langle Q_i\rangle^{(0)}=Z^{-2}_q Z_{ij}\langle Q_j\rangle
+\end{equation}
+From \eqn{q10}, \eqn{q20} and \eqn{zq1a} we read off ($MS$-scheme)
+\begin{equation}\label{zll} Z = 1+ \aspi {1\over\eps}
+ \left(\begin{array}{cc}  3/N & -3 \\
+                          -3 & 3/N
+    \end{array}\right)   \end{equation}
+It follows that the renormalized matrix elements $\langle Q_i\rangle$
+are given by
+\begin{equation}\label{q1re}
+\langle Q_1\rangle=\left(1+2C_F \aspi\ln{\mu^2\over -p^2}
+\right)S_1+{3\over N}\aspi\ln{\mu^2\over -p^2}S_1-
+3\aspi\ln{\mu^2\over -p^2} S_2   \end{equation}
+\begin{equation}\label{q2re}
+\langle Q_2\rangle=\left(1+2C_F \aspi\ln{\mu^2\over -p^2}
+\right)S_2+{3\over N}\aspi\ln{\mu^2\over -p^2}S_2-
+3\aspi\ln{\mu^2\over -p^2} S_1   \end{equation}
+Inserting $\langle Q_i\rangle$ into \eqn{acq} and comparing with \eqn{amp}
+we derive
+\begin{equation}\label{c12}
+C_1=-3\aspi\ln{M^2_W\over\mu^2}   \qquad
+C_2=1+{3\over N}\aspi\ln{M^2_W\over\mu^2}   \end{equation}
+We would like to digress and add a comment on the renormalization of
+the interaction terms in the effective theory. The commonly used
+convention is to introduce via \eqn{q0zq} the renormalization constants
+$Z_{ij}$, defined to absorb the divergences of the operator matrix
+elements. It is however instructive to view this renormalization in
+a slightly different, but of course equivalent way, corresponding to
+the standard counter\-term method in perturbative renormalization.
+Consider, as usual, the hamiltonian of the effective theory as the
+starting point with fields and coupling constants as bare quantities,
+which are renormalized according to ($q$=$s$, $c$, $u$, $d$)
+\begin{equation}\label{q0z2}
+q^{(0)}=Z^{1/2}_q q  \end{equation}
+\begin{equation}\label{c0zc}  C^{(0)}_i=Z^c_{ij} C_j \end{equation}
+Then the hamiltonian \eqn{hq12} is essentially (omitting the factor
+${G_F\over\sqrt{2}}V^\ast_{cs}V_{ud}$)
+\begin{equation}\label{ctcq}
+C^{(0)}_iQ_i(q^{(0)})\equiv Z^2_qZ^c_{ij} C_jQ_i\equiv
+C_iQ_i+(Z^2_q Z^c_{ij}-\delta_{ij})C_jQ_i  \end{equation}
+that is, it can be written in terms of renormalized couplings and
+fields ($C_iQ_i$), plus coun\-ter\-terms. The argument $q^{(0)}$ in the
+first term in \eqn{ctcq} indicates that the interaction term $Q_i$ is
+composed of bare fields. Calculating the amplitude with the
+hamiltonian \eqn{ctcq}, which includes the counterterms, we get the
+finite renormalized result
+\begin{equation}\label{zqzc}
+Z^2_qZ^c_{ij} C_j\langle Q_i\rangle^{(0)}=
+C_j\langle Q_j\rangle     \end{equation}
+Hence (compare \eqn{q0zq})
+\begin{equation}\label{zcz}
+Z^c_{ij}=Z^{-1}_{ji}  \end{equation}
+In short, it is sometimes useful to keep in mind that one can think
+of the ``operator renormalization'', which sounds like a new concept,
+in terms of the completely equivalent, but customary, renormalization
+of the coupling constants $C_i$, as in any field theory.
+
+Now that we have presented in quite some detail the derivation of
+the Wilson coefficients in \eqn{c12}, we shall discuss and interpret
+the most important aspects of the short-distance expansion for
+weak decays, which can be studied very transparently on the explicit
+example we have given.
+\begin{itemize}
+\item First of all a further remark about the phenomenon of
+operator mixing that we encountered in our example. This occurs
+because gluonic corrections to the matrix element of the original
+operator $Q_2$ are not just proportional to $Q_2$ itself, but involve
+the additional structure $Q_1$ (and vice versa). Therefore, besides
+a $Q_2$-counterterm, a counterterm $\sim Q_1$ is needed to renormalize
+this matrix element -- the operators in question are said to mix
+under renormalization. This however is nothing new in principle. It
+is just an algebraic generalization of the usual concepts. Indeed,
+if we introduce a different operator basis $Q_\pm=(Q_2\pm Q_1)/2$
+(with coefficients $C_\pm=C_2\pm C_1$) the renormalization becomes
+diagonal and matrix elements of $Q_+$ and $Q_-$ are renormalized
+multiplicatively. In this new basis the OPE reads
+\begin{equation}\label{apam}  A\equiv A_++A_- =
+-i{G_F\over\sqrt{2}}V^\ast_{cs}V_{ud}(C_+\langle Q_+\rangle +
+C_-\langle Q_-\rangle)   \end{equation}
+where ($S_\pm=(S_2\pm S_1)/2$)
+\begin{equation}\label{aspm}
+A_\pm=-i{G_F\over\sqrt{2}}V^\ast_{cs}V_{ud}\left[\left(1+2C_F \aspi
+\ln{\mu^2\over -p^2}\right)S_\pm+({3\over N}\mp 3)\aspi\ln{M^2_W\over -p^2} S_\pm
+\right]   \end{equation}
+and
+\begin{equation}\label{qmpm}
+\langle Q_\pm\rangle=\left(1+2C_F \aspi\ln{\mu^2\over -p^2}
+\right)S_\pm+({3\over N}\mp 3)\aspi\ln{\mu^2\over -p^2} S_\pm  \end{equation}
+\begin{equation}\label{cpm}
+C_\pm=1+({3\over N}\mp 3)\aspi \ln{M^2_W\over\mu^2}   \end{equation}
+\item In the calculation of the amplitude $A$ in \eqn{amp} and of the
+matrix elements in \eqn{q10} and \eqn{q20} the off-shell momentum $p$ of
+the external quark legs represents an infrared regulator. The
+logarithmic infrared divergence of the gluon correction diagrams
+(figs.~\ref{fig:1loopful}\,(a)--(c) and \ref{fig:1loopeff}\,(a)--(c))
+as $p^2\to 0$ is evident from \eqn{amp}, \eqn{q10}
+and \eqn{q20}.  A similar observation can be made for the $M_W$
+dependence of the full amplitude $A$. We see that \eqn{amp} is
+logarithmically divergent in the limit $M_W\to\infty$. This behaviour
+is reflected in the ultraviolet divergences (persisting after field
+renormalization) of the matrix elements \eqn{q10}, \eqn{q20} in the
+effective theory, whose local interaction terms correspond to the weak
+interactions in the infinite $M_W$ limit as they are just the leading
+contribution of the $1/M_W$ operator product expansion.  This also
+implies, that the characteristic logarithmic functional dependence of
+the leading $\ord(\as)$ corrections is closely related to the
+divergence structure of the effective theory, that is to the
+renormalization constants $Z_{ij}$.
+\item The most important feature of the OPE is that it provides a
+factorization of short-distance (coefficients) and long-distance
+(operator matrix elements) contributions. This is clearly exhibited
+in our example. The dependence of the amplitude \eqn{amp} on $p^2$,
+representing the long-distance structure of $A$, is fully contained
+in the matrix elements of the local operators $Q_i$ \eqn{q1re}, \eqn{q2re},
+whereas the Wilson coefficients $C_i$ in \eqn{c12} are free from this
+dependence. Essentially, this factorization has the form
+(see \eqn{aspm} -- \eqn{cpm})
+\begin{equation}\label{fact}
+(1+\as G \ln{M^2_W\over -p^2})\doteq
+(1+\as G \ln{M^2_W\over\mu^2})\cdot
+(1+\as G \ln{\mu^2\over -p^2})        \end{equation}
+that is, amplitude = coefficient function $\times$ operator matrix
+element. Hereby the logarithm on the l.h.s. is split according to
+\begin{equation}\label{splt}
+\ln{M^2_W\over -p^2}=\ln{M^2_W\over\mu^2}+ \ln{\mu^2\over -p^2}  \end{equation}
+Since the logarithmic behaviour results from the integration over
+some virtual loop momentum, we may -- roughly speaking -- rewrite
+this as
+\begin{equation}\label{pmuw}
+\int^{M^2_W}_{-p^2}{d k^2\over k^2}=
+\int^{M^2_W}_{\mu^2}{d k^2\over k^2} +
+\int^{\mu^2}_{-p^2}{d k^2\over k^2}   \end{equation}
+which illustrates that the coefficient contains the contributions
+from large virtual momenta of the loop correction from scales
+$\mu\approx 1\gev$ to $M_W$, whereas the low energy contributions are
+separated into the matrix elements.\\
+Of course, the latter can not be calculated in perturbation
+theory for transitions between physical meson states. The point is,
+that we have calculated the OPE for unphysical off-shell quark
+external states only to extract the Wilson coefficients, which we
+need to construct the effective hamiltonian \eqn{hq12}. For this
+purpose the fact that we have considered an unphysical amplitude is
+irrelevant since the coefficient functions do not depend on the
+external states, but represent the short-distance structure of the
+theory. Once we have extracted the coefficients and written down
+the effective hamiltonian, the latter can be used -- at least in
+principle -- to evaluate the physically interesting decay amplitudes
+by means of some nonperturbative approach.
+\item In interpreting the role of the scale $\mu$ we may distinguish
+two different aspects. From the point of view of the effective
+theory $\mu$ is just a renormalization scale, introduced in the
+process of renormalizing the effective local interaction terms by
+the dimensional method. On the other hand, from the point of view of
+the full theory, $\mu$ acts as the scale at which the full
+contribution is separated into a low energy and a high energy part,
+as is evident from the above discussion. For this reason $\mu$ is
+sometimes also called the {\it factorization scale}.
+\item In our case the infrared structure of the amplitude is
+characterized by the off-shell momentum $p$.
+In general one could work with any other arbitrary momentum
+configuration, on-shell or off-shell, with or without external
+quark mass, with infrared divergences regulated by off-shell
+momenta, quark masses, a fictitious gluon mass or by dimensional
+regularization. In the case of off-shell momenta the amplitude is
+furthermore dependent on the gauge parameter of the gluon field.
+All these things belong to the infrared or long-distance structure of
+the amplitude. Therefore the dependence on these choices is the same
+for the full amplitude and for the operator matrix elements and
+drops out in the coefficient functions. To check that this is really
+the case for a particular choice is of crucial importance for
+practical calculations. On the other hand one may use this freedom and
+choose the treatment of external lines according to convenience or
+taste. Sometimes it may however seem preferable to keep a slightly more
+inconvenient dependence on external masses and/or gluon gauge in
+order to have a useful check that this dependence does indeed cancel
+out for the Wilson coefficients one is calculating.
+\end{itemize}
+
+\subsection{The Renormalization Group}
+            \label{sec:basicform:rg}
+\subsubsection{Basic Concepts}
+               \label{sec:basicform:rg:basic}
+So far we have computed the Wilson coefficient functions \eqn{cpm} in ordinary
+perturbation theory. This, however, is not sufficient for the problem
+at hand. The appropriate scale at which to normalize the hadronic
+matrix elements of local operators is a low energy scale -- low
+compared to the weak scale $M_W$ -- of a few $GeV$ typically.
+In our example of charm decay $\mu=\ord(m_c)$. For such a low scale
+$\mu$ the logarithm $\ln(M^2_W/\mu^2)$ multiplying $\as(\mu)$
+in the expression \eqn{cpm} becomes large. Although $\as(\mu)$
+by itself is a valid expansion parameter down to scales of
+$\ord(1\gev)$, say, this is not longer true for the combination
+$\as(\mu) \ln(M^2_W/\mu^2)$. In fact, for our example \eqn{cpm}
+the first order correction term amounts for $\mu=1\gev$ to
+65 -- 130\% although $\as/4\pi\approx 4\%$. The reason for
+this breakdown of the naive perturbative expansion lies
+ultimately in the appearance of largely disparate scales $M_W$ and
+$\mu$ in the problem at hand. \\
+This situation can be considerably improved by employing the
+method of the renormalization group (RG). The renormalization group
+is the group of transformations between different choices of the
+renormalization scale $\mu$. The renormalization group equations
+describe the change of renormalized quantities, Green functions
+and parameters, with $\mu$ in a differential form. As we shall
+illustrate below, solving these differential equations allows,
+in the leading logarithmic approximation (LLA),
+to sum up the terms $(\as\ln(M_W/\mu))^n$ to all orders $n$ ($n=0,
+\ldots, \infty$) in perturbation theory. This leads to the RG improved
+perturbation theory. Going one step beyond in this modified expansion,
+to the next-to-leading logarithmic approximation (NLLA), the summation
+is extended to all terms $\as(\as\ln(M_W/\mu))^n$, and so on.
+In this context it is useful to consider $\as\ln(M_W/\mu)$ with
+a large logarithm $\ln(M_W/\mu)$ as a quantity of order $\ord(1)$
+\begin{equation}\label{alog}
+\as \ln{M_W\over\mu}=\ord(1)\qquad  \mu\ll M_W   \end{equation}
+Therefore the series in powers of $\as\ln(M_W/\mu)$ cannot be
+truncated. Summed to all orders it yields again a contribution of
+order $\ord(1)$. Correspondingly the next-to-leading logs
+$\as(\as\ln(M_W/\mu)^n$ represent an $\ord(\as)$
+perturbative correction to the leading term.\\
+The renormalization group equation for the Wilson coefficient functions
+follows from the fact, that the unrenormalized Wilson coefficients
+$\vec C^{(0)}=Z_c \vec C$ ($\vec C^T=(C_1, C_2)$)
+are $\mu$-independent. Defining the matrix
+of anomalous dimensions $\gamma$ by
+\begin{equation}\label{gazz} \gamma=Z^{-1}{d\over d\ln\mu}Z  \end{equation}
+and recalling that $Z^T_c=Z^{-1}$, we obtain the renormalization group
+equation
+\begin{equation}\label{rgc}
+{d\over d\ln\mu}\vec C(\mu)=\gamma^T(\as) \vec C(\mu)  \end{equation}
+The solution of \eqn{rgc} may formally be written in terms of a
+$\mu$-evolution matrix $U$ as
+\begin{equation}\label{rgcu}
+\vec C(\mu)=U(\mu, M_W) \vec C(M_W)  \end{equation}
+From \eqn{zll} and \eqn{gazz} we have to first order in $\as$
+\begin{equation}\label{g120} \gamma(\as)=\aspi \gamma^{(0)}=\aspi
+ \left(\begin{array}{cc} -6/N & 6 \\
+                          6 & -6/N
+    \end{array}\right)   \end{equation}
+or in the diagonal basis
+\begin{equation}\label{gpm0}
+\gamma_\pm(\as)=\aspi\gamma^{(0)}_\pm \qquad  \gamma^{(0)}_\pm=
+   \pm 6{N\mp1\over N}  \end{equation}
+Note that if we neglect QCD loop corrections completely, the
+couplings $\vec C$ are independent of $\mu$. The nontrivial
+$\mu$-dependence of $\vec C$ expressed in \eqn{rgc} is a genuine
+quantum effect. It implies an anomalous scaling behaviour for the
+dimensionless coefficients, i.e. one that is different from the
+classical theory. For this reason the factor $\gamma$ is called
+anomalous (scale) dimension (compare \eqn{rgc} with
+${d\over d\ln\mu}\mu^n=n \mu^n$ for an n-dimensional $\mu$-dependent
+term $\mu^n$).\\
+Using \eqn{rga} the RG equation \eqn{rgc} is easily solved with the
+result
+\begin{equation}\label{cpmrg}
+C_\pm(\mu)=\left[{\as(M_W)\over\as(\mu)}\right]^{\gamma^{(0)}_\pm\over
+  2\beta_0} C_\pm(M_W)  \end{equation}
+At a scale $\mu_W=M_W$ no large logarithms are present and $C_\pm(M_W)$
+can therefore be calculated in ordinary perturbation theory.
+From \eqn{cpm} we have to the order needed for the LLA
+\begin{equation}\label{cmw1}  C_\pm(M_W)=1  \end{equation}
+\eqn{cpmrg} and \eqn{cmw1} give the final result for the coefficients
+in the leading log approximation of RG improved perturbation theory.
+\\
+At this point one should emphasize, that the choice of the high energy
+matching scale $\mu_W=M_W$ is of course not unique. The only
+requirement is that the choice of $\mu_W$ must not introduce large
+logs $\ln(M_W/\mu_W)$ in order not to spoil the applicability of
+the usual perturbation theory. Therefore $\mu_W$ should be of
+order $\ord(M_W)$. The logarithmic correction in \eqn{cpm} is then
+$\ord(\as)$ and is neglected in LLA. Then, still,
+$C_\pm(\mu_W)=1$ and
+\begin{equation}\label{cpmr2}
+C_\pm(\mu)=\left[{\as(\mu_W)\over\as(\mu)}\right]^{\gamma^{(0)}_\pm\over
+  2\beta_0} =
+\left[{\as(M_W)\over \as(\mu)}\right]^{\gamma^{(0)}_\pm\over
+  2\beta_0} (1+\ord(\as)) \end{equation}
+A change of $\mu_W$ around the value of $M_W$ causes an ambiguity
+of $\ord(\as)$ in the coefficient. This ambiguity represents a
+theoretical uncertainty in the determination of $C_\pm(\mu)$. In
+order to reduce it, it is necessary to go beyond the leading order.
+At NLO the scale ambiguity is then reduced from $\ord(\as)$ to
+$\ord(\as^2)$. We will come back to this point below. Presently, we
+will set $\mu_W=M_W$, but it is important to keep the related
+uncertainty in mind.\\
+Taking into account the leading order solution of the RG equation
+\eqn{rga} for the coupling, which can be expressed in the form
+\begin{equation}\label{alls}
+\as(m)={\as(\mu)\over 1+\beta_0{\as(\mu)\over 4\pi}\ln{m^2\over\mu^2}}  \end{equation}
+we may rewrite \eqn{cpmrg} as
+\begin{equation}\label{clls} C_\pm(\mu)=
+\left({1\over 1+\beta_0{\as(\mu)\over 4\pi}\ln{M^2_W\over\mu^2}}\right)^{
+   \gamma^{(0)}_\pm\over 2\beta_0}  \end{equation}
+\eqn{clls} contains the logarithmic corrections
+$\sim \as\ln(M^2_W/\mu^2)$ to all orders in $\as$. This shows very
+clearly that the leading log corrections have been summed up to
+all orders in perturbation theory by solving the RG equation. In
+particular, if we again expand \eqn{clls} in powers of $\as$, keeping
+the first term only we recover \eqn{cpm}.
+This observation demonstrates, that the RG method allows to obtain
+solutions, which go beyond the conventional perturbation theory.
+
+Before concluding this subsection, we would like to introduce still
+two generalizations of the approach developed so far, which will
+appear in the general discussion below.
+
+\subsubsection{Threshold Effects in LLA}
+               \label{sec:basicform:rg:thold}
+First we may generalize the renormalization group evolution from
+$M_W$ down to $\mu\approx m_c$ to include the threshold effect of
+heavy quarks like $b$ or $t$ as follows
+\begin{equation}\label{cmub}
+\vec C(\mu)=U^{(f=4)}(\mu, \mu_b)U^{(f=5)}(\mu_b, \mu_W)\vec C(\mu_W)\end{equation}
+which is valid for the LLA. In our example of the $c\to su\bar d$
+transition the top quark gives no contribution at all. Being
+heavier (but comparable) in mass than the W, it is simply
+removed from the theory along with the W-boson. In a first step the
+coefficients at the initial scale $\mu_W\approx M_W$ are evolved down to
+$\mu_b\approx m_b$
+in an effective theory with five quark flavors ($f=5$). Then,
+again in the spirit of the effective field theory technique, for
+scales below $\mu_b$ also the bottom quark is removed as an explicit
+degree of freedom from the effective theory, yielding a new effective
+theory with only four ``active'' quark flavors left. The matching
+corrections between both theories can be calculated in ordinary
+perturbation theory at the scale $\mu_b$, since due to $\mu_b\approx m_b$
+no large logs can occur in this procedure. For the same reason
+matching corrections $(\ord(\as))$ can be neglected in LLA and the
+coefficients at $\mu_b$, $\vec C(\mu_b)$, simply serve as the initial
+values for the RG evolution in the four quark theory down to
+$\mu\approx m_c$. In addition, continuity of the running coupling
+across the threshold $\mu_b$ is imposed by the requirement
+\begin{equation}\label{af45}
+\alpha_{s, f=4}(\mu_b, \Lambda^{(4)}) =
+\alpha_{s, f=5}(\mu_b, \Lambda^{(5)})
+\end{equation}
+which defines different QCD scales $\Lambda^{(f)}$ for each effective
+theory.\\
+Neglecting the b-threshold, as we did before \eqn{rgcu}, one may just
+perform the full evolution from $\mu_W$ to $\mu$ in an effective
+four flavor theory. It turns out that in some cases the difference
+of these two approaches is even negligible.\\
+We would like to add a comment on this effective field theory
+technique. At the first sight the idea to ``remove by hand''
+heavy degrees of freedom may look somewhat artificial. However it
+appears quite natural when not viewed from the evolution from high
+towards low energies but vice versa (which actually corrsponds to
+the historical way). Suppose only the ``light'' quarks $u$, $d$, $s$,
+$c$ were known. Then in the attempt to formulate a theory of their
+weak interactions one would be lead to a generalized Fermi theory
+with (effective) four quark coupling constants to be determined
+somehow. Of course, we are in the lucky position to know the
+underlying theory in the form of the Standard Model. Therefore we
+can actually derive the coupling constants of the low energy effective
+theory from ``first principles''. This is exactly what is achieved
+technically by going through a series of effective theories, removing
+heavy degrees of freedom successively, by means of a step-by-step
+procedure.
+
+\subsubsection{Penguin Operators}
+               \label{sec:basicform:rg:pop}
+A second, but very important issue is the generation of QCD penguin
+operators \cite{vainshtein:77}. Consider for example the local
+operator $(\bar s_iu_i)_{V-A}(\bar u_jd_j)_{V-A}$, which is directly
+induced by W-boson exchange. In this case, additional QCD correction
+diagrams, the penguin diagrams (d.1) and (d.2 ) with a gluon in
+fig.\ \ref{fig:1loopeff}, contribute and as a consequence six operators
+are involved in the mixing under renormalization instead of two. These
+read
+\begin{equation}\label{q16}
+\begin{array}{rcl}
+Q_1=(\bar s_iu_j)_{V-A}(\bar u_jd_i)_{V-A} \\
+Q_2=(\bar s_iu_i)_{V-A}(\bar u_jd_j)_{V-A} \\
+Q_3=(\bar s_id_i)_{V-A}\sum_q(\bar q_jq_j)_{V-A} \\
+Q_4=(\bar s_id_j)_{V-A}\sum_q(\bar q_jq_i)_{V-A} \\
+Q_5=(\bar s_id_i)_{V-A}\sum_q(\bar q_jq_j)_{V+A} \\
+Q_6=(\bar s_id_j)_{V-A}\sum_q(\bar q_jq_i)_{V+A}
+\end{array}
+\end{equation}
+The sum over $q$ runs over all quark flavors that exist in the
+effective theory in question. The operators $Q_1$ and $Q_2$ are just
+the ones we have encountered in subsection~\ref{sec:basicform:ope}, but with
+the c-quark replaced by $u$. This modified flavor structure gives rise to
+the gluon penguin type diagrams shown in fig.\ \ref{fig:1loopeff}\,(d).
+Since the gluon coupling is of course flavor conserving, it is clear
+that penguins cannot be generated from the operator $(\bar
+sc)_{V-A}(\bar ud)_{V-A}$. The penguin graphs induce the new local
+interaction vertices $Q_3,\ldots, Q_6$, which have the same quantum
+numbers. Their structure is easily understood. The flavor content is
+determined by the $(\bar sd)_{V-A}$ current in the upper part and by a
+$\sum_q(\bar qq)_V$ vector current due to the gluon coupling in the
+lower. This vector structure is for convenience decomposed into a
+$(V-A)$ and a $(V+A)$ part. For each of these, two different color
+forms arise due to the color structure of the exchanged gluon (see
+\eqn{tata}). Together this yields the four operators $Q_3,\ldots,
+Q_6$.\\
+For all operators $Q_1,\ldots, Q_6$ all possible QCD corrections (that
+is all amputated Green functions with insertion of $Q_i$) of the
+current-current (fig.\ \ref{fig:1loopeff}\,(a)--(c)) as well as of the
+penguin type (fig.\ \ref{fig:1loopeff}\,(d.1) and (d.2)) have to be
+evaluated.  In this process no new operators are generated, so that
+$Q_1,\ldots, Q_6$ form a complete set. They ``close under
+renormalization''. In analogy to the case of
+subsection~\ref{sec:basicform:ope} the divergent parts of these Green
+functions determine, after field renormalization, the operator
+renormalization constants, which in the present case form a $6\times 6$
+matrix. The calculation of the corresponding anomalous dimension matrix
+and the renormalization group analysis then proceeds in the usual way.
+We will see that the inclusion of higher order electroweak interactions
+requires the introduction of still more operators.
+
+\subsection{Summary of Basic Formalism}
+            \label{sec:basicform:summary}
+We think that after this rather detailed discussion of the methods
+required for the short-distance calculations in weak decays, it is
+useful to give at this point a concise summary of the material
+covered so far. At the same time this may serve as an outline of the
+necessary procedure for practical calculations. Furthermore it will
+also provide a starting point for the extension of the formalism
+from the LLA considered until now to the NLLA to be presented
+in the next subsection.
+
+Ultimately our goal is the evaluation of weak decay amplitudes
+involving hadrons in the framework of a low energy effective theory,
+of the form
+\begin{displaymath}
+\langle {\cal H}_{eff}\rangle={G_F\over\sqrt{2}}V_{CKM}
+\langle \vec Q^T(\mu)\rangle \vec C(\mu)
+\end{displaymath}
+The procedure for this calculation can be divided into the
+following three steps.
+
+\bigskip
+\noindent
+{\bf Step 1: Perturbation Theory}
+\\
+Calculation of Wilson coefficients $\vec C(\mu_W)$ at
+$\mu_W\approx M_W$ to the desired order in $\as$. Since
+logarithms of the form $\ln(\mu_W/M_W)$ are not large, this can be
+performed in ordinary perturbation theory. It amounts to matching
+the full theory onto a five quark effective theory.\\
+
+\medskip
+\noindent
+{\bf Step 2: RG Improved Perturbation Theory}
+\\
+\begin{itemize}
+\item Calculation of the anomalous dimensions of the operators
+\item Solution of the renormalization group equation for $\vec{C}(\mu)$
+\item Evolution of the coefficients from $\mu_W$ down to the
+appropriate low energy scale $\mu$
+\begin{displaymath}
+\vec C(\mu)=U(\mu, \mu_W)\vec C(\mu_W)
+\end{displaymath}
+\end{itemize}
+
+\medskip
+\noindent
+{\bf Step 3: Non-Perturbative Regime}
+\\
+Calculation of hadronic matrix elements $\langle\vec Q(\mu)\rangle$,
+normalized at the appropriate low energy scale $\mu$, by means of
+some non-perturbative method.
+
+\bigskip
+\noindent
+Important issues in this procedure are:
+\begin{itemize}
+\item The OPE achieves a {\it factorization\/} of short- and long
+distance contributions.
+\begin{itemize}
+\item
+Correspondingly, in order to disentangle the short-distance from the
+long-distance part and to extract $\vec C(\mu_W)$ in actual
+calculations, a proper {\it matching\/} of the full onto the
+{\it effective theory\/} has to be performed.
+\item Similar comments apply to the matching of an effective theory
+with $f$ quark flavors to a theory with $(f-1)$ flavors during the
+RG evolution to lower scales.
+\item Furthermore, factorization implies, that the $\mu$-dependence
+and also the dependence on the renormalization scheme, which
+appears beyond the leading order, cancel between $C_i$ and
+$\langle Q_i\rangle$.
+\item Since the top quark is integrated out along with the W, the
+coefficients $\vec C(\mu_W)$ in general contain also the full dependence
+on the top quark mass $m_t$.
+\end{itemize}
+\item A {\it summation of large logs\/} by means of the RG method is
+necessary. More specifically, in the $n$-th order of
+renormalization group improved perturbation theory the terms of the
+form
+\begin{displaymath}
+\as^n(\mu)\left(\as(\mu)\ln{M_W\over\mu}\right)^k
+\end{displaymath}
+are summed to all orders in $k$ ($k$=0, 1, 2,$\ldots$). This approach
+is justified as long as $\as(\mu)$ is small enough, which
+requires that $\mu$ not be too low, typically not less than $1\gev$.
+\end{itemize}
+
+\subsection{Wilson Coefficients Beyond Leading Order}
+            \label{sec:basicform:wc}
+\subsubsection{The RG Formalism}
+               \label{sec:basicform:wc:rgf}
+We are now going to extend the renormalization group formalism for
+the coefficient functions to the next-to-leading order level.
+Subsequently we will discuss important aspects of the resulting
+formulae, in particular the scale- and scheme dependences and their
+cancellation.\\
+To have something specific in mind, we may consider the calculation
+for the $\dS$ effective hamiltonian for nonleptonic decays, which
+without QCD effects and for low energy is given by
+\begin{equation}\label{hds1}
+{\cal H}^{\dS}_{eff}={G_F\over\sqrt{2}}V^\ast_{us}V_{ud}
+  (\bar su)_{V-A}(\bar ud)_{V-A}   \end{equation}
+At higher energies of course also the charm, bottom and top quark
+have to be taken into account. The Feynman diagrams contributing to
+$\ord(\as)$ corrections to this hamiltonian are shown in
+fig.~\ref{fig:1loopful} and \ref{fig:1loopeff}.
+Including current-current- as well as penguin type corrections, the
+relevant operator basis consists of the six operators in \eqn{q16}.
+\\
+On the one hand, this particular case is very important by itself since
+it provides the theoretical basis for a large variety of different
+decay modes. On the other hand we will at this stage keep the
+discussion fairly general, so that all important features of a general
+validity are exhibited. In addition, the central formulae of this
+subsection will be used at several places later on, if at times
+extended or modified to match the specific cases in question. In
+part two of this report we will give a more detailed discussion of
+the hamiltonians relevant for various decays. Here, we would rather like
+to concentrate on the presentation of the OPE and renormalization group
+formalism.
+\\
+The effective hamiltonian for nonleptonic decays may be written in
+general as
+\begin{equation}\label{hqtc}
+{\cal H}_{eff}={G_F\over\sqrt{2}}\sum_i C_i(\mu)Q_i(\mu)\equiv
+  {G_F\over\sqrt{2}}\vec Q^T(\mu) \vec C(\mu)   \end{equation}
+where the index $i$ runs over all contributing operators, in our
+example $Q_1,\ldots, Q_6$ of \eqn{q16}. It is straightforward to
+apply ${\cal H}_{eff}$ to D- and B-meson decays as well by changing
+the quark flavors appropriately. For the time being we omit CKM
+parameters, which can be reinserted later on. $\mu$ is some low
+energy scale of the order $\ord(1\gev)$, $\ord(m_c)$ and $\ord(m_b)$
+for K-, D- and B-meson decays, respectively. The argument $\mu$ of the
+operators $Q_i(\mu)$ means, that their matrix elements are to be
+normalized at scale $\mu$.\\
+The Wilson coefficient functions are given by
+\begin{equation}\label{cucw}
+\vec C(\mu)=U(\mu, \mu_W)\vec C(\mu_W)   \end{equation}
+The coefficients at the scale $\mu_W=\ord(M_W)$ can be evaluated in
+perturbation theory. The evolution matrix $U$ then includes the
+renormalization group improved perturbative contributions from the
+scale $\mu_W$ down to $\mu$.\\
+In the first step we determine $\vec C(\mu_W)$ from a comparison of
+the amputated Green function with appropriate external lines in the
+full theory with the corresponding amplitude in the effective theory.
+At NLO we have to calculate to $\ord(\as)$, including
+non-logarithmic, constant terms. The full amplitude results from
+the current-current- and penguin type diagrams in fig.~\ref{fig:1loopful},
+is finite after field renormalization and can be written as
+\begin{equation}\label{aa01} A=
+{G_F\over\sqrt{2}}\vec S^T(\vec A^{(0)}+{\as(\mu_W)\over 4\pi}\vec A^{(1)})\end{equation}
+Here $\vec S$ denotes the tree level matrix elements of the
+operators $\vec Q$.
+In the effective theory \eqn{hqtc} the current-current- and penguin
+corrections of fig.~\ref{fig:1loopeff} have to be calculated for all
+the operators $Q_i$. In this case, besides the field renormalization, a
+renormalization of operators is necessary
+\begin{equation}\label{q0z3}
+Z^2_q\langle\vec Q\rangle^{(0)}=Z\langle\vec Q\rangle  \end{equation}
+where the matrix Z absorbes those divergences of the Green functions
+with operator $\vec Q$ insertion, that are not removed by the field
+renormalization. The renormalized matrix elements of the operators
+can then to $\ord(\as)$ be written as
+\begin{equation}\label{qars}
+\langle\vec Q(\mu_W)\rangle=(1+{\as(\mu_W)\over 4\pi} r)\vec S  \end{equation}
+and the amplitude in the effective theory to the same order becomes
+\begin{equation}\label{aeff}  A_{eff}=
+{G_F\over\sqrt{2}}\vec S^T(1+{\as(\mu_W)\over 4\pi} r^T) \vec C(\mu_W)\end{equation}
+Equating \eqn{aa01} and \eqn{aeff} we obtain
+\begin{equation}\label{cmuw} \vec C(\mu_W)=
+\vec A^{(0)}+{\as(\mu_W)\over 4\pi}(\vec A^{(1)}-r^T\vec A^{(0)})  \end{equation}
+In general $\vec A^{(1)}$ in \eqn{aa01} involves logarithms
+$\ln(M^2_W/-p^2)$ where p denotes some global external momentum for the
+amplitudes in fig.~\ref{fig:1loopful}.  On the other hand, the matrix
+$r$ in \eqn{qars}, characterizing the radiative corrections to
+$\langle\vec Q(\mu_W)\rangle$, includes $\ln(-p^2/\mu^2_W)$. As we have
+seen in subsection \ref{sec:basicform:ope}, these logarithms combine to
+$\ln(M^2_W/\mu^2_W)$ in the Wilson coefficient \eqn{cmuw}. For
+$\mu_W=M_W$ this logarithm vanishes altogether. For $\mu_W=\ord(M_W)$
+the expression $\ln(M^2_W/\mu^2_W)$ is a ``small logarithm'' and the
+correction $\sim\as \ln(M^2_W/\mu^2_W)$, which could be neglected in
+LLA, has to be kept in the perturbative calculation at NLO together
+with constant pieces of order $\ord(\as)$.
+\\
+In the second step, the renormalization group equation for $\vec C$
+\begin{equation}\label{rgcv}
+{d\over d\ln\mu}\vec C(\mu)=\gamma^T(g)\vec C(\mu)   \end{equation}
+has to be solved with boundary condition \eqn{cmuw}. The solution is
+written with the help of the U-matrix as in \eqn{cucw}, where
+$U(\mu, \mu_W)$ obeys the same equation as $\vec C(\mu)$ in \eqn{rgcv}.
+The general solution is easily written down iteratively
+\begin{equation}\label{uit}
+U(\mu, m)=1+\int^{g(\mu)}_{g(m)}dg_1{\gamma^T(g_1)\over\beta(g_1)}+
+\int^{g(\mu)}_{g(m)}dg_1\int^{g_1}_{g(m)}dg_2
+{\gamma^T(g_1)\over\beta(g_1)}{\gamma^T(g_2)\over\beta(g_2)}+\ldots \end{equation}
+which using $dg/d\ln\mu=\beta(g)$ is readily seen to solve the
+renormalization group equation
+\begin{equation}\label{rgu}
+{d\over d\ln\mu}U(\mu, m)=\gamma^T(g)U(\mu, m)   \end{equation}
+The series in \eqn{uit} can be more compactly expressed by introducing
+the notion of g-ordering
+\begin{equation}\label{utge}
+U(\mu, m)=T_g \exp\int^{g(\mu)}_{g(m)}dg'{\gamma^T(g')\over\beta(g')}\end{equation}
+where in the case $g(\mu)>g(m)$ the g-ordering operator $T_g$ is
+defined through
+\begin{equation}\label{tgdf}
+T_g f(g_1)\ldots f(g_n)=\sum_{perm}
+\Theta(g_{i_1}-g_{i_2})\Theta(g_{i_2}-g_{i_3})\ldots
+\Theta(g_{i_{n-1}}-g_{i_n})f(g_{i_1})\ldots f(g_{i_n}) \end{equation}
+and brings about an ordering of the factors $f(g_i)$ such that the
+coupling constants increase from right to left. The sum in \eqn{tgdf} runs
+over all permutations $\{i_1,\ldots, i_n\}$ of $\{1, 2,\ldots, n\}$.
+The $T_g$ ordering is necessary since in general the anomalous
+dimension matrices at different couplings do not commute beyond the
+leading order, $[\gamma(g_1), \gamma(g_2)]\not= 0$.\\
+At next-to-leading order we have to keep the first two terms in the
+perturbative expansions for $\beta(g)$ (see \eqn{bg01}) and $\gamma(g)$
+\begin{equation}\label{gg01}
+\gamma(\as)=\gamma^{(0)}\aspi + \gamma^{(1)}\left(\aspi\right)^2
+\end{equation}
+To this order the evolution matrix $U(\mu, m)$ is given by
+\cite{burasetal:92a}
+\begin{equation}\label{u0jj}
+U(\mu,m)=
+(1+{\as(\mu)\over 4\pi} J) U^{(0)}(\mu,m) (1-{\as(m)\over 4\pi} J)
+\end{equation}
+$U^{(0)}$ is the evolution matrix in leading logarithmic approximation
+and the matrix $J$ expresses the next-to-leading corrections to this
+evolution. We have
+\begin{equation}\label{u0vd} U^{(0)}(\mu,m)= V
+\left({\left[{\as(m)\over\as(\mu)}\right]}^{{\vec\gamma^{(0)}\over 2\beta_0}}
+   \right)_D V^{-1}   \end{equation}
+where $V$ diagonalizes ${\gamma^{(0)T}}$
+\begin{equation}\label{ga0d} \gamma^{(0)}_D=V^{-1} {\gamma^{(0)T}} V  \end{equation}
+and $\vec\gamma^{(0)}$ is the vector containing the diagonal elements of
+the diagonal matrix $\gamma^{(0)}_D$.\\
+If we define
+\begin{equation}\label{gvg1} G=V^{-1} {\gamma^{(1)T}} V   \end{equation}
+and a matrix $H$ whose elements are
+\begin{equation}\label{sij} H_{ij}=\delta_{ij}\gamma^{(0)}_i{\beta_1\over 2\beta^2_0}-
+    {G_{ij}\over 2\beta_0+\gamma^{(0)}_i-\gamma^{(0)}_j}  \end{equation}
+the matrix $J$ is given by
+\begin{equation}\label{jvs} J=V H V^{-1}   \end{equation}
+The fact that \eqn{u0jj} is indeed a solution of the RG equation \eqn{rgu}
+to the order considered is straightforwardly verified by differentiation
+with respect to $\ln\mu$. Combining now the initial values \eqn{cmuw}
+with the evolution matrix \eqn{u0jj} we obtain
+\begin{equation}\label{cjua} \vec C(\mu)=(1+{\as(\mu)\over 4\pi} J)U^{(0)}(\mu,\mu_W)
+(\vec A^{(0)}+{\as(\mu_W)\over 4\pi}[\vec A^{(1)}-(r^T+J)\vec A^{(0)}])\end{equation}
+Using \eqn{cjua} we can calculate for example the coefficients at a scale
+$\mu=\mu_b=\ord(m_b)$, working in an effective five flavor theory, $f=5$.
+If we have to evolve the coefficients to still lower values, we would
+like to formulate a new effective theory for $\mu<\mu_b$ where now
+also the b-quark is removed as an explicit degree of freedom. To
+calculate the coefficients in this new four flavor theory at the
+scale $\mu_b$, we have to determine the matching corrections at
+this scale.\\
+We follow the same principles as in the case of integrating out the
+W-boson and require
+\begin{equation}\label{qfcf}
+\langle\vec Q_f(m)\rangle^T\vec C_f(m)=
+\langle\vec Q_{f-1}(m)\rangle^T\vec C_{f-1}(m)  \end{equation}
+in the general case of a change from an f-flavor to a (f--1)-flavor
+theory at a scale $m$. The ``full amplitude'' on the l.h.s., which is
+now in an f-flavor effective theory, is expanded into matrix elements
+of the new (f--1)-flavor theory, multiplied by new Wilson coefficients
+$\vec C_{f-1}$. From \eqn{qars}, determining the matrix elements of
+operators to $\ord(\as)$, one finds
+\begin{equation}\label{qfdr}
+\langle\vec Q_f(m)\rangle=(1+{\as(m)\over 4\pi} \delta r)
+\langle\vec Q_{f-1}(m)\rangle    \end{equation}
+where
+\begin{equation}\label{drrf} \delta r=r^{(f)}-r^{(f-1)}
+\end{equation}
+In \eqn{drrf} we have made explicit the dependence of the matrix $r$
+on the number of quark flavors which enters in our example via the
+penguin contributions. From \eqn{qfcf} and \eqn{qfdr} we find
+\begin{equation}\label{cmcf}
+\vec C_{f-1}(m)=M(m)\vec C_f(m)  \end{equation}
+with
+\begin{equation}\label{mdrt}  M(m)=1+{\as(m)\over 4\pi} \delta r^T  \end{equation}
+The general renormalization group matrix $U$ in \eqn{u0jj}, now
+evaluated for (f--1) flavors, can be used to evolve $\vec C_{f-1}(m)$
+to lower values of the renormalization scale. It is clear that no
+large logarithms can appear in \eqn{mdrt} and that therefore the
+matching corrections, expressed in the matrix $M(m)$ can be
+computed in usual perturbation theory. We note that this type of
+matching corrections enters in a nontrivial way for the first time
+at the NLO level. In the LLA $M\equiv 1$ and one can simply omit the
+b-flavor components in the penguin operators when crossing the
+b-threshold.\\
+We also remark that the correction matrix $M$ introduces a small
+discontinuity of the coefficients, regarded as functions of $\mu$,
+at the matching scale $m$. This is however not surprising. In any
+case the $\vec C(\mu)$ are not physical quantities and their
+discontinuity precisely cancels the effect of removing the heavy
+quark flavor from the operators, which evidently is a
+``discontinuous'' step. Hence, physical amplitudes are not
+affected and indeed the behaviour of $\vec C$ at the matching scale
+ensures that the same physical result will be obtained,
+whether we choose to calculate in the f-flavor- or in the (f--1)-flavor
+theory for scales around the matching scale $m$.\\
+To conclude we will write down how the typical final result for
+the coefficient functions at $\mu\approx 1\gev$, appropriate for
+K-decays, looks like, if we combine all the contributions discussed
+above. Then we can write
+\begin{equation}\label{cthr}
+\vec C(\mu)=U_3(\mu,\mu_c)M(\mu_c)U_4(\mu_c,\mu_b)M(\mu_b)
+U_5(\mu_b,\mu_W)\vec C(\mu_W)  \end{equation}
+where $U_f$ is the evolution matrix for $f$ active flavors.
+In the following discussion we will not always include the flavor
+thresholds when writing the expression for the RG evolution. It is
+clear, that they can be added in a straightforward fashion.
+
+\subsubsection{The Calculation of the Anomalous Dimensions}
+               \label{sec:basicform:wc:adm}
+The matrix of anomalous dimensions is the most important ingredient
+for the renormalization group calculation of the Wilson coefficient
+functions. In the following we will summarize the essential steps of
+its calculation.\\
+Recall that the evaluation of the amputated Green functions with
+insertion of the operators $\vec Q$ gives the relation
+\begin{equation}\label{qzgf}
+\langle\vec Q\rangle^{(0)}=Z^{-2}_q Z\langle\vec Q\rangle
+\equiv Z_{GF}\langle\vec Q\rangle   \end{equation}
+$\langle\vec Q\rangle^{(0)}$, $\langle\vec Q\rangle$ denote the
+unrenormalized and renormalized Green functions, respectively.
+$Z_q$ is the quark field renormalization constant and $Z$ is the
+renormalization constant matrix of the operators $\vec Q$.\\
+The anomalous dimensions are given by
+\begin{equation}\label{gaz2}
+\gamma(g)=Z^{-1}{d\over d\ln\mu}Z   \end{equation}
+In the $MS$ (or $\overline{MS}$) scheme the renormalization constants
+are chosen to absorb the pure pole divergences $1/\eps^k$
+($D=4-2\eps$), but no finite parts. $Z$ can then be expanded in
+inverse powers of $\eps$ as follows
+\begin{equation}\label{zeps}
+Z=1+\sum^\infty_{k=1}{1\over\eps^k}Z_k(g)  \end{equation}
+Using the expression for the $\beta$-function \eqn{bete}, valid for
+arbitrary $\eps$ we derive the useful formula \cite{floratosetal:77}
+\begin{equation}\label{ggz1}
+\gamma(g)=-2g^2{\partial Z_1(g)\over\partial g^2}
+=-2\as{\partial Z_1(\as)\over\partial \as}  \end{equation}
+Similarly to \eqn{zeps} we expand
+\begin{equation}\label{zqep}
+Z_q=1+\sum^\infty_{k=1}{1\over\eps^k}Z_{q,k}(g)  \end{equation}
+\begin{equation}\label{zgfe}
+Z_{GF}=1+\sum^\infty_{k=1}{1\over\eps^k}Z_{GF,k}(g)  \end{equation}
+From the calculation of the unrenormalized Green functions \eqn{qzgf}
+we immediately obtain $Z_{GF}$. What we need to compute $\gamma(g)$
+is $Z_1(g)$ \eqn{ggz1}. From \eqn{qzgf}, \eqn{zeps}, \eqn{zqep}, \eqn{zgfe}
+we find
+\begin{equation}\label{zqgf}
+Z_1=2Z_{q,1}+Z_{GF,1}  \end{equation}
+At next-to-leading order we have from the $1/\eps$ poles of the
+unrenormalized Green functions
+\begin{equation}\label{zgf1}
+Z_{GF,1}=b_1 \aspi + b_2 \left(\aspi\right)^2  \end{equation}
+The corresponding expression for the well known factor $Z_{q,1}$
+has been quoted in \eqn{zq1a}. Using \eqn{zq1a}, \eqn{ggz1},
+\eqn{zqgf}, \eqn{zgf1} we finally obtain for the one- and two-loop
+anomalous dimension matrices $\gamma^{(0)}$ and $\gamma^{(1)}$ in
+\eqn{gg01}
+\begin{equation}\label{a1b1}
+\gamma^{(0)}_{ij}=-2[2a_1 \delta_{ij}+(b_1)_{ij}]  \end{equation}
+\begin{equation}\label{a2b2}
+\gamma^{(1)}_{ij}=-4[2a_2 \delta_{ij}+(b_2)_{ij}]  \end{equation}
+\eqn{a1b1} and \eqn{a2b2} may be used as recipes to immediately extract
+the anomalous dimensions from the divergent parts of the
+unrenormalized Green functions.
+
+\subsubsection{Renormalization Scheme Dependence}
+               \label{sec:basicform:wc:rgdep}
+A further issue, which becomes important at next-to-leading order is
+the dependence of unphysical quantities, like the Wilson coefficients
+and the anomalous dimensions, on the choice of the renormalization
+scheme. This scheme dependence arises because the renormalization
+prescription involves an arbitrariness in the finite parts to be
+subtracted along with the ultraviolet singularities.  Two different
+schemes are then related by a finite renormalization.  Considering the
+quantities, which we encountered in
+subsection~\ref{sec:basicform:wc:rgf}, the following of them are
+independent of the renormalization scheme
+\begin{equation}\label{rsi}
+\beta_0,\quad\beta_1,\quad\gamma^{(0)},\quad\vec A^{(0)},\quad
+\vec A^{(1)},\quad r^T+J,\quad\langle\vec Q\rangle^T\vec C  \end{equation}
+whereas
+\begin{equation}\label{rsd}
+r,\quad\gamma^{(1)},\quad J,\quad\vec C,\quad\langle\vec Q\rangle \end{equation}
+are scheme dependent.\\
+In the framework of dimensional regularization one example of how
+such a scheme dependence can occur is the treatment of $\gf$ in $D$
+dimensions.
+Possible choices are the ``naive dimensional regularization'' (NDR)
+scheme with $\gf$ taken to be
+anticommuting or the 't-Hooft--Veltman (HV) scheme
+\cite{thooft:72}, \cite{breitenlohner:77} with
+non-anticommuting $\gf$. Another example is the use of operators in
+a color singlet or a non-singlet form, such as
+\begin{equation}\label{qtwi}
+Q_2=(\bar s_iu_i)_{V-A}(\bar u_jd_j)_{V-A}
+\quad \hbox{\rm or}\quad
+\tilde Q_2=(\bar s_id_j)_{V-A}(\bar u_ju_i)_{V-A} \end{equation}
+where $i$, $j$ are color indices. In $D=4$ dimensions these operators
+are equivalent since they are related by a Fierz transformation. In
+the NDR scheme however these two choices yield different results
+for $r$, $\gamma^{(1)}$ and $J$ and thus constitute two different
+schemes, related by a nontrivial finite renormalization. On the
+other hand, both choices give the same $r$, $\gamma^{(1)}$ and $J$
+if the HV scheme is employed.\\
+Let us now discuss the question of renormalization scheme dependences
+in explicit terms in order to obtain an overview on how the
+scheme dependences arise, how various quantities transform under a
+change of the renormalization scheme and how the cancellation of
+scheme dependences is guaranteed for physically relevant
+quantities.\\
+First of all, it is clear that the product
+\begin{equation}\label{qtc}
+\langle\vec Q(\mu)\rangle^T\vec C(\mu)  \end{equation}
+representing the full amplitude, is independent of the
+renormalization scheme chosen. This is simply due to the fact, that
+it is precisely the factorization of the amplitude into Wilson coefficients
+and matrix elements of operators by means of the operator product
+expansion, which introduces the scheme dependence of $\vec C$ and
+$\langle\vec Q\rangle$. In other words, the scheme dependence of
+$\vec C$ and $\langle\vec Q\rangle$ represents the arbitrariness one
+has in splitting the full amplitude into coefficients and matrix
+elements and the scheme independence of the combined product \eqn{qtc}
+is manifest in the construction of the operator product expansion.
+\\
+More explicitly, these quantities are in different schemes
+(primed and unprimed) related by
+\begin{equation}\label{rsqc}\langle\vec Q\rangle'=(1+\aspi s)\langle\vec Q\rangle\qquad
+ \vec C'=(1-\aspi s^T)\vec C  \end{equation}
+ where $s$ is a constant matrix. \eqn{rsqc} represents a finite
+renormalization of $\vec C$ and $\langle\vec Q\rangle$.
+From \eqn{qars} we immediately obtain
+\begin{equation}\label{rprs}  r'=r+s  \end{equation}
+Furthermore from
+\begin{equation}\label{qtuc} \langle\vec Q(\mu)\rangle^T\vec C(\mu)\equiv
+  \langle\vec Q(\mu)\rangle^T U(\mu,M_W) \vec C(M_W)  \end{equation}
+we have
+\begin{equation}\label{upus} U'(\mu,M_W)=
+(1-{\as(\mu)\over 4\pi}s^T)U(\mu,M_W)(1+{\as(M_W)\over 4\pi}s^T)  \end{equation}
+A comparison with \eqn{u0jj} yields
+\begin{equation}\label{jpjs} J'=J-s^T \end{equation}
+The renormalization constant matrix in the primed scheme, $Z'$,
+follows from \eqn{rsqc} and \eqn{qzgf}
+\begin{equation}\label{zpzs}  Z'=Z (1- \aspi s)  \end{equation}
+Recalling the definition of the matrix of anomalous dimensions,
+\eqn{gaz2} and \eqn{gg01}, we derive
+\begin{equation}\label{gpgs}\gamma^{(0)\prime}=\gamma^{(0)} \qquad
+ \gamma^{(1)\prime}=\gamma^{(1)}+[s,\gamma^{(0)}]+2\beta_0 s \end{equation}
+With these general formulae at hand it is straightforward to
+clarify the cancellation of scheme dependences in all particular
+cases. Alternatively, they may be used to transform scheme
+dependent quantities from one scheme to another, if desired, or to
+check the compatibility of results obtained in different schemes.
+\\
+In particular we immediately verify from \eqn{rprs} and \eqn{jpjs} the
+scheme independence of the matrix $r^T+J$. This means that in the
+expression for $\vec C$ in \eqn{cjua} the factor on the right hand
+side of $U^{(0)}$, related to the ``upper end'' of the evolution,
+is independent of the renormalization scheme, as it must be. The
+same is true for $U^{(0)}$. On the other hand $\vec C$ still
+depends on the renormalization scheme through the matrix $J$ to the
+left of $U^{(0)}$. As is evident from \eqn{rsqc},
+this dependence is compensated for by the
+corresponding scheme dependence of the matrix elements of operators
+so that a physically meaningful result for the decay amplitudes
+is obtained.
+To ensure a proper cancellation of the scheme dependence the matrix
+elements have to be evaluated in the same scheme
+(renormalization, $\gf$, form of operators) as the coefficient
+functions, which is a nontrivial task for the necessary
+non-perturbative computations. In other words, beyond the leading
+order the matching between short- and long-distance contributions has
+to be performed properly not only with respect to the scale $\mu$,
+but also with respect to the renormalization scheme employed.
+
+\subsubsection{Discussion}
+               \label{sec:basicform:wc:disc}
+We will now specialize the presentation of the general formalism to the
+case of a single operator (that is without mixing).  This situation is
+e.g.\ relevant for the operators $Q_+$ and $Q_-$ with four different quark
+flavors, which we encountered in section~\ref{sec:basicform:ope}. The
+resulting simplifications are useful in order to display some more
+details of the structure of the calculation and to discuss the most
+salient features of the NLO analysis in a transparent way.
+\\
+In the case where only one single operator contributes, the
+amplitude in the full theory (dynamical W-boson) may be written as
+(see \eqn{aa01})
+\begin{equation}\label{amp2}
+A={G_F\over\sqrt{2}}(1+{\as(\mu_W)\over 4\pi}\left[-{\gamma^{(0)}\over 2}
+\ln{M^2_W\over -p^2}+\tilde A^{(1)}\right]) S  \end{equation}
+where we have made the logarithmic dependence on the W mass explicit.
+In the effective theory the amplitude reads
+\begin{eqnarray}\label{aef2}
+A_{eff}&=&{G_F\over\sqrt{2}}C(\mu_W)\langle Q(\mu_W)\rangle \\
+&=&{G_F\over\sqrt{2}}C(\mu_W)(1+{\as(\mu_W)\over 4\pi}\left[{\gamma^{(0)}\over 2}
+ \left(\ln{-p^2\over\mu^2_W}+\gamma_E-\ln 4\pi\right)+\tilde r
+ \right])S   \nonumber
+\end{eqnarray}
+The divergent pole term $1/\eps$ has been subtracted minimally. A
+comparison of \eqn{amp2} and \eqn{aef2} yields the Wilson coefficient
+\begin{equation}\label{cmw2}
+ C(\mu_W)=1+{\as(\mu_W)\over 4\pi}\left[-{\gamma^{(0)}\over 2}
+ \left(\ln{M^2_W\over\mu^2_W}+\gamma_E-\ln 4\pi\right)+B\right] \end{equation}
+where
+\begin{equation}\label{ba1r} B=\tilde A^{(1)}-\tilde r  \end{equation}
+In the leading log approximation we had simply $C(\mu_W)=1$. By
+contrast at NLO the $\ord(\as)$ correction has to be taken into
+account in addition. This correction term exhibits the following
+new features:
+\begin{itemize}
+\item The expression $\gamma_E-\ln 4\pi$, which is characteristic to
+dimensional regularization appears. It is proportional to $\gamma^{(0)}$.
+\item A constant term $B$ is present. $B$ depends on the
+factorization scheme chosen.
+\item An explicit logarithmic dependence on the matching scale
+$\mu_W$ shows up.
+\end{itemize}
+We discuss these points one by one.\\
+First, the term $\gamma_E-\ln 4\pi$ is characteristic for the $MS$
+scheme. It can be eliminated by going from the $MS$- to the
+$\overline{MS}$ scheme. This issue is well known in the literature.  We
+find it however useful to briefly repeat the definition of the
+$\overline{MS}$ scheme in the present context, since this is an
+important point for NLO analyses.
+\\
+Consider the RG solution for the coefficient
+\begin{eqnarray}\label{cja2}
+ \lefteqn{C(\mu)=} & & \\
+ & &(1+{\as(\mu)\over 4\pi}J)\left[{\as(\mu_W)\over \as(\mu)}\right]^{
+  \gamma^{(0)}\over 2\beta_0}
+ (1+{\as(\mu_W)\over 4\pi}\left[-{\gamma^{(0)}\over 2}
+ \left(\ln{M^2_W\over\mu^2_W}+\gamma_E-\ln 4\pi\right)+B-J\right])
+ \nonumber
+\end{eqnarray}
+This represents the solution for the $MS$ scheme. Therefore in
+\eqn{cja2} $\as=\alpha_{s,MS}$. The redefinition of $\alpha_{s,MS}$
+through
+\begin{equation}\label{amsb}
+\alpha_{s,MS}=\alpha_{s,\overline{MS}}\left(1+\beta_0(\gamma_E-\ln 4\pi)
+ {\alpha_{s,\overline{MS}}\over 4\pi}\right)  \end{equation}
+is a finite renormalization of the coupling,
+which defines the $\overline{MS}$ scheme. Since
+\begin{equation}\label{msbr}
+[\alpha_{s,MS}(\mu_W)]^{\gamma^{(0)}\over 2\beta_0}\doteq
+[\alpha_{s,\overline{MS}}(\mu_W)]^{\gamma^{(0)}\over 2\beta_0}
+\left(1+{\gamma^{(0)}\over 2}(\gamma_E-\ln 4\pi)
+{\alpha_{s,\overline{MS}}(\mu_W)\over 4\pi}\right)   \end{equation}
+we see, that this transformation eliminates, to the order considered,
+the $\gamma_E-\ln 4\pi$ term in \eqn{cja2}. At the lower end of the
+evolution the same redefinition yields a factor
+\begin{equation}\label{msbf}
+1-{\gamma^{(0)}\over 2}(\gamma_E-\ln 4\pi)
+{\alpha_{s,\overline{MS}}(\mu)\over 4\pi}   \end{equation}
+which removes the corresponding factor from the matrix element
+(see \eqn{aef2})
+\begin{equation}\label{msbq}
+\langle Q(\mu)\rangle_{MS}\equiv
+\left(1+{\gamma^{(0)}\over 2}(\gamma_E-\ln 4\pi)
+{\alpha_{s,\overline{MS}}(\mu)\over 4\pi}\right)
+\langle Q(\mu)\rangle_{\overline{MS}}   \end{equation}
+At the next-to-leading log level we are working, the transformation
+\eqn{amsb} is equivalent to a redefinition of the scale $\Lambda$
+according to
+\begin{equation}\label{msbl}
+\Lambda^2_{\overline{MS}}=4\pi e^{-\gamma_E}\Lambda^2_{MS}  \end{equation}
+as one can verify with the help of \eqn{amu}. In practice, one can
+just drop the ($\gamma_E-\ln 4\pi$) terms in \eqn{cja2}. Then $\as(\mu)$
+and $\Lambda$ are to be taken in the $\overline{MS}$ scheme.
+Throughout the present report it is always understood that the
+transformation to $\overline{MS}$ has been performed. Then
+\begin{equation}\label{msbc}
+ C(\mu)=(1+{\as(\mu)\over 4\pi}J)\left[{\as(\mu_W)\over\as(\mu)}\right]^{
+  \gamma^{(0)}\over 2\beta_0}
+ (1+{\as(\mu_W)\over 4\pi}\left[-{\gamma^{(0)}\over 2}
+ \ln{M^2_W\over\mu^2_W}+B-J\right]) \end{equation}
+Second, from the issue of the $MS$ -- $\overline{MS}$ transformation,
+or more generally an arbitrary redefinition of $\as$ (or $\Lambda$) one
+should distinguish the renormalization scheme dependence due to the
+ambiguity in the renormalization of the operator.  It suggests itself
+to use for the latter the term ``factorization scheme dependence''.
+This is the scheme dependence we have discussed in
+section~\ref{sec:basicform:wc:rgdep}. A change in the factorization
+scheme transforms $\gamma^{(1)}$, $B$ and $J$ as
+\begin{equation}\label{gbjs}
+{\gamma^{(1)}}'=\gamma^{(1)} + 2\beta_0 s
+\qquad B'=B - s
+\qquad J'=J - s
+\end{equation}
+where $s$ is a constant number. This follows from the formulae in
+section~\ref{sec:basicform:wc:rgdep} and from the definition of $B$ in
+\eqn{ba1r}. Note that in the case of a single operator the relation
+between $\gamma^{(1)}$ and $J$ simplifies to
+\begin{equation}\label{jg01}
+J={1\over 2\beta_0}\left({\beta_1\over\beta_0}\gamma^{(0)}
+  -\gamma^{(1)}\right)   \end{equation}
+Obviously the scheme dependence cancels in the difference
+$B-J$ in \eqn{msbc}.\\
+Third, due to the explicit $\mu_W$ dependence in the $\ord(\as)$
+correction term the coefficient function is, to the order considered,
+independent of the precise value of the matching scale $\mu_W$, as it
+must be. Indeed
+\begin{equation}\label{cmud}
+{d\over d\ln\mu_W}C(\mu)=\ord(\as^2)  \end{equation}
+since
+\begin{equation}\label{amud}
+{d\over d\ln\mu_W}\as(\mu_W)=-2\beta_0{\as(\mu_W)^2\over 4\pi}+\ord(\as^3)\end{equation}
+In the same way one can also convince oneself that the coefficient
+function is independent of the heavy quark threshold scales, up to
+terms of the neglected order.\\
+Of course the dependence on the low energy scale $\mu$ remains
+and has to be matched with the corresponding dependence of the
+operator matrix element.\\
+All the points we have mentioned here apply in an analogous
+manner also to the case with operator mixing, only the algebra is
+then slightly more complicated.
+
+We would like to stress once again that it is only at the NLO level,
+that these features enter the analysis in a nontrivial way, as should
+be evident from the presentation we have given above.
+
+\subsubsection{Evanescent Operators}
+               \label{sec:basicform:wc:evanop}
+Finally, we would like to mention the so called {\it evanescent}
+operators. These are operators which exist in $D\not=4$ dimensions but
+vanish in $D=4$. It has been stressed in \cite{burasweisz:90} that a
+correct calculation of two-loop anomalous dimensions requires a proper
+treatment of these operators. This discussion has been extended in
+\cite{dugan:91} and further generalized in \cite{herrlichnierste:94}.
+In view of a rather technical nature of this aspect we refer the
+interested reader to the papers quoted above.

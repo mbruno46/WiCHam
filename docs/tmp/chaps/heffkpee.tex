@@ -1,0 +1,387 @@
+\section{The Effective Hamiltonian for $\Kpiee$}
+         \label{sec:HeffKpe}
+The $\dS$ effective hamiltonian for $\Kpiee$ at scales $\mu < \mc$ is given by
+\begin{equation}
+\Heff(\dS) = \frac{G_F}{\sqrt{2}} \V{us}^* \V{ud}^{} \left[ \; \sum_{i=1}^{6,7V}
+             \left( z_i(\mu) + \tau \; y_i(\mu) \right) Q_i(\mu)
+             + \tau \; y_{7A}(\mw) \; Q_{7A}(\mw) \; \right]
+\label{eq:HeffKpe}
+\end{equation}
+with
+\begin{equation}
+\tau = - \frac{ \V{ts}^* \V{td}^{} }{ \V{us}^* \V{ud}^{} } \, .
+\label{eq:tauagain}
+\end{equation}
+
+\subsection{Operators}
+            \label{sec:HeffKpe:op}
+In \eqn{eq:HeffKpe} $Q_{1,2}$
+denote the $\dS$ current-current and $Q_3,\ldots,Q_6$ the QCD penguin
+operators of eq.~\eqn{eq:Kppbasis}. For scales $\mu > \mc$ again the
+current-current operators $Q^c_{1,2}$ of eq.~\eqn{eq:KppQ12c} have to
+be taken into account.
+
+The new operators specific to the decay $\Kpiee$ are
+\begin{eqnarray}
+Q_{7V} &=& (\bar{s} d)_{\rm V-A} (\bar{e} e)_{\rm V} \, ,
+\label{eq:Q7VKpe} \\
+Q_{7A} &=& (\bar{s} d)_{\rm V-A} (\bar{e} e)_{\rm A} \, .
+\label{eq:Q7AKpe}
+\end{eqnarray}
+They originate through the $\gamma$- and $Z^0$-penguin and box diagrams of
+fig.\ \ref{fig:1loopful}.
+
+It is convenient to introduce the auxiliary operator
+\begin{equation}
+Q'_{7V} = (\aem/\as) \; (\bar{s} d)_{\rm V-A} (\bar{e}e)_{\rm V}
+\label{eq:Q7VprimeKpe}
+\end{equation}
+and work for the renormalization group analysis in the basis
+$Q_1,\ldots,Q_6$, $Q'_{7V}$. The factor $\aem/\as$ in the definition of
+$Q'_{7V}$ implies that in this new basis the anomalous
+dimension matrix $\hg$ will be a function of $\as$ alone. At the end of the
+renormalization group analysis, this factor will be put back into the
+Wilson coefficient $C_{7V}(\mu)$ of the operator $Q_{7V}$ in
+eq.~\eqn{eq:Q7VKpe}. There is no need to include a similar factor in
+$Q_{7A}$ as this operator does not mix under renormalization with the
+remaining operators. Since $Q_{7A}$ has no anomalous dimension its Wilson
+coeffcient is $\mu$-independent.
+
+In principle one can think of including the electroweak four-quark
+penguin operators $Q_7,\ldots,Q_{10}$ of eq.~\eqn{eq:dF1:1010basis} in
+$\Heff$ of \eqn{eq:HeffKpe}. However, their Wilson coefficients and
+matrix elements for the decay $\Kpiee$ are both of order $\ord(\aem)$
+implying that these operators eventually would enter the amplitude
+$A(\Kpiee)$ at $\ord(\aem^2)$.  To the order considered here this
+contribution is thus negligible. This should be distinguished from the
+case of $\Kpipi$ discussed in section~\ref{sec:HeffdF1:1010}. There, in
+spite of being suppressed by $\aem/\as$ relative to QCD penguin
+operators, the electroweak penguin operators have to be included in the
+analysis because of the additional enhancement factor $\RE A_0/\RE A_2
+\simeq 22$ present in the formula for $\epe$ (see section
+\ref{sec:nloepe}). Such an enhancement factor is not present in the
+$\Kpiee$ case and the electroweak penguin operators can be safely
+neglected. \\
+Concerning the Wilson coefficients, the electroweak four-quark penguin
+operators would also affect through mixing under renormalization the
+coefficients $C_3,\ldots,C_6$ at $\ord(\aem)$ and $C_{7V}$ at
+$\ord(\aem^2)$.  Since the corresponding matrix elements are
+$\ord(\aem)$ and $\ord(1)$, respectively, we again obtain a negligible
+$\ord(\aem^2)$ effect in $A(\Kpiee)$. \\
+In summary, the electroweak four-quark penguin operators $Q_7, \ldots,
+Q_{10}$ can safely be neglected in the following discussion of
+$\Heff(\dS)$ for $\Kpiee$.
+
+We also neglect the ``magnetic moment'' operators.These operators,
+being of dimension five, do not influence the Wilson coefficients of
+the operators $Q_1,\ldots,Q_6$, $Q_{7V}$ and $Q_{7A}$. Since their
+contributions to $\Kpiee$ are suppressed by an additional factor $\ms$,
+they appear strictly speaking at higher order in chiral perturbation
+theory. On the other hand the magnetic moment type operators play a
+crucial role in $b \to s \gamma$ and $b \to d \gamma$ transitions as
+discussed in sections \ref{sec:Heff:BXsgamma} and
+\ref{sec:Heff:Bsgamma}. They also have to be kept in the decay $B\to
+X_se^+e^-$.
+
+\subsection{Wilson Coefficients}
+            \label{sec:HeffKpe:wc}
+Eqs.~\eqn{eq:WCy}--\eqn{eq:WCz} remain valid in the case of $\Kpiee$ with
+$\hU_{f}(m_1,m_2)$ and $\hM(m_i)$ now denoting $7 \times 7$ matrices in
+the $Q_1,\ldots,Q_6$, $Q'_{7V}$ basis. The Wilson coefficients are
+given by seven-dimensional column vectors $\vec{z}(\mu)$ and
+$\vec{v}(\mu)$ having components $(z_1,\ldots,z_6,z'_{7V})$ and
+$(v_1,\ldots,v_6,v'_{7V})$, respectively. Here
+\begin{equation}
+v'_{7V}(\mu) = \frac{\as(\mu)}{\aem} \; v_{7V}(\mu) \, ,
+\qquad\qquad
+z'_{7V}(\mu) = \frac{\as(\mu)}{\aem} \; z_{7V}(\mu)
+\end{equation}
+are the rescaled Wilson coefficients of the auxiliary operator $Q'_{7V}$
+used in the renormalization group evolution.
+
+The initial conditions $C_1(\mw),\ldots,C_6(\mw)$, $z_1(\mw)$, $z_2(\mw)$
+and $z_1(\mc),\ldots,z_6(\mc)$ for the four-quark operators $Q_1,\ldots,Q_6$
+are readily obtained from eqs.~\eqn{eq:CMw1QCD}--\eqn{eq:CMw6QCD},
+\eqn{eq:zMw12} and \eqn{eq:zmc}.
+
+The corresponding initial conditions for the remaining operators
+$Q'_{7V}$ and $Q_{7A}$ specific to $\Kpiee$ are then given in the NDR
+scheme by
+\begin{equation}
+C'_{7V}(\mw) = \frac{\as(\mw)}{2 \pi}
+\left[ \frac{C_0(x_t)-B_0(x_t)}{\sin^2\theta_W} -\tilde{D}_0(x_t) -
+4 C_0(x_t) \right]
+\label{eq:C7VprimeMw}
+\end{equation}
+and
+\begin{equation}
+C_{7A}(\mw) = 
+y_{7A}(\mw) = \frac{\aem}{2 \pi} \frac{B_0(x_t)-C_0(x_t)}{\sin^2\theta_W}.
+\label{eq:C7AMw}
+\end{equation}
+In order to find $z'_{7V}(\mc)$ which results from the diagrams of
+fig.\ \ref{fig:1loopeff}, we simply have to rescale the NDR result for
+$z_7(\mc)$ in eq.~\eqn{eq:zmc:1010} by a factor of $-3 \as/\aem$. This
+yields
+\begin{equation}
+z'_{7V}(\mc) = -\frac{\as(\mc)}{2 \pi} F_{\rm e}(\mc) \, .
+\label{eq:z7primemc}
+\end{equation}
+
+\subsection{Renormalization Group Evolution and Anomalous Dimension Matrices}
+            \label{sec:HeffKpe:rge}
+Working in the rescaled basis $Q_1,\ldots,Q_6$, $Q'_{7V}$ the anomalous
+dimension matrix $\hg$ has per construction a pure $\ord(\as)$ expansion
+\begin{equation}
+\hg = \frac{\as}{4\pi}       \gamma^{(0)} +
+      \frac{\as^2}{(4\pi)^2} \gamma^{(1)} + \ldots
+\, ,
+\label{eq:gsexpKpe}
+\end{equation}
+where $\hg^{(0)}$ and $\hg^{(1)}$ are $7 \times 7$ matrices. The
+evolution matrices $\hU_{f}(m_1,m_2)$ in eqs.~\eqn{eq:WCv} and
+\eqn{eq:WCz} are for the present case simply given by \eqn{eq:UQCDKpp}
+and \eqn{u0vd}--\eqn{jvs}.
+
+The $6 \times 6$ submatrix of $\gamma^{(0)}$ involving the
+operators $Q_1,\ldots,Q_6$ has already been given in eq.~\eqn{eq:gs0Kpp}.
+Here we only give the remaining entries of $\gamma^{(0)}$ related to
+the additional presence of the operator $Q'_{7V}$
+\begin{equation}
+\begin{array}{lclclcl}
+\gamma^{(0)}_{17} &=& -\frac{16}{9} N
+&\qquad&
+\gamma^{(0)}_{27} &=& -\frac{16}{9}
+\svs \\
+\gamma^{(0)}_{37} &=& -\frac{16}{9} N \left(u-\frac{d}{2}-\frac{1}{N} \right)
+&\qquad&
+\gamma^{(0)}_{47} &=& -\frac{16}{9} \left( u -\frac{d}{2} - N \right)
+\svs \\
+\gamma^{(0)}_{57} &=& -\frac{16}{9} N \left( u -\frac{d}{2} \right)
+&\qquad&
+\gamma^{(0)}_{67} &=& -\frac{16}{9} \left( u -\frac{d}{2} \right)
+\svs \\
+\gamma^{(0)}_{77} &=& -2 \beta_0 = -\frac{22}{3} N + \frac{4}{3} f
+&\qquad&
+\gamma^{(0)}_{7i} &=& 0 \qquad i=1,\ldots,6
+\svs
+\end{array}
+\label{eq:g0col7kpe}
+\end{equation}
+where $N$ denotes the number of colours. These elements have been first
+calculated in \cite{gilman:80} except that $\gamma^{(0)}_{37}$ and
+$\gamma^{(0)}_{47}$ have been corrected in \cite{eegpicek:88},
+\cite{flynn:89b}.
+
+The $6 \times 6$ submatrix of $\gamma^{(1)}$ involving the
+operators $Q_1,\ldots,Q_6$ has already been presented as $\gss$ in
+eq.~\eqn{eq:gs1ndrN3Kpp} and
+the seventh column of $\gamma^{(1)}$ is given as follows in the
+NDR scheme \cite{burasetal:94a}
+\begin{eqnarray}
+\gamma^{(1)}_{17} &=& \frac{8}{3} \left( 1 - N^2 \right) \, ,
+\nn \\
+\gamma^{(1)}_{27} &=& \frac{200}{81} \left( N - \frac{1}{N} \right) \, ,
+\nn \\
+\gamma^{(1)}_{37} &=& \frac{8}{3} \left( u - \frac{d}{2} \right) \left( 1
+    - N^2 \right) + \frac{464}{81} \left( \frac{1}{N} - N \right) \, ,
+\nn \\
+\gamma^{(1)}_{47} &=& \left( u \frac{280}{81} + d \frac{64}{81} \right)
+    \left( \frac{1}{N} - N \right) + \frac{8}{3} \left( N^2 - 1 \right) \, ,
+\label{eq:g1col7kpe} \\
+\gamma^{(1)}_{57} &=& \frac{8}{3} \left( u - \frac{d}{2} \right)
+                      \left( 1 - N^2 \right) \, ,
+\nn \\
+\gamma^{(1)}_{67} &=& \left( u \frac{440}{81} - d \frac{424}{81} \right)
+                      \left( N - \frac{1}{N} \right) \, ,
+\nn \\
+\gamma^{(1)}_{77} &=& -2 \beta_1 = -\frac{68}{3} N^2 + \frac{20}{3} N f +
+                      4 C_F f
+\nn \\
+\gamma^{(1)}_{7i} &=& 0 \qquad i=1,\ldots,6
+\nn
+\end{eqnarray}
+where $C_F = (N^2 -1)/(2 N)$. The corresponding results in the HV
+scheme can be found in \cite{burasetal:94a}.
+
+\subsection{Quark Threshold Matching Matrix}
+            \label{sec:HeffKpe:Mm}
+For the case of $\Kpiee$ the matching matrix $M(m)$ has in the
+basis $Q_1,\ldots,Q_6,Q'_{7V}$ the form
+\begin{equation}
+\hM(m) = 1 + \frac{\as(m)}{4 \pi} \; \vardrs^T
+\label{eq:MmKpe}
+\end{equation}
+where $1$ and $\vardrs^T$ are $7 \times 7$ matrices and $m$ is
+the scale of the quark threshold.
+
+The $6 \times 6$ submatrix of $\hM(m)$ involving $Q_1,\ldots,Q_6$ has been
+given in eq.~\eqn{eq:drsmbcKpp}. The remaining entries of $\vardrs$ can
+be found from the matrix $\vardre$ given in eqs.\ \eqn{eq:drsembdF1:1010}
+and \eqn{eq:drsemcdF1:1010} by making a simple rescaling by $-3 \;
+\as/\aem$ as in the case of $z_7(\mc)$.
+
+In summary, for the quark threshold $m = \mb$ the matrix $\vardrs$ reads
+\begin{equation}
+\vardrs =
+\left(
+\begin{array}{ccccccc}
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & -\frac{20}{9} \\
+0 & 0 & \frac{5}{27} & -\frac{5}{9} & \frac{5}{27} & -\frac{5}{9} &
+  -\frac{20}{27} \\
+0 & 0 & 0 & 0 & 0 & 0 & -\frac{20}{9} \\
+0 & 0 & \frac{5}{27} & -\frac{5}{9} & \frac{5}{27} & -\frac{5}{9} &
+  -\frac{20}{27} \\
+0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\right) \, .
+\label{eq:drsKpe}
+\end{equation}
+For $m=\mc$ the seventh column of $\vardrs$ in \eqn{eq:drsKpe} has
+to be multiplied by $-2$.
+
+\subsection{Numerical Results for the $\Kpiee$ Wilson Coefficients}
+            \label{sec:HeffKpe:numres}
+\begin{table}[htb]
+\caption[]{$K_{\rm L} \rightarrow \pi^0\,e^+\,e^-$ Wilson coefficients
+for $Q_{7V,A}$ at $\mu=1\gev$ for $\mt=170\gev$. The corresponding
+coefficients for $Q_1,\ldots,Q_6$ can be found in table \ref{tab:wc6smu1}
+of section \ref{sec:HeffdF1:66}.
+\label{tab:wckpemu1}}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+Scheme & LO & NDR & HV & LO & 
+NDR & HV & LO & NDR & HV \\
+\hline
+$z_{7V}/\aem$ & --0.014 & --0.015 & 0.005 & --0.024 & 
+--0.046 & --0.003 & --0.035 & --0.084 & --0.011 \\
+\hline
+$y_{7V}/\aem$ & 0.575 & 0.747 & 0.740 & 0.540 & 
+0.735 & 0.725 & 0.509 & 0.720 & 0.710 \\
+$y_{7A}/\aem$ & --0.700 & --0.700 & --0.700 & --0.700 & 
+--0.700 & --0.700 & --0.700 & --0.700 & --0.700 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+In the case of $K_L \to \pi^0 e^+ e^-$, due to
+$\gamma^{(0)}_{7i}=\gamma^{(1)}_{7i}=0$, $i=1,\ldots,6$ in
+eq.\ \eqn{eq:g0col7kpe} and \eqn{eq:g1col7kpe}, respectively, the RG
+evolution of $Q_1,\ldots,Q_6$ is completely unaffected by the additional
+presence of the operator $Q_{7V}$. The $K_L \to \pi^0 e^+ e^-$ Wilson
+coefficients $z_i$ and $y_i$, $i=1,\ldots,6$ at scale $\mu=1\gev$
+can therefore be found in table \ref{tab:wc6smu1} of section
+\ref{sec:HeffdF1:66}.
+\\
+The $K_L \to \pi^0 e^+ e^-$ Wilson coefficients for the remaining operators
+$Q_{7V}$ and $Q_{7A}$ are given in table \ref{tab:wckpemu1}. Some
+insight in the analytic structure of $y_{7V}$ will be gained by studying
+the analogous decay $B \to X_s e^+ e^-$ in section \ref{sec:Heff:BXsee}
+and also in section \ref{sec:KLpee} where the phenomenology of $K_L \to
+\pi^0 e^+ e^-$ will be presented.
+
+\begin{table}[htb]
+\caption[]{$K_{\rm L} \to \pi^0 e^+ e^-$ Wilson coefficients
+$z_{7V}/\aem$ and  $y_{7V}/\aem$ for $\mt=170\gev$ and various values
+of $\mu$.
+\label{tab:kpemuzy7}}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms=^{(4)}325\mev$} &
+  \multicolumn{3}{c| }{$\Lms=^{(4)}435\mev$} \\
+\hline
+Scheme & LO & NDR & HV & LO & NDR & HV & LO & NDR & HV \\
+\hline
+$\mu\,[\gev]$ & \multicolumn{9}{c|}{$z_{7V}/\aem$} \\
+\hline
+0.8 & --0.031 & --0.029 & 0.004 & --0.053 &
+      --0.081 & --0.012 & --0.077 & --0.149 & --0.023 \\
+1.0 & --0.014 & --0.015 & 0.005 & --0.024 &
+      --0.046 & --0.003 & --0.035 & --0.084 & --0.011 \\
+1.2 & --0.004 & --0.009 & 0.002 & --0.006 &
+      --0.029 &       0 & --0.009 & --0.051 & --0.002 \\
+\hline
+$\mu\,[\gev]$ & \multicolumn{9}{c|}{$y_{7V}/\aem$} \\
+\hline
+0.8 & 0.578 & 0.751 & 0.744 & 0.545 & 0.739 & 0.730 & 0.514 & 0.722 & 0.712 \\
+1.0 & 0.575 & 0.747 & 0.740 & 0.540 & 0.735 & 0.725 & 0.509 & 0.720 & 0.710 \\
+1.2 & 0.571 & 0.744 & 0.736 & 0.537 & 0.731 & 0.721 & 0.505 & 0.716 & 0.706
+\end{tabular}
+\end{center}
+\end{table}
+
+In table \ref{tab:kpemuzy7} we show the $\mu$-dependence of
+$z_{7V}/\aem$ and $y_{7V}/\aem$.  We find a pronounced scheme and
+$\mu$-dependence for $z_{7V}$.  This signals that these dependences
+have to be carefully addressed in the calculation of the CP conserving
+part in the $K_L \to \pi^0 e^+ e^-$ amplitude. On the other hand, the
+scheme and $\mu$-dependences for $y_{7V}$ are below $\ord(1.5\%)$.
+\\
+Similarly, $z_{7V}$ shows a strong dependence on the choice of the QCD
+scale $\Lms$ while this dependence is small or absent for $y_{7V}$ and
+$y_{7A}$, respectively.
+\\
+Finally, as seen from eq.\ \eqn{eq:z7primemc} $z_{7V}$ is independent
+of $\mt$. However, with in/decreasing $\mt$ in the range $\mt = (170
+\pm 15)\gev$ there is a relative variation of $\ord(\pm 3\%)$ and
+$\ord(\pm 14\%)$ for the absolute values of $y_{7V}$ and $y_{7A}$,
+respectively.
+This is illustrated further in fig.\ \ref{fig:kpiee:mty7VA} and table
+\ref{tab:kpey7VAmt} where the $\mt$ dependence of these coefficients is
+shown explicitly. Accidentally for $m_t\approx 175\gev$ one finds
+$|y_{7V}| \approx |y_{7A}|$.  Most importantly the impact of NLO
+corrections is to enhance the Wilson coefficient $y_{7V}$ by roughly
+$25\%$. As we will see in section \ref{sec:KLpee} this implies an
+enhancement of the direct CP violation in $\Kpiee$.
+
+\begin{figure}[hbt]
+\vspace{0.10in}
+\centerline{
+\epsfysize=5in
+\rotate[r]{
+\epsffile{ps/mty7VA.ps}
+} }
+\vspace{0.08in}
+\caption[]{
+Wilson coefficients $|y_{7V}/\aem|^2$ and $|y_{7A}/\aem|^2$ as a
+function of $\mt$ for $\Lms^{(4)}=325\mev$ at scale $\mu=1.0\gev$.
+\label{fig:kpiee:mty7VA}}
+\end{figure}
+
+\begin{table}[htb]
+\caption[]{$K_{\rm L} \to \pi^0 e^+ e^-$ Wilson coefficients
+$y_{7V}/\aem$ and $y_{7A}/\aem$ for $\mu=1.0\gev$ and various values of
+$\mt$.
+\label{tab:kpey7VAmt}}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c||c|}
+& \multicolumn{9}{c||}{$y_{7V}/\aem$} & $y_{7A}/\aem$ \\
+\hline
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=435\mev$} & \\
+\hline
+$\mt [\gev]$ & LO & NDR & HV & LO & NDR & HV & LO & NDR & HV & \\
+\hline
+150 & 0.546 & 0.719 & 0.711 & 0.512 & 
+0.706 & 0.697 & 0.481 & 0.692 & 0.681 & --0.576 \\
+160 & 0.560 & 0.733 & 0.726 & 0.526 & 
+0.721 & 0.711 & 0.495 & 0.706 & 0.696 & --0.637 \\
+170 & 0.575 & 0.747 & 0.740 & 0.540 & 
+0.735 & 0.725 & 0.509 & 0.720 & 0.710 & --0.700 \\
+180 & 0.588 & 0.761 & 0.753 & 0.554 & 
+0.748 & 0.739 & 0.523 & 0.734 & 0.723 & --0.765 \\
+190 & 0.601 & 0.774 & 0.766 & 0.567 & 
+0.761 & 0.752 & 0.536 & 0.747 & 0.736 & --0.833 \\
+200 & 0.614 & 0.786 & 0.779 & 0.580 & 
+0.774 & 0.764 & 0.549 & 0.760 & 0.749 & --0.902 \\
+\end{tabular}
+\end{center}
+\end{table}

@@ -1,0 +1,859 @@
+\section{$\epe$ Beyond Leading Logarithms}
+        \label{sec:nloepe}
+\subsection{Basic Formulae}
+           \label{subsec:epeformulae}
+The direct CP violation in $K \to \pi\pi$ is described by $\eps'$.
+The parameter $\eps'$ is given in terms of the amplitudes $A_0 \equiv
+A(K \to (\pi\pi)_{I=0})$ and $A_2 \equiv
+A(K \to (\pi\pi)_{I=2})$ as follows
+\begin{equation}
+\eps' = -\frac{\omega}{\sqrt{2}} \xi (1 - \Omega) \exp(i \Phi) \, ,
+\label{eq:epsprim}
+\end{equation}
+where
+\begin{equation}
+\xi = \frac{\IM A_0}{\RE A_0} \, , \quad
+\omega = \frac{\RE A_2}{\RE A_0} \, , \quad
+\Omega = \frac{1}{\omega} \frac{\IM A_2}{\IM A_0}
+\label{eq:xiomega}
+\end{equation}
+and $\Phi = \pi/2 + \delta_2 - \delta_0 \approx \pi/4$.
+
+When using \eqn{eq:epsprim} and \eqn{eq:xiomega} in phenomenological
+applications one usually takes $\RE A_0$ and $\omega$ from
+experiment, i.e.
+\begin{equation}
+\RE A_0 = 3.33 \cdot 10^{-7}\gev
+\qquad
+\RE A_2 = 1.50 \cdot 10^{-8}\gev
+\qquad
+\omega = 0.045
+\label{eq:ReA0data}
+\end{equation}
+where the last relation reflects the so-called $\Delta I=1/2$ rule. The
+main reason for this strategy is the unpleasant fact that until today
+nobody succeded in fully explaining this rule which to a large extent is
+believed to originate in the long-distance QCD contributions. We will be
+more specific about this in the next section. On the other hand the
+imaginary parts of the amplitudes in \eqn{eq:xiomega} being related to
+CP violation and the top quark physics should be dominated by
+short-distance contributions. Therefore $\IM A_0$ and $\IM A_2$ are
+usually calculated using the effective hamiltonian given in
+\eqn{eq:HeffdF1:1010}. Using this hamiltonian and the experimental
+values for $\eps$, $\RE A_0$ and $\omega$ the ratio $\epe$ can be
+written as follows
+\begin{equation}
+\epe = \IM \lambda_t \left[ P^{(1/2)} - P^{(3/2)} \right]
+\label{eq:epe}
+\end{equation}
+where
+\begin{eqnarray}
+P^{(1/2)} &=& \sum P_i^{(1/2)} = r \sum y_i \langle Q_i\rangle_0
+(1-\Omega_{\eta+\eta'})
+\label{eq:P12} \\
+P^{(3/2)} &=& \sum P_i^{(3/2)} = \frac{r}{\omega}
+\sum y_i \langle Q_i\rangle_2
+\label{eq:P32}
+\end{eqnarray}
+with
+\begin{equation}
+r = \frac{G_F \omega}{2 |\eps| \RE A_0} \, .
+\label{eq:repe}
+\end{equation}
+Here the hadronic matrix element shorthand notation is
+\begin{equation}
+\langle Q_i\rangle_I \equiv \langle (\pi\pi)_I | Q_i | K \rangle
+\label{eq:QiKpp}
+\end{equation}
+and the sum in \eqn{eq:P12} and \eqn{eq:P32} runs over all contributing
+operators. This means for $\mu > \mc$ also contributions from operators
+$Q^c_{1,2}$ to $P^{(1/2)}$ and $P^{(3/2)}$ have to be taken into
+account. These are necessary for $P^{(1/2)}$ and $P^{(3/2)}$ to be
+independent of the renormalization scale $\mu$. Next,
+\begin{equation}
+\Omega_{\eta+\eta'} = \frac{1}{\omega} \frac{(\IM A_2)_{\rm
+I.B.}}{\IM A_0}
+\label{eq:Omegaeta}
+\end{equation}
+represents the contribution stemming from isospin breaking in the quark masses
+($m_u \not= m_d$). For $\Omega_{\eta+\eta'}$ we will take
+\begin{equation}
+\Omega_{\eta+\eta'} = 0.25 \pm 0.05
+\label{eq:Omegaetadata}
+\end{equation}
+which is in the ball park of the values obtained in the $1/N_c$ approach
+\cite{burasgerard:87} and in chiral perturbation theory
+\cite{donoghueetal:86}, \cite{lusignoli:89}. $\Omega_{\eta+\eta'}$ is
+independent of $\mt$.
+
+The numerical values of the Wilson coefficients $y_i$ have been already given
+in section \ref{sec:HeffdF1:1010:numres}. We therefore turn now our
+attention to the hadronic matrix elements \eqn{eq:QiKpp} which
+constitute the main source of uncertainty in the calculation of
+$\epe$.
+
+\subsection{Hadronic Matrix Elements for $K \to \pi\pi$}
+           \label{subsec:matelKpp}
+The hadronic matrix elements $\langle Q_i \rangle_I$ depend generally
+on the renormalization scale $\mu$ and on the scheme used to
+renormalize the operators $Q_i$. These two dependences are canceled by
+those present in the Wilson coefficients $C_i(\mu)$ so that the
+resulting physical amplitudes do not depend on $\mu$ and on the
+renormalization scheme of the operators.  Unfortunately the accuracy of
+the present non-perturbative methods used to evalutate $\langle Q_i
+\rangle_I$, like lattice methods or $1/N_c$ expansion, is not
+sufficient to obtain the required $\mu$ and scheme dependences of
+$\langle Q_i \rangle_I$. A review of the existing methods and their
+comparison can be found in \cite{burasetal:92d}, \cite{ciuchini:95}.
+In view of this situation it has been suggested \cite{burasetal:92d} to
+determine as many matrix elements $\langle Q_i \rangle_I$ as possible
+from the leading CP conserving $K \to \pi\pi$ decays, for which the
+experimental data are summarized in \eqn{eq:ReA0data}. To this end it
+turned out to be very convenient to determine $\langle Q_i \rangle_I$
+at a scale $\mu = \mc$.  Using the renormalization group evolution one
+can then find $\langle Q_i \rangle_I$ at any other scale $\mu \not=
+\mc$. The details of this procedure can be found in
+\cite{burasetal:92d}. Here we simply summarize the results of this
+work.
+
+We first express the matrix elements
+$\langle Q_i \rangle_I$ in terms of the non-perturbative parameters
+$B_i^{(1/2)}$ and $B_i^{(3/2)}$ for $\langle Q_i \rangle_0$ and
+$\langle Q_i \rangle_2$, respectively. For $\mu \le \mc$ we have
+\cite{burasetal:92d}
+\begin{eqnarray}
+\langle Q_1 \rangle_0 &=& -\,\frac{1}{9} X B_1^{(1/2)} \, ,
+\label{eq:Q10} \\
+\langle Q_2 \rangle_0 &=&  \frac{5}{9} X B_2^{(1/2)} \, ,
+\label{eq:Q20} \\
+\langle Q_3 \rangle_0 &=&  \frac{1}{3} X B_3^{(1/2)} \, ,
+\label{eq:Q30} \\
+\langle Q_4 \rangle_0 &=&  \langle Q_3 \rangle_0 + \langle Q_2 \rangle_0
+                          -\langle Q_1 \rangle_0 \, ,
+\label{eq:Q40} \\
+\langle Q_5 \rangle_0 &=&  \frac{1}{3} B_5^{(1/2)} 
+                           \langle \overline{Q_6} \rangle_0 \, ,
+\label{eq:Q50} \\
+\langle Q_6 \rangle_0 &=&  -\,4 \sqrt{\frac{3}{2}} 
+\left[ \frac{m_{\rm K}^2}{\ms(\mu) + \md(\mu)}\right]^2
+\frac{F_\pi}{\kappa} \,B_6^{(1/2)} \, ,
+\label{eq:Q60} \\
+\langle Q_7 \rangle_0 &=& 
+- \left[ \frac{1}{6} \langle \overline{Q_6} \rangle_0 (\kappa + 1) 
+         - \frac{X}{2} \right] B_7^{(1/2)} \, ,
+\label{eq:Q70} \\
+\langle Q_8 \rangle_0 &=& 
+- \left[ \frac{1}{2} \langle \overline{Q_6} \rangle_0 (\kappa + 1) 
+         - \frac{X}{6} \right] B_8^{(1/2)} \, ,
+\label{eq:Q80} \\
+\langle Q_9 \rangle_0 &=& 
+\frac{3}{2} \langle Q_1 \rangle_0 - \frac{1}{2} \langle Q_3 \rangle_0 \, ,
+\label{eq:Q90} \\
+\langle Q_{10} \rangle_0 &=& 
+    \langle Q_2 \rangle_0 + \frac{1}{2} \langle Q_1 \rangle_0
+  - \frac{1}{2} \langle Q_3 \rangle_0 \, ,
+\label{eq:Q100}
+\end{eqnarray}
+\begin{eqnarray}
+\langle Q_1 \rangle_2 &=& 
+\langle Q_2 \rangle_2 = \frac{4 \sqrt{2}}{9} X B_1^{(3/2)} \, ,
+\label{eq:Q122} \\
+\langle Q_i \rangle_2 &=&  0 \, , \qquad i=3,\ldots,6 \, ,
+\label{eq:Q362} \\
+\langle Q_7 \rangle_2 &=& 
+  -\left[ \frac{\kappa}{6 \sqrt{2}} \langle \overline{Q_6} \rangle_0
+          + \frac{X}{\sqrt{2}}
+   \right] B_7^{(3/2)} \, ,
+\label{eq:Q72} \\
+\langle Q_8 \rangle_2 &=& 
+  -\left[ \frac{\kappa}{2 \sqrt{2}} \langle \overline{Q_6} \rangle_0
+          + \frac{\sqrt{2}}{6} X
+   \right] B_8^{(3/2)} \, ,
+\label{eq:Q82} \\
+\langle Q_9 \rangle_2 &=& 
+   \langle Q_{10} \rangle_2 = \frac{3}{2} \langle Q_1 \rangle_2 \, ,
+\label{eq:Q9102}
+\end{eqnarray}
+where
+\begin{equation}
+\kappa = \frac{\Lambda_\chi^2}{m_{\rm K}^2 - m_\pi^2} =
+         \frac{F_\pi}{F_{\rm K} - F_\pi} \, ,
+\label{eq:kappaQi}
+\end{equation}
+\begin{equation}
+X = \sqrt{\frac{3}{2}} F_\pi \left( m_{\rm K}^2 - m_\pi^2 \right) \, ,
+\label{eq:XQi}
+\end{equation}
+and
+\begin{equation}
+\langle \overline{Q_6} \rangle_0 =
+   \frac{\langle Q_6 \rangle_0}{B_6^{(1/2)}} \, .
+\label{eq:Q60bar}
+\end{equation}
+The actual numerical values used for $m_{\rm K}$, $m_\pi$, $F_{\rm K}$,
+$F_\pi$ are collected in appendix \ref{app:numinput}.
+
+In the vacuum insertion method $B_i=1$ independent of $\mu$. In QCD,
+however, the hadronic parameters $B_i$ generally depend on the
+renormalizations scale $\mu$ and the renormalization scheme considered.
+
+\subsection{$\langle Q_i(\mu) \rangle_2$ for $(V-A)\otimes (V-A)$ Operators}
+           \label{subsec:Qi2VmAVmA}
+The matrix elements $\langle Q_1 \rangle_2$, $\langle Q_2 \rangle_2$,
+$\langle Q_9 \rangle_2$ and $\langle Q_{10} \rangle_2$ can to a very
+good approximation be determined from $\RE A_2$ in
+\eqn{eq:ReA0data} as functions of $\Lms$, $\mu$ and the renormalization
+scheme considered. To this end it is useful to set $\aem=0$, as the
+$\ord(\aem)$ effects in CP conserving amplitudes, such as the
+contributions of electroweak penguins, are very small. One then finds
+\begin{equation}
+\langle Q_1(\mu) \rangle_2 = \langle Q_2(\mu) \rangle_2 =
+\frac{10^6\gev^2}{1.77} \frac{\RE A_2}{z_+(\mu)} =
+\frac{8.47 \cdot 10^{-3}\gev^3}{z_+(\mu)}
+\label{eq:Q122data}
+\end{equation}
+and comparing with \eqn{eq:Q122}
+\begin{equation}
+B_1^{(3/2)}(\mu) = \frac{0.363}{z_+(\mu)}
+\label{eq:B321}
+\end{equation}
+with $z_+ = z_1 + z_2$.
+Since $z_+(\mu)$ depends on the scale $\mu$ and the renormalization
+scheme used, \eqn{eq:B321} gives automatically the scheme and $\mu$
+dependence of $B_1^{(3/2)}$ and of the related matrix elements $\langle
+Q_1 \rangle_2$, $\langle Q_2 \rangle_2$,
+$\langle Q_9 \rangle_2$ and $\langle Q_{10} \rangle_2$. The impact of
+$\ord(\aem)$ corrections on this result has been analysed in
+\cite{burasetal:92d}. It amounts only to a few percent as expected.
+These corrections are of course included in the numerical analysis
+presented in this reference and here as well. Using $\mu=\mc=1.3\gev$,
+$\Lms^{(4)}=325\mev$ and $z_+(\mc)$ of table \ref{tab:wc10smu13}
+we find according to \eqn{eq:B321}
+\begin{equation}
+B_{1,NDR}^{(3/2)}(\mc) =  0.453
+\qquad
+B_{1,HV}^{(3/2)}(\mc) =  0.472 \, .
+\label{eq:B321mc}
+\end{equation}
+
+\noindent
+The following comments should be made:
+\begin{itemize}
+\item
+$B_1^{(3/2)}(\mu)$ decreases with increasing $\mu$.
+\item
+The extracted value for $B_1^{(3/2)}$ is by more than a factor of two
+smaller than the vacuum insertion estimate.
+\item
+It is compatible with the $1/N_c$ value $B_1^{(3/2)}(1\gev) \approx
+0.55$ \cite{bardeen:87b} and somewhat smaller than the lattice result
+$B_1^{(3/2)}(2\gev) \approx 0.6$ \cite{ciuchini:95}.
+\end{itemize}
+
+\subsection{$\langle Q_i(\mu) \rangle_0$ for $(V-A)\otimes (V-A)$ Operators}
+           \label{subsec:Qi0VmAVmA}
+The determination of $\langle Q_i(\mu) \rangle_0$ matrix elements is
+more involved because several operators may contribute to $\RE
+A_0$. The main idea of \cite{burasetal:92d} is then to set $\mu=\mc$, as
+at this scale only $Q_1$ and $Q_2$ operators contribute to $\RE
+A_0$ in the HV scheme. One then finds $\langle Q_1(\mc) \rangle_0$ as a
+function of  $\langle Q_2(\mc) \rangle_0$
+\begin{equation}
+\langle Q_1(\mc) \rangle_0 = \frac{10^6\gev^2}{1.77} \frac{\RE
+A_0}{z_1(\mc)} - \frac{z_2(\mc)}{z_1(\mc)} \langle Q_2(\mc) \rangle_0
+\label{eq:Q10mc}
+\end{equation}
+where the reference in $\langle Q_{1,2}(\mc) \rangle_0$ to the HV scheme
+has been suppressed for convenience. Using next the relations
+\eqn{eq:Q40}, \eqn{eq:Q90} and \eqn{eq:Q100} one is able to obtain
+$\langle Q_4(\mc) \rangle_0$, $\langle Q_9(\mc) \rangle_0$ and $\langle
+Q_{10}(\mc) \rangle_0$ as functions of $\langle Q_2(\mc) \rangle_0$ and
+$\langle Q_3(\mc) \rangle_0$. Because $\langle Q_3(\mc) \rangle_0$ is
+colour suppressed it is less essential for this analysis than $\langle
+Q_2(\mc) \rangle_0$. Moreover its Wilson coefficient is small and
+similarly to $\langle Q_9(\mc) \rangle_0$ and $\langle 
+Q_{10}(\mc) \rangle_0$ also $\langle Q_3(\mc) \rangle_0$ has only a
+small impact on $\epe$. On the other hand the coefficient $y_4$ is
+substantial and consequently $\langle Q_4(\mc) \rangle_0$ plays a
+considerable role in the analysis of $\epe$. The matrix element $\langle
+Q_3(\mc) \rangle_0$ has then an indirect impact on $\epe$ through
+relation \eqn{eq:Q40}. For numerical evaluation, $\langle Q_3(\mc)
+\rangle_0$ of \eqn{eq:Q30} with $B_3^{(1/2)} = 1$ can be used keeping in
+mind that this may introduce a small uncertainty in the final analysis.
+This uncertainty has been investigated in \cite{burasetal:92d}.
+
+Once the matrix elements in question have been determined as functions
+of $\langle Q_2(\mc) \rangle_0$ in the HV scheme, they can be found by a
+finite renormalization in any other scheme. Details can be found in
+\cite{burasetal:92d}.
+
+If one in addition makes the very plausible assumption valid in all
+known non-perturbative approaches that $\langle Q_-(\mc) \rangle_0 \ge
+\langle Q_+(\mc) \rangle_0 \ge 0$ the experimental value of $\RE
+A_0$ in \eqn{eq:ReA0data} together with \eqn{eq:Q10mc} and table
+\ref{tab:wc10smu13} implies for $\Lms^{(4)}=325\mev$
+\begin{equation}
+B_{2,LO}^{(1/2)}(\mc)  =  5.7 \pm 1.1
+\qquad
+B_{2,NDR}^{(1/2)}(\mc) =  6.6 \pm 1.0
+\qquad
+B_{2,HV}^{(1/2)}(\mc) =  6.2 \pm 1.0 \, .
+\label{eq:B122mc}
+\end{equation}
+The extraction of $B_1^{(1/2)}(\mc)$ and of an analogous parameter
+$B_4^{(1/2)}(\mc)$ are presented in detail in \cite{burasetal:92d}.
+$B_1^{(1/2)}(\mc)$ depends very sensitively on $B_2^{(1/2)}(\mc)$ and
+its central value is as high as 15. $B_4^{(1/2)}(\mc)$ is less sensitive
+and typically by (10--15)\,\% lower than $B_2^{(1/2)}(\mc)$. In any case
+this analysis shows very large departures from the results of the
+vacuum insertion method.
+
+\subsection{$\langle Q_i(\mu) \rangle_{0,2}$ for $(V-A)\otimes (V+A)$ Operators}
+           \label{subsec:Qi0VmAVpA}
+The matrix elements of the $(V-A) \otimes (V+A)$ operators $Q_5$--$Q_8$
+cannot be constrained by CP conserving data and one has to rely on
+existing non-perturbative methods to calculate them. Fortunately, there
+are some indications that the existing non-perturbative estimates of
+$\langle Q_i(\mu) \rangle_{0,2}$, $i=5,\ldots,8$ are more reliable than
+the corresponding calculations for $(V-A) \otimes (V-A)$ operators.
+
+First of all, the parameters $B_{5,6}^{(1/2)}$ \cite{kilcup:91},
+\cite{sharpe:91} and $B_{7,8}^{(3/2)}$ \cite{francoetal:89},
+\cite{kilcup:91}, \cite{sharpe:91}, \cite{bernardsoni:91} calculated in
+the lattice approach
+\begin{equation}
+B_{5,6}^{(1/2)} = 1.0 \pm 0.2 
+\qquad
+B_{7,8}^{(3/2)} = 1.0 \pm 0.2 
+\label{eq:B1258}
+\end{equation}
+agree well with the vacuum insertion values ($B_i=1$) and in the case
+of $B_6^{(1/2)}$ and $B_8^{(3/2)}$ with the $1/N_c$ approach ($B_6^{(1/2)}
+= B_8^{(3/2)} = 1$) \cite{bardeen:87a}, \cite{burasgerard:87}.
+
+We note next that with fixed values for $B_{5,6}^{(1/2)}$ and
+$B_{7,8}^{(3/2)}$ the $\mu$-dependence of $\langle Q_{5,6} \rangle_0$
+and $\langle Q_{7,8} \rangle_2$ is governed by the $\mu$ dependence of
+$\ms(\mu)$. For $\langle Q_6 \rangle_0$ and $\langle Q_8 \rangle_2$
+this property has been first found in the $1/N_c$ approach
+\cite{burasgerard:87}: in the large-$N_c$ limit the anomalous
+dimensions of $Q_6$ and $Q_8$ are simply twice the anomalous dimension
+of the mass operator leading to $\sim 1/\ms^2(\mu)$ for the
+corresponding matrix elements. Another support comes from a
+renormalization study in \cite{burasetal:92d}. In this analysis the
+$B_i$-factors in \eqn{eq:B1258} have been set to unity at $\mu=\mc$.
+Subsequently the evolution of the matrix elements in the range $1\gev
+\le \mu \le 4\gev$ has been calculated showing that for the NDR scheme
+$B_{5,6}^{(1/2)}$ and $B_{7,8}^{(3/2)}$ were $\mu$ independent within
+an accuracy of (2--3)\,\%. The $\mu$ dependence in the HV scheme has
+been found to be stronger but still below 10\,\%.
+
+Concerning $B_{7,8}^{(1/2)}$ one can simply set $B_{7,8}^{(1/2)}=1$ as
+the matrix elementes $\langle Q_{7,8} \rangle_0$ play only a minor role
+in the $\epe$ analysis.
+
+In summary, our treatment of $\langle Q_i \rangle_{0,2}$, $i=5,\ldots 8$
+follows the one used in \cite{burasetal:92d}. We will set
+\begin{equation}
+B_{7,8}^{(1/2)}(\mc) = 1
+\qquad
+B_5^{(1/2)}(\mc) = B_6^{(1/2)}(\mc)
+\qquad
+B_7^{(3/2)}(\mc) = B_8^{(3/2)}(\mc)
+\label{eq:B1278mc}
+\end{equation}
+and we will treat $B_6^{(1/2)}(\mc)$ and $B_8^{(3/2)}(\mc)$ as free
+parameters in the neighbourhood of the values given in \eqn{eq:B1258}.
+Then the main uncertainty in the values of $\langle Q_i \rangle_{0,2}$,
+$i=5,\ldots 8$ results from the value of the strange quark mass
+$\ms(\mc)$. The present estimates give
+\begin{equation}
+\ms(\mc) = (170 \pm 20)\mev
+\label{eq:msmc}
+\end{equation}
+with the lower values coming from recent lattice calculations
+\cite{alltonetal:94} and the higher ones from QCD sum rules
+\cite{jaminmuenz:95}, \cite{chetyrkinetal:95}.
+
+\subsection{The Four Dominant Contributions to $\epe$}
+           \label{subsec:epe4dom}
+$P^{(1/2)}$ and $P^{(3/2)}$ in \eqn{eq:epe} can be written as linear
+combinations of two independent hadronic parameters $B_6^{(1/2)}$ and
+$B_8^{(3/2)}$ \cite{burasetal:92d}. This $B_i$-expansion reads
+\begin{eqnarray}
+P^{(1/2)} &=& a_0^{(1/2)} +
+  \left[ \frac{178\mev}{\ms(\mc)+\md(\mc)} \right]^2 a_6^{(1/2)} B_6^{(1/2)}
+\label{eq:P12Bi} \\
+P^{(3/2)} &=& a_0^{(3/2)} +
+  \left[ \frac{178\mev}{\ms(\mc)+\md(\mc)} \right]^2 a_8^{(3/2)} B_8^{(3/2)}
+  \, .
+\label{eq:P32Bi}
+\end{eqnarray}
+Here $a_0^{(1/2)}$ and $a_0^{(3/2)}$ effectively summarize all
+dependences other than $B_6^{(1/2)}$ and $B_8^{(3/2)}$, especially
+$B_2^{(1/2)}$ in the case of $a_0^{(1/2)}$.
+Note that in contrast to \cite{burasetal:92d} we have absorbed the
+dependence on $B_2^{(1/2)}$ into $a_0^{(1/2)}$ and we have exhibited the
+dependence on $\ms$ which was not shown explicitly there.
+The residual $\ms$ dependence present in $a_0^{(1/2)}$ and
+$a_0^{(3/2)}$ is negligible.  Setting $\mu=\mc$, and using the strategy
+for hadronic matrix elements outlined above one finds the coefficients
+$a_i^{(1/2)}$ and $a_i^{(3/2)}$ as functions of $\Lms$, $\mt$ and the
+renormalization scheme considered. These dependences are given in
+tables \ref{tab:bip12} and \ref{tab:bip32}. We should however stress
+that $P^{(1/2)}$ and $P^{(3/2)}$ are independent of $\mu$ and the
+renormalization scheme considered.
+
+\begin{table}[htb]
+\caption[]{$B_i$-expansion coefficients for $P^{(1/2)}$.
+\label{tab:bip12}}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+& & \multicolumn{2}{c||}{LO} &
+  \multicolumn{2}{c||}{NDR} &
+  \multicolumn{2}{c|}{HV} \\
+\hline
+$\Lms^{(4)}\,[\mev]$ & $\mt\,[\gev]$ &
+$a_0^{(1/2)}$ & $a_6^{(1/2)}$ &
+$a_0^{(1/2)}$ & $a_6^{(1/2)}$ &
+$a_0^{(1/2)}$ & $a_6^{(1/2)}$ \\
+\hline
+    & 155  &  --2.138 & 5.110  &  --2.251 & 4.676  &  --2.215 & 4.159 \\
+215 & 170  &  --2.070 & 5.138  &  --2.187 & 4.698  &  --2.150 & 4.181 \\
+    & 185  &  --1.996 & 5.162  &  --2.117 & 4.716  &  --2.081 & 4.200 \\
+\hline 
+    & 155  &  --2.231 & 6.540  &  --2.414 & 6.255  &  --2.362 & 5.389 \\
+325 & 170  &  --2.161 & 6.576  &  --2.350 & 6.282  &  --2.298 & 5.416 \\
+    & 185  &  --2.085 & 6.606  &  --2.281 & 6.306  &  --2.229 & 5.439 \\
+\hline 
+    & 155  &  --2.288 & 8.171  &  --2.549 & 8.417  &  --2.473 & 6.972 \\
+435 & 170  &  --2.212 & 8.214  &  --2.482 & 8.451  &  --2.406 & 7.005 \\
+    & 185  &  --2.130 & 8.251  &  --2.409 & 8.480  &  --2.333 & 7.035
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{$B_i$-expansion coefficients for $P^{(3/2)}$.
+\label{tab:bip32}}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+& & \multicolumn{2}{c||}{LO} &
+  \multicolumn{2}{c||}{NDR} &
+  \multicolumn{2}{c|}{HV} \\
+\hline
+$\Lms^{(4)}\,[\mev]$ & $\mt\,[\gev]$ &
+$a_0^{(3/2)}$ & $a_8^{(3/2)}$ & $a_0^{(3/2)}$ &
+$a_8^{(3/2)}$ & $a_0^{(3/2)}$ & $a_8^{(3/2)}$ \\
+\hline
+    & 155  &  --0.797 & 1.961  &  --0.819 & 1.887  &  --0.838 & 2.114 \\
+215 & 170  &  --0.880 & 2.602  &  --0.900 & 2.438  &  --0.919 & 2.666 \\
+    & 185  &  --0.965 & 3.296  &  --0.983 & 3.036  &  --1.002 & 3.263 \\
+\hline 
+    & 155  &  --0.788 & 2.645  &  --0.814 & 2.639  &  --0.837 & 2.894 \\
+325 & 170  &  --0.870 & 3.422  &  --0.895 & 3.305  &  --0.917 & 3.560 \\
+    & 185  &  --0.956 & 4.264  &  --0.978 & 4.027  &  --1.000 & 4.281 \\
+\hline 
+    & 155  &  --0.779 & 3.425  &  --0.809 & 3.622  &  --0.835 & 3.899 \\
+435 & 170  &  --0.861 & 4.360  &  --0.889 & 4.435  &  --0.915 & 4.712 \\
+    & 185  &  --0.947 & 5.372  &  --0.971 & 5.316  &  --0.998 & 5.593
+\end{tabular}
+\end{center}
+\end{table}
+
+Inspecting \eqn{eq:P12Bi}, \eqn{eq:P32Bi} and tables \ref{tab:bip12},
+\ref{tab:bip32} we identify the following four contributions which
+govern the ratio $\epe$ at scales $\mu=\ord(\mc)$:
+\renewcommand{\theenumi}{\roman{enumi}}
+\begin{enumerate}
+\item
+\label{enum:i}
+The contribution of $(V-A) \otimes (V-A)$ operators to $P^{(1/2)}$ is
+dominantly represented by $a_0^{(1/2)}$. This term is to a large extent
+fixed by the experimental value of $A_0$ and consequently is only very
+weakly dependent on $\Lms$ and the renormalization scheme considered.
+The weak dependence on $\mt$ results from small contributions of
+electroweak penguin operators.  Taking $\Lms^{(4)} = 325\mev$,
+$\mu=\mc$ and $\mt = 170\gev$ we have $a_0^{(1/2)} \approx -2.3$ for
+both schemes considered.  We observe that the contribution of $(V-A)
+\otimes (V-A)$ operators, in particular $Q_4$, to $\epe$ is {\em
+negative}.
+\item
+\label{enum:ii}
+The contribution of $(V-A) \otimes (V+A)$ QCD penguin operators to
+$P^{(1/2)}$ is given by the second term in \eqn{eq:P12Bi}. This
+contribution is large and {\em positive}. The coefficient $a_6^{(1/2)}$
+depends sensitively on $\Lms$ which results from the strong dependence
+of $y_6$ on the QCD scale. The dependence on $\mt$ is very weak on the
+other hand. Taking $\Lms^{(4)} = 325\mev$, $\ms(\mc)=170\mev$ and $\mt
+= 170\gev$ and setting as an example $B_6^{(1/2)} = 1$ in the NDR and
+HV schemes we find a positve contribution to $\epe$ amounting to 6.3
+and 5.4 in the NDR and HV scheme, respectively.
+
+\item
+\label{enum:iii}
+The contribution of the $(V-A) \otimes (V-A)$ electroweak penguin
+operators $Q_9$ and $Q_{10}$ to $P^{(3/2)}$ is represented by
+$a_0^{(3/2)}$. As in the case of the contribution \ref{enum:i}, the
+matrix elements contributing to $a_0^{(3/2)}$ are fixed by the CP
+conserving data, this time by the amplitude $A_2$. Consequently, the
+scheme and the $\Lms$ dependence of $a_0^{(3/2)}$ is very weak. The
+sizeable $\mt$ dependence of $a_0^{(3/2)}$ results from the $\mt$
+dependence of $y_9 + y_{10}$. $a_0^{(3/2)}$ contributes {\em positively}
+to $\epe$. For $\mt = 170\gev$ this contribution is roughly 0.9 for
+both renormalization schemes and the full range of $\Lms$ considered.
+\item
+\label{enum:iv}
+The contribution of the $(V-A) \otimes (V+A)$ electroweak penguin
+operators $Q_7$ and $Q_8$ to $P^{(3/2)}$ is represented by the second
+term in \eqn{eq:P32Bi}. This contribution depends sensitively on $\mt$
+and $\Lms$ as could be expected on the basis of $y_7$ and $y_8$. Taking
+again $B_8^{(3/2)}=1$ in both renormalization schemes we find for the
+central values of $\Lms^{(4)}$, $\mt$ and $\mc$ a {\em
+negative} contribution to $\epe$ equal to $-3.9$ and $-3.6$ for the NDR
+and HV scheme, respecetively.
+\end{enumerate}
+\renewcommand{\theenumi}{\arabic{enumi}}
+
+Before analysing $\epe$ numerically in more detail, let us just set
+$\IM \lambda_t = 1.3 \cdot 10^{-4}$ and $B_6^{(1/2)} = B_8^{(3/2)} = 1$
+in both schemes. Then for the central values of the remaining
+parameters one obtains $\epe = 2.0 \cdot 10^{-4}$ and $\epe = 0.6 \cdot
+10^{-4}$ for the NDR and HV scheme, respectively. This strong scheme
+dependence can only be compensated for by having $B_6^{(1/2)}$ and
+$B_8^{(3/2)}$ different in the two schemes considered. As we will see
+below the strong cancellations between various contributions at $\mt
+\approx 170\gev$ make the prediction for $\epe$ rather uncertain. One
+should also stress that the formulation presented here does not exhibit
+analytically the $\mt$ dependence. As the coefficients $a_0^{(3/2)}$
+and $a_8^{(3/2)}$ depend very sensitively on $\mt$ it is useful to
+display this dependence in an analytic form.
+
+\subsection{An Analytic Formula for $\epe$}
+           \label{subsec:epeanalytic}
+As shown in \cite{buraslauten:93} it is possible to cast the above
+discussion into an analytic formula which exhibits the $\mt$ dependence
+together with the dependence on $\ms$, $B_6^{(1/2)}$ and $B_8^{(3/2)}$.
+Such an analytic formula should be useful for those phenomenologists
+and experimentalists who are not interested in getting involved with
+the technicalities discussed in preceding sections.
+
+In order to find an analytic expression for $\epe$ which exactly
+reproduces the results discussed above one uses the PBE presented in
+section \ref{sec:PBE}. The resulting analytic expression for $\epe$ is
+then given as follows
+\begin{equation}
+\epe =
+\IM \lambda_t F(x_t)
+\label{eq:epePBE}
+\end{equation}
+where
+\begin{equation}
+F(x_t) = P_0 + P_X X_0(x_t) + P_Y Y_0(x_t) + P_Z Z_0(x_t) + P_E E_0(x_t)
+\label{eq:Fxt}
+\end{equation}
+with the $\mt$ dependent functions listed in section \ref{sec:PBE}. The
+coefficients $P_i$ are given in terms of $B_6^{(1/2)} \equiv
+B_6^{(1/2)}(\mc)$, $B_8^{(3/2)} \equiv B_8^{(3/2)}(\mc)$ and $\ms(\mc)$
+as follows
+\begin{equation}
+P_i = r_i^{(0)} + \left[ \frac{178\mev}{\ms(\mc)+\md(\mc)} \right]^2
+\left(r_i^{(6)} B_6^{(1/2)} + r_i^{(8)} B_8^{(3/2)} \right) \, .
+\label{eq:pbePi}
+\end{equation}
+The $P_i$ are $\mu$ and renormalization scheme independent. They depend
+however on $\Lms$. In table \ref{tab:pbendr} we give the numerical
+values of $r_i^{(0)}$, $r_i^{(6)}$ and $r_i^{(8)}$ for different values
+of $\Lms$ at $\mu=\mc$ in the NDR renormalization scheme. Analogous
+results in the HV scheme are given in table \ref{tab:pbehv}. The
+coefficients $r_i^{(0)}$, $r_i^{(6)}$ and $r_i^{(8)}$do not depend on
+$\ms(\mc)$ as this dependence has been factored out. $r_i^{(0)}$ does,
+however, depend on the particular choice for the parameter
+$B_2^{(1/2)}$ in the parametrization of the matrix element $\langle Q_2
+\rangle_0$. The values given in the tables correspond to the central
+values in \eqn{eq:B122mc}. Variation of $B_2^{(1/2)}$ in the full
+allowed range introduces an uncertainty of at most 18\,\% in the
+$r_i^{(0)}$ column of the tables.  Since the parameters $r_i^{(0)}$
+give only subdominant contributions to $\epe$ keeping $B_2^{(1/2)}$ and
+$r_i^{(0)}$ at their central values is a very good approximation.
+
+For different scales $\mu$ the numerical values in the tables change
+without modifying the values of the $P_i$'s as it should be. To this
+end also $B_6^{(1/2)}$ and $B_8^{(3/2)}$ have to be modified as they
+depend albeit weakly on $\mu$.
+
+Concerning the scheme dependence we note that whereas $r_0$ coefficients
+are scheme dependent, the coefficients $r_i$, $i=X, Y, Z, E$ do not show
+any scheme dependence. This is related to the fact that the $\mt$
+dependence in $\epe$ enters first at the NLO level and consequently all
+coefficients $r_i$ in front of the $\mt$ dependent functions must be
+scheme independent. That this turns out to be indeed the case is a nice
+check of our calculations.
+
+Consequently when changing the renormalization scheme one is only
+obliged to change appropriately $B_6^{(1/2)}$ and $B_8^{(3/2)}$ in the
+formula for $P_0$ in order to obtain a scheme independence of $\epe$.
+In calculating $P_i$ where $i \not= 0$, $B_6^{(1/2)}$ and $B_8^{(3/2)}$
+can in fact remain unchanged, because their variation in this part
+corresponds to higher order contributions to $\epe$ which would have to
+be taken into account in the next order of perturbation theory.
+
+For similar reasons the NLO analysis of $\epe$ is still insensitive to
+the precise definition of $\mt$. In view of the fact that the NLO
+calculations of $\IM \lambda_t$ have been done with
+$\mt=\overline{m}_t(\mt)$ we will also use  this definition in
+calculating $F(x_t)$.
+
+\begin{table}[htb]
+\caption[]{$\Delta S=1$ PBE coefficients for various $\Lms$ in the NDR scheme.
+\label{tab:pbendr}}
+\begin{center}
+\begin{tabular}{|c||c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+$i$ & $r_i^{(0)}$ & $r_i^{(6)}$ & $r_i^{(8)}$ &
+      $r_i^{(0)}$ & $r_i^{(6)}$ & $r_i^{(8)}$ &
+      $r_i^{(0)}$ & $r_i^{(6)}$ & $r_i^{(8)}$ \\
+\hline
+ 0  & --2.644 & 4.784 & 0.876 & --2.749 & 6.376 & 0.689 & --2.845 & 8.547
+    & 0.436 \\
+$X$ & 0.555 & 0.008 & 0 & 0.521 & 0.012 & 0 & 0.495 & 0.017 & 0 \\
+$Y$ & 0.422 & 0.037 & 0 & 0.385 & 0.046 & 0 & 0.356 & 0.057 & 0 \\
+$Z$ & 0.074 & --0.007 & --4.798 & 0.149 & --0.009 & --5.789 & 0.237 & --0.011
+    & --7.064 \\
+$E$ & 0.209 & --0.591 & 0.205 & 0.181 & --0.727 & 0.265 & 0.152 & --0.892
+    & 0.342
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{$\Delta S=1$ PBE coefficients for various $\Lms$ in the HV scheme.
+\label{tab:pbehv}}
+\begin{center}
+\begin{tabular}{|c||c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+$i$ & $r_i^{(0)}$ & $r_i^{(6)}$ & $r_i^{(8)}$ &
+      $r_i^{(0)}$ & $r_i^{(6)}$ & $r_i^{(8)}$ &
+      $r_i^{(0)}$ & $r_i^{(6)}$ & $r_i^{(8)}$ \\
+\hline
+ 0  & --2.631 & 4.291 & 0.668 & --2.735 & 5.548 & 0.457 & --2.830 & 7.163
+    & 0.185 \\
+$X$ & 0.555 & 0.008 & 0 & 0.521 & 0.012 & 0 & 0.495 & 0.017 & 0 \\
+$Y$ & 0.422 & 0.037 & 0 & 0.385 & 0.046 & 0 & 0.356 & 0.057 & 0 \\
+$Z$ & 0.074 & --0.007 & --4.798 & 0.149 & --0.009 & --5.789 & 0.237 & --0.011
+    & --7.064 \\
+$E$ & 0.209 & --0.591 & 0.205 & 0.181 & --0.727 & 0.265 & 0.152 & --0.892
+    & 0.342
+\end{tabular}
+\end{center}
+\end{table}
+
+The inspection of tables \ref{tab:pbendr} and \ref{tab:pbehv} shows
+that the terms involving $r_0^{(6)}$ and $r_Z^{(8)}$ dominate the ratio
+$\epe$. The function $Z_0(x_t)$ representing a gauge invariant
+combination of $Z^0$- and $\gamma$-penguins grows rapidly with $\mt$
+and due to $r_Z^{(8)} < 0$ these contributions suppress $\epe$ strongly
+for large $\mt$ \cite{flynn:89}, \cite{buchallaetal:90}. These two
+dominant terms $r_0^{(6)}$ and $r_Z^{(8)}$ correspond essentially to
+the second terms in \eqn{eq:P12Bi} and \eqn{eq:P32Bi}, respectively.
+The first term in \eqn{eq:P12Bi} corresponds roughly to $r_0^{(0)}$
+given here, while the first term in \eqn{eq:P32Bi} is represented to a
+large extent by the positve contributions of $X_0(x_t)$ and $Y_0(x_t)$.
+The last term in \eqn{eq:Fxt} representing the residual $\mt$
+dependence of QCD penguins plays only a minor role in the full analysis
+of $\epe$.
+
+\subsection{Numerical Results}
+           \label{subsec:epenumres}
+Let us define two effective B-factors:
+\begin{equation}\label{7e}
+(B_i^{(j)}(m_c))_{eff}= 
+\left [\frac{178\mev}{\bar m_s(m_c)+\bar m_d(m_c)} \right ]^2 B_i^{(j)}(m_c)
+\end{equation}
+In fig.\ \ref{fig:lepemt170} we show $\epe$ for $\mt=170\gev$ as a function
+of $\Lms$ for different choices of the effective $B_i$ factors.
+We show here only the results in the NDR scheme. As discussed above
+$\epe$ is generally lower in the HV scheme, if the same values for
+$B_6^{(1/2)}$ and $B_8^{(3/2)}$ are used in both schemes. In view of the
+fact that the differences between NDR and HV schemes are smaller than
+the uncertainties in $B_6^{(1/2)}$ and $B_8^{(3/2)}$ we think it is
+sufficient to present only the results in the NDR scheme here. The
+results in the HV scheme can be found in \cite{burasetal:92d},
+\cite{ciuchini:95}.
+
+\begin{figure}[htb]
+\vspace{0.15in}
+\centerline{
+\epsfysize=6in
+\rotate[r]{
+\epsffile{ps/lemt170.ps}
+}}
+\vspace{0.15in}
+\caption[]{
+The ranges of $\epe$ in the NDR scheme as a function of $\Lms^{(4)}$
+for $\mt=170\gev$ and present (light grey) and future (dark grey)
+parameter ranges given in appendix \ref{app:numinput}. The three pairs
+of $\epe$ plots correspond to hadronic parameter sets
+(a) $(B_6^{(1/2)}(\mc))_{\rm eff}=1.5$, $(B_8^{(3/2)}(\mc))_{\rm eff}=1.0$,
+(b) $(B_6^{(1/2)}(\mc))_{\rm eff}=1.0$, $(B_8^{(3/2)}(\mc))_{\rm eff}=1.0$,
+and
+(c) $(B_6^{(1/2)}(\mc))_{\rm eff}=1.0$, $(B_8^{(3/2)}(\mc))_{\rm eff}=1.5$,
+respectively.
+\label{fig:lepemt170}}
+\end{figure}
+
+Fig.\ \ref{fig:lepemt170} shows strong dependence of $\epe$ on $\Lms$.
+However the main uncertainty originates in the poor knowledge of
+$(B_i)_{eff}$.  In case a) in which the QCD-penguin contributions
+dominate, $\epe$ can reach values as high as $1 \cdot 10^{-3}$.
+However, in case c) the electroweak penguin contributions are large
+enough to cancel essentially the QCD-penguin contributions completely.
+Consequently in this case $|\epe|< 2 \cdot 10^{-5}$ and the standard
+model prediction of $\epe$ cannot be distinguished from a superweak
+theory. As shown in fig.\ \ref{fig:lepemt155} higher values of $\epe$
+can be obtained for $\mt = 155\gev$ although still $\epe < 13 \cdot
+10^{-4}$.
+
+\begin{figure}[htb]
+\vspace{0.15in}
+\centerline{
+\epsfysize=6in
+\rotate[r]{
+\epsffile{ps/lemt155.ps}
+}}
+\vspace{0.15in}
+\caption[]{
+Same as fig.\ \ref{fig:lepemt170} but for $\mt=155\gev$.
+\label{fig:lepemt155}}
+\end{figure}
+
+\begin{figure}[htb]
+\vspace{0.15in}
+\centerline{
+\epsfysize=6in
+\rotate[r]{
+\epsffile{ps/lemt185.ps}
+}}
+\vspace{0.15in}
+\caption[]{
+Same as fig.\ \ref{fig:lepemt170} but for $\mt=185\gev$.
+\label{fig:lepemt185}}
+\end{figure}
+
+For $\mt = 185\gev$ the values of $\epe$ are correspondingly smaller
+and in case c) small negative values are found for $\epe$.  In figs.\
+\ref{fig:lepemt170}--\ref{fig:lepemt185} the dark grey regions refer to
+the future ranges for $\IM\lambda_t$. Of course one should hope that
+also the knowledge of $(B_i)_{eff}$ and of $\Lms^{(4)}$ will be
+improved in the future so that a firmer prediction for $\epe$ can be
+obtained.
+
+\begin{figure}[htb]
+\vspace{0.15in}
+\centerline{
+\epsfysize=6in
+\rotate[r]{
+\epsffile{ps/mteper1r2f.ps}
+}}
+\vspace{0.15in}
+\caption[]{
+The ranges of $\epe$ in the NDR scheme as a function of $\mt$
+for $\Lms^{(4)}=325\mev$ and present (light grey) and future (dark grey)
+parameter ranges given in appendix \ref{app:numinput}. The three bands
+correspond to hadronic parameter sets
+(a) $(B_6^{(1/2)}(\mc))_{\rm eff}=1.5$, $(B_8^{(3/2)}(\mc))_{\rm eff}=1.0$,
+(b) $(B_6^{(1/2)}(\mc))_{\rm eff}=1.0$, $(B_8^{(3/2)}(\mc))_{\rm eff}=1.0$,
+and
+(c) $(B_6^{(1/2)}(\mc))_{\rm eff}=1.0$, $(B_8^{(3/2)}(\mc))_{\rm eff}=1.5$,
+respectively.
+\label{fig:mteper1r2f}}
+\end{figure}
+
+Finally, fig.\ \ref{fig:mteper1r2f} shows the interrelated influence of
+$\mt$ and the two most important hadronic matrix elements for penguin
+operators on the theoretical prediction of $\epe$. For a dominant QCD
+penguin matrix element $<Q_6>_0$ $\epe$ stays positive for all $\mt$
+values considered. $\epe \approx 0$ becomes possible for equally
+weighted matrix elements $<Q_6>_0$ and $<Q_8>_2$ around $\mt=205\gev$.
+A dominant electroweak pengiun matrix element $<Q_8>_2$ shifts the
+point $\epe \approx 0$ to $\mt \approx 165\gev$ and even allows for a
+negative $\epe$ for higher values of $\mt$. The key issue to understand
+this behaviour of $\epe$ is the observation that the $Q_6$ contribution
+to $\epe$ is positive and only weakly $\mt$ dependent. On the other
+hand the contribution coming from $Q_8$ is negative and shows a strong
+$\mt$ dependence.
+
+The results in fig.\ \ref{fig:lepemt170}--\ref{fig:mteper1r2f}
+use only the $\eps_K$ constraint. In order to complete our analysis we
+want to impose also the $x_d$-constraint and vary $m_s(m_c)$,
+$B^{(1/2)}_6$ and $B^{(3/2)}_8$ in the full ranges given in
+\eqn{eq:B1258} and \eqn{eq:msmc}.
+
+This gives for the ``present'' scenario
+\begin{equation}
+-2.1 \cdot 10^{-4} \le \epe \le 13.2 \cdot 10^{-4}
+\label{eq:eperangepresent}
+\end{equation}
+to be compared with
+\begin{equation}
+-1.1 \cdot 10^{-4} \le \epe \le 10.4 \cdot 10^{-4}
+\label{eq:eperangefuture}
+\end{equation}
+in the case of the ``future'' scenario. In both cases the
+$x_d$-constraint has essentially no impact on the predicted range for
+$\epe$.
+\\
+Finally, extending the ``future'' scenario to $\ms(\mc)=(170 \pm
+10)\mev$, $\Lms^{(4)}=(325 \pm 50)\mev$ and $B^{(1/2)}_6,
+B^{(3/2)}_8=1.0 \pm 0.1$ would give
+\begin{equation}
+0.3 \cdot 10^{-4} \le \epe \le 5.4 \cdot 10^{-4}
+\label{eq:eperangefuture2}
+\end{equation}
+again with no impact from imposing the $x_d$-constraint.
+
+Allowing for the additional variation $B_{2,NDR}^{(1/2)}(\mc) = 6.6 \pm
+1.0$ extends ranges \eqn{eq:eperangepresent}--\eqn{eq:eperangefuture2}
+to $-2.5 \cdot 10^{-4} \le \epe \le 13.7 \cdot 10^{-4}$, $-1.5 \cdot
+10^{-4} \le \epe \le 10.8 \cdot 10^{-4}$ and $0.1 \cdot 10^{-4} \le
+\epe \le 5.8 \cdot 10^{-4}$, respectively.
+
+An analysis of the Rome group \cite{ciuchini:95} gives
+$\RE(\epe)=(3.1\pm 2.5)\cdot 10^{-4}$ which is compatible with our
+results. Similar results are found with hadronic matrix elements
+calculated in the chiral quark model \cite{bertolinietal:94},
+\cite{bertolinietal:95}.
+
+The difference in the range for $\epe$ presentend here by us and the
+Rome group is related to the different treatment of theoretical and
+experimental errors. Whereas we simply scan all parameters within one
+standard deviation, \cite{ciuchini:95} use Gaussian distributions in
+treating the experimental errors. Consequently our procedure is more
+conservative. We agree however with these authors that values for
+$\epe$ above $1 \cdot 10^{-3}$ although not excluded are very
+improbable. This should be contrasted with the work of the Dortmund
+group \cite{froehlich:91}, \cite{heinrichetal:92} which finds values
+for $\epe$ in the ball park of $(2 - 3) \cdot 10^{-3}$. We do not know
+any consistent framework for hadronic matrix elements which would give
+such high values within the Standard Model.
+
+The experimental situation on $\RE(\epe)$ is unclear at present.  While
+the result of the NA31 collaboration at CERN with $\RE(\epe) = (23 \pm
+7)\cdot 10^{-4}$ \cite{barr:93} clearly indicates direct CP violation,
+the value of E731 at Fermilab, $\RE(\epe) = (7.4 \pm 5.9)\cdot 10^{-4}$
+\cite{gibbons:93}, is compatible with superweak theories
+\cite{wolfenstein:64} in which $\epe = 0$.  The E731 result is in the
+ball park of the theoretical estimates.  The NA31 value appears a bit
+high compared to the range given in \eqn{eq:eperangepresent} above.
+
+Hopefully, in about three years the experimental situation concerning
+$\epe$ will be clarified through the improved measurements by the two
+collaborations at the $10^{-4}$ level and by experiments at the $\Phi$
+factory in Frascati.  One should also hope that the theoretical
+situation of $\epe$ will improve by then to confront the new data.

@@ -1,0 +1,447 @@
+\section{The Effective $\Delta F=1$ Hamiltonian: Current-Current Operators}
+   \label{sec:HeffdF1:22}
+
+\subsection{Operators}
+   \label{sec:HeffdF1:22:op}
+We begin our compendium by presenting the parts of effective
+hamiltonians involving the current-current operators only.
+These operators will be generally denoted by $Q_1$ and $Q_2$,
+although their flavour structure depends on the decay considered.
+To be specific we will consider
+\begin{equation}\label{B1}
+Q_1=(\bar b_i c_j)_{V-A} (\bar u_j d_i)_{V-A}
+\qquad 
+Q_2=(\bar b_i c_i)_{V-A} (\bar u_j d_j)_{V-A}
+\end{equation}
+\begin{equation}\label{B2}
+Q_1=(\bar s_i c_j)_{V-A} (\bar u_j d_i)_{V-A}
+\qquad 
+Q_2=(\bar s_i c_i)_{V-A} (\bar u_j d_j)_{V-A}
+\end{equation}
+\begin{equation}\label{B3}
+Q_1=(\bar s_i u_j)_{V-A} (\bar u_j d_i)_{V-A}
+\qquad 
+Q_2=(\bar s_i u_i)_{V-A} (\bar u_j d_j)_{V-A}
+\end{equation}
+for $\Delta B=1$, $\Delta C=1$ and $\Delta S=1$ decays respectively.
+Then the corresponding effective hamiltonians are given by
+\begin{equation}\label{B4}
+H_{eff}(\Delta B=1)=\frac{G_F}{\sqrt{2}}V_{cb}^{*}V_{ud}
+\lbrack C_1(\mu) Q_1+C_2(\mu)Q_2 \rbrack
+\qquad
+(\mu=O(m_b))
+\end{equation}
+\begin{equation}\label{B5}
+H_{eff}(\Delta C=1)=\frac{G_F}{\sqrt{2}}V_{cs}^{*}V_{ud}
+\lbrack C_1(\mu) Q_1+C_2(\mu)Q_2 \rbrack
+\qquad
+(\mu=O(m_c))
+\end{equation}
+\begin{equation}\label{B6}
+H_{eff}(\Delta S=1)=\frac{G_F}{\sqrt{2}}V_{us}^{*}V_{ud}
+\lbrack C_1(\mu) Q_1+C_2(\mu)Q_2 \rbrack
+\qquad
+(\mu=O(1\gev))
+\end{equation}
+As we will see in subsequent sections these hamiltonians have to be
+generalized to include also penguin operators. This however will not
+change the Wilson coefficients $C_1(\mu)$ and $C_2(\mu)$ except for
+small $O(\aem)$ corrections in a complete analysis which includes
+also electroweak penguin operators. For this reason it is useful to
+present the results for $C_{1,2}$ separately as they can be used in a
+large class of decays.
+
+When analyzing $Q_1$ and $Q_2$ in isolation, it is useful to work with
+the operators $Q_{\pm}$ and their coefficients $z_{\pm}$ defined by
+\begin{equation}\label{B7}
+Q_{\pm}=\frac{1}{2} (Q_2\pm Q_1)
+\qquad
+\qquad
+z_\pm=C_2\pm C_1 \, .
+\end{equation}
+$Q_+$ and $Q_-$ do not mix under renormalization and the expression for
+$z_\pm(\mu)$ is very simple.
+
+\subsection{Wilson Coefficients and RG Evolution}
+   \label{sec:HeffdF1:22:wcrg}
+The initial conditions for $z_\pm$ at $\mu=M_W$ are obtained using the
+matching procedure between the full (fig.\ \ref{fig:1loopful}\,(a)--(c))
+and effective (fig.\ \ref{fig:1loopeff}\,(a)--(c)) theory summarized in
+section \ref{sec:basicform:wc:rgf}. Given the initial conditions for
+$z_\pm$ at scale $\mu=M_W$
+\begin{equation}\label{B8}
+z_\pm(M_W)=1+\frac{\as(M_W)}{4\pi}B_\pm
+\end{equation}
+and using the NLO RG evolution formula \eqn{cjua} for the case without
+mixing one finds for the Wilson coefficients of $Q_\pm$ at some scale $\mu$
+\begin{equation}\label{B9}
+z_\pm(\mu)=\left[1+\frac{\as(\mu)}{4\pi}J_\pm\right]
+      \left[\frac{\as(M_W)}{\as(\mu)}\right]^{d_\pm}
+\left[1+\frac{\as(M_W)}{4\pi}(B_\pm-J_\pm)\right]
+\end{equation}
+with
+\begin{equation}\label{B10}
+J_\pm=\frac{d_\pm}{\beta_0}\beta_1-\frac{\gamma^{(1)}_\pm}{2\beta_0}
+\qquad\qquad
+d_\pm=\frac{\gamma^{(0)}_\pm}{2\beta_0} \, ,
+\end{equation}
+where the coefficients $\beta_0$ and $\beta_1$ of the QCD
+$\beta$-function are given in \eqn{b0b1}. Furthermore the LO and NLO
+expansion coefficients for the anomalous dimensions $\gamma_\pm$ of
+$Q_\pm$ in \eqn{B10} and the coefficients $B_\pm$ in \eqn{B8} are given by
+\begin{equation}\label{B11}
+\gamma^{(0)}_\pm=\pm 12 \frac{N\mp 1}{2N}
+\end{equation}
+\begin{equation}\label{B12}
+\gamma^{(1)}_{\pm}=\frac{N\mp 1}{2N}
+\left[-21\pm\frac{57}{N}\mp\frac{19}{3}N \pm
+\frac{4}{3}f-2\beta_0\kappa_\pm\right]
+\end{equation}
+\begin{equation}\label{B13}
+B_\pm=\frac{N\mp 1}{2N}\left[\pm 11+\kappa_\pm\right]
+\end{equation}
+with $N$ being the number of colors.  Here we have introduced the
+parameter $\kappa_\pm$ which conveniently distinguishes between various
+renormalization schemes
+\begin{equation}
+\kappa_\pm = \left\{ \begin{array}{rl}
+    0 & \qquad {\rm NDR}  \\
+\mp 4 & \qquad {\rm HV}
+\end{array}\right. \, .
+\label{B14}
+\end{equation}
+
+Thus, using $N=3$ in the following, $J_\pm$ in (\ref{B10}) can also be
+written as
+\begin{equation}\label{B15}
+J_\pm=(J_\pm)_{\rm NDR}+\frac{3\mp 1}{6}\kappa_\pm
+=(J_\pm)_{\rm NDR}\pm\frac{\gamma^{(0)}_\pm}{12}\kappa_\pm
+\end{equation}
+Setting $\gamma_\pm^{(1)}$, $B_\pm$ and $\beta_1$ to zero gives the
+leading logarithmic approximation \cite{altarelli:74}, \cite{gaillard:74}.
+
+The NLO calculations in the NDR scheme and in the HV scheme have been
+presented in \cite{burasweisz:90}.  In writing (\ref{B12}) we have
+incorporated the $-2 \gamma^{(1)}_J$ correction in the HV scheme
+resulting from the non-vanishing two--loop anomalous dimension of the
+weak current.
+\begin{equation}
+\gamma^{(1)}_J = \left\{
+\begin{array}{lcl}
+                           0 & \qquad & \mbox{NDR} \\
+\frac{N^2 -1}{N} \, 2\beta_0 & \qquad & \mbox{HV}
+\end{array}
+\right.
+\label{eq:wcanom}
+\end{equation}
+The NLO corrections $\gamma^{(1)}_\pm$ in the
+dimensional reduction scheme (DRED) have been first considered in
+\cite{altarelli:81} and later confirmed in \cite{burasweisz:90}. Here
+one has $\kappa_\pm = \mp 6 - N$. This value for $\kappa_\pm$ in DRED
+incorporates also a finite renormalization of $\as$ in order to work in
+all schemes with the usual $\overline{MS}$ coupling.
+
+As already discussed in section \ref{sec:basicform:wc:rgdep}, the
+expression $(B_\pm-J_\pm)$ is scheme independent.  The scheme
+dependence of the Wilson coeffcients $z_\pm(\mu)$ originates then
+entirely from the scheme dependence of $J_\pm$ at the lower end of the
+evolution which can be seen explicitly in (\ref{B15}).
+
+In order to exhibit the $\mu$ dependence on the same footing as the
+scheme dependence, it is useful to rewrite (\ref{B9}) in the case of
+B--decays as follows:
+\begin{equation}\label{B16}
+z_\pm(\mu)=\left[1+\frac{\as(m_b)}{4\pi} \tilde J_\pm(\mu)\right]
+      \left[\frac{\as(M_W)}{\as(m_b)}\right]^{d_\pm}
+\left[1+\frac{\as(M_W)}{4\pi}(B_\pm-J_\pm)\right]
+\end{equation}
+with 
+
+\begin{equation}\label{B17}
+\tilde J_\pm(\mu)=(J_\pm)_{NDR}\pm 
+\frac{\gamma^{(0)}_\pm}{12}\kappa_\pm
++\frac{\gamma^{(0)}_\pm}{2}\ln(\frac{\mu^2}{m^2_b})
+\end{equation}
+summarizing both the renormalization scheme dependence and the
+$\mu$--dependence. Note that in the first parenthesis in (\ref{B16}) we
+have set $\as(\mu)=\as(m_b)$ as the difference in the scales
+in this correction is still of higher order.  We also note that a
+change of the renormalization scheme can be compensated by a change in
+$\mu$. From (\ref{B17}) we find generally
+\begin{equation}\label{B18}
+\mu_i^\pm=\mu_{NDR} \, \exp\left(\mp\frac{\kappa_\pm^{(i)}}{12}\right)
+\end{equation}
+where $i$ denotes a given scheme. From (\ref{B14}) we then have
+\begin{equation}\label{B19}
+\mu_{HV}=\mu_{NDR} \, \exp\left(\frac{1}{3}\right)
+\end{equation}
+Evidently the change in $\mu$ relating HV and NDR\footnote{ The
+relation $\mu_{\rm DRED}^{\pm} = \mu_{\rm NDR} \, \exp\left(\frac{2\pm
+1}{4}\right)$ between NDR and DRED is more involved. In any case
+$\mu_{\rm HV}$ and $\mu_{\rm DRED}^\pm$ are larger than $\mu_{\rm
+NDR}$.} is the same for $z_+$ and $z_-$ and consequently for
+$C_i(\mu)$.
+
+This discussion shows that a meaningful analysis of the $\mu$
+dependence of $C_i(\mu)$ can only be made simultaneously with the
+analysis of the scheme dependence.
+
+The coefficients $C_i(\mu)$ for B-decays can now be calculated using
+\begin{equation}\label{B20}
+C_1(\mu)=\frac{z_+(\mu)-z_-(\mu)}{2}
+\qquad\qquad
+C_2(\mu)=\frac{z_+(\mu)+z_-(\mu)}{2}
+\end{equation}
+To this end we set $f=5$ in the formulae above and use the two-loop
+$\as(\mu)$ of eq.\ \eqn{amu} with $\Lambda \equiv \Lms^{(5)}$. The
+actual numerical values used for $\as(M_Z)$ or equivalently
+$\Lms^{(5)}$ are collected in appendix \ref{app:numinput} together with
+other numerical input parameters.
+
+In the case of D-decays and K-decays the relevant scales are
+$\mu=\ord(m_c)$ and $\mu=\ord(1\gev)$, respectively. In order to
+calculate $C_i(\mu)$ for these cases one has to evolve these
+coefficients first from $\mu=\ord(m_b)$ further down to $\mu=\ord(m_c)$ in
+an effective theory with $f=4$. Matching $\as^{(5)}(m_b) = \as^{(4)}(m_b)$
+we find to a very good approximation $\Lms^{(4)}=(325\pm110)\mev$.
+Unfortunately, the necessity to evolve $C_i(\mu)$ from $\mu=M_W$ down to
+$\mu=m_c$ in two different effective theories ($f=5$ and $f=4$) and
+eventually in the case of K-decays with $f=3$ for $\mu< m_c$ makes the
+formulae for $C_i(\mu)$ in D--decays and K--decays rather complicated.
+They can be found in \cite{burasetal:92d}. Fortunately all these
+complications can be avoided by a simple trick, which reproduces the
+results of \cite{burasetal:92d} to better than $1.5\%$.  In order to
+find $C_i(\mu)$ for $1\gev\leq\mu\leq 2\gev$ one can simply use the
+master formulae given above with $\Lms^{(5)}$ replaced by $\Lms^{(4)}$
+and an ``{effective}'' number of active flavours $f=4.15$. The latter
+effective value for $f$ allows to obtain a very good agreement with
+\cite{burasetal:92d}.  This can be verified by comparing the results
+presented here with those in tables \ref{tab:wc6smu1} and
+\ref{tab:wc6smu2} where no ``tricks'' have been used.  The nice feature
+of this method is that the $\mu$ and renormalization scheme dependences
+of $C_i(\mu)$ can still be studied in simple terms.
+
+The numerical coefficients $C_i(\mu)$ for B--decays are shown in tables
+\ref{tab:c1B} and \ref{tab:c2B} for different $\mu$ and  $\Lms^{(5)}$.
+In addition to the results for the NDR and HV renormalization schemes
+we show the LO values\footnote{The results for the DRED scheme can be
+found in \cite{buras:94}.}. The corresponding results for K--decays and
+D--decays are given in tables \ref{tab:c1KD} and \ref{tab:c2KD}.
+
+\begin{table}[htb]
+\caption[]{The coefficient $C_1(\mu)$ for  B-decays.}
+\label{tab:c1B}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(5)}=140\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(5)}=225\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(5)}=310\mev$} \\
+\hline
+$\mu [{\rm GeV}]$ &LO & NDR & HV & LO & NDR & HV & LO & NDR & HV  \\
+\hline
+\hline
+4.0 & --0.274 & --0.175 & --0.211 & --0.310 & --0.197 & --0.239 & --0.341 &
+--0.216 & --0.264  \\
+\hline
+5.0 & --0.244 & --0.151 & --0.184 & --0.274 & --0.169 & --0.208 & --0.300 &
+--0.185 & --0.228  \\
+\hline
+6.0 & --0.221 & --0.133 & --0.164 & --0.248 & --0.148 & --0.184 & --0.269 &
+--0.161 & --0.201  \\
+\hline
+7.0 & --0.203 & --0.118 & --0.148 & --0.226 & --0.132 & --0.166 & --0.246 &
+--0.143 & --0.181  \\
+\hline
+8.0 & --0.188 & --0.106 & --0.135 & --0.209 & --0.118 & --0.151 & --0.226 &
+--0.128 & --0.164  \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{The coefficient $C_2(\mu)$ for B-decays.}
+\label{tab:c2B}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(5)}=140\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(5)}=225\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(5)}=310\mev$} \\
+\hline
+$\mu [{\rm GeV}]$ & LO& NDR & HV & LO & NDR & HV & LO & NDR & HV  \\
+\hline
+\hline
+4.0 & 1.121 & 1.074 & 1.092 & 1.141 & 1.086 & 1.107 & 1.158 &
+1.096 & 1.120  \\
+\hline
+5.0 & 1.105 & 1.062 & 1.078 & 1.121 & 1.072 & 1.090 & 1.135 &
+1.080 & 1.101  \\
+\hline
+6.0 & 1.093 & 1.054 & 1.069 & 1.107 & 1.062 & 1.079 & 1.118 &
+1.068 & 1.087  \\
+\hline
+7.0 & 1.084 & 1.047 & 1.061 & 1.096 & 1.054 & 1.069 & 1.106 &
+1.059 & 1.077  \\
+\hline
+8.0 & 1.077 & 1.042 & 1.055 & 1.087 & 1.047 & 1.062 & 1.096 &
+1.052 & 1.069  \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\noindent
+From tables \ref{tab:c1B}--\ref{tab:c2Bnlo} we observe:
+\begin{itemize}
+\item
+The scheme dependence of the Wilson coefficients is sizable.  This is
+in particular the case of $C_1$ which vanishes in the absence of QCD
+corrections.
+\item
+The differences between LO and NLO results in the case of $C_1$ are
+large showing the importance of next--to--leading corrections. In fact
+in the NDR scheme the corrections may be as large as $70\%$.  This
+comparison of LO and NLO coefficients can however be questioned because
+for the chosen values of $\Lms$ one has $\as^{(LO)}(M_Z)=0.135 \pm
+0.009$ to be compared with $\as(M_Z)=0.117 \pm 0.007$ \cite{bethke:94},
+\cite{webber:94}. Consequently the difference in LO and NLO results for
+$C_i$ originates partly in the change in the value of the QCD
+coupling.
+\item
+In view of the latter fact it is instructive to show also the LO
+results in which the next-to-leading expression for $\as$ is used.
+We give some examples in tables \ref{tab:c1Bnlo} and \ref{tab:c2Bnlo}.
+Now the differences between LO and NLO results is considerably smaller
+although still as large as $30-40\%$ in the case of $C_1$ and the NDR
+scheme.
+\item
+In any case the inclusion of NLO corrections in NDR and HV schemes
+weakens the impact of QCD on the Wilson coefficients of
+current--current operators.  It is however important to keep in mind
+that such a behavior is specific to the scheme chosen and will in
+general be different in other schemes, reflecting the unphysical nature
+of the Wilson coefficient functions.
+\end{itemize}
+
+\begin{table}[htb]
+\caption[]{The coefficient $C_1(\mu)$ for K-decays and D-decays.}
+\label{tab:c1KD}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+$\mu [{\rm GeV}]$ &LO & NDR & HV & LO & NDR & HV & LO & NDR & HV  \\
+\hline
+\hline
+1.00 & --0.602 & --0.410 & --0.491 & --0.742 & --0.510 & --0.631 & --0.899 &
+--0.632 & --0.825  \\
+\hline
+1.25 & --0.529 & --0.356 & --0.424 & --0.636 & --0.430 & --0.523 & --0.747 &
+--0.512 & --0.642  \\
+\hline
+1.50 & --0.478 & --0.319 & --0.379 & --0.565 & --0.378 & --0.457 & --0.653 &
+--0.439 & --0.543  \\
+\hline
+1.75 & --0.439 & --0.291 & --0.346 & --0.514 & --0.340 & --0.410 & --0.587 & 
+--0.390 & --0.478  \\
+\hline
+2.00 & --0.409 & --0.269 & --0.320 & --0.475 & --0.311 & --0.375 & --0.537 &
+--0.353 & --0.431  \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{The coefficient $C_2(\mu)$ for K-decays and D-decays.}
+\label{tab:c2KD}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+$\mu [{\rm GeV}]$ &LO & NDR & HV & LO & NDR & HV & LO & NDR & HV  \\
+\hline
+\hline
+1.00 & 1.323 & 1.208 & 1.259 & 1.422 & 1.275 & 1.358 & 1.539 &  
+1.363 & 1.506  \\
+\hline
+1.25 & 1.274 & 1.174 & 1.216 & 1.346 & 1.221 & 1.282 & 1.426 & 
+1.277 & 1.367  \\
+\hline
+1.50 & 1.241 & 1.152 & 1.187 & 1.298 & 1.188 & 1.237 & 1.358 & 
+1.228 & 1.296  \\
+\hline
+1.75 & 1.216 & 1.136 & 1.167 & 1.264 & 1.165 & 1.207 & 1.313 & 
+1.196 & 1.252  \\
+\hline
+2.00 & 1.198 & 1.123 & 1.152 & 1.239 & 1.148 & 1.185 & 1.279 &
+1.174 & 1.221  \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{$C_1^{\rm LO}$ and $C_2^{\rm LO}$ for B-decays with $\as$
+in NLO.}
+\label{tab:c1Bnlo}
+\begin{center}
+\begin{tabular}{|c|c|c||c|c||c|c|}
+& \multicolumn{2}{c||}{$\Lms^{(5)}=140\mev$} &
+  \multicolumn{2}{c||}{$\Lms^{(5)}=225\mev$} &
+  \multicolumn{2}{c| }{$\Lms^{(5)}=310\mev$} \\
+\hline
+$\mu [{\rm GeV}]$ & $C_1$ & $C_2$ & $C_1$ & 
+
+$C_2$ & $C_1$ & $C_2$  \\
+\hline
+\hline
+4.0 & --0.244 & 1.105 & --0.274 & 1.121 & --0.301 & 1.135
+\\
+\hline
+5.0 & --0.217 & 1.091 & --0.243 & 1.105 & --0.265 & 1.116
+\\
+\hline
+6.0 & --0.197 & 1.082 & --0.220 & 1.093 & --0.239 & 1.102
+\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{$C_1^{\rm LO}$ and $C_2^{\rm LO}$ for K and D-decays with $\as$
+in NLO.}
+\label{tab:c2Bnlo}
+\begin{center}
+\begin{tabular}{|c|c|c||c|c||c|c|}
+& \multicolumn{2}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{2}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{2}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+$\mu [{\rm GeV}]$ & $C_1$ & $C_2$ & $C_1$ & $C_2$ & $C_1$ & $C_2$  \\
+\hline
+\hline
+1.0 & --0.524 & 1.271 & --0.664 & 1.366 & --0.851 & 1.502
+\\
+\hline
+1.5 & --0.413 & 1.201 & --0.493 & 1.250 & --0.579 & 1.307
+\\
+\hline
+2.0 & --0.354 & 1.165 & --0.412 & 1.200 & --0.469 & 1.235
+\\
+\end{tabular}
+\end{center}
+\end{table}
+
+We have made the whole discussion without invoking HQET (cf.\ section
+\ref{sec:HQET}). It is sometimes stated in the literature that at
+$\mu=m_b$ in the case of B-decays one {\it has to } switch to HQET.  In
+this case for $\mu<m_b$ the anomalous dimensions $\gamma_\pm$ differ
+from those given above. We should however stress that switching to HQET
+can be done at any $\mu<m_b$ provided the logarithms $\ln(m_b/\mu)$ in
+$\langle Q_i \rangle$ do not become too large.  Similar comments apply
+to D-decays with respect to $\mu=m_c$. Of course the coefficients $C_i$
+calculated in HQET for $\mu<m_b$ are different from the coefficients
+presented here. However the corresponding matrix elements $\langle Q_i
+\rangle$ in HQET are also different so that the physical amplitudes
+remain unchanged.

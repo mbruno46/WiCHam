@@ -1,0 +1,1456 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting up things
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if you do not have LaTeX 2e remove the ``times'' style from the line below
+\documentstyle[preprint,eqsecnum,aps,epsf,rotate,floats,sty/rmpbib,sty/times]{revtex}
+
+% macro definitions
+%
+\def\theequation{\thesection.\arabic{equation}}
+
+\newcommand{\blankpage}{\clearpage
+\thispagestyle{empty}
+\
+\clearpage}
+
+\newcommand{\skipevenpage}{
+\ifodd\thepage \relax
+\else \blankpage \fi
+}
+
+\newcommand{\Math}{{\sc Mathematica}}
+\newcommand{\Red}{{\sc Reduce}}
+\newcommand{\Form}{{\sc Form}}
+\newcommand{\tracer}{{\sc Tracer}}
+
+\newcommand{\dS}{\Delta S=1}
+\newcommand{\dB}{\Delta B=1}
+\newcommand{\dC}{\Delta C=1}
+\newcommand{\dI}{\Delta I=1/2}
+\newcommand{\dIth}{\Delta I=3/2}
+
+\newcommand{\BB}{$B^0$-$\bar{B}^0$}
+\newcommand{\KK}{$K^0$-$\bar{K}^0$}
+
+\newcommand{\vmavma}{(V-A)\otimes (V-A)}
+\newcommand{\vmavpa}{(V-A)\otimes (V+A)}
+\newcommand{\smpsmp}{(S-P)\otimes (S-P)}
+\newcommand{\sppsmp}{(S+P)\otimes (S-P)}
+
+\newcommand{\Int}{\int\!\!}
+
+\newcommand{\ord}{{\cal O}}
+\newcommand{\CP}{${\cal CP}\,$}
+
+
+\newcommand{\qarrow}{ 
+\ \begin{array}{c} \hbox{\scriptsize QCD} \\ \longrightarrow \\
+                   \hbox{\scriptsize QED} \end{array}\ }
+
+\newcommand{\Hi }{{\cal H}_{\rm I}}
+\newcommand{\His}{{\cal H}_{\rm I}^{(s)}}
+\newcommand{\Hie}{{\cal H}_{\rm I}^{(e)}}
+
+\newcommand{\vT}{\vec{T}^{(0)}}
+\newcommand{\vTs}{\vec{T}_{\rm s}^{(1)}}
+\newcommand{\vTe}{\vec{T}_{\rm e}^{(1)}}
+
+\newcommand{\vv}{\vec{v}}
+\newcommand{\vz}{\vec{z}}
+\newcommand{\vy}{\vec{y}}
+
+\newcommand{\as}{\alpha_{\rm s}}
+\newcommand{\aem}{\alpha}
+
+\newcommand{\hU}{U}
+\newcommand{\hR}{R}
+\newcommand{\hJ}{J}
+\newcommand{\hV}{V}
+\newcommand{\hK}{K}
+\newcommand{\hM}{M}
+
+\newcommand{\gf}{\gamma_5}
+
+\newcommand{\gj }{\gamma_{\rm J}}
+\newcommand{\gjs}{\gamma_{\rm J,s}^{(0)}}
+\newcommand{\gje}{\gamma_{\rm J,e}^{(0)}}
+\newcommand{\gjss}{\gamma_{\rm J,s}^{(1)}}
+\newcommand{\gjse}{\gamma_{\rm J,se}^{(1)}}
+
+\newcommand{\tg}{\tilde{\gamma}}
+
+\newcommand{\hg}{\gamma}
+\newcommand{\hG}{\Gamma}
+
+\newcommand{\ndr}{{\rm NDR}}
+\newcommand{\ndrb}{\overline{{\rm NDR}}}
+
+\newcommand{\gs}{\gamma_{\rm s}^{(0)}}
+\newcommand{\gem}{\gamma_{\rm e}^{(0)}}
+
+\newcommand{\gss}{\gamma_{\rm s}^{(1)}}
+\newcommand{\gse}{\gamma_{\rm se}^{(1)}}
+
+\newcommand{\gst}{\gamma_{\rm s}^{(0) T}}
+\newcommand{\gemt}{\gamma_{\rm e}^{(0) T}}
+\newcommand{\gsst}{\gamma_{\rm s}^{(1) T}}
+\newcommand{\gset}{\gamma_{\rm se}^{(1) T}}
+
+\newcommand{\gssndr}{\gamma_{\rm s,NDR}^{(1)}}
+\newcommand{\gsshv }{\gamma_{\rm s,HV }^{(1)}}
+\newcommand{\gsendr}{\gamma_{\rm se,NDR}^{(1)}}
+\newcommand{\gsehv }{\gamma_{\rm se,HV }^{(1)}}
+
+\newcommand{\vQ}{\vec{Q}}
+\newcommand{\vC}{\vec{C}}
+
+\newcommand{\hZ}{Z}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\epe}{\varepsilon'/\varepsilon}
+
+\newcommand{\brackcc}[1]{\left[#1\right]_{\rm cc}}
+\newcommand{\brackp }[1]{\left[#1\right]_{\rm p}}
+\newcommand{\brackets}[2]{\left[ #1 \right]_{\rm #2}}
+
+\newcommand{\lbrackcc}[1]{[#1]_{\rm cc}}
+\newcommand{\lbrackp }[1]{[#1]_{\rm p}}
+\newcommand{\lbrackets}[2]{[#1]_{\rm #2}}
+
+\newcommand{\re}{r_{\rm e}}
+\newcommand{\rs}{r_{\rm s}}
+\newcommand{\dre}{\Delta r_{\rm e}}
+\newcommand{\drs}{\Delta r_{\rm s}}
+\newcommand{\rendr}{r_{\rm e,NDR}}
+\newcommand{\rsndr}{r_{\rm s,NDR}}
+\newcommand{\rehv}{r_{\rm e,HV}}
+\newcommand{\rshv}{r_{\rm s,HV}}
+\newcommand{\hJe}{J_{\rm e}}
+\newcommand{\hJs}{J_{\rm s}}
+\newcommand{\hJse}{J_{\rm se}}
+\newcommand{\vardre}{\delta r_{\rm e}}
+\newcommand{\vardrs}{\delta r_{\rm s}}
+
+\newcommand{\mt}{m_{\rm t}}
+\newcommand{\mb}{m_{\rm b}}
+\newcommand{\mc}{m_{\rm c}}
+\newcommand{\ms}{m_{\rm s}}
+\newcommand{\mup}{m_{\rm u}}
+\newcommand{\md}{m_{\rm d}}
+\newcommand{\mw}{M_{\rm W}}
+\newcommand{\mz}{M_{\rm Z}}
+
+\newcommand{\gev}{\, {\rm GeV}}
+\newcommand{\mev}{\, {\rm MeV}}
+
+\newcommand{\Heff}{{\cal H}_{\rm eff}}
+\newcommand{\Lf}{\Lambda_f}
+\newcommand{\Lms}{\Lambda_{\overline{\rm MS}}}
+\newcommand{\LMS}[1]{\Lambda_{\overline{\rm MS}}^{(#1)}}
+\newcommand{\Llo}{\Lambda_{LO}}
+
+\newcommand{\zt}{\tilde{z}}
+\newcommand{\yt}{\tilde{y}}
+\newcommand{\vt}{\tilde{v}}
+
+\newcommand{\V}[1]{V_{\rm #1}}
+\newcommand{\Qzero}[1]{\langle Q_{#1} \rangle_0}
+\newcommand{\Qtwo }[1]{\langle Q_{#1} \rangle_2}
+
+\newcommand{\RE}{{\rm Re}}
+\newcommand{\IM}{{\rm Im}}
+
+\newcommand{\fp}{f_{\rm P}}
+\newcommand{\pqcd}{P_{\rm QCD}}
+\newcommand{\pew }{P_{\rm EW}}
+\newcommand{\Kpipi}{K \to \pi\pi}
+\newcommand{\Kpiee}{K_L \to \pi^0 e^+ e^-}
+\newcommand{\Kpienu}{K^+ \to \pi^0 e^+ \nu}
+\newcommand{\Xpppm}{X_2(\pi^+\pi^-)}
+
+\newcommand{\Slash}{\not\!}
+\newcommand{\lsim}{~{}_{\textstyle\sim}^{\textstyle <}~}
+\newcommand{\gsim}{~{}_{\textstyle\sim}^{\textstyle >}~}
+\newcommand{\tvs}{\vbox{\vskip 3mm}}
+\newcommand{\svs}{\vbox{\vskip 5mm}}
+\newcommand{\mvs}{\vbox{\vskip 8mm}}
+\newcommand{\msvs}{\vbox{\vskip 7mm}}
+\newcommand{\po}{\phantom{1}}
+\newcommand{\nph}{\phantom{.00}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\eqn}[1]{(\ref{#1})}
+
+\newcommand{\kpnn}{$K^+ \to \pi^+\nu\bar\nu$\ }
+\newcommand{\kpn}{K^+ \to \pi^+\nu\bar\nu}
+\newcommand{\klmm}{$K_L \to \mu^+\mu^-$\ }
+\newcommand{\klm}{K_L \to \mu^+\mu^-}
+\newcommand{\klpnn}{$K_L \to \pi^0\nu\bar\nu$\ }
+\newcommand{\klpn}{K_L \to \pi^0\nu\bar\nu}
+\newcommand{\bsg}{b \to s \gamma}
+\newcommand{\Bsg}{B \to X_s \gamma }
+\newcommand{\Bsee}{B \to X_s e^+ e^-}
+\newcommand{\bsee}{b \to s e^+ e^-}
+\newcommand{\bcenu}{b \to c e \bar\nu}
+\newcommand{\kpiee}{K_L \to \pi^0 e^+ e^-}
+\newcommand{\Ctilde}{\widetilde C}
+
+\newcommand{\aspi}{\frac{\as}{4 \pi}}
+
+\newcommand{\imlt}{\IM \lambda_t}
+\newcommand{\relt}{\RE \lambda_t}
+\newcommand{\relc}{\RE \lambda_c}
+
+\newcommand{\newsection}[1]{\section{#1}\setcounter{equation}{0}}
+
+\newcommand{\memo}[1]{
+\bigskip
+{\bf\hrule\medskip\centerline{MEMO}\medskip\hrule\bigskip
+\noindent #1}
+\bigskip\hrule
+\bigskip}
+
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\topfraction}{0.95}
+\setcounter{topnumber}{2}
+\renewcommand{\bottomfraction}{0.95}
+\setcounter{bottomnumber}{2}
+\renewcommand{\floatpagefraction}{0.95}
+
+\tighten
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Page, Abstract, Table of Contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chaps/titabst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The main part of the paper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chaps/intro}
+\include{chaps/part1}
+\include{chaps/ewmodel}
+\include{chaps/basicform}
+\include{chaps/part2}
+\include{chaps/heffguid}
+\include{chaps/heffcc}
+\include{chaps/heffps}
+\include{chaps/heffpew}
+\include{chaps/heffkpee}
+\include{chaps/heffbxs}
+\include{chaps/heffrare}
+\include{chaps/heffkmix}
+\include{chaps/heffbmix}
+\include{chaps/pbe}
+\include{chaps/hqet}
+\include{chaps/part3}
+\include{chaps/inputpar}
+\include{chaps/bincl}
+\include{chaps/utriag}
+\include{chaps/epe}
+\include{chaps/deltamk}
+\include{chaps/klpee}
+\include{chaps/bxsgee}
+\include{chaps/kpnunu}
+\include{chaps/kpmumu}
+\include{chaps/bxnnbmm}
+\include{chaps/summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chaps/acknowl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+\include{chaps/numinput}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+% \bibliography{../share/2lref}
+
+\begin{thebibliography}{\protect\citename{Papadimitriou {\em et~al.\/}, }1991}
+
+\bibitem[\protect\citename{Abachi {\em et~al.\/}, }1995]{D0:95}
+Abachi, S. {\em et~al.\/}, 1995,
+\newblock Phys. Rev. Lett. {\bf 74}, 2632.
+
+\bibitem[\protect\citename{Abada {\em et~al.\/}, }1992]{abadaetal:92}
+Abada, A. {\em et~al.\/}, 1992,
+\newblock Nucl. Phys. {\bf B376}, 172.
+
+\bibitem[\protect\citename{Abe {\em et~al.\/}, }1994a]{abeetal:94a}
+Abe, F. {\em et~al.\/}, 1994a,
+\newblock Phys. Rev. {\bf D50}, 2966.
+
+\bibitem[\protect\citename{Abe {\em et~al.\/}, }1994b]{abeetal:94b}
+Abe, F. {\em et~al.\/}, 1994b,
+\newblock Phys. Rev. Lett {\bf 73}, 225.
+
+\bibitem[\protect\citename{Abe {\em et~al.\/}, }1994c]{abeetal:95}
+Abe, F. {\em et~al.\/}, 1994c,
+\newblock Phys. Rev. {\bf D51}, 4623.
+
+\bibitem[\protect\citename{Adel and Yao, }1993]{Yao1}
+Adel, K. and Y.~P. Yao, 1993,
+\newblock Mod. Phys. Lett. {\bf A8}, 1679.
+
+\bibitem[\protect\citename{Adel and Yao, }1994]{Yao2}
+Adel, K. and Y.~P. Yao, 1994,
+\newblock Phys. Rev. {\bf D49}, 4945.
+
+\bibitem[\protect\citename{Adler {\em et~al.\/}, }1995]{adleretal:95}
+Adler, S. {\em et~al.\/}, 1995,
+\newblock BNL preprint, {\bf BNL-62327; hep-ex/9510006}.
+
+\bibitem[\protect\citename{Agrawal {\em et~al.\/}, }1991]{agrawaletal:91}
+Agrawal, P., J.~Ng, G.~B{\'e}langer, and C.~Geng, 1991,
+\newblock Phys. Rev. Lett. {\bf 67}, 537.
+
+\bibitem[\protect\citename{Agrawal {\em et~al.\/}, }1992]{agrawaletal:92}
+Agrawal, P., J.~Ng, G.~B{\'e}langer, and C.~Geng, 1992,
+\newblock Phys. Rev. {\bf D45}, 2383.
+
+\bibitem[\protect\citename{Alam {\em et~al.\/}, }1995]{CLEO:94}
+Alam, M.~S. {\em et~al.\/}, 1995,
+\newblock Phys. Rev. Lett. {\bf 74}, 2885.
+
+\bibitem[\protect\citename{Ali and Greub, }1991a]{aligreub:91a}
+Ali, A. and C.~Greub, 1991a,
+\newblock Z. Phys. {\bf C49}, 431.
+
+\bibitem[\protect\citename{Ali and Greub, }1991b]{aligreub:91b}
+Ali, A. and C.~Greub, 1991b,
+\newblock Phys. Lett. {\bf B259}, 182.
+
+\bibitem[\protect\citename{Ali and Greub, }1993]{aligreub:93}
+Ali, A. and C.~Greub, 1993,
+\newblock Z. Phys. {\bf C60}, 433.
+
+\bibitem[\protect\citename{Ali and Greub, }1995]{aligreub:95}
+Ali, A. and C.~Greub, 1995,
+\newblock Phys. Lett. {\bf B361}, 146.
+
+\bibitem[\protect\citename{Ali and London, }1995]{alilondon:95}
+Ali, A. and D.~London, 1995,
+\newblock DESY preprint {\bf DESY-95-148; hep-ph/9508272}.
+
+\bibitem[\protect\citename{Ali {\em et~al.\/}, }1991]{AMM:91}
+Ali, A., T.~Mannel, and T.~Morozumi, 1991,
+\newblock Phys. Lett. {\bf B273}, 505.
+
+\bibitem[\protect\citename{Ali {\em et~al.\/}, }1995]{AGM:94}
+Ali, A., G.~F. Giudice, and T.~Mannel, 1995,
+\newblock Z. Phys. {\bf C67}, 417.
+
+\bibitem[\protect\citename{Alliegro {\em et~al.\/}, }1992]{alliegro:92}
+Alliegro, C. {\em et~al.\/}, 1992,
+\newblock Phys. Rev. Lett. {\bf 68}, 278.
+
+\bibitem[\protect\citename{Allton {\em et~al.\/}, }1994]{alltonetal:94}
+Allton, C.~R., M.~Ciuchini, M.~Crisafulli, V.~Lubicz, and G.~Martinelli, 1994,
+\newblock Nucl. Phys. {\bf B431}, 667.
+
+\bibitem[\protect\citename{Altarelli and Maiani, }1974]{altarelli:74}
+Altarelli, G. and L.~Maiani, 1974,
+\newblock Phys. Lett. {\bf B52}, 351.
+
+\bibitem[\protect\citename{Altarelli and Petrarca, }1991]{altarellipetrarca:91}
+Altarelli, G. and S.~Petrarca, 1991,
+\newblock Phys. Lett. {\bf B261}, 303.
+
+\bibitem[\protect\citename{Altarelli {\em et~al.\/}, }1981]{altarelli:81}
+Altarelli, G., G.~Curci, G.~Martinelli, and S.~Petrarca, 1981,
+\newblock Nucl. Phys. {\bf B187}, 461.
+
+\bibitem[\protect\citename{Ammar {\em et~al.\/}, }1993]{CLEO:93}
+Ammar, R. {\em et~al.\/}, 1993,
+\newblock Phys. Rev. Lett. {\bf 71}, 674.
+
+\bibitem[\protect\citename{Ammar {\em et~al.\/}, }1994]{ammaretal:94}
+Ammar, R. {\em et~al.\/}, 1994,
+\newblock Phys. Rev. {\bf D49}, 5701.
+
+\bibitem[\protect\citename{Antonelli {\em et~al.\/}, }1995]{antonellietal:95}
+Antonelli, V., S.~Bertolini, M.~Fabrichesi, and E.~I. Lashin, 1995,
+\newblock SISSA preprint, {\bf SISSA 102/95/EP}.
+
+\bibitem[\protect\citename{Ashmore, }1972]{ashmore:72}
+Ashmore, J.~F., 1972,
+\newblock Lett. Nuovo Cim. {\bf 4}, 289.
+
+\bibitem[\protect\citename{Bagan {\em et~al.\/}, }1992]{baganetal:92}
+Bagan, E., P.~Ball, V.~Braun, and H.~G. Dosch, 1992,
+\newblock Phys. Lett. {\bf B278}, 457.
+
+\bibitem[\protect\citename{Bagan {\em et~al.\/}, }1994]{baganetal:94a}
+Bagan, E., P.~Ball, V.~Braun, and P.~Gosdzinsky, 1994,
+\newblock Nucl. Phys. {\bf B432}, 3.
+
+\bibitem[\protect\citename{Bagan {\em et~al.\/}, }1995a]{baganetal:94b}
+Bagan, E., P.~Ball, V.~Braun, and P.~Gosdzinsky, 1995a,
+\newblock Phys. Lett. {\bf B342}, 362.
+
+\bibitem[\protect\citename{Bagan {\em et~al.\/}, }1995b]{baganetal:95}
+Bagan, E., P.~Ball, B.~Fiol, and P.~Gosdzinsky, 1995b,
+\newblock Phys. Lett. {\bf B351}, 546.
+
+\bibitem[\protect\citename{Ball and Nierste, }1994]{ballnierste:94}
+Ball, P. and U.~Nierste, 1994,
+\newblock Phys. Rev. {\bf D50}, 5841.
+
+\bibitem[\protect\citename{Ball {\em et~al.\/}, }1995a]{braunetal:95}
+Ball, P., M.~Beneke, and V.~M. Braun, 1995a,
+\newblock Phys. Rev. {\bf D52}, 3929.
+
+\bibitem[\protect\citename{Ball {\em et~al.\/}, }1995b]{balletal:95}
+Ball, P., M.~Beneke, and V.~M. Braun, 1995b,
+\newblock Nucl. Phys. {\bf D452}, 563.
+
+\bibitem[\protect\citename{Barbieri and Giudice, }1993]{Barbieri}
+Barbieri, R. and G.~F. Giudice, 1993,
+\newblock Phys. Lett. {\bf B309}, 86.
+
+\bibitem[\protect\citename{Bardeen {\em et~al.\/}, }1978]{bardeen:78}
+Bardeen, W.~A., A.~J. Buras, D.~W. Duke, and T.~Muta, 1978,
+\newblock Phys. Rev. {\bf D18}, 3998.
+
+\bibitem[\protect\citename{Bardeen {\em et~al.\/}, }1987a]{bardeen:87b}
+Bardeen, W.~A., A.~J. Buras, and J.-M. G\'{e}rard, 1987a,
+\newblock Phys. Lett. {\bf B192}, 138.
+
+\bibitem[\protect\citename{Bardeen {\em et~al.\/}, }1987b]{bardeen:87a}
+Bardeen, W.~A., A.~J. Buras, and J.-M. G\'{e}rard, 1987b,
+\newblock Nucl. Phys. {\bf B293}, 787.
+
+\bibitem[\protect\citename{Bardeen {\em et~al.\/}, }1988]{bardeenetal:88}
+Bardeen, W.~A., A.~J. Buras, and J.-M. G\'{e}rard, 1988,
+\newblock Phys. Lett. {\bf B211}, 343.
+
+\bibitem[\protect\citename{Barger {\em et~al.\/}, }1993]{Barger}
+Barger, V., M.~S. Berger, and R.~J.~N. Phillips, 1993,
+\newblock Phys. Rev. Lett. {\bf 70}, 1368.
+
+\bibitem[\protect\citename{Barr {\em et~al.\/}, }1992]{barretal:92}
+Barr, G.~D. {\em et~al.\/}, 1992,
+\newblock Phys. Lett. {\bf B284}, 440.
+
+\bibitem[\protect\citename{Barr {\em et~al.\/}, }1993]{barr:93}
+Barr, G.~D. {\em et~al.\/}, 1993,
+\newblock Phys. Lett. {\bf B317}, 233.
+
+\bibitem[\protect\citename{Baxter {\em et~al.\/}, }1994]{baxteretal:94}
+Baxter, R.~M. {\em et~al.\/}, 1994,
+\newblock Phys. Rev. {\bf D49}, 1594.
+
+\bibitem[\protect\citename{B{\'e}langer and Geng, }1991]{belangergeng:91}
+B{\'e}langer, G. and C.~Q. Geng, 1991,
+\newblock Phys. Rev. {\bf D43}, 140.
+
+\bibitem[\protect\citename{B{\'e}langer {\em et~al.\/}, }1993]{belangeretal:93}
+B{\'e}langer, G., C.~Geng, and P.~Turcotte, 1993,
+\newblock Nucl. Phys. {\bf B390}, 253.
+
+\bibitem[\protect\citename{Beneke and Braun, }1995]{benekebraun:95}
+Beneke, M. and V.~Braun, 1995,
+\newblock Phys. Lett. {\bf B348}, 513.
+
+\bibitem[\protect\citename{Bernard and Soni, }1991]{bernardsoni:91}
+Bernard, C. and A.~Soni, 1991,
+\newblock Nucl. Phys. {\bf (Proc. Suppl.) 9}, 155.
+
+\bibitem[\protect\citename{Bernard {\em et~al.\/}, }1994]{bernardetal:94}
+Bernard, C., J.~Labrenz, and A.~Soni, 1994,
+\newblock Phys. Rev. {\bf D49}, 2536.
+
+\bibitem[\protect\citename{Bertolini {\em et~al.\/}, }1987]{Bert}
+Bertolini, S., F.~Borzumati, and A.~Masiero, 1987,
+\newblock Phys. Rev. Lett. {\bf 59}, 180.
+
+\bibitem[\protect\citename{Bertolini {\em et~al.\/}, }1991a]{Borzum}
+Bertolini, S., F.~Borzumati, A.~Masiero, and G.~Ridolfi, 1991a,
+\newblock Nucl. Phys. {\bf B353}, 591.
+
+\bibitem[\protect\citename{Bertolini {\em et~al.\/}, }1991b]{BBMR:91}
+Bertolini, S., F.~Borzumati, A.~Masiero, and G.~Ridolfi, 1991b,
+\newblock Nucl. Phys. {\bf B353}, 591.
+
+\bibitem[\protect\citename{Bertolini {\em et~al.\/}, }1995a]{bertolinietal:94}
+Bertolini, S., J.~Eeg, and M.~Fabbrichesi, 1995a,
+\newblock Nucl. Phys. {\bf B449}, 197.
+
+\bibitem[\protect\citename{Bertolini {\em et~al.\/}, }1995b]{bertolinietal:95}
+Bertolini, S., J.~O. Eeg, and M.~Fabrichesi, 1995b,
+\newblock SISSA preprint, {\bf SISSA 103/95/EP}.
+
+\bibitem[\protect\citename{Bethke, }1994]{bethke:94}
+Bethke, S., 1994,
+\newblock talk presented at the QCD '94 Conference, Montpellier, France, July
+  7--13.
+
+\bibitem[\protect\citename{Bigi and Gabbiani, }1991]{bigigabbiani:91}
+Bigi, I.~I. and F.~Gabbiani, 1991,
+\newblock Nucl. Phys. {\bf B367}, 3.
+
+\bibitem[\protect\citename{Bigi and Uraltsev, }1994]{bigiuraltsev:94}
+Bigi, I.~I. and N.~Uraltsev, 1994,
+\newblock Z. Phys. . {\bf C62}, 623.
+
+\bibitem[\protect\citename{Bigi {\em et~al.\/}, }1992]{bigietal:92}
+Bigi, I.~I., N.~G. Uraltsev, and A.~I. Vainshtein, 1992,
+\newblock Phys. Lett. {\bf B293}, 430; erratum ibid.\ {\em Phys. Lett.} {\bf
+  B297} (1993) 477.
+
+\bibitem[\protect\citename{Bigi {\em et~al.\/}, }1993]{bigietal:93}
+Bigi, I.~I. {\em et~al.\/}, 1993,
+\newblock Phys. Rev. Lett. {\bf 71}, 496.
+
+\bibitem[\protect\citename{Bigi {\em et~al.\/}, }1994a]{Bigi}
+Bigi, I.~I., B.~Blok, M.~Shifman, N.~G. Uraltsev, and A.~I. Vainshtein, 1994a,
+\newblock {\rm in} {\em B-Decays} {\rm (2nd Edition), editor S. L. Stone, World
+  Scientific, Singapore, (1994) p.\ 132; (1992), p.\ 610}.
+
+\bibitem[\protect\citename{Bigi {\em et~al.\/}, }1994b]{bigietal:94}
+Bigi, I.~I., B.~Blok, M.~Shifman, and A.~Vainshtein, 1994b,
+\newblock Phys. Lett. {\bf B323}, 408.
+
+\bibitem[\protect\citename{Bijnens and Prades, }1995]{bijnenspardes:95}
+Bijnens, J. and J.~Prades, 1995,
+\newblock Nucl. Phys. {\bf B444}, 523.
+
+\bibitem[\protect\citename{Bijnens and Wise, }1984]{bijnenswise:84}
+Bijnens, J. and M.~B. Wise, 1984,
+\newblock Phys. Lett. {\bf B137}, 245.
+
+\bibitem[\protect\citename{Bijnens {\em et~al.\/}, }1991]{bijnensetal:91}
+Bijnens, J., J.-M. G\'{e}rard, and G.~Klein, 1991,
+\newblock Phys. Lett. {\bf B257}, 191.
+
+\bibitem[\protect\citename{Bjorken {\em et~al.\/}, }1992]{Bj}
+Bjorken, J.~D., I.~Dunietz, and J.~Taron, 1992,
+\newblock Nucl. Phys. {\bf B371}, 111.
+
+\bibitem[\protect\citename{Blok and Shifman, }1993]{blokshifman:93}
+Blok, B. and M.~Shifman, 1993,
+\newblock talk presented at the 3rd Workshop on the Tau-Charm Factory,
+  Marbella, Spain, 1-6 June, 1993, {\bf hep-ph/9311331}.
+
+\bibitem[\protect\citename{Blok {\em et~al.\/}, }1994]{bloketal:94}
+Blok, B., L.~Koyrakh, M.~Shifman, and A.~I. Vainshtein, 1994,
+\newblock Phys. Rev. {\bf D49}, 3356.
+
+\bibitem[\protect\citename{Bollini and Giambiagi, }1972a]{bollini:72a}
+Bollini, C.~G. and J.~J. Giambiagi, 1972a,
+\newblock Phys. Lett. {\bf B40}, 566.
+
+\bibitem[\protect\citename{Bollini and Giambiagi, }1972b]{bollini:72b}
+Bollini, C.~G. and J.~J. Giambiagi, 1972b,
+\newblock Nuovo Cim. {\bf 12B}, 20.
+
+\bibitem[\protect\citename{Borzumati, }1994]{Borzum2}
+Borzumati, F., 1994,
+\newblock Z. Phys. {\bf C63}, 291.
+
+\bibitem[\protect\citename{Boyd {\em et~al.\/}, }1995]{boydetal:94}
+Boyd, C., B.~Grinstein, and R.~Lebed, 1995,
+\newblock Phys. Rev. Lett. {\bf 74}, 4603.
+
+\bibitem[\protect\citename{Breitenlohner and Maison, }1977]{breitenlohner:77}
+Breitenlohner, P. and D.~Maison, 1977,
+\newblock Commun. Math. Phys. {\bf 52}, 11, 39, 55.
+
+\bibitem[\protect\citename{Broadhurst and Grozin, }1991]{broadhurstgrozin:91}
+Broadhurst, D. and A.~Grozin, 1991,
+\newblock Phys. Lett. {\bf B267}, 105.
+
+\bibitem[\protect\citename{Brodsky {\em et~al.\/}, }1983]{brodskyetal:83}
+Brodsky, S.~J., G.~P. Lepage, and P.~B. Mackenzie, 1983,
+\newblock Phys. Rev. {\bf D28}, 228.
+
+\bibitem[\protect\citename{Browder and Honscheid, }1995]{browderhonscheid:95}
+Browder, T.~E. and K.~Honscheid, 1995,
+\newblock Prog. Part. Nucl. Phys. {\bf 35}, 81.
+
+\bibitem[\protect\citename{Bruno and Prades, }1993]{brunoprades:93}
+Bruno, C. and J.~Prades, 1993,
+\newblock Z. Phys. {\bf C57}, 585.
+
+\bibitem[\protect\citename{Buchalla and Buras, }1993a]{buchallaburas:93b}
+Buchalla, G. and A.~J. Buras, 1993a,
+\newblock Nucl. Phys. {\bf B400}, 225.
+
+\bibitem[\protect\citename{Buchalla and Buras, }1993b]{buchallaburas:93a}
+Buchalla, G. and A.~J. Buras, 1993b,
+\newblock Nucl. Phys. {\bf B398}, 285.
+
+\bibitem[\protect\citename{Buchalla and Buras, }1994a]{buchallaburas:94}
+Buchalla, G. and A.~J. Buras, 1994a,
+\newblock Nucl. Phys. {\bf B412}, 106.
+
+\bibitem[\protect\citename{Buchalla and Buras, }1994b]{buchallaburas:94b}
+Buchalla, G. and A.~J. Buras, 1994b,
+\newblock Phys. Lett. {\bf B336}, 263.
+
+\bibitem[\protect\citename{Buchalla and Buras, }1994c]{buchallaburas:94c}
+Buchalla, G. and A.~J. Buras, 1994c,
+\newblock Phys. Lett. {\bf B333}, 221.
+
+\bibitem[\protect\citename{Buchalla {\em et~al.\/}, }1990]{buchallaetal:90}
+Buchalla, G., A.~J. Buras, and M.~K. Harlander, 1990,
+\newblock Nucl. Phys. {\bf B337}, 313.
+
+\bibitem[\protect\citename{Buchalla {\em et~al.\/}, }1991]{buchallaetal:91}
+Buchalla, G., A.~J. Buras, and M.~K. Harlander, 1991,
+\newblock Nucl. Phys. {\bf B349}, 1.
+
+\bibitem[\protect\citename{Buchalla, }1993]{buchalla:93}
+Buchalla, G., 1993,
+\newblock Nucl. Phys. {\bf B391}, 501.
+
+\bibitem[\protect\citename{Buras and G\'{e}rard, }1987]{burasgerard:87}
+Buras, A.~J. and J.-M. G\'{e}rard, 1987,
+\newblock Phys. Lett. {\bf B192}, 156.
+
+\bibitem[\protect\citename{Buras and Harlander, }1992]{burasharlander:92}
+Buras, A.~J. and M.~K. Harlander, 1992,
+\newblock {\rm in} Heavy Flavours, {\rm editors A. J. Buras and M. Lindner,
+  World Scientific, Singapore, (1992), p.\ 58}.
+
+\bibitem[\protect\citename{Buras and Lautenbacher, }1993]{buraslauten:93}
+Buras, A.~J. and M.~E. Lautenbacher, 1993,
+\newblock Phys. Lett. {\bf B318}, 212.
+
+\bibitem[\protect\citename{Buras and M{\"u}nz, }1995]{burasmuenz:95}
+Buras, A.~J. and M.~M{\"u}nz, 1995,
+\newblock Phys. Rev. {\bf D52}, 186.
+
+\bibitem[\protect\citename{Buras and Weisz, }1990]{burasweisz:90}
+Buras, A.~J. and P.~H. Weisz, 1990,
+\newblock Nucl. Phys. {\bf B333}, 66.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1990]{burasjaminweisz:90}
+Buras, A.~J., M.~Jamin, and P.~H. Weisz, 1990,
+\newblock Nucl. Phys. {\bf B347}, 491.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1992]{burasetal:92a}
+Buras, A.~J., M.~Jamin, M.~E. Lautenbacher, and P.~H. Weisz, 1992,
+\newblock Nucl. Phys. {\bf B370}, 69; addendum ibid.~{\em Nucl.~Phys.}~{\bf
+  B375} (1992) 501.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1993a]{burasetal:92c}
+Buras, A.~J., M.~Jamin, and M.~E. Lautenbacher, 1993a,
+\newblock Nucl. Phys. {\bf B400}, 75.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1993b]{burasetal:92d}
+Buras, A.~J., M.~Jamin, and M.~E. Lautenbacher, 1993b,
+\newblock Nucl. Phys. {\bf B408}, 209.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1993c]{burasetal:92b}
+Buras, A.~J., M.~Jamin, M.~E. Lautenbacher, and P.~H. Weisz, 1993c,
+\newblock Nucl. Phys. {\bf B400}, 37.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1994a]{burasetal:94a}
+Buras, A.~J., M.~E. Lautenbacher, M.~Misiak, and M.~M{\"u}nz, 1994a,
+\newblock Nucl. Phys. {\bf B423}, 349.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1994b]{burasetal:94b}
+Buras, A.~J., M.~E. Lautenbacher, and G.~Ostermaier, 1994b,
+\newblock Phys. Rev. {\bf D50}, 3433.
+
+\bibitem[\protect\citename{Buras {\em et~al.\/}, }1994c]{BMMP:94}
+Buras, A.~J., M.~Misiak, M.~M{\"u}nz, and S.~Pokorski, 1994c,
+\newblock Nucl. Phys. {\bf B424}, 374.
+
+\bibitem[\protect\citename{Buras, }1980]{buras:80}
+Buras, A.~J., 1980,
+\newblock Rev. Mod. Phys. {\bf 52}, 199.
+
+\bibitem[\protect\citename{Buras, }1993]{buras:93}
+Buras, A.~J., 1993,
+\newblock Phys. Lett. {\bf B317}, 449.
+
+\bibitem[\protect\citename{Buras, }1994]{buras:94b}
+Buras, A.~J., 1994,
+\newblock Phys. Lett. {\bf B333}, 476.
+
+\bibitem[\protect\citename{Buras, }1995]{buras:94}
+Buras, A.~J., 1995,
+\newblock Nucl. Phys. {\bf B434}, 606.
+
+\bibitem[\protect\citename{Cabibbo and Maiani, }1978]{CM:78}
+Cabibbo, N. and L.~Maiani, 1978,
+\newblock Phys. Lett. {\bf B79}, 109.
+
+\bibitem[\protect\citename{{Callan~Jr}, }1970]{callan:70}
+{Callan~Jr}, C.~G., 1970,
+\newblock Phys. Rev. {\bf D2}, 1541.
+
+\bibitem[\protect\citename{Cella {\em et~al.\/}, }1990]{cella:90a}
+Cella, G., G.~Curci, G.~Ricciardi, and A.~Vicer\'{e}, 1990,
+\newblock Phys. Lett. {\bf B248}, 181.
+
+\bibitem[\protect\citename{Cella {\em et~al.\/}, }1991]{cellaetal:91}
+Cella, G., G.~Ricciardi, and A.~Vicer\'{e}, 1991,
+\newblock Phys. Lett. {\bf B258}, 212.
+
+\bibitem[\protect\citename{Cella {\em et~al.\/}, }1994a]{CCRV:94a}
+Cella, G., G.~Curci, G.~Ricciardi, and A.~Vicer{\'e}, 1994a,
+\newblock Phys. Lett. {\bf B325}, 227.
+
+\bibitem[\protect\citename{Cella {\em et~al.\/}, }1994b]{CCRV:94b}
+Cella, G., G.~Curci, G.~Ricciardi, and A.~Vicer{\'e}, 1994b,
+\newblock Nucl. Phys. {\bf B431}, 417.
+
+\bibitem[\protect\citename{Chay {\em et~al.\/}, }1990]{Chay}
+Chay, J., H.~Georgi, and B.~Grinstein, 1990,
+\newblock Phys. Lett. {\bf B247}, 399.
+
+\bibitem[\protect\citename{Chetyrkin {\em et~al.\/}, }1995]{chetyrkinetal:95}
+Chetyrkin, K.~G., C.~A. Dominguez, D.~Pirjol, and K.~Schilcher, 1995,
+\newblock Phys. Rev. {\bf D51}, 5090.
+
+\bibitem[\protect\citename{Cho and Misiak, }1994]{LR}
+Cho, P. and M.~Misiak, 1994,
+\newblock Phys. Rev. {\bf D49}, 5894.
+
+\bibitem[\protect\citename{Cicuta and Montaldi, }1972]{cicutamontaldi:72}
+Cicuta, G.~M. and E.~Montaldi, 1972,
+\newblock Lett. Nuovo Cim. {\bf 4}, 329.
+
+\bibitem[\protect\citename{Ciuchini {\em et~al.\/}, }1993a]{ciuchini:92}
+Ciuchini, M., E.~Franco, G.~Martinelli, and L.~Reina, 1993a,
+\newblock Phys. Lett. {\bf B301}, 263.
+
+\bibitem[\protect\citename{Ciuchini {\em et~al.\/}, }1993b]{CFMRS:93}
+Ciuchini, M., E.~Franco, G.~Martinelli, L.~Reina, and L.~Silvestrini, 1993b,
+\newblock Phys. Lett. {\bf B316}, 127.
+
+\bibitem[\protect\citename{Ciuchini {\em et~al.\/}, }1994a]{ciuchini:93}
+Ciuchini, M., E.~Franco, G.~Martinelli, and L.~Reina, 1994a,
+\newblock Nucl. Phys. {\bf B415}, 403.
+
+\bibitem[\protect\citename{Ciuchini {\em et~al.\/}, }1994b]{Ciu:94}
+Ciuchini, M., E.~Franco, G.~Martinelli, L.~Reina, and L.~Silvestrini, 1994b,
+\newblock Phys. Lett. {\bf B334}, 137.
+
+\bibitem[\protect\citename{Ciuchini {\em et~al.\/}, }1994c]{CFRS:94}
+Ciuchini, M., E.~Franco, L.~Reina, and L.~Silvestrini, 1994c,
+\newblock Nucl. Phys. {\bf B421}, 41.
+
+\bibitem[\protect\citename{Ciuchini {\em et~al.\/}, }1995]{ciuchini:95}
+Ciuchini, M., E.~Franco, G.~Martinelli, L.~Reina, and L.~Silvestrini, 1995,
+\newblock Z. Phys. {\bf C68}, 239.
+
+\bibitem[\protect\citename{Cohen and Manohar, }1984]{cohenmanohar:84}
+Cohen, A.~G. and A.~Manohar, 1984,
+\newblock Phys. Lett. {\bf B143}, 481.
+
+\bibitem[\protect\citename{Cohen {\em et~al.\/}, }1993]{cohenetal:93}
+Cohen, A.~G., G.~Ecker, and A.~Pich, 1993,
+\newblock Phys. Lett. {\bf B304}, 347.
+
+\bibitem[\protect\citename{Crisafulli {\em et~al.\/}, }1995]{crisafullietal:95}
+Crisafulli, M. {\em et~al.\/}, 1995,
+\newblock preprint, {\bf hep-lat/9509029}.
+
+\bibitem[\protect\citename{Datta {\em et~al.\/}, }1990]{dattaetal:90}
+Datta, A., J.~Fr{\"o}hlich, and E.~A. Paschos, 1990,
+\newblock Z. Phys. {\bf C46}, 63.
+
+\bibitem[\protect\citename{Datta {\em et~al.\/}, }1995]{dattaetal:95}
+Datta, A., E.~A. Paschos, J.-M. Schwarz, and M.~N.~S. Roy, 1995,
+\newblock University of Dortmund preprint, {\bf DO-TH 95/12}.
+
+\bibitem[\protect\citename{Deshpande and He, }1995]{deshpandehe:94}
+Deshpande, N.~G. and X.-G. He, 1995,
+\newblock Phys. Rev. Lett. {\bf 74}, 26; erratum ibid.\ {\em Phys. Rev. Lett.}
+  {\bf 74} (1995) 4099.
+
+\bibitem[\protect\citename{Deshpande {\em et~al.\/}, }1987]{Desh}
+Deshpande, N.~G., P.~Lo, J.~Trampeti{\'c}, G.~Eilam, and P.~Singer, 1987,
+\newblock Phys. Rev. Lett. {\bf 59}, 183.
+
+\bibitem[\protect\citename{Deshpande {\em et~al.\/}, }1989]{DTP:89}
+Deshpande, N.~G., J.~Trampeti{\'c}, and K.~Panose, 1989,
+\newblock Phys. Rev. {\bf D39}, 1461.
+
+\bibitem[\protect\citename{Deshpande {\em et~al.\/}, }1993]{DPT:93}
+Deshpande, N.~G., K.~Panose, and J.~Trampeti{\'c}, 1993,
+\newblock Phys. Lett. {\bf B308}, 322.
+
+\bibitem[\protect\citename{Deshpande {\em et~al.\/}, }1995]{deshpandeetal:94}
+Deshpande, N.~G., X.-G. He, and J.~Trampeti{\'c}, 1995,
+\newblock Phys. Lett. {\bf B345}, 547.
+
+\bibitem[\protect\citename{Dib {\em et~al.\/}, }1989a]{dib1:89}
+Dib, C.~O., I.~Dunietz, and F.~J. Gilman, 1989a,
+\newblock Phys. Lett. {\bf B218}, 487.
+
+\bibitem[\protect\citename{Dib {\em et~al.\/}, }1989b]{dib2:89}
+Dib, C.~O., I.~Dunietz, and F.~J. Gilman, 1989b,
+\newblock Phys. Rev. {\bf D39}, 2639.
+
+\bibitem[\protect\citename{Dib {\em et~al.\/}, }1990]{dibdunietzgilman:90}
+Dib, C.~O., I.~Dunietz, F.~J. Gilman, and Y.~Nir, 1990,
+\newblock Phys. Rev. {\bf D~41}, 1522.
+
+\bibitem[\protect\citename{Dib {\em et~al.\/}, }1991]{dibetal:91}
+Dib, C.~O., I.~Dunietz, and F.~J. Gilman, 1991,
+\newblock Mod. Phys. Lett. {\bf A6}, 3573.
+
+\bibitem[\protect\citename{Dikeman {\em et~al.\/}, }1995]{dikemanetal:94}
+Dikeman, R.~D., M.~Shifman, and N.~G. Uraltsev, 1995,
+\newblock University of Minnesota preprint {\bf TPI-MINN-95/9-T;
+  hep-ph/9505397}.
+
+\bibitem[\protect\citename{Donoghue and Gabbiani, }1995]{donoghuegabbiani:95}
+Donoghue, J.~F. and F.~Gabbiani, 1995,
+\newblock Phys. Rev. {\bf D51}, 2187.
+
+\bibitem[\protect\citename{Donoghue {\em et~al.\/}, }1982]{donoghueetal:82}
+Donoghue, J.~F., E.~Golowich, and B.~R. Holstein, 1982,
+\newblock Phys. Lett. {\bf B119}, 412.
+
+\bibitem[\protect\citename{Donoghue {\em et~al.\/}, }1986]{donoghueetal:86}
+Donoghue, J.~F., E.~Golowich, B.~R. Holstein, and J.~Trampeti{\'c}, 1986,
+\newblock Phys. Lett. {\bf B179}, 361.
+
+\bibitem[\protect\citename{Draper and McNeile, }1994]{drapermcneile:94}
+Draper, T. and C.~McNeile, 1994,
+\newblock Nucl. Phys. {\bf B (Proc. Suppl.) 34}, 453.
+
+\bibitem[\protect\citename{Dugan and Grinstein, }1991]{dugan:91}
+Dugan, M.~J. and B.~Grinstein, 1991,
+\newblock Phys. Lett. {\bf B256}, 239.
+
+\bibitem[\protect\citename{Duncan {\em et~al.\/}, }1995]{duncanetal:94}
+Duncan, A., E.~Eichten, J.~Flynn, B.~Hill, G.~Hockney, and H.~Thacker, 1995,
+\newblock Phys. Rev. {\bf D51}, 5101.
+
+\bibitem[\protect\citename{Ecker {\em et~al.\/}, }1987]{eckeretal:87}
+Ecker, G., A.~Pich, and E.~de~Rafael, 1987,
+\newblock Nucl. Phys. {\bf B291}, 692.
+
+\bibitem[\protect\citename{Ecker {\em et~al.\/}, }1988]{eckeretal:88}
+Ecker, G., A.~Pich, and E.~de~Rafael, 1988,
+\newblock Nucl. Phys. {\bf B303}, 665.
+
+\bibitem[\protect\citename{Eeg and Picek, }1988]{eegpicek:88}
+Eeg, J.~O. and I.~Picek, 1988,
+\newblock Phys.~Lett. {\bf B214}, 651.
+
+\bibitem[\protect\citename{Ellis and Hagelin, }1983]{ellishagelin:83}
+Ellis, J. and J.~S. Hagelin, 1983,
+\newblock Nucl. Phys. {\bf B217}, 189.
+
+\bibitem[\protect\citename{Falk {\em et~al.\/}, }1994]{falketal:94}
+Falk, A., M.~Luke, and M.~J. Savage, 1994,
+\newblock Phys. Rev. {\bf D49}, 3367.
+
+\bibitem[\protect\citename{Falk {\em et~al.\/}, }1995]{falketal:94b}
+Falk, A., M.~Wise, and I.~Dunietz, 1995,
+\newblock Phys. Rev. {\bf D51}, 1183.
+
+\bibitem[\protect\citename{Fleischer, }1994a]{fleischer:94a}
+Fleischer, R., 1994a,
+\newblock Z. Phys. {\bf C62}, 81.
+
+\bibitem[\protect\citename{Fleischer, }1994b]{fleischer:94b}
+Fleischer, R., 1994b,
+\newblock Phys. Lett. {\bf B332}, 419.
+
+\bibitem[\protect\citename{Floratos {\em et~al.\/}, }1977]{floratosetal:77}
+Floratos, E.~G., D.~A. Ross, and C.~T. Sachrajda, 1977,
+\newblock Nucl. Phys. {\bf B129}, 66.
+
+\bibitem[\protect\citename{Flynn and Randall, }1989a]{flynn:89b}
+Flynn, J.~M. and L.~Randall, 1989a,
+\newblock Nucl. Phys. {\bf B326}, 31.
+
+\bibitem[\protect\citename{Flynn and Randall, }1989b]{flynn:89}
+Flynn, J.~M. and L.~Randall, 1989b,
+\newblock Phys. Lett. {\bf B224}, 221; erratum ibid.\ {\em Phys. Lett.} {\bf
+  B235} (1990) 412.
+
+\bibitem[\protect\citename{Flynn {\em et~al.\/}, }1991]{flynnetal:91}
+Flynn, J., O.~Hern\'{a}ndez, and B.~Hill, 1991,
+\newblock Phys. Rev. {\bf D43}, 3709.
+
+\bibitem[\protect\citename{Flynn, }1990]{flynn:90}
+Flynn, J.~M., 1990,
+\newblock Mod. Phys. Lett. {\bf A5}, 877.
+
+\bibitem[\protect\citename{Franco {\em et~al.\/}, }1989]{francoetal:89}
+Franco, E., L.~Maiani, G.~Martinelli, and A.~Morelli, 1989,
+\newblock Nucl. Phys. {\bf B317}, 63.
+
+\bibitem[\protect\citename{Fr{\"o}hlich {\em et~al.\/}, }1991]{froehlich:91}
+Fr{\"o}hlich, J., J.~Heinrich, E.~A. Paschos, and J.-M. Schwarz, 1991,
+\newblock University of Dortmund preprint, {\bf DO-TH 02/91}.
+
+\bibitem[\protect\citename{Gaillard and Lee, }1974a]{gaillard:74}
+Gaillard, M.~K. and B.~W. Lee, 1974a,
+\newblock Phys. Rev. Lett. {\bf 33}, 108.
+
+\bibitem[\protect\citename{Gaillard and Lee, }1974b]{gaillard:74b}
+Gaillard, M.~K. and B.~W. Lee, 1974b,
+\newblock Phys. Rev. {\bf D10}, 897.
+
+\bibitem[\protect\citename{Gell-Mann and Low, }1954]{gellmannlow:54}
+Gell-Mann, M. and F.~E. Low, 1954,
+\newblock Phys. Rev. {\bf 95}, 1300.
+
+\bibitem[\protect\citename{Geng and Ng, }1990]{gengng:90}
+Geng, C.~Q. and J.~N. Ng, 1990,
+\newblock Phys. Rev. {\bf D41}, 2351.
+
+\bibitem[\protect\citename{Georgi, }1991]{georgi:91}
+Georgi, H., 1991,
+\newblock {\rm in} {\em Proceedings of TASI-91}, {\rm editors R.K. Ellis et
+  al., World Scientific, Singapore, (1991), p\. 589}.
+
+\bibitem[\protect\citename{G\'{e}rard, }1990]{gerard:90}
+G\'{e}rard, J.-M., 1990,
+\newblock Acta Physica Polonica {\bf B21}, 257.
+
+\bibitem[\protect\citename{Gibbons {\em et~al.\/}, }1993]{gibbons:93}
+Gibbons, L.~K. {\em et~al.\/}, 1993,
+\newblock Phys. Rev. Lett. {\bf 70}, 1203.
+
+\bibitem[\protect\citename{Gilman and Wise, }1979]{gilman:79}
+Gilman, F.~J. and M.~B. Wise, 1979,
+\newblock Phys. Rev. {\bf D20}, 2392.
+
+\bibitem[\protect\citename{Gilman and Wise, }1980]{gilman:80}
+Gilman, F.~J. and M.~B. Wise, 1980,
+\newblock Phys. Rev. {\bf D21}, 3150.
+
+\bibitem[\protect\citename{Gilman and Wise, }1983]{gilmanwise:83}
+Gilman, F.~J. and M.~B. Wise, 1983,
+\newblock Phys. Rev. {\bf D27}, 1128.
+
+\bibitem[\protect\citename{Gim\'{e}nez, }1993]{gimenez:93}
+Gim\'{e}nez, V., 1993,
+\newblock Nucl. Phys. {\bf B401}, 116.
+
+\bibitem[\protect\citename{Greub {\em et~al.\/}, }1995]{GIW:94}
+Greub, C., A.~Ioannissian, and D.~Wyler, 1995,
+\newblock Phys. Lett. {\bf B346}, 149.
+
+\bibitem[\protect\citename{Grigjanis {\em et~al.\/}, }1988]{grigjanis:88}
+Grigjanis, R., P.~J. O'Donnell, M.~Sutherland, and H.~Navelet, 1988,
+\newblock Phys. Lett. {\bf B213}, 355.
+
+\bibitem[\protect\citename{Grigjanis {\em et~al.\/}, }1989]{GDSN:89}
+Grigjanis, R., P.~J. {O'Donnell}, M.~Sutherland, and H.~Navelet, 1989,
+\newblock Phys. Lett. {\bf B223}, 239.
+
+\bibitem[\protect\citename{Grigjanis {\em et~al.\/}, }1992]{grigjanis:92}
+Grigjanis, R., P.~{O'Donnell}, M.~Sutherland, and H.~Navelet, 1992,
+\newblock Phys. Lett. {\bf B286}, 413E.
+
+\bibitem[\protect\citename{Grinstein {\em et~al.\/}, }1989]{grinstein:89a}
+Grinstein, B., M.~J. Savage, and M.~B. Wise, 1989,
+\newblock Nucl. Phys. {\bf B319}, 271.
+
+\bibitem[\protect\citename{Grinstein {\em et~al.\/}, }1990]{Grin}
+Grinstein, B., R.~Springer, and M.~B. Wise, 1990,
+\newblock Nucl. Phys. {\bf B339}, 269.
+
+\bibitem[\protect\citename{Grinstein, }1989]{grinstein:89}
+Grinstein, B., 1989,
+\newblock Phys. Lett. {\bf B229}, 280.
+
+\bibitem[\protect\citename{Grinstein, }1991]{grinstein:91}
+Grinstein, B., 1991,
+\newblock {\rm in} {\em High Energy Phenomenology}, {\rm editors R. Huerta and
+  M.A. P\'{e}res, World Scientific, Singapore, (1991), p\. 161}.
+
+\bibitem[\protect\citename{Gross, }1976]{gross:76}
+Gross, D., 1976,
+\newblock {\rm in} {\em Methods In Field Theory} {\rm (Les Houches 1975,
+  Proceedings), editors R. Balian and J. Zinn-Justin, North-Holland, Amsterdam,
+  (1976), p.\ 141}.
+
+\bibitem[\protect\citename{Grossman {\em et~al.\/}, }1995]{grossmanetal:95}
+Grossman, Y., Z.~Ligeti, and E.~Nardi, 1995,
+\newblock CALTEC preprint, {\bf CALT-68-2022; hep-ph/9510378}.
+
+\bibitem[\protect\citename{Guberina and Peccei, }1980]{guberina:80}
+Guberina, B. and R.~D. Peccei, 1980,
+\newblock Nucl. Phys. {\bf B163}, 289.
+
+\bibitem[\protect\citename{Hagelin and Littenberg, }1989]{hagelinlittenberg:89}
+Hagelin, J.~S. and L.~S. Littenberg, 1989,
+\newblock Prog. Part. Nucl. Phys. {\bf 23}, 1.
+
+\bibitem[\protect\citename{Harris and Rosner, }1992]{harrisrosner:92}
+Harris, G.~R. and J.~L. Rosner, 1992,
+\newblock Phys. Rev. {\bf D45}, 946.
+
+\bibitem[\protect\citename{Harris {\em et~al.\/}, }1993]{harrisetal:93}
+Harris, D.~A. {\em et~al.\/}, 1993,
+\newblock Phys. Rev. Lett. {\bf 71}, 3918.
+
+\bibitem[\protect\citename{Hayashi {\em et~al.\/}, }1993]{Hayashi}
+Hayashi, T., M.~Matsuda, and M.~Tanimoto, 1993,
+\newblock Prog. Theo. Phys. {\bf 89}, 1047.
+
+\bibitem[\protect\citename{Heiliger and Seghal, }1993]{heiligerseghal:93}
+Heiliger, P. and L.~Seghal, 1993,
+\newblock Phys. Rev. {\bf D47}, 4920.
+
+\bibitem[\protect\citename{Heinrich {\em et~al.\/}, }1992]{heinrichetal:92}
+Heinrich, J., E.~A. Paschos, J.-M. Schwarz, and Y.~L. Wu, 1992,
+\newblock Phys. Lett. {\bf B279}, 140.
+
+\bibitem[\protect\citename{Herrlich and Nierste, }1994]{herrlichnierste:93}
+Herrlich, S. and U.~Nierste, 1994,
+\newblock Nucl.~Phys. {\bf B419}, 292.
+
+\bibitem[\protect\citename{Herrlich and Nierste, }1995a]{herrlichnierste:95}
+Herrlich, S. and U.~Nierste, 1995a,
+\newblock Phys. Rev. {\bf D52}, 6505.
+
+\bibitem[\protect\citename{Herrlich and Nierste, }1995b]{herrlichnierste:94}
+Herrlich, S. and U.~Nierste, 1995b,
+\newblock Nucl. Phys. {\bf B455}, 39.
+
+\bibitem[\protect\citename{Herrlich, }1994]{herrlich:94}
+Herrlich, S., 1994,
+\newblock Ph.D. dissertation, Munich Technical University (unpublished).
+
+\bibitem[\protect\citename{Hewett, }1993]{Hewett}
+Hewett, J.~L., 1993,
+\newblock Phys. Rev. Lett. {\bf 70}, 1045.
+
+\bibitem[\protect\citename{Hokim and Pham, }1983]{hokimpham:83}
+Hokim, Q. and X.~Pham, 1983,
+\newblock Phys. Lett. {\bf B122}, 297.
+
+\bibitem[\protect\citename{Hokim and Pham, }1984]{hokimpham:84}
+Hokim, Q. and X.~Pham, 1984,
+\newblock Ann. Phys. {\bf 155}, 202.
+
+\bibitem[\protect\citename{Hou {\em et~al.\/}, }1987]{HWS:87}
+Hou, W.~S., R.~I. Willey, and A.~Soni, 1987,
+\newblock Phys. Rev. Lett. {\bf 58}, 1608.
+
+\bibitem[\protect\citename{Inami and Lim, }1981]{inamilim:81}
+Inami, T. and C.~S. Lim, 1981,
+\newblock Progr. Theor. Phys. {\bf 65}, 297.
+
+\bibitem[\protect\citename{Isgur and Wise, }1989]{isgurwise:89}
+Isgur, N. and M.~Wise, 1989,
+\newblock Phys. Lett. {\bf B232}, 113.
+
+\bibitem[\protect\citename{Isgur and Wise, }1990]{isgurwise:90}
+Isgur, N. and M.~Wise, 1990,
+\newblock Phys. Lett. {\bf B237}, 527.
+
+\bibitem[\protect\citename{Isgur and Wise, }1992]{isgurwise:92}
+Isgur, N. and M.~Wise, 1992,
+\newblock {\rm in} {\em Heavy Flavours}, {\rm editors A. J. Buras and M.
+  Lindner, World Scientific, Singapore, (1992), p.\ 234}.
+
+\bibitem[\protect\citename{Ishizuka, }1993]{ishizuka:93}
+Ishizuka, N., 1993,
+\newblock Phys. Rev. Lett. {\bf 71}, 24.
+
+\bibitem[\protect\citename{Jamin and M{\"u}nz, }1995]{jaminmuenz:95}
+Jamin, M. and M.~M{\"u}nz, 1995,
+\newblock Z. Phys. {\bf C66}, 633.
+
+\bibitem[\protect\citename{Jamin and Pich, }1994]{jaminpich:94}
+Jamin, M. and A.~Pich, 1994,
+\newblock Nucl. Phys. {\bf B425}, 15.
+
+\bibitem[\protect\citename{Jaus and Wyler, }1990]{JW:90}
+Jaus, W. and D.~Wyler, 1990,
+\newblock Phys. Rev. {\bf D41}, 3405.
+
+\bibitem[\protect\citename{Jezabek and K{\"u}hn, }1989]{JK:89}
+Jezabek, M. and J.~H. K{\"u}hn, 1989,
+\newblock Nucl. Phys. {\bf B320}, 20.
+
+\bibitem[\protect\citename{Ji and Musolf, }1991]{jimuslof:91}
+Ji, X. and M.~Musolf, 1991,
+\newblock Phys. Lett. {\bf B257}, 409.
+
+\bibitem[\protect\citename{Kambor {\em et~al.\/}, }1990]{kamboretal:90}
+Kambor, J., J.~Missimer, and D.~Wyler, 1990,
+\newblock Nucl. Phys. {\bf B346}, 17.
+
+\bibitem[\protect\citename{Kambor {\em et~al.\/}, }1991]{kamboretal:91}
+Kambor, J., J.~Missimer, and D.~Wyler, 1991,
+\newblock Phys. Lett. {\bf B261}, 496.
+
+\bibitem[\protect\citename{Kapustin and Ligeti, }1995]{kapustinligeti:95}
+Kapustin, A. and Z.~Ligeti, 1995,
+\newblock Phys. Lett. {\bf B355}, 318.
+
+\bibitem[\protect\citename{Kapustin {\em et~al.\/}, }1995]{kapustinetal:95}
+Kapustin, A., Z.~Ligeti, and H.~D. Politzer, 1995,
+\newblock Phys. Lett. {\bf B357}, 653.
+
+\bibitem[\protect\citename{Kaufman {\em et~al.\/}, }1989]{kaufmanetal:89}
+Kaufman, W.~A., H.~Steger, and Y.~P. Yao, 1989,
+\newblock Mod. Phys. Lett. {\bf A3}, 1479.
+
+\bibitem[\protect\citename{Kilcup, }1991]{kilcup:91}
+Kilcup, G.~W., 1991,
+\newblock Nucl. Phys. {\bf B (Proc. Suppl.) 20}, 417.
+
+\bibitem[\protect\citename{Kilian and Mannel, }1993]{kilianmannel:93}
+Kilian, W. and T.~Mannel, 1993,
+\newblock Phys. Lett. {\bf B301}, 382.
+
+\bibitem[\protect\citename{Kim and Martin, }1989]{KM:89}
+Kim, C.~S. and A.~D. Martin, 1989,
+\newblock Phys. Lett. {\bf B225}, 186.
+
+\bibitem[\protect\citename{Ko, }1992]{ko:92}
+Ko, P., 1992,
+\newblock Phys. Rev. {\bf D45}, 174.
+
+\bibitem[\protect\citename{K{\"o}hler and Paschos, }1995]{kohlerpaschos:95}
+K{\"o}hler, G.~O. and E.~A. Paschos, 1995,
+\newblock Phys. Rev. {\bf D52}, 175.
+
+\bibitem[\protect\citename{Kroll {\em et~al.\/}, }1995]{krolletal:95}
+Kroll, J. {\em et~al.\/}, 1995,
+\newblock Fermilab preprint, {\bf FERMILAB-CONF-95/229-E}.
+
+\bibitem[\protect\citename{Kuno, }1992]{kuno:92}
+Kuno, Y., 1992,
+\newblock KEK-preprint 92-190, {\rm published in} Proc. 10th Int. Symp. on High
+  Energy Spin Physics, Nagoya, Japan (1992), p.\ 769.
+
+\bibitem[\protect\citename{Lim {\em et~al.\/}, }1989]{LMS:89}
+Lim, C.~S., T.~Morozumi, and A.~I. Sanda, 1989,
+\newblock Phys. Lett. {\bf B218}, 343.
+
+\bibitem[\protect\citename{Littenberg and Valencia,
+  }1993]{littenbergvalencia:93}
+Littenberg, L. and G.~Valencia, 1993,
+\newblock Ann. Rev. Nucl. Part. Sci. {\bf 43}, 729.
+
+\bibitem[\protect\citename{Littenberg, }1989a]{littenberg:89}
+Littenberg, L., 1989a,
+\newblock Phys. Rev. {\bf D39}, 3322.
+
+\bibitem[\protect\citename{Littenberg, }1989b]{littenberg:89b}
+Littenberg, L.~S., 1989b,
+\newblock {\rm in} {\em Proceedings of the Workshop on CP Violation at a Kaon
+  Factory}, {\rm editor J.N.\ Ng, TRIUMF, Vancouver, Canada (1989), p.\ 19}.
+
+\bibitem[\protect\citename{Lu and Wise, }1994]{luwise:94}
+Lu, M. and M.~Wise, 1994,
+\newblock Phys. Lett. {\bf B324}, 461.
+
+\bibitem[\protect\citename{Lu {\em et~al.\/}, }1992]{luetal:92}
+Lu, M., M.~Wise, and M.~Savage, 1992,
+\newblock Phys. Rev. {\bf D46}, 5026.
+
+\bibitem[\protect\citename{Luke and Savage, }1994]{lukesavage:94}
+Luke, M. and M.~Savage, 1994,
+\newblock Phys. Lett. {\bf B321}, 88.
+
+\bibitem[\protect\citename{Luke {\em et~al.\/}, }1995]{lukeetal:95}
+Luke, M., M.~Savage, and M.~B. Wise, 1995,
+\newblock Phys. Lett. {\bf B343}, 329.
+
+\bibitem[\protect\citename{Lusignoli, }1989]{lusignoli:89}
+Lusignoli, M., 1989,
+\newblock Nucl. Phys. {\bf B325}, 33.
+
+\bibitem[\protect\citename{Mannel {\em et~al.\/}, }1992]{manneletal:92}
+Mannel, T., W.~Roberts, and Z.~Ryzak, 1992,
+\newblock Nucl. Phys. {\bf B368}, 204.
+
+\bibitem[\protect\citename{Mannel, }1993]{mannel:93}
+Mannel, T., 1993,
+\newblock {\rm in} {\em QCD -- 20 Years Later}, {\rm editors P.M. Zerwas and
+  H.A. Kastrup, World Scientific, Singapore, (1993), p.\ 634}.
+
+\bibitem[\protect\citename{Mannel, }1994]{mannel:94}
+Mannel, T., 1994,
+\newblock Nucl. Phys. {\bf B413}, 396.
+
+\bibitem[\protect\citename{Manohar and Wise, }1994]{manoharwise:94}
+Manohar, A. and M.~Wise, 1994,
+\newblock Phys. Rev. {\bf D49}, 1310.
+
+\bibitem[\protect\citename{Marciano and Parsa, }1995]{marcianoparsa:95}
+Marciano, W. and Z.~Parsa, 1995,
+\newblock preprint, {\bf DOE/ER/40561-224-INT95-17-09}.
+
+\bibitem[\protect\citename{Misiak and M{\"u}nz, }1995]{misiakmuenz:95}
+Misiak, M. and M.~M{\"u}nz, 1995,
+\newblock Phys. Lett. {\bf B344}, 308.
+
+\bibitem[\protect\citename{Misiak, }1991]{misiak:91}
+Misiak, M., 1991,
+\newblock Phys. Lett. {\bf B269}, 161.
+
+\bibitem[\protect\citename{Misiak, }1993]{misiak:93}
+Misiak, M., 1993,
+\newblock Nucl. Phys. {\bf B393}, 23.
+
+\bibitem[\protect\citename{Misiak, }1994]{misiak:94b}
+Misiak, M., 1994,
+\newblock Phys. Lett. {\bf B321}, 113.
+
+\bibitem[\protect\citename{Misiak, }1995]{misiak:94}
+Misiak, M., 1995,
+\newblock Nucl. Phys. {\bf B439}, 461E.
+
+\bibitem[\protect\citename{Narison, }1994]{narison:94}
+Narison, S., 1994,
+\newblock Phys. Lett. {\bf B322}, 247.
+
+\bibitem[\protect\citename{Neubert and Stech, }1991]{neubertstech:91}
+Neubert, M. and B.~Stech, 1991,
+\newblock Phys. Rev. {\bf D44}, 775.
+
+\bibitem[\protect\citename{Neubert, }1992]{neubert:92}
+Neubert, M., 1992,
+\newblock Phys. Rev. {\bf D45}, 2451.
+
+\bibitem[\protect\citename{Neubert, }1994a]{neubert:94b}
+Neubert, M., 1994a,
+\newblock Phys. Lett. {\bf B338}, 84.
+
+\bibitem[\protect\citename{Neubert, }1994b]{neubert:94c}
+Neubert, M., 1994b,
+\newblock Phys. Rev. {\bf D49}, 4623.
+
+\bibitem[\protect\citename{Neubert, }1994c]{neubert:94}
+Neubert, M., 1994c,
+\newblock Phys. Rept. {\bf 245}, 259.
+
+\bibitem[\protect\citename{Nierste, }1995]{nierste:95}
+Nierste, U., 1995,
+\newblock Ph.D. dissertation, Munich Technical University {\bf hep-ph/9510323}.
+
+\bibitem[\protect\citename{Nir, }1989]{nir:89}
+Nir, Y., 1989,
+\newblock Phys. Lett. {\bf B221}, 184.
+
+\bibitem[\protect\citename{Nir, }1992]{nir:74}
+Nir, Y., 1992,
+\newblock {\rm in} {\em Proceedings of the the 20th Annual SLAC Summer
+  Institute on Particle Physics}, {\rm Stanford, CA, 13-24 July 1992, p.\ 81}.
+
+\bibitem[\protect\citename{Novikov {\em et~al.\/}, }1977]{novikovetal:77}
+Novikov, V.~A., A.~I. Vainshtein, V.~I. Zakharov, and M.~A. Shifman, 1977,
+\newblock Phys. Rev. {\bf D16}, 223.
+
+\bibitem[\protect\citename{{O'Donnell} and Tung, }1991]{DT:91}
+{O'Donnell}, P.~J. and H.~K.~K. Tung, 1991,
+\newblock Phys. Rev. {\bf D43}, R2067.
+
+\bibitem[\protect\citename{Ohl {\em et~al.\/}, }1990]{ohletal:90}
+Ohl, K.~E. {\em et~al.\/}, 1990,
+\newblock Phys. Rev. Lett. {\bf 64}, 2755.
+
+\bibitem[\protect\citename{Ovsyannikov, }1956]{ovsyannikov:56}
+Ovsyannikov, L.~V., 1956,
+\newblock Dokl. Acad. Nauk SSSR {\bf 109}, 1112.
+
+\bibitem[\protect\citename{Palmer and Stech, }1993]{palmerstech:93}
+Palmer, W. and B.~Stech, 1993,
+\newblock Phys. Rev. {\bf D48}, 4174.
+
+\bibitem[\protect\citename{Papadimitriou {\em et~al.\/},
+  }1991]{papadimitriou:91}
+Papadimitriou, V. {\em et~al.\/}, 1991,
+\newblock Phys. Rev. {\bf D44}, 573.
+
+\bibitem[\protect\citename{{Particle~Data~Group}, }1994]{particledata:94}
+{Particle~Data~Group}, 1994,
+\newblock Phys. Rev. {\bf D50}.
+
+\bibitem[\protect\citename{Patterson, }1995]{patterson:95}
+Patterson, R., 1995,
+\newblock proceedings of the XXVII. International Conference on High Energy
+  Physics, Glasgow, 1994, editors P.J. Bussey and I.G. Knowles, IOP
+  Publications Ltd., Bristol, 1995, p\. 149.
+
+\bibitem[\protect\citename{Peccei and Wang, }1995]{pecceiwang:95}
+Peccei, R.~D. and K.~Wang, 1995,
+\newblock Phys. Lett. {\bf B349}, 220.
+
+\bibitem[\protect\citename{Pich and de Rafael, }1985]{pichderaf:85}
+Pich, A. and E.~de~Rafael, 1985,
+\newblock Phys. Lett. {\bf B158}, 477.
+
+\bibitem[\protect\citename{Pich and de Rafael, }1991]{pichderafael:91}
+Pich, A. and E.~de~Rafael, 1991,
+\newblock Nucl. Phys. {\bf B358}, 311.
+
+\bibitem[\protect\citename{Politzer and Wise, }1988a]{politzerwise:88a}
+Politzer, H. and M.~Wise, 1988a,
+\newblock Phys. Lett. {\bf B206}, 681.
+
+\bibitem[\protect\citename{Politzer and Wise, }1988b]{politzerwise:88b}
+Politzer, H. and M.~Wise, 1988b,
+\newblock Phys. Lett. {\bf B208}, 504.
+
+\bibitem[\protect\citename{Ponce, }1981]{ponce:81}
+Ponce, W., 1981,
+\newblock Phys. Rev. {\bf D23}, 1134.
+
+\bibitem[\protect\citename{Pott, }1995]{pott:95}
+Pott, N., 1995,
+\newblock Technical University Munich preprint {\bf TUM-T31-93/95}.
+
+\bibitem[\protect\citename{Prades {\em et~al.\/}, }1991]{pradesetal:91}
+Prades, J., C.~Dominguez, J.~Penarrocha, A.~Pich, and E.~de~Rafael, 1991,
+\newblock Z. Phys. {\bf C51}, 287.
+
+\bibitem[\protect\citename{Rein and Sehgal, }1989]{reinsehgal:89}
+Rein, D. and L.~M. Sehgal, 1989,
+\newblock Phys. Rev. {\bf D39}, 3325.
+
+\bibitem[\protect\citename{Ritchie and Wojcicki, }1993]{ritchiewojcicki:93}
+Ritchie, J.~L. and S.~G. Wojcicki, 1993,
+\newblock Rev. Mod. Phys. {\bf 65}, 1149.
+
+\bibitem[\protect\citename{Rosner, }1992]{rosner:00}
+Rosner, J.~L., 1992,
+\newblock {\rm in} {\em B-Decays}, {\rm editor S. L. Stone, World Scientific,
+  Singapore, (1992)}.
+
+\bibitem[\protect\citename{Sachrajda, }1992]{sachrajda:92}
+Sachrajda, C.~T., 1992,
+\newblock {\rm in} {\em Heavy Flavours}, {\rm editors A. J. Buras and M.
+  Lindner, World Scientific, Singapore, (1992), p.\ 415}.
+
+\bibitem[\protect\citename{Sachrajda, }1994]{sachrajda:94}
+Sachrajda, C., 1994,
+\newblock {\rm in} {\em B-Decays} {\rm (2nd Edition), editor S. L. Stone, World
+  Scientific, Singapore, (1994), p.\ 602}.
+
+\bibitem[\protect\citename{Savage and Wise, }1990]{savagewise:90}
+Savage, M. and M.~Wise, 1990,
+\newblock Phys. Lett. {\bf B250}, 151.
+
+\bibitem[\protect\citename{Schmidtler and Schubert,
+  }1992]{schmidtlerschubert:92}
+Schmidtler, M. and K.~R. Schubert, 1992,
+\newblock Z.Phys. {\bf C~53}, 347.
+
+\bibitem[\protect\citename{Sharpe, }1991]{sharpe:91}
+Sharpe, S.~R., 1991,
+\newblock Nucl. Phys. {\bf B (Proc. Suppl.) 20}, 429.
+
+\bibitem[\protect\citename{Sharpe, }1994]{sharpe:94}
+Sharpe, S.~R., 1994,
+\newblock Nucl. Phys. {\bf B (Proc. Suppl.) 34}, 403.
+
+\bibitem[\protect\citename{Shifman {\em et~al.\/}, }1994]{shifmanetal:94}
+Shifman, M., N.~G. Uraltsev, and A.~I. Vainshtein, 1994,
+\newblock Int. J. Mod. Phys. {\bf A9}, 2467.
+
+\bibitem[\protect\citename{Shifman {\em et~al.\/}, }1995]{shifmanetal:95}
+Shifman, M., N.~G. Uraltsev, and A.~I. Vainshtein, 1995,
+\newblock Phys. Rev. {\bf D51}, 2217.
+
+\bibitem[\protect\citename{Soni, }1995]{soni:95}
+Soni, A., 1995,
+\newblock preprint, {\bf hep-lat 9510036}.
+
+\bibitem[\protect\citename{Stueckelberg and Petermann, }1953]{stueckelberg:53}
+Stueckelberg, E. C.~G. and A.~Petermann, 1953,
+\newblock Helv. Phys. Acta {\bf 26}, 499.
+
+\bibitem[\protect\citename{Symanzik, }1970]{symanzik:70}
+Symanzik, K., 1970,
+\newblock Comm. Math. Phys. {\bf 18}, 227.
+
+\bibitem[\protect\citename{`t Hooft and Veltman, }1972a]{thooft:72b}
+`t~Hooft, G. and M.~Veltman, 1972a,
+\newblock Nucl. Phys. {\bf B50}, 318.
+
+\bibitem[\protect\citename{`t Hooft and Veltman, }1972b]{thooft:72}
+`t~Hooft, G. and M.~Veltman, 1972b,
+\newblock Nucl. Phys. {\bf B44}, 189.
+
+\bibitem[\protect\citename{`t Hooft, }1973]{thooft:73}
+`t~Hooft, G., 1973,
+\newblock Nucl. Phys. {\bf B61}, 455.
+
+\bibitem[\protect\citename{Tanimoto, }1992]{tanimoto:92}
+Tanimoto, M., 1992,
+\newblock Phys. Lett. {\bf B274}, 463.
+
+\bibitem[\protect\citename{Thorndike, }1995]{thorndike:95}
+Thorndike, E., 1995,
+\newblock talk presented at the EPS-HEP Conference, Brussels, Belgium, July
+  1995.
+
+\bibitem[\protect\citename{Vainshtein {\em et~al.\/}, }1976]{vainshteinetal:76}
+Vainshtein, A.~I., V.~I. Zakharov, V.~A. Novikov, and M.~A. Shifman, 1976,
+\newblock Sov. J. Nucl. Phys. {\bf 23}, 540.
+
+\bibitem[\protect\citename{Vainshtein {\em et~al.\/}, }1977]{vainshtein:77}
+Vainshtein, A.~I., V.~I. Zakharov, and M.~A. Shifman, 1977,
+\newblock JEPT {\bf 45}, 670.
+
+\bibitem[\protect\citename{Voloshin and Shifman, }1987]{voloshinshifman:87}
+Voloshin, M. and M.~Shifman, 1987,
+\newblock Sov. J. Nucl. Phys. {\bf 45}, 292.
+
+\bibitem[\protect\citename{Voloshin, }1995]{voloshin:94}
+Voloshin, M., 1995,
+\newblock Phys. Rev. {\bf D51}, 3948.
+
+\bibitem[\protect\citename{Vysotskij, }1980]{vysotskij:80}
+Vysotskij, M.~I., 1980,
+\newblock Sov. J. Nucl. Phys. {\bf 31}, 797.
+
+\bibitem[\protect\citename{Weaver {\em et~al.\/}, }1994]{weaveretal:94}
+Weaver, M. {\em et~al.\/}, 1994,
+\newblock Phys. Rev. Lett. {\bf 72}, 3758.
+
+\bibitem[\protect\citename{Webber, }1994]{webber:94}
+Webber, B.~R., 1994,
+\newblock talk presented at the International Conference on High Energy
+  Physics, Glasgow, Scotland, July 20--27.
+
+\bibitem[\protect\citename{Weinberg, }1973]{weinberg:73}
+Weinberg, S., 1973,
+\newblock Phys. Rev. {\bf D8}, 3497.
+
+\bibitem[\protect\citename{Wilson and Zimmermann, }1972]{wilsonzim:72}
+Wilson, K.~G. and W.~Zimmermann, 1972,
+\newblock Comm. Math. Phys. {\bf 24}, 87.
+
+\bibitem[\protect\citename{Winstein and Wolfenstein,
+  }1993]{winsteinwolfenstein:93}
+Winstein, B. and L.~Wolfenstein, 1993,
+\newblock Rev. Mod. Phys. {\bf 65}, 1113.
+
+\bibitem[\protect\citename{Witten, }1977]{witten:77}
+Witten, E., 1977,
+\newblock Nucl. Phys. {\bf B122}, 109.
+
+\bibitem[\protect\citename{Wolfenstein, }1964]{wolfenstein:64}
+Wolfenstein, L., 1964,
+\newblock Phys. Rev. Lett. {\bf 13}, 562.
+
+\bibitem[\protect\citename{Wolfenstein, }1983]{wolfenstein:83}
+Wolfenstein, L., 1983,
+\newblock Phys. Rev. Lett. {\bf 51}, 1841.
+
+\end{thebibliography}
+
+\end{document}

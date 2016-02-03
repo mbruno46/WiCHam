@@ -1,0 +1,246 @@
+
+In this section we describe the core functions used to implement the RG evolution of the 
+Wilson Coefficients.
+
+\subsection{QCD RG functions}
+
+\code{U0[a1,a2,b0,g0]}
+
+\begin{itemize}
+\item \code{a1,a2}: values of $\as$ at two different scales $\mu_1>\mu_2$
+\item \code{b0}: coefficient $b_0$ of the QCD $\beta$-function
+\item \code{g0}: LO anomalous dimension matrix $\gs$ 
+\end{itemize}
+
+\begin{equation}
+\label{u0vd} U^{(0)}(\mu,m)= V
+\left({\left[{\as(m)\over\as(\mu)}\right]}^{{\vec\gamma^{(0)}\over 2\beta_0}}
+   \right)_D V^{-1}   
+\end{equation}
+with
+\begin{equation}
+\label{ga0d} \gamma^{(0)}_D=V^{-1} {\gamma^{(0)T}} V  
+\end{equation}
+
+\code{J[b0,b1,g0,g1]}
+
+\begin{itemize}
+\item \code{b0}: coefficient $b_0$ of the QCD $\beta$-function
+\item \code{b1}: coefficient $b_1$ of the QCD $\beta$-function
+\item \code{g0}: LO anomalous dimension matrix $\gs$
+\item \code{g1}: NLO anomalous dimension matrix $\gss$
+\end{itemize}
+
+\begin{equation}
+\label{jvs} J=V H V^{-1}   
+\end{equation}
+\begin{equation}
+\label{sij} H_{ij}=\delta_{ij}\gamma^{(0)}_i{\beta_1\over 2\beta^2_0}-
+    {G_{ij}\over 2\beta_0+\gamma^{(0)}_i-\gamma^{(0)}_j}  
+\end{equation}
+\begin{equation}
+\label{gvg1} G=V^{-1} {\gamma^{(1)T}} V   
+\end{equation}
+\begin{equation}
+\label{ga0d} \gamma^{(0)}_D=V^{-1} {\gamma^{(0)T}} V  
+\end{equation}
+
+\code{U[a1,a2,b0,g0,J]}
+
+\begin{itemize}
+\item \code{a1,a2}: values of $\as$ at two different scales $\mu_1>\mu_2$
+\item \code{b0}: coefficient $b_0$ of the QCD $\beta$-function
+\item \code{g0}: LO anomalous dimension matrix $\gs$ 
+\item \code{J}: $J$ matrix obtained from \code{J[b0,b1,g0,g1]}
+\end{itemize}
+
+\begin{equation}\label{u0jj}
+U(\mu,m)= U^{(0)}(\mu,m) + {1 \over 4\pi} \Big[ \as(\mu) J U^{(0)}(\mu,m) - \as(m) U^{(0)}(\mu,m) J \Big]
+\end{equation}
+
+\subsection{QED RG functions}
+
+\code{M1[b0,b1,ge0,gse1,J]}
+
+\begin{itemize}
+\item \code{b0}: coefficient $b_0$ of the QCD $\beta$-function
+\item \code{b1}: coefficient $b_1$ of the QCD $\beta$-function
+\item \code{ge0}: LO anomalous dimension matrix $\ge$
+\item \code{gse1}: NLO anomalous dimension matrix $\gse$
+\item \code{J}: $J$ matrix obtained from \code{J[b0,b1,g0,g1]}
+\end{itemize}
+
+\begin{equation}
+\hM^{(1)} = \hV^{-1} \left( \gset - \frac{\beta_1}{\beta_0} \gemt +
+                \left[ \gemt, \hJ \right] \right) \hV \, .
+\label{eq:M1}
+\end{equation}
+
+\code{R[a1,a2,b0,g0,ge0,M1,J]}
+
+\begin{itemize}
+\item \code{a1,a2}: values of $\as$ at two different scales $\mu_1>\mu_2$
+\item \code{b0}: coefficient $b_0$ of the QCD $\beta$-function
+\item \code{g0}: LO anomalous dimension matrix $\gs$
+\item \code{ge0}: LO anomalous dimension matrix $\ge$
+\item \code{M1}: $M_1$ matrix obtained from \code{M1[b0,b1,ge0,gse1,J]}
+\item \code{J}: $J$ matrix obtained from \code{J[b0,b1,g0,g1]}
+\end{itemize}
+
+\begin{equation}
+\hR(m_1,m_2) \equiv -\frac{2\pi}{\beta_0} \; \hV \; \left(
+                 \hK^{(0)}(m_1,m_2) +
+                 \frac{1}{4\pi} \sum_{i=1}^{3} \hK_i^{(1)}(m_1,m_2)
+                 \right) \hV^{-1}
+\end{equation}
+
+\begin{equation}
+(\hK^{(0)}(m_1,m_2))_{ij} = \frac{\hM^{(0)}_{ij}}{a_i - a_j - 1}
+\left[
+\left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_j} \frac{1}{\as(m_1)} -
+\left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i} \frac{1}{\as(m_2)}
+\right] 
+\label{eq:K0}
+\end{equation}
+
+\begin{equation}
+\left( \hK_1^{(1)}(m_1,m_2) \right)_{ij} =
+\Bigg\lbrace
+\begin{array}{ll}
+\frac{M^{(1)}_{ij}}{a_i - a_j}
+\left[ \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_j} -
+       \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i} \right] & i \not= j \\
+M^{(1)}_{ii} \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i}
+             \ln\frac{\as(m_1)}{\as(m_2)}             & i=j
+\end{array} 
+\label{eq:K11}
+\end{equation}
+
+\begin{eqnarray}
+\hK_2^{(1)}(m_1,m_2) & = &
+-\,\as(m_2) \; \hK^{(0)}(m_1,m_2) \; H \, ,
+\label{eq:K12} \\
+\hK_3^{(1)}(m_1,m_2) & = &
+\phantom{-}\,\as(m_1) \; H \; \hK^{(0)}(m_1,m_2)
+\label{eq:K13}
+\end{eqnarray}
+with
+\begin{equation}
+\hM^{(0)} = \hV^{-1} \; \gemt \; \hV
+\end{equation}
+
+\subsection{Quark threshold matching functions}
+
+\code{Fs[a,z12]}
+
+\begin{itemize}
+\item \code{a}: value of $\as$ at the mass threshold $\mc$.
+\item \code{z12}: vector with the two Wilson Coefficients $z_1$ and $z_2$ computed at the
+quark threshold $\mc$
+\end{itemize}
+
+The function \code{Fs} returns the vector below
+
+\begin{equation}
+\vec{z}^{\rm }(\mc) =
+\left( \begin{array}{c}
+z_1^{\rm }(\mc) \\ z_2^{\rm }(\mc) \\
+\as/(36\pi) z_2^{\rm }(\mc) \\
+-\as/(12 \pi) z_2^{\rm }(\mc) \\
+\as/(36\pi) z_2^{\rm }(\mc) \\
+-\as/(12 \pi) z_2^{\rm }(\mc) 
+\end{array} \right) \, ,
+\label{eq:zmc:1010}
+\end{equation}
+
+\code{Fse[a,z12,ae]}
+
+\begin{itemize}
+\item \code{a}: value of $\as$ at the mass thresholds $\mb$ and $\mc$.
+\item \code{z12}: vector with the two Wilson Coefficients $z_1$ and $z_2$ computed at the
+quark thresholds $\mc$ and $\mb$
+\item \code{ae}: value of $\aem$. Default is 0.
+\end{itemize}
+
+The function \code{Fse} returns the vector below 
+
+\begin{equation}
+\vec{z}^{\rm }(\mc) =
+\left( \begin{array}{c}
+z_1^{\rm }(\mc) \\ z_2^{\rm }(\mc) \\
+\as/(36\pi) z_2^{\rm }(\mc) \\
+-\as/(12 \pi) z_2^{\rm }(\mc) \\
+\as/(36\pi) z_2^{\rm }(\mc) \\
+-\as/(12 \pi) z_2^{\rm }(\mc) \\
+\aem/(6\pi) F_{\rm e}^{\rm }(\mc) \\  0  \\
+\aem/(6\pi) F_{\rm e}^{\rm }(\mc) \\  0
+\end{array} \right) \, ,
+\label{eq:zmc:1010}
+\end{equation}
+with 
+\begin{equation}
+F_{\rm e}^{\rm }(\mc) =
+-\frac{4}{9} \; \left( 3 z_1(\mc) + z_2(\mc) \right) \, .
+\label{eq:Femc}
+\end{equation}
+
+
+\code{M[mu,a,ae,size]}
+
+\begin{itemize}
+\item \code{mu}: energy scale of \code{a}. Values accepted are $\mc$ and $\mb$.
+\item \code{a}: value of $\as$ at the mass thresholds $\mb$ and $\mc$.
+\item \code{ae}: value of $\aem$. Default is 0.
+\item \code{size}: size of the returned matrix. Default is 10.
+\end{itemize}
+
+\begin{equation}
+\hM(m) = 1 + \frac{\as(m)}{4\pi} \; \vardrs^T +
+         \frac{\aem}{4\pi} \; \vardre^T \, .
+\label{eq:MmdF1:1010}
+\end{equation}
+The routine automatically uses
+\begin{equation}\nonumber
+\vardrs^T=\frac{5}{18} P \, (0,0,0,-2,0,-2,0,1,0,1)
+\end{equation}
+\begin{equation}
+\vardre^T=\frac{10}{81} \bar{P} \, (0,0,6,2,6,2,-3,-1,-3,-1)
+\label{eq:drsembdF1:1010}
+\end{equation}
+if $\mu=\mb$, whereas if  $\mu=\mc$
+\begin{equation}\nonumber
+\vardrs^T=-\frac{5}{9} P \, (0,0,0,1,0,1,0,1,0,1)
+\end{equation}
+\begin{equation}
+\vardre^T=-\frac{40}{81} \bar{P} \, (0,0,3,1,3,1,3,1,3,1)
+\label{eq:drsemcdF1:1010}
+\end{equation}
+with 
+\begin{eqnarray}
+P^T &=& (0,0,-\frac{1}{3},1,-\frac{1}{3},1,0,0,0,0) \, ,
+\label{eq:Pdrs:10} \\
+\bar{P}^T &=& (0,0,0,0,0,0,1,0,1,0) \, .
+\label{eq:Pbardre:10}
+\end{eqnarray}
+
+
+\subsection{QCD+QED RG functions}
+
+\code{FullU[a1,a2,ae,b0,g0,ge0,M1,J]}
+
+\begin{itemize}
+\item \code{a1,a2}: values of $\as$ at two different scales $\mu_1>\mu_2$
+\item \code{ae}: value of $\aem$
+\item \code{b0}: coefficient $b_0$ of the QCD $\beta$-function
+\item \code{g0}: LO anomalous dimension matrix $\gs$
+\item \code{ge0}: LO anomalous dimension matrix $\ge$
+\item \code{M1}: $M_1$ matrix obtained from \code{M1[b0,b1,ge0,gse1,J]}
+\item \code{J}: $J$ matrix obtained from \code{J[b0,b1,g0,g1]}
+\end{itemize}
+
+\begin{equation}
+\hU(m_1,m_2,\aem) =
+\hU(m_1,m_2) + \frac{\aem}{4\pi} \hR(m_1,m_2) \, ,
+\label{eq:UdF1:1010}
+\end{equation}
+

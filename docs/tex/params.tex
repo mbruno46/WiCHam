@@ -1,0 +1,54 @@
+
+In this section we describe the functions related to the strong coupling constant
+and the physical constants which are automatically loaded with this library.
+
+\subsection{Strong coupling constant}
+
+\code{beta0[Nc,Nf]}\\
+\code{beta1[Nc,Nf]}
+
+\begin{itemize}
+\item \code{Nc}: number of colors
+\item \code{Nf}: number of flavors
+\end{itemize}
+
+First coefficients $b_0$ and $b_1$ of the QCD $\beta$-function.\\
+
+\hrulefill
+
+\code{alphas[mu,L,Nc,Nf,loop]}
+
+\begin{itemize}
+\item \code{mu}: energy scale at which $\as$ is computed
+\item \code{L}: value of the $\Lambda$ parameter
+\item \code{Nc}: number of colors
+\item \code{Nf}: number of flavors
+\item \code{loop}: number of loops. Accepted values are 1,2,3,4. Default is 2.
+\end{itemize}
+
+\hrulefill
+
+\code{FindLambda[a,mu,Nc,Nf,loop]}
+
+\begin{itemize}
+\item \code{a}: input value of $\as$
+\item \code{mu}: energy scale at which $\as$ is computed
+\item \code{Nc}: number of colors
+\item \code{Nf}: number of flavors
+\item \code{loop}: number of loops. Accepted values are 1,2,3,4. Default is 2.
+\end{itemize}
+
+The function returns the value of the $\Lambda$ parameter which solves the matching equation
+\begin{equation}
+\as^\mathrm{input}  = \as^\mathrm{(loop)}(\mu,\Lambda,N_{\rm c},N_{\rm f})
+\end{equation}
+
+\subsection{Constants}
+
+\code{MW,MZ,mtop,mbottom,mcharm,alphasMZ}
+
+\begin{eqnarray}
+\mw = 80.2 \gev \, &,& \mz = \mw/\sqrt{1-0.23^2} \,, \\ 
+\mt = 170 \gev \, &,& \mb = 4.4 \gev \,, \mc = 1.3 \gev \,, \\
+\as(\mz) = 0.117
+\end{eqnarray}

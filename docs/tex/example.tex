@@ -1,0 +1,33 @@
+
+\hrulefill
+
+\textbf{Example 1} : computation of the LO Wilson Coefficients at $\mu=4 \gev$ using $\Lambda^4 = 0.325 \gev$ 
+and $\as$ in LO. Note that to obtain the Wilson Coefficients in the LO approximation 
+we must use the one-loop running of $\as$, while for the NLO approximation the two-loop running.\\
+
+Since we want to start from the $\Lambda$ parameter in the 4-flavor theory we have to first 
+find the $\Lambda$ parameter in the 5-flavor theory where we match the standard model with 
+effective weak hamiltonian. Hence we start by computing $\as$ at the bottom threshold\\
+\code{amb = alphas[mbottom,0.325,3,4,1];}\\
+and then we compute $\Lambda^5$ by matching the 4 and 5 flavors theories\\
+\code{L = FindLambda[amb,mbottom,3,5,1];}\\
+\code{aMW = alphas[mMW,L,3,5,1];}\\
+
+Now we can evolve the Wilson Coefficients down to $4 \gev$\\
+\code{z = ComputeZ[4,aMW,1,MW];}\\
+\code{y = ComputeY[z,4,aMW,1,MW];}\\
+
+To obtain the LO results we simply use\\
+\code{ReduceOrder[z,LO]}\\
+\code{ReduceOrder[y,LO]}\\
+
+\hrulefill
+
+\textbf{Example 2}: computation of the NLO Wilson Coefficients at $\mu=1 \gev$ using $\as(\mz)$\\
+\code{z = ComputeZ[4,alphasMZ,2];}\\
+\code{y = ComputeY[z,4,alphasMZ,2];}\\
+
+To obtain the NLO results we simply use\\
+\code{ReduceOrder[z,NLO]}\\
+\code{ReduceOrder[y,NLO]}
+

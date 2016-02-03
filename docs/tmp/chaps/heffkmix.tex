@@ -1,0 +1,1107 @@
+\section{The Effective Hamiltonian for $K^0-\bar K^0$ Mixing}
+         \label{sec:HeffKKbar}
+
+\subsection{General Structure}
+\label{sec:HeffKKbar:General}
+The following chapter is devoted to the presentation of the
+effective hamiltonian for $\Delta S=2$ transitions. This hamiltonian
+incorporates the short-distance physics contributing to
+$K^0-\bar K^0$ mixing and is essential for the description of
+CP violation in the neutral K-meson system.
+\\
+Being a FCNC process, $K^0-\bar K^0$ mixing can only occur at the
+loop level within the Standard Model. To lowest order it is induced
+through the box diagrams in fig.\ \ref{fig:oporig}\,(e).
+Including QCD corrections the
+effective low energy hamiltonian, to be derived from these diagrams,
+can be written as follows $(\lambda_i = V_{is}^* V_{id}^{})$
+\begin{eqnarray}\label{hds2}
+{\cal H}^{\Delta S=2}_{eff}&=&\frac{G^2_F}{16\pi^2}M^2_W
+ \left[\lambda^2_c\eta_1 S_0(x_c)+\lambda^2_t \eta_2 S_0(x_t)+
+ 2\lambda_c\lambda_t \eta_3 S_0(x_c, x_t)\right] \times
+\nonumber\\
+& & \times \left[\as(\mu)\right]^{-2/9}\left[
+  1 + \frac{\as(\mu)}{4\pi} J_3\right]  Q + h. c.
+\end{eqnarray}
+This equation, together with \eqn{eta1}, \eqn{eta2}, \eqn{eta3}
+for $\eta_1$, $\eta_2$ and $\eta_3$ respectively, represents the
+complete next-to-leading order short-distance hamiltonian for
+$\Delta S=2$ transitions. (\ref{hds2}) is valid for scales $\mu$
+below the charm threshold $\mu_c=\ord(m_c)$. In this case
+${\cal H}^{\Delta S=2}_{eff}$ consists of a single four-quark operator
+\begin{equation}\label{qsdsd}
+Q=(\bar sd)_{V-A}(\bar sd)_{V-A}
+\end{equation}
+which is multiplied by the corresponding coefficient function.
+It is useful and customary to decompose this function into a
+charm-, a top- and a mixed charm-top contribution, as displayed
+in (\ref{hds2}). This form is obtained upon eliminating $\lambda_u$
+by means of CKM matrix unitarity and setting $x_u=0$. The basic
+electroweak loop contributions without QCD correction are then
+expressed through the functions $S_0$, which read \cite{inamilim:81}
+\begin{equation}\label{s0c}
+S_0(x_c)\doteq x_c
+\end{equation}
+\begin{equation}\label{s0t}
+S_0(x_t)=\frac{4x_t-11x^2_t+x^3_t}{4(1-x_t)^2}-
+ \frac{3x^3_t \ln x_t}{2(1-x_t)^3}
+\end{equation}
+\begin{equation}\label{s0ct}
+S_0(x_c, x_t)=x_c\left[\ln\frac{x_t}{x_c}-\frac{3x_t}{4(1-x_t)}-
+ \frac{3 x^2_t\ln x_t}{4(1-x_t)^2}\right]
+\end{equation}
+Here again we keep only linear terms in $x_c\ll 1$, but of course
+all orders in $x_t$.
+\\
+Short-distance QCD effects are described through the correction
+factors $\eta_1$, $\eta_2$, $\eta_3$ and the explicitly
+$\as$-dependent terms in (\ref{hds2}). The discussion of
+these corrections will be the subject of the following sections.
+\\
+Without QCD, i.e. in the limit $\as\to 0$, one has
+$\eta_i [\as]^{-2/9}\to 1$. In general, the complete
+coefficient function multiplying $Q$ in (\ref{hds2}) contains the
+QCD effects at high energies $\mu_W=\ord(M_W)$,
+$\mu_t=\ord(m_t)$ together with their RG evolution down to the
+scale $\mu=\ord(1\gev)$. A common ingredient for the three
+different contributions in (\ref{hds2}) is the anomalous dimension
+of the operator $Q$ and the corresponding evolution of its coefficient.
+The Fierz symmetric flavor structure of $Q$ implies that it acquires
+the same anomalous dimension as the Fierz symmetric operator
+$Q_+=(Q_2+Q_1)/2$ (see section \ref{sec:HeffdF1:22}), explicitly
+\begin{equation}\label{gamq1}
+\gamma=\frac{\as}{4\pi}\gamma^{(0)}+
+       \left(\frac{\as}{4\pi}\right)^2\gamma^{(1)}
+\end{equation}
+\begin{equation}\label{gamq2}
+\gamma^{(0)}=6\frac{N-1}{N}\qquad
+\gamma^{(1)}=\frac{N-1}{2N}\left[-21+\frac{57}{N}-\frac{19}{3}N+
+    \frac{4}{3} f\right]\quad ({\rm NDR})
+\end{equation}
+The resulting evolution of the coefficient of $Q$ between general
+scales $\mu_1$ and $\mu$ then reads
+\begin{equation}\label{cqmu}
+C_Q(\mu)=\left[1+\frac{\as(\mu)-\as(\mu_1)}{4\pi}J_f\right]
+  \left[\frac{\as(\mu_1)}{\as(\mu)}\right]^{d_f}
+  C_Q(\mu_1)
+\end{equation}
+where
+\begin{equation}\label{zd0}
+d_f=\frac{\gamma^{(0)}}{2\beta_0} \qquad
+J_f= \frac{d_f}{\beta_0}\beta_1 - \frac{\gamma^{(1)}}{2\beta_0}
+\end{equation}
+depend on the number of active flavors $f$. At the lower end of the
+evolution $f=3$. The terms in (\ref{cqmu}) depending on
+$\as(\mu)$ are factored out explicitly in (\ref{hds2}) to
+exhibit the $\mu$-dependence of the coefficient function in the
+$f=3$ regime, which has to cancel the corresponding $\mu$-dependence
+of the hadronic matrix element of $Q$ between meson states in
+physical applications. A similar comment applies to the scheme
+dependence entering $J_f$ in (\ref{zd0}) through the scheme
+dependence of $\gamma^{(1)}$. Splitting off the $\mu$-dependence in
+(\ref{hds2}) is of course not unique. The way it is done belongs to the
+{\em definition} of the $\eta_i$-factors.
+\\
+Let us finally compare the structure of (\ref{hds2}) with the
+effective hamiltonians for rare decays discussed in chapter
+\ref{sec:HeffRareKB}. Common features of both types of processes
+include:
+\begin{itemize}
+\item
+Both are generated to lowest order via electroweak FCNC loop
+transitions involving heavy quarks.
+\item
+They contain a charm and a top contribution.
+\item
+The hamiltonian consists of a single dimension-6 operator.
+\end{itemize}
+Besides these similarities, however, there are also a few important
+differences, which have their root in the fact that the $\Delta S=2$
+box diagrams involve two distinct quark lines as compared to the single
+quark line in semileptonic rare decays:
+\begin{itemize}
+\item
+The CKM parameter combinations $\lambda_i$ appear quadratically in
+(\ref{hds2}) instead of only linearly.
+\item
+(\ref{hds2}) in addition receives contributions from a mixed
+top-charm sector. This part in fact turns out to have the most
+involved structure of the three contributions.
+\item
+The operator $Q$ has a non-vanishing QCD anomalous dimension, resulting
+in a non-trivial scale and scheme dependence of the Wilson
+coefficient.
+\item
+The hadronic matrix element of the four-quark operator $Q$ is
+a considerably more complicated object than the quark current
+matrix elements in semileptonic rare decays.
+\end{itemize}
+We will now present the complete next-to-leading order results for
+$\eta_2$, $\eta_1$ and $\eta_3$ in turn and discuss their most
+important theoretical features. The first leading log calculations of
+$\eta_1$ have been presented in \cite{vainshteinetal:76},
+\cite{novikovetal:77} and of $\eta_2$ in \cite{vysotskij:80}. The
+complete leading log calculation inlcuding also $\eta_3$ has been first
+performed in \cite{gilmanwise:83}.  Leading order calculations in the
+presence of a heavy top can be found in \cite{kaufmanetal:89},
+\cite{flynn:90}, \cite{dattaetal:90} and \cite{dattaetal:95}.
+
+\subsection{The Top Contribution -- $\eta_2$}
+\label{sec:HeffKKbar:eta2}
+
+The basic structure of the top quark sector in
+${\cal H}^{\Delta S=2}_{eff}$ is easy to understand. First the
+top quark is integrated out, along with the $W$, at a matching
+scale $\mu_t=\ord(m_t)$, leaving a $m_t$-dependent coefficient
+normalized at $\mu_t$, multiplying the single operator $Q$.
+Subsequently the coefficient is simply renormalized down to
+scales $\mu=\ord(1\gev)$ by means of (\ref{cqmu}). Including
+NLO corrections the resulting QCD factor $\eta_2$ from (\ref{hds2})
+may be written (in $\overline{MS}$) as follows \cite{burasjaminweisz:90}
+\begin{eqnarray}\label{eta2}
+\eta_2&=&\left[\as(m_c)\right]^{6/27}
+ \left[\frac{\as(m_b)}{\as(m_c)}\right]^{6/25}
+ \left[\frac{\as(\mu_t)}{\as(m_b)}\right]^{6/23}
+\\
+& & \cdot\left[1+\frac{\as(m_c)}{4\pi}(J_4-J_3)+
+         \frac{\as(m_b)}{4\pi}(J_5-J_4) \right.
+\nonumber\\
+& & + \left.\frac{\as(\mu_t)}{4\pi} \left(
+ \frac{S_1(x_t)}{S_0(x_t)}+B_t-J_5+\frac{\gamma^{(0)}}{2}
+ \ln\frac{\mu^2_t}{M^2_W}+\gamma_{m0}
+ \frac{\partial\ln S_0(x_t)}{\partial\ln x_t}\ln\frac{\mu^2_t}{M^2_W}
+\right)\right] \nonumber
+\end{eqnarray}
+where $\gamma_{m0} = 6 C_F$,
+\begin{equation}\label{btndr}
+B_t=5\frac{N-1}{2N}+3\frac{N^2-1}{2N}\qquad ({\rm NDR})
+\end{equation}
+and
+\begin{equation}\label{s1x}
+S_1(x)=\frac{N-1}{2N}S^{(8)}_1(x)+\frac{N^2-1}{2N}S^{(1)}_1(x)
+\end{equation}
+\begin{eqnarray}\label{s1x8}
+S^{(8)}_1(x)=&-&\frac{64-68x-17x^2+11x^3}{4(1-x)^2}+
+                \frac{32-68x+32x^2-28x^3+3x^4}{2(1-x)^3}\ln x
+\nonumber\\
+&+&\frac{x^2(4-7x+7x^2-2x^3)}{2(1-x)^4}\ln^2 x+
+   \frac{2x(4-7x-7x^2+x^3)}{(1-x)^3}L_2(1-x)
+\nonumber\\
+&+&\frac{16}{x}\left(\frac{\pi^2}{6}-L_2(1-x)\right)
+\end{eqnarray}
+\begin{eqnarray}\label{s1x1}
+S^{(1)}_1(x)=&-&\frac{x(4-39x+168x^2+11x^3)}{4(1-x)^3}-
+                \frac{3x(4-24x+36x^2+7x^3+x^4)}{2(1-x)^4}\ln x
+\nonumber\\
+&+&\frac{3x^3(13+4x+x^2)}{2(1-x)^4}\ln^2 x-
+   \frac{3x^3(5+x)}{(1-x)^3}L_2(1-x)
+\end{eqnarray}
+where the dilogarithm $L_2$ is defined in \eqn{l2}.
+
+In the expression (\ref{eta2}) we have taken into account the heavy
+quark thresholds at $m_b$ and $m_c$ in the RG evolution. As it must
+be, the dependence on the threshold scales is of the neglected
+order $\ord(\alpha^2_s)$. In fact the threshold ambiguity is here of
+$\ord(\as^2)$ also in LLA since $\gamma^{(0)}$ is flavor independent.
+It turns out that this dependence is also very weak numerically and
+we therefore set $\mu_c=m_c$ and $\mu_b=m_b$. Furthermore it is
+a good approximation to neglect the b-threshold completely
+using an effective 4-flavor theory from $\mu_t$ down to $m_c$. This
+can be achieved by simply substituting $m_b\to\mu_t$ in (\ref{eta2}).
+\\
+The leading order expression for $\eta_2$ is given by the first three
+factors on the r.h.s. of (\ref{eta2}). The fourth factor represents
+the next-to-leading order generalization. Let us discuss now the
+most interesting and important features of the NLO result for $\eta_2$
+exhibited in (\ref{eta2}).
+\begin{itemize}
+\item
+$\eta_2$ is proportional to the initial value of the Wilson
+coefficient function at $\mu_t=\mw$
+\begin{equation}\label{s01x}
+S(x)=S_0(x)+\frac{\as}{4\pi}\left(S_1(x)+B_t S_0(x)\right)
+\end{equation}
+which has to be extracted from the box graphs in fig.\
+\ref{fig:oporig}\,(e) and the corresponding gluon correction diagrams
+after a proper factorization of long- and short-distance
+contributions.
+\item
+$S(x)$ in (\ref{s01x}) is similar to the functions $X(x)$ and
+$Y(x)$ in sections \ref{sec:HeffRareKB:kpnn:heff} and
+\ref{sec:HeffRareKB:klmm:heff} except that $S(x)$ is scheme
+dependent due to the renormalization that is required for the
+operator $Q$. This scheme dependence enters (\ref{s01x}) through the
+scheme dependent constant $B_t$, given in the NDR scheme in
+(\ref{btndr}). This scheme dependence is canceled in the combination
+$B_t-J_5$ by the two-loop anomalous dimension contained in $J_5$.
+Likewise the scheme dependence of $J_f$ cancels in the differences
+$(J_{f}-J_{f-1})$ as is evident from the discussion of section
+\ref{sec:basicform:wc:rgdep}.
+\item
+A very important point is the dependence on the high energy matching
+scale $\mu_t$. This dependence enters the NLO
+$\as(\mu_t)$-correction in (\ref{eta2}) in two distinct ways:
+First as a term proportional to $\gamma^{(0)}$ and, secondly, in
+conjunction with $\gamma_{m0}$. The first of these terms cancels to
+$\ord(\as)$ the $\mu_t$-dependence present in the leading
+term $[\as(\mu_t)]^{6/23}$. The second, on the other hand, leads
+to an $\ord(\as)$ $\mu_t$-dependence of $\eta_2$ which is
+just the one needed to cancel the $\mu_t$-ambiguity of the leading
+function $S_0(x_t(\mu_t))$ in the product $\eta_2 S_0(x_t)$, such
+that in total physical results become independent of $\mu_t$ to
+$\ord(\as)$. From these observations it is obvious that one
+may interpret $\mu_t$ in the first case as the initial scale of the
+RG evolution and in the second case as the scale at which the top
+quark mass is defined. These two scales need not necessarily have the
+same value.
+\\
+The important point is, that to leading logarithmic accuracy the
+$\mu_t$-de\-pen\-dence of both $\eta^{LO}_2(\mu_t)$ and
+$S_0(x_t(\mu_t))$ remains uncompensated, leaving a dis\-tur\-bing\-ly
+large uncertainty in the short-distance calculation.
+\item
+It is interesting to note that in the limit $\mt\gg \mw$ the dependence
+on $\mu_t$ enters $\eta_2$ as $\ln\mu_t/\mt$, rather than
+$\ln\mu_t/\mw$. This feature provides a formal justification for
+choosing $\mu_t=\ord(\mt)$ instead of $\mu_t=\ord(\mw)$. An explicit
+expression for the large $\mt$ limit in the similar case of $\eta_{2B}$
+may be found in section \ref{sec:HeffBBbar}.
+\item
+Although at NLO the product $\eta_2 S_0(x_t)$ depends only very weakly
+on the precise value of $\mu_t$ as long as it is of $\ord(m_t)$, the
+choice $\mu_t=m_t$ is again convenient:  With this choice $\eta_2$
+becomes almost independent of the top quark mass $m_t(m_t)$. By
+contrast, for $\mu_t=M_W$, say, $\eta_2$ would decrease with rising
+$m_t(m_t)$ in order to compensate for the increase of $S_0(x_t(M_W))$
+due to the use of a -- for high $m_t$ -- ``unnaturally'' low scale
+$M_W$.
+\item
+As mentioned above the dependence of the Wilson coefficient on the
+low energy scale $\mu$ and the remaining scheme dependence ($J_3$)
+has been factored out explicitly in (\ref{hds2}). Therefore the
+QCD correction factor $\eta_2$ is {\it by definition\/}
+scale and scheme independent on the lower end of the RG evolution.
+\end{itemize}
+
+\subsection{The Charm Contribution -- $\eta_1$}
+\label{sec:HeffKKbar:eta1}
+
+The calculation of $\eta_1$ beyond leading logs has been presented in
+great detail in \cite{herrlichnierste:93}, \cite{herrlich:94}. Our task
+here will be to briefly describe the basic procedure and to summarize
+the main results.
+\\
+In principle the charm contribution is similar in structure to the
+top contribution. However, since the quark mass $m_c\ll M_W$,
+the charm degrees of freedom can no longer be integrated out
+simultaneously with the $W$ boson, which would introduce large
+logarithmic corrections $\sim\as\ln M_W/m_c$. To resum these logarithms
+one first constructs an effective theory at a scale $\ord(M_W)$, where
+the $W$ boson is removed. The relevant operators are subsequently
+renormalized down to scales $\mu_c=\ord(m_c)$, where the charm quark is
+then integrated out. After this step only the operator $Q$
+(\ref{qsdsd}) remains and $\eta_1$ is finally obtained as discussed in
+section \ref{sec:HeffKKbar:General}.
+\\
+Let us briefly outline this procedure for the case at hand.
+After integrating out $W$ the effective hamiltonian to first order
+in weak interactions, which is needed for the charm contribution,
+can be written as
+\begin{equation}\label{hc1}
+{\cal H}^{(1)}_c=\frac{G_F}{\sqrt 2}\sum_{q, q^\prime=u, c}
+ V^\ast_{q^\prime s}V_{qd}\left(C_+Q^{q^\prime q}_+ +
+ C_-Q^{q^\prime q}_- \right)
+\end{equation}
+where we have introduced the familiar $\Delta S=1$ four-quark
+operators in the multiplicatively renormalizable basis
+\begin{equation}\label{qqpm}
+Q^{q^\prime q}_\pm=\frac{1}{2}\left[
+(\bar s_iq^\prime_i)_{V-A}(\bar q_jd_j)_{V-A}\pm
+(\bar s_iq^\prime_j)_{V-A}(\bar q_jd_i)_{V-A} \right]
+\end{equation}
+We remark that no penguin operators appear in the present case
+due to GIM cancellation between charm quark and up quark
+contributions.
+\\
+$\Delta S=2$ transitions occur to second order in the effective
+interaction (\ref{hc1}). The $\Delta S=2$ effective hamiltonian
+is therefore given by
+\begin{equation}\label{heff2c}
+{\cal H}^{\Delta S=2}_{eff,c}=-\frac{i}{2}\int d^4x\
+T \left( {\cal H}^{(1)}_c(x) {\cal H}^{(1)}_c(0) \right)
+\end{equation}
+Inserting (\ref{hc1}) into (\ref{heff2c}), keeping only pieces that can
+contribute to the charm box diagrams and taking the GIM constraints
+into account, one obtains
+\begin{equation}\label{hds2c}
+{\cal H}^{\Delta S=2}_{eff,c}=\frac{G^2_F}{2}\lambda^2_c
+ \sum_{i,j=+,-}C_i C_j O_{ij}
+\end{equation}
+where
+\begin{equation}\label{oijdef}
+O_{ij}=-\frac{i}{2}\int d^4x\ T\left[
+Q^{cc}_i(x)Q^{cc}_j(0)-Q^{uc}_i(x)Q^{cu}_j(0)-
+Q^{cu}_i(x)Q^{uc}_j(0)+Q^{uu}_i(x)Q^{uu}_j(0) \right]
+\end{equation}
+From the derivation of (\ref{hds2c}) it is evident, that the
+Wilson coefficients of the bilocal operators $O_{ij}$ are simply given
+by the product $C_i C_j$ of the coefficients pertaining to the
+local operators $Q_i$, $Q_j$. The evolution of the $C_i$ from $M_W$
+down to $\mu_c$ proceeds in the standard fashion and is described
+by equations of the type shown in (\ref{cqmu}) with the
+appropriate anomalous dimensions inserted. In the following we list
+the required ingredients.
+\\
+The Wilson coefficients at scale $\mu=M_W$ read
+\begin{equation}\label{cpmw}
+C_\pm(M_W)=1+\frac{\as(M_W)}{4\pi}B_\pm
+\end{equation}
+\begin{equation}\label{bpmn}
+B_\pm=\pm 11\frac{N\mp 1}{2N}   \qquad {\rm (NDR)}
+\end{equation}
+The two-loop anomalous dimensions are
+\begin{equation}\label{gapm1}
+\gamma_\pm=\frac{\as}{4\pi}\gamma^{(0)}_\pm+
+       \left(\frac{\as}{4\pi}\right)^2\gamma^{(1)}_\pm
+\end{equation}
+\begin{equation}\label{gapm2}
+\gamma^{(0)}_\pm=\pm 6\frac{N\mp 1}{N}\quad
+\gamma^{(1)}_\pm=\frac{N\mp 1}{2N}\left[-21\pm\frac{57}{N}\mp\frac{19}{3}N
+ \pm\frac{4}{3} f\right]\quad ({\rm NDR})
+\end{equation}
+For $i,j=+,-$ we introduce
+\begin{equation}\label{dzi}
+d^{(f)}_i=\frac{\gamma^{(0)}_i}{2\beta_0} \qquad
+J^{(f)}_i= \frac{d^{(f)}_i}{\beta_0}\beta_1 - \frac{\gamma^{(1)}_i}{2\beta_0}
+\end{equation}
+and
+\begin{equation}\label{dzij}
+d^{(f)}_{ij}=d^{(f)}_i+d^{(f)}_j \qquad
+J^{(f)}_{ij}=J^{(f)}_i+J^{(f)}_j
+\end{equation}
+The essential step consists in matching (\ref{hds2c}) onto an
+effective theory without charm, which will contain the single
+operator $Q=(\bar sd)_{V-A}(\bar sd)_{V-A}$. In NLO this matching
+has to be performed to $\ord(\as)$. At a normalization
+scale $\mu_c$ it reads explicitly, expressed in terms of operator
+matrix elements $(i, j=+, -)$
+\begin{equation}\label{oijq}
+\langle O_{ij}\rangle=\frac{m^2_c(\mu_c)}{8\pi^2}\left[ \tau_{ij}+
+ \frac{\as(\mu_c)}{4\pi}\left( \kappa_{ij}
+ \ln\frac{\mu^2_c}{m^2_c}+\beta_{ij}\right)\right]
+ \langle Q\rangle
+\end{equation}
+\begin{equation}\label{tauij}
+\tau_{++}=\frac{N+3}{4}
+\qquad
+\tau_{+-}=\tau_{-+}=-\frac{N-1}{4}
+\qquad
+\tau_{--}=\frac{N-1}{4}
+\end{equation}
+\begin{equation}\label{kapij}
+\kappa_{++}=3(N-1)\tau_{++}
+\qquad
+\kappa_{+-}=\kappa_{-+}=3(N+1)\tau_{+-}
+\qquad
+\kappa_{--}=3(N+3)\tau_{--}
+\end{equation}
+The $\beta_{ij}$ are scheme dependent. In the NDR scheme they are
+given by \cite{herrlichnierste:93}
+\begin{eqnarray}\label{betij}
+\beta_{++} &=& (1-N)\left(\frac{N^2-6}{12N}\pi^2+
+ 3\frac{-N^2+2N+13}{4N} \right)  \nonumber \\
+\beta_{+-}=\beta_{-+} &=& (1-N)\left(\frac{-N^2+2N-2}{12N}\pi^2+
+ \frac{3N^2+13}{4N} \right)    \\
+\beta_{--} &=& (1-N)\left(\frac{N^2-4N+2}{12N}\pi^2-
+ \frac{3N^2+10N+13}{4N} \right)  \nonumber
+\end{eqnarray}
+Now, starting from (\ref{hds2c}), evolving $C_i$ from $M_W$ down to
+$\mu_c$, integrating out charm at $\mu_c$ with the help of
+(\ref{oijq}), evolving the resulting coefficient according to
+(\ref{cqmu}) and recalling the definition of $\eta_1$ in
+(\ref{hds2}), one finally obtains
+\begin{eqnarray}\label{eta1}
+\eta_1=&&[\as(\mu_c)]^{d_3}\sum_{i,j=+,-}
+\left(\frac{\as(m_b)}{\as(\mu_c)}\right)^{d^{(4)}_{ij}}
+\left(\frac{\as(M_W)}{\as(m_b)}\right)^{d^{(5 )}_{ij}}\times
+\nonumber \\
+&&\times\left[\tau_{ij}+\frac{\as(\mu_c)}{4\pi}\left(\kappa_{ij}
+\ln\frac{\mu^2_c}{m^2_c}+\tau_{ij}(J^{(4)}_{ij}-J_3)+\beta_{ij}
+\right)+\right. \nonumber \\
+&&\left. +\tau_{ij}\left(\frac{\as(m_b)}{4\pi}
+(J^{(5)}_{ij}-J^{(4)}_{ij})+\frac{\as(M_W)}{4\pi}
+(B_i+B_j-J^{(5)}_{ij})\right)\right]
+\end{eqnarray}
+We conclude this section with a discussion of a few important
+issues concerning the structure of this formula.
+\begin{itemize}
+\item
+(\ref{eta1}), as first obtained in \cite{herrlichnierste:93}, represents the
+next-to-leading order generalization of the leading log expression
+for $\eta_1$ given in \cite{gilmanwise:83}. The latter follows as a
+special case of (\ref{eta1}) when the $\ord(\as)$ correction
+terms are put to zero.
+\item
+The expression (\ref{eta1}) is independent of the renormalization
+scheme up to terms of the neglected order $\ord(\alpha^2_s)$.
+We have written $\eta_1$ in a form, in which this scheme
+independence becomes manifest: While the various $J$-terms, $B_i$ and
+$\beta_{ij}$ in (\ref{eta1}) all depend on the renormalization
+scheme when considered separately, the combinations
+$\tau_{ij}(J^{(4)}_{ij}-J_3)+\beta_{ij}$,
+$J^{(5)}_{ij}-J^{(4)}_{ij}$ and $B_i+B_j-J^{(5)}_{ij}$
+are scheme invariant.
+\item
+The product $\eta_1(\mu_c) x_c(\mu_c)$ is independent of $\mu_c$
+to the considered order,
+\begin{equation}
+\frac{d}{d\ln\mu_c}\eta_1(\mu_c) x_c(\mu_c)=\ord(\alpha^2_s)
+\end{equation}
+in accordance with the requirements of renormalization group
+invariance. The cancellation of the $\mu_c$-dependence to
+$\ord(\as)$ is related to the presence of an explicitly
+$\mu_c$-dependent term at NLO in (\ref{eta1}) and is
+guaranteed through the identity
+\begin{equation}\label{kapid}
+\kappa_{ij}=\tau_{ij}\left(\gamma_{m0}+\frac{\gamma^{(0)}}{2}-
+\frac{\gamma^{(0)}_i+\gamma^{(0)}_j}{2}\right)
+\end{equation}
+which is easily verified using (\ref{gm01}), (\ref{gamq2}),
+(\ref{gapm2}), (\ref{tauij}) and (\ref{kapij}).
+\item
+Also the ambiguity in the scale $\mu_W$, at which $W$ is integrated out,
+is reduced from $\ord(\as)$ to $\ord(\alpha^2_s)$
+when going from leading to next-to-leading order. As mentioned
+above the dependence on the $b$-threshold scale $\mu_b$ is
+$\ord(\alpha^2_s)$ in NLLA as well as in LLA.
+Numerically the dependence on $\mu_b$ is very small. Also the
+variation of the result with the high energy matching scale $\mu_W$
+is considerably weaker than the residual dependence on $\mu_c$.
+Therefore we have set $\mu_b=m_b$ and $\mu_W=M_W$ in (\ref{eta1}).
+In numerical analyses we will take the dominant $\mu_c$-dependence
+as representative for the short-distance scale ambiguity of $\eta_1$.
+The generalization to the case $\mu_W\not= M_W$ is discussed in
+\cite{herrlichnierste:93}. The more general case $\mu_b\not= m_b$ is trivially
+obtained by substituting $m_b\to\mu_b$ in (\ref{eta1}).
+\item
+Note that due to the GIM structure of $O_{ij}$ no mixing under infinite
+renormalization occurs between $O_{ij}$ and the local operator $Q$.
+This is related to the absence of the logarithm in the function
+$S_0(x_c)$ in \eqn{s0c}.
+\end{itemize}
+It is instructive to compare the results obtained for $\eta_1$
+and $\eta_2$. Expanding (\ref{eta1}) to first order in $\as$,
+in this way ``switching off'' the RG summations, we find
+\begin{eqnarray}\label{e1lim}
+&&[\as(\mu)]^{-2/9}\left(1+\frac{\as(\mu)}{4\pi}J_3\right)
+\eta_1\doteq  \\
+&& 1+\frac{\as}{4\pi}\left[\frac{\gamma^{(0)}}{2}\left(
+\ln\frac{\mu^2}{M^2_W}+\ln\frac{m^2}{M^2_W}-1+\frac{2}{9}\pi^2\right)
++\gamma_{m0}\left(\ln\frac{\mu^2}{m^2}+\frac{1}{3}\right)\right]
+\nonumber
+\end{eqnarray}
+where we have replaced $\mu_c\to\mu$ and $m_c\to m$. In deriving
+(\ref{e1lim}) besides (\ref{kapid}) the following identities are
+useful
+\begin{equation}\label{tauid}
+\sum_{i,j=+,-}\tau_{ij}=1\qquad
+\sum_{i,j=+,-}\tau_{ij}\frac{\gamma^{(0)}_i+\gamma^{(0)}_j}{2}=
+\gamma^{(0)}
+\end{equation}
+\begin{equation}\label{bid}
+\sum_{i,j=+,-}\tau_{ij}(B_i+B_j)=2 B_+
+\end{equation}
+The same result (\ref{e1lim}) is obtained from $\eta_2$ as well,
+if we set $m_c=m_b=\mu_t=\mu$, $m_t=m$ in (\ref{eta2}) and expand
+for $m\ll M_W$. This exercise yields a useful cross-check between
+the calculations for $\eta_1$ and $\eta_2$. In addition it gives
+some further insight into the structure of the QCD corrections to
+$\Delta S=2$ box diagrams, establishing $\eta_1$ and $\eta_2$ as two
+different generalizations of the same asymptotic limit (\ref{e1lim}).
+
+\subsection{The Top-Charm Contribution -- $\eta_3$}
+\label{sec:HeffKKbar:eta3}
+To complete the description of the $K^0-\bar K^0$ effective hamiltonian we
+now turn to the mixed top-charm component, defined by the contribution
+$\sim\lambda_c\lambda_t$ in (\ref{hds2}), and the associated QCD
+correction factor $\eta_3$. The short distance QCD effects have been
+first obtained within the leading log approximation by
+\cite{gilmanwise:83}. The calculation of $\eta_3$ at next-to-leading
+order is due to the work of \cite{herrlichnierste:95},
+\cite{nierste:95}. As already mentioned, the renormalization group
+analysis necessary for $\eta_3$ is more involved than in the cases of
+$\eta_1$ and $\eta_2$. The characteristic differences will become clear
+from the following presentation.
+\\
+We begin by writing down the relevant $\Delta S=1$ hamiltonian,
+obtained after integrating out $W$ and top, which provides the basis
+for the construction of the $\Delta S=2$ effective hamiltonian we want
+to derive. It reads
+\begin{equation}\label{hct1}
+{\cal H}^{(1)}_{ct}=\frac{G_F}{\sqrt 2}\left(\sum_{q, q^\prime=u, c}
+ V^\ast_{q^\prime s}V_{qd}\sum_{i=1,2}C_iQ^{q^\prime q}_i -
+ \lambda_t\sum_{i=3}^6 C_i Q_i \right)
+\end{equation}
+with
+\begin{equation}\label{qpq12}
+Q^{q^\prime q}_1=(\bar s_iq^\prime_j)_{V-A}(\bar q_jd_i)_{V-A} \qquad
+Q^{q^\prime q}_2=(\bar s_iq^\prime_i)_{V-A}(\bar q_jd_j)_{V-A}
+\end{equation}
+and corresponds to the hamiltonian (\ref{eq:HeffKppc}), discussed in
+chapter \ref{sec:HeffdF1:66}, except that we have included the
+$\Delta C=1$ components $Q^{uc}_i$, $Q^{cu}_i$, which contribute in the
+analysis of $\eta_3$.
+By contrast to the simpler case of $\eta_1$ presented in the previous
+section, now also the penguin operators $Q_i$, $i=3,\ldots, 6$
+(\ref{eq:Kppbasis}) have to be considered. Being proportional to
+$\lambda_t=V^\ast_{ts}V_{td}$ they will contribute to the
+$\lambda_c\lambda_t$-part of (\ref{hds2}). We remark in this context
+that, on the other hand, the penguin contribution to the 
+$\lambda^2_t$-sector is entirely negligible. Since only light quarks
+are involved in $Q_3,\ldots ,Q_6$, the double penguin diagrams, which 
+would contribute to the $\lambda^2_t$-piece of the $\Delta S=2$
+amplitude, are suppressed by at least a factor of $m^2_b/m^2_t$
+compared with the dominant top-exchange effects discussed in section
+\ref{sec:HeffKKbar:eta2}.
+\\
+At second order in (\ref{hct1}) $\Delta S=2$ transitions are generated.
+Inserting (\ref{hct1}) in an expression similar to (\ref{heff2c}),
+eliminating $\lambda_u$ by means of $\lambda_u=-\lambda_c-\lambda_t$
+and collecting the terms proportional to $\lambda_c\lambda_t$, we
+obtain the top-charm component of the effective $\Delta S=2$
+hamiltonian in the form
+\begin{equation}\label{hds2ct}
+{\cal H}^{\Delta S=2}_{eff,ct}=\frac{G^2_F}{2}\lambda_c\lambda_t
+ \sum_{i=\pm}\left[\sum_{j=1}^6 C_i C_j Q_{ij}
+ +C_{7i} Q_7\right]
+\end{equation}
+where   
+\begin{equation}\label{qij12}
+Q_{ij}=-\frac{i}{2}\int d^4x\ T\left[
+2Q^{uu}_i(x)Q^{uu}_j(0)-Q^{uc}_i(x)Q^{cu}_j(0)-
+Q^{cu}_i(x)Q^{uc}_j(0) \right]
+\end{equation}
+for $j=1, 2$ and
+\begin{equation}\label{qij36}
+Q_{ij}=-\frac{i}{2}\int d^4x\ T\left[
+\left(Q^{uu}_i(x)-Q^{cc}_i(x)\right)Q_j(0)+
+Q_j(x)\left(Q^{uu}_i(0)-Q^{cc}_i(0)\right)\right]
+\end{equation}
+for $j=3, \ldots,6$.
+\\
+In defining these operators we have already omitted bilocal products
+with flavor structure like $(\bar su\bar ud)\cdot(\bar sc\bar cd)$,
+which cannot contribute to $\Delta S=2$ box diagrams. Furthermore,
+for the factor entering the bilocal operators with index
+$i$ we have changed the basis from $Q^{q^\prime q}_{1,2}$ to
+$Q^{q^\prime q}_\pm$ given in (\ref{qqpm}).
+In addition local counterterms proportional to the $\Delta S=2$
+operator
+\begin{equation}\label{q7def}
+Q_7=\frac{m^2_c}{g^2}(\bar sd)_{V-A}(\bar sd)_{V-A}
+\end{equation}
+have been added to (\ref{hds2ct}). These are necessary here because
+the bilocal operators can in general mix into $Q_7$ under infinite
+renormalization, a fact related to the logarithm present in the
+leading term $-x_c\ln x_c$ entering $S_0(x_c, x_t)$ in (\ref{s0ct}).
+This behaviour is in contrast to the charm contribution, where the
+corresponding function $S_0(x_c)=x_c$ does not contain a logarithmic term
+and consequently no local $\Delta S=2$ counterterm is necessary in
+(\ref{hds2c}). On the other hand the situation here is analogous to the
+case of the charm contribution to the effective hamiltonian for
+$K^+\to\pi^+\nu\bar\nu$ in section \ref{sec:HeffRareKB:kpnn} which
+similarly behaves as $x_c\ln x_c$ in lowest order and correspondingly
+requires a counterterm, as displayed in (\ref{hzop}) and (\ref{hbop}).
+
+After integrating out top and $W$ at the high energy matching scale
+$\mu_W={\cal O}(M_W)$, the Wilson coefficients $C_j$, $j=1, \ldots 6$
+of (\ref{hct1}) and (\ref{hds2ct}) are given in the NDR-scheme by
+(see section \ref{sec:HeffdF1:66})
+\begin{eqnarray}\label{ctmuw}
+\vec C^T(\mu_W) & = & (0, 1, 0, 0, 0, 0)+ 
+  \frac{\alpha_s(\mu_W)}{4\pi}
+  \left(6, -2, -\frac{2}{9}, \frac{2}{3}, -\frac{2}{9}, \frac{2}{3}
+  \right)\ln\frac{\mu_W}{M_W} \nonumber\\ 
+  & + & \frac{\alpha_s(\mu_W)}{4\pi}
+  \left(\frac{11}{2}, -\frac{11}{6}, -\frac{1}{6}\tilde E_0(x_t),
+  \frac{1}{2}\tilde E_0(x_t), -\frac{1}{6}\tilde E_0(x_t),
+  \frac{1}{2}\tilde E_0(x_t)\right)
+\end{eqnarray}
+and $C_\pm=C_2\pm C_1$. $\tilde E_0(x_t)$ can be found in
+(\ref{eq:Exttilde}).
+The coefficient of $Q_7$ is obtained through matching the $\Delta S=2$
+matrix element of the effective theory (\ref{hds2ct}) to the
+corresponding full theory matrix element, which is in the required
+approximation ($x_c\ll 1$) given by (compare (\ref{hds2}))
+\begin{equation}\label{afullct}
+A_{full, ct}=\frac{G^2_F}{16\pi^2}M^2_W 2\lambda_c\lambda_t
+S_0(x_c,x_t)\langle Q\rangle
+\end{equation}
+At next-to-leading order this matching has to be done to one loop,
+including finite parts. Note that here the loop effect is due to
+electroweak interactions and QCD does not contribute explicitly in this
+step.  The matching condition determines the sum $C_7\equiv
+C_{7+}+C_{7-}$, which in the NDR scheme and with the conventional
+definition of evanescent operators, \cite{burasweisz:90}, see also
+\cite{herrlichnierste:95}, \cite{nierste:95}, reads
+\begin{equation}\label{c7muw}
+C_7(\mu_W)=\frac{\alpha_s(\mu_W)}{4\pi}\left[-8\ln\frac{\mu_W}{M_W}+
+4\ln x_t-\frac{3x_t}{1-x_t}-\frac{3x^2_t\ln x_t}{(1-x_t)^2}+2\right]
+\end{equation}
+at next-to-leading order.
+In leading log approximation one simply would have $C_7(\mu_W)=0$.
+\\
+The distribution of $C_7$ among $C_{7+}$ and $C_{7-}$ is arbitrary
+and has no impact on the physics. For example we may choose
+\begin{equation}\label{c7pm}
+C_{7+}=C_7\qquad\qquad  C_{7-}=0
+\end{equation}
+Having determined the initial values of the Wilson coefficients
+\begin{equation}\label{cvpmt}
+\vec C^{(\pm)T}\equiv (C_\pm C_1, \ldots, C_\pm C_6, C_{7\pm})
+\end{equation}
+at a scale $\mu_W$, $\vec C^{(\pm)}(\mu_W)$, the next step consists
+in solving the RG equations to determine $\vec C^{(\pm)}(\mu_c)$
+at the charm mass scale $\mu_c={\cal O}(m_c)$. The renormalization
+group evolution of $\vec C^{(\pm)}$ is given by
+\begin{equation}\label{rgct}
+\frac{d}{d\ln\mu}\vec C^{(\pm)}(\mu)=\gamma^{(\pm)T}_{ct}
+  \vec C^{(\pm)}(\mu)
+\end{equation}
+\begin{equation}\label{gpmct}
+\gamma^{(\pm)}_{ct}=
+\left( \begin{array}{cc}
+\gamma_s+\gamma_\pm\cdot 1 & \vec\gamma_{\pm 7}\\
+\vec 0^T  & \gamma_{77}  \end{array}  \right)
+\end{equation}
+Here $\gamma_s$ is the standard $6\times 6$ anomalous dimension matrix
+for the $\Delta S=1$ effective hamiltonian including QCD penguins
+from (\ref{eq:gsexpKpp}), (\ref{eq:gs0Kpp}) and (\ref{eq:gs1ndrN3Kpp})
+(NDR-scheme). Similarly $\gamma_\pm$ are the anomalous dimensions of the
+current-current operators. They can be obtained as
+$\gamma_\pm=\gamma_{s,11}\pm\gamma_{s,12}$ and are also given in
+section \ref{sec:HeffdF1:22}.
+\\
+$\gamma_{77}$ represents the anomalous dimension of $Q_7$ (\ref{q7def})
+and reads
+\begin{equation}\label{g77}
+\gamma_{77}=\gamma_++2\gamma_m+2\beta(g)/g=
+\frac{\alpha_s}{4\pi}\gamma^{(0)}_{77}+
+\left(\frac{\alpha_s}{4\pi}\right)^2\gamma^{(1)}_{77}
+\end{equation}
+For $N=3$ and in NDR
+\begin{equation}\label{g7701}
+\gamma^{(0)}_{77}=-2+\frac{4}{3}f\qquad
+\gamma^{(1)}_{77}=\frac{175}{3}+\frac{152}{9}f
+\end{equation}
+Finally $\vec\gamma_{\pm 7}$, the vector of anomalous dimensions expressing
+the mixing of the bilocal operators $Q_{\pm i}$ ($i=1,\ldots,6$)
+into $Q_7$, is given by
+\begin{equation}\label{gpm7}
+\vec\gamma_{\pm 7}=
+\frac{\alpha_s}{4\pi}\vec\gamma^{(0)}_{\pm 7}+
+\left(\frac{\alpha_s}{4\pi}\right)^2\vec\gamma^{(1)}_{\pm 7}
+\end{equation}
+where
+\begin{equation}\label{gp70}
+\vec\gamma^{(0)T}_{+7}=
+\left(-16,-8,-32,-16,32,16\right)
+\end{equation}
+\begin{equation}\label{gm70}
+\vec\gamma^{(0)T}_{-7}=
+\left(8,0,16,0,-16,0\right)
+\end{equation}
+\begin{equation}\label{gp71}
+\vec\gamma^{(1)T}_{+7}=
+\left(-212,-28,-424,-56,\frac{1064}{3},\frac{832}{3}\right)
+\end{equation}
+\begin{equation}\label{gm71}
+\vec\gamma^{(1)T}_{-7}=
+\left(276,-92,552,-184,-\frac{1288}{3},0 \right)
+\end{equation}
+The scheme-dependent numbers in $\vec\gamma^{(1)}_{\pm 7}$ are given
+here in the NDR-scheme with the conventional treatment of evanescent
+operators as described in \cite{burasweisz:90}, \cite{herrlichnierste:95},
+\cite{nierste:95}.
+\\
+In order to solve the RG equation (\ref{rgct}) it is useful
+\cite{herrlichnierste:95}, \cite{nierste:95} to define the
+eight-dimensional vector ($\vec C^T=(C_1,\ldots,C_6)$)
+\begin{equation}\label{d8def}
+\vec D^T=(\vec C^T,C_{7+}/C_+,C_{7-}/C_-)
+\end{equation}
+which obeys
+\begin{equation}\label{rgd8}
+\frac{d}{d\ln\mu}\vec D=\gamma^T_{ct}\vec D
+\end{equation}
+where
+\begin{equation}\label{gct8}
+\gamma_{ct}=
+\left(\begin{array}{ccc}
+\gamma_s & \vec\gamma_{+7} & \vec\gamma_{-7} \\
+\vec 0^T & \gamma_{77}-\gamma_+ & 0 \\
+\vec 0^T & 0 & \gamma_{77}-\gamma_-
+\end{array}\right)
+\end{equation}
+The solution of (\ref{rgd8}) proceeds in the standard fashion as
+described in section \ref{sec:basicform:wc:rgf} and has the form
+\begin{equation}\label{dcsol}
+\vec D(\mu_c)=U_4(\mu_c,\mu_b)M(\mu_b)U_5(\mu_b,\mu_W)\vec D(\mu_W)
+\end{equation}
+similarly to (\ref{cthr}).
+The b-quark-threshold matching matrix $M(\mu_b)$ is an $8\times 8$ 
+matrix whose $6\times 6$ submatrix $M_{ij}$, $i,j=1,\ldots,6$
+is identical to the matrix $M$ described in section
+\ref{sec:HeffdF1:66:Mm}. The remaining elements are $M_{77}=M_{88}=1$
+and zero otherwise.
+From (\ref{dcsol}) the Wilson coefficients $C_i(\mu_c)$ are
+obtained as
+\begin{equation}\label{cdrel}
+C_i(\mu_c)=D_i(\mu_c)\quad i=1,\ldots,6\qquad
+C_7(\mu_c)=C_+(\mu_c)D_7(\mu_c)+C_-(\mu_c)D_8(\mu_c)
+\end{equation}
+
+The final step in the calculation of $\eta_3$ consists in removing
+the charm degrees of freedom from the effective theory.
+Without charm the effective short-distance hamiltonian corresponding
+to (\ref{hds2ct}) can be written as 
+\begin{equation}\label{hctq}
+{\cal H}^{\Delta S=2}_{eff,ct}=\frac{G^2_F}{2}\lambda_c\lambda_t
+C_{ct}  Q
+\end{equation}
+The matching condition is obtained by equating the matrix elements of
+(\ref{hds2ct}) and (\ref{hctq}), evaluated at a scale 
+$\mu_c={\cal O}(m_c)$. At next-to-leading order one needs the finite
+parts of the matrix elements of $Q_{ij}$, which can be written in the
+form
+\begin{equation}\label{qijq}
+\langle Q_{ij}(\mu_c)\rangle=\frac{m^2_c(\mu_c)}{8\pi^2}
+r_{ij}(\mu_c)\langle Q\rangle
+\end{equation}
+where in the renormalization scheme described above after eq. (\ref{gm71})
+the $r_{ij}$ are given by
+\begin{equation}\label{rijt}
+r_{ij}(\mu_c)=
+\left\{ \begin{array}{ll}
+(4\ln(\mu_c/m_c)-1)\tau_{ij} & j=1,2 \\
+(8\ln(\mu_c/m_c)-4)\tau_{ij} & j=3,4 \\
+(-8\ln(\mu_c/m_c)+4)\tau_{ij} & j=5,6 \end{array}\right.
+\end{equation}
+\begin{equation}\label{tjodd}
+\tau_{\pm 1}=\tau_{\pm 3}=\tau_{\pm 5}=(1\pm 3)/2
+\end{equation}
+\begin{equation}\label{tjevn}
+\tau_{+j}=1\qquad \tau_{-j}=0\qquad  \mbox{$j$ even}
+\end{equation}
+Using (\ref{qijq}), the matching condition at $\mu_c$ between
+(\ref{hds2ct}) and (\ref{hctq}) implies
+\begin{equation}\label{cctmuc}
+C_{ct}(\mu_c)=\sum_{i=\pm}\sum_{j=1}^6 C_i(\mu_c) C_j(\mu_c)
+\frac{m^2_c(\mu_c)}{8\pi^2}r_{ij}(\mu_c)+C_7(\mu_c)
+\frac{m^2_c(\mu_c)}{4\pi\alpha_s(\mu_c)}
+\end{equation}
+Evolving $C_{ct}$ from $\mu_c$ to $\mu<\mu_c$ in a three-flavor theory
+using (\ref{cqmu}) and comparing (\ref{hctq}) with (\ref{hds2}), 
+we obtain the final result
+\begin{displaymath}
+\eta_3=\frac{x_c(\mu_c)}{S_0(x_c(\mu_c),x_t(\mu_W))}\alpha_s(\mu_c)^{2/9}
+\Bigl[ \frac{\pi}{\alpha_s(\mu_c)}C_7(\mu_c)
+\left(1-\frac{\alpha_s(\mu_c)}{4\pi}J_3\right)+ 
+\end{displaymath}
+\begin{equation}\label{eta3}
+ +\frac{1}{2}\sum_{i=\pm}\sum_{j=1}^6 C_i(\mu_c) C_j(\mu_c)
+r_{ij}(\mu_c)\Bigr] 
+\end{equation}
+One may convince oneself, that $\eta_3 S_0(x_c,x_t)$ is independent of the 
+renormalization scales, in particular of $\mu_c$, up to terms of 
+${\cal O}(x_c \alpha^{2/9}_s \alpha_s)$. 
+
+Furthermore, using the formulae given in this
+section, it is easy to see from the explicit expression (\ref{eta3}),
+that $\eta_3 \alpha^{-2/9}_s\to 1$ in the limit $\alpha_s\to 0$,
+as it should indeed be the case.
+\\
+The next-to-leading order formula (\ref{eta3}) for $\eta_3$, first
+calculated in \cite{herrlichnierste:95}, \cite{nierste:95}, provides
+the generalization of the leading log result obtained by
+\cite{gilmanwise:83}. It is instructive to compare (\ref{eta3}) with
+the leading order approximation, which can be written as
+\begin{equation}\label{eta3lo}
+\eta^{LO}_3=\alpha_s(\mu_c)^{2/9}
+\frac{-\pi C^{LO}_7(\mu_c)}{\alpha_s(\mu_c)\ln x_c}
+\end{equation}
+using the notation of (\ref{eta3}). $C^{LO}_7$ denotes the coefficient
+$C_7$, restricted to the leading logarithmic approximation.
+Formula (\ref{eta3lo}), derived here as a special case of (\ref{eta3}),
+is equivalent to the result obtained in \cite{gilmanwise:83}.
+\\
+If penguin operators and the b-quark threshold in the RG
+evolution are neglected, it is possible to write down in closed form
+a relatively simple, explicit expression for $\eta_3$. Using a 4-flavor
+effective theory for the evolution from the $W$-scale down to the
+charm scale, we find in this approximation
+\begin{eqnarray}\label{eta3apx}
+\eta_3 &=& \frac{x_c(\mu_c)}{S_0(x_c(\mu_c),x_t)}\alpha_s(\mu_c)^{2/9}\cdot
+\nonumber \\
+&\cdot& \Biggl[ \frac{\pi}{\alpha_s(\mu_c)}\left(-\frac{18}{7}K_{++}-
+\frac{12}{11}K_{+-}+\frac{6}{29}K_{--}+\frac{7716}{2233}K_7\right)
+\left(1-\frac{\alpha_s(\mu_c)}{4\pi}\frac{307}{162}\right)+ \nonumber \\
+& & + \left(\ln\frac{\mu_c}{m_c}-\frac{1}{4}\right)
+\left(3 K_{++}-2 K_{+-}+ K_{--}\right) + \nonumber \\
+& & +\frac{262497}{35000}K_{++}-\frac{123}{625}K_{+-}+
+\frac{1108657}{1305000}K_{--}-\frac{277133}{50750}K_7+ \nonumber \\
+& & + K\left(-\frac{21093}{8750}K_{++}+\frac{13331}{13750}K_{+-}-
+\frac{10181}{18125}K_{--}-\frac{1731104}{2512125}K_7\right)+ \nonumber \\
+& & +\left(\ln x_t-\frac{3 x_t}{4(1-x_t)}-\frac{3x^2_t\ln x_t}{4(1-x_t)^2}
++\frac{1}{2}\right) K K_7 \Biggr]
+\end{eqnarray}
+where
+\begin{equation}\label{kpm}
+K_{++}=K^{12/25}\qquad K_{+-}=K^{-6/25}\qquad K_{--}=K^{-24/25}
+\end{equation}
+\begin{equation}\label{k7k}
+K_7=K^{1/5}\qquad  K=\frac{\alpha_s(M_W)}{\alpha_s(\mu_c)}
+\end{equation}
+Here we have set $\mu_W=M_W$. (\ref{eta3apx}) represents the
+next-to-leading order generalization of an approximate formula for the
+leading log $\eta_3$, also omitting gluon penguins, that has been first
+given in \cite{gilmanwise:83}.
+The analytical expression for $\eta_3$ in \eqn{eta3apx}
+provides an excellent approximation, deviating generally by less
+than $1\%$ from the full result.
+
+\subsection{Numerical Results}
+\label{sec:HeffKKbar:Num}
+
+\subsubsection{General Remarks}
+\label{sec:HeffKKbar:Num:Rem}
+After presenting the theoretical aspects of the short-distance
+QCD factors $\eta_1$, $\eta_2$ and $\eta_3$ in the previous
+sections, we shall now turn to a discussion of their
+numerical values. However, before considering explicit numbers,
+we would like to make a few general remarks.
+\\
+First of all, it is important to recall
+that in the matrix element
+$\langle\bar K^0|{\cal H}^{\Delta S=2}_{eff}|K^0\rangle$
+(see (\ref{hds2})), only the complete products
+\begin{equation}\label{setaiq}
+S_{0i}\cdot \eta_i[\as(\mu)]^{-2/9}\left[
+1+\frac{\as(\mu)}{4\pi}J_3\right]
+\langle\bar K^0|Q(\mu)|K^0\rangle\equiv
+C_i(\mu) \langle\bar K^0|Q(\mu)|K^0\rangle
+\end{equation}
+are physically relevant.  Here $S_{0i}$ denote the appropriate quark
+mass dependent functions $S_0$ for the three contributions ($i=1$, $2$,
+$3$) in (\ref{hds2}).  None of the factors in (\ref{setaiq}) is
+physically meaningful by itself. In particular, there is some
+arbitrariness in splitting the product (\ref{setaiq}) into the
+short-distance part and the matrix element of $Q$ (\ref{qsdsd})
+containing long distance contributions. This arbitrariness has of
+course no impact on the physical result. However, it is essential to
+employ a definition for the operator matrix element that is consistent
+with the short-distance QCD factor used.
+\\
+Conventionally, the matrix element $\langle\bar K^0|Q|K^0\rangle$
+is expressed in terms of the so-called bag parameter $B_K(\mu)$
+defined through
+\begin{equation}\label{bkdef}
+\langle\bar K^0|Q(\mu)|K^0\rangle\equiv\frac{8}{3}F^2_K m^2_K B_K(\mu)
+\end{equation}
+where $m_K$ is the kaon mass and $F_K=160 MeV$ is the kaon decay
+constant. In principle, one could just use the scale- and scheme
+dependent bag factor $B_K(\mu)$ along with the coefficient
+functions $C_i(\mu)$ as defined by (\ref{setaiq}), evaluated
+at the same scale and in the same renormalization scheme.
+However, it has become customary to define the short-distance
+QCD correction factors $\eta_i$ by splitting off from the
+Wilson coefficient $C_i(\mu)$ the factor
+$[\as(\mu)]^{-2/9}[1+\as(\mu)/(4\pi)\ J_3]$, which
+carries the dependence on the renormalization scheme and the scale $\mu$.
+This factor is then
+attributed to the matrix element of $Q$, formally cancelling its
+scale and scheme dependence. Accordingly one defines a
+renormalization scale and scheme invariant bag parameter $B_K$
+(compare (\ref{setaiq}), (\ref{bkdef}))
+\begin{equation}\label{bkbkmu}
+B_K\equiv [\as(\mu)]^{-2/9}\left[
+1+\frac{\as(\mu)}{4\pi}J_3\right] B_K(\mu)
+\end{equation}
+If the $\eta_i$ as described in this report are employed to
+describe the short-distance QCD corrections, eq. (\ref{bkbkmu})
+is the consistent definition to be used for the kaon bag
+parameter.
+\\
+Eventually the quantity $B_K(\mu)$ should be calculated within
+lattice QCD. At present, the analysis of \cite{sharpe:94}, for
+example, gives a central value of $B_K(2 GeV)_{NDR}=0.616$, with
+some still sizable uncertainty. For a recent review see also
+\cite{soni:95}.
+This result already incorporates the lattice-continuum
+theory matching and refers to the usual NDR scheme.
+It is clear that the NLO calculation of short-distance QCD effects
+is essential for consistency with this matching and for a proper
+treatment of the scheme dependence. Both require ${\cal O}(\as)$
+corrections, which go beyond the leading log approximation.
+\\
+To convert to the scheme invariant parameter $B_K$ one uses
+(\ref{bkbkmu}) with the NDR-scheme value for $J_3=307/162$ to
+obtain $B_K=0.84$. Note that the factor involving $J_3$ in (\ref{bkbkmu}),
+which appears at NLO, increases the r.h.s. of (\ref{bkbkmu}) by
+$\approx 4.5\%$. The leading factor $\as^{-2/9}$ is about $1.31$.
+Of course, the fact that there is presently still a rather large
+uncertainty in the calculation of the hadronic matrix element is
+somewhat forgiving, regarding the precise definition of $B_K$.
+However, as the lattice calculations improve further and the errors
+decrease, the issue of a consistent definition of the $\eta_i$
+and $B_K$ will become crucial and it is important to keep
+relation (\ref{bkbkmu}) in mind.
+
+Let us next add a side remark concerning the separation of the
+full amplitude into the formally RG invariant factors $\eta_i$
+and $B_K$.
+This separation is essentially unique, up to trivial constant factors,
+if the evolution from the charm scale $\mu_c$ down to a "hadronic"
+scale $\mu<\mu_c$ is written in the resummed form as shown in
+(\ref{cqmu}) and one requires that all factors depending on the scale
+$\mu$ are absorbed into the matrix element. On the other hand the
+hadronic scale $\mu={\cal O}(1 GeV)$ is not really much different
+from the charm scale $\mu_c={\cal O}(m_c)$, so that the logarithms
+$\ln\mu/\mu_c$ are not very large. Therefore one could argue that
+it is not necessary to resum those logarithms. In this case the
+first two factors on the r.h.s. of (\ref{cqmu}) could be expanded
+to first order in $\as$ and the amplitude (\ref{setaiq})
+would read
+\begin{equation}\label{ciqmumuc}
+C_i(\mu_c)\left(1+\frac{\as}{\pi}\ln\frac{\mu}{\mu_c}\right)
+\langle\bar K^0|Q(\mu)|K^0\rangle
+\end{equation}
+From this expression it is obvious, that the separation of the
+physical amplitude into scheme invariant short-distance factors
+and a scheme invariant matrix element is in general not unique.
+This illustrates once more the ambiguity existing for theoretical
+concepts such as operator matrix elements or QCD correction factors,
+which only cancels in physical quantities.
+\\
+For definiteness, we will stick to the RG improved form also for the
+evolution between $\mu_c$ and $\mu$ and the definitions for
+$\eta_i$ and $B_K$ that we have discussed in detail above.
+
+
+\subsubsection{Results for $\eta_1$, $\eta_2$ and $\eta_3$}
+\label{sec:HeffKKbar:Num:Res}
+We are now ready to quote numerical results for the
+short-distance QCD corrections $\eta_i$ at next-to-leading order
+and to compare them with the leading order approximation.
+\\
+The factors $\eta_1$ and $\eta_3$ have been analyzed in detail in
+\cite{herrlichnierste:93} and \cite{nierste:95}.
+Here we summarize briefly their main results.
+Using our central parameter values $m_c(m_c)=1.3 GeV$,
+$\Lms^{(4)}=0.325 GeV$, $m_t(m_t)=170 GeV$ and
+fixing the scales as $\mu_c=m_c$, $\mu_W=M_W$ for $\eta_1$,
+$\mu_W=130 GeV$ for $\eta_3$, one obtains at NLO
+\begin{equation}\label{eta13nlo}
+\eta_1=1.38\qquad\qquad \eta_3=0.47
+\end{equation}
+This is to be compared with the LO values corresponding to the same
+input $\eta^{LO}_1=1.12$, $\eta^{LO}_3=0.35$.  We note that the
+next-to-leading order corrections are sizable, typically $20\%-30\%$,
+but still perturbative.  The numbers above may be compared with the
+leading log values $\eta^{LO}_1=0.85$ and $\eta^{LO}_3=0.36$ that have
+been previously used in the literature, based on the choice $m_c=1.4
+GeV$, $\Lambda_{QCD}=0.2 GeV$ and $\mu_W=M_W$.  The considerable
+difference between the two LO values for $\eta_1$ mainly reflects the
+large dependence of $\eta_1$ on $\Lambda_{QCD}$.
+\\
+In fact, when the QCD scale is allowed to vary within
+$\Lms^{(4)}=(0.325\pm 0.110)GeV$, the
+value for $\eta_1$ (NLO) changes by $\sim\pm 35\%$. The leading order
+result $\eta^{LO}_1$ appears to be slightly less sensitive to
+$\Lambda_{QCD}$. However, in this approximation the relation of
+$\Lambda_{QCD}$ to $\Lms^{(4)}$ is not well
+defined, which introduces an additional source of uncertainty
+when working to leading logarithmic accuracy.
+\\
+The situation is much more favorable in the case of $\eta_3$, where
+the sensitivity to $\Lms^{(4)}$ is quite small,
+$\sim\pm 3\%$.
+Likewise the dependence on the charm quark mass is very small for both
+$\eta_1$ and $\eta_3$. Using $m_c(m_c)=(1.3\pm 0.05)GeV$ and the
+central value for $\Lms^{(4)}$ it is about $\pm 4\%$ for $\eta_1$ and
+entirely negligible for $\eta_3$.
+\\
+Finally, there are the purely theoretical uncertainties due to the
+renormalization scales. They are dominated by the ambiguity related
+to $\mu_c$. The products $S_0(x_c(\mu_c))\cdot\eta_1(\mu_c)$ and
+$S_0(x_c(\mu_c),x_t)\cdot\eta_3(\mu_c)$ are independent of $\mu_c$
+up to terms of the neglected order in RG improved perturbation theory.
+In the case of $S_0(x_c(\mu_c))\cdot\eta_1(\mu_c)$
+($S_0(x_c(\mu_c),x_t)\cdot\eta_3(\mu_c)$) the remaining sensitivity to
+$\mu_c$ amounts to typically $\pm 15\%$ ($\pm 7\%$) at NLO. These
+scale dependences are somewhat reduced compared to the leading order
+calculation, where the corresponding uncertainty is around $\pm 30\%$
+($\pm 10\%$).
+\\
+To summarize, sizable uncertainties are still associated with the
+number for the QCD factor $\eta_1$, whose central value is found to
+be $\eta_1=1.38$ \cite{herrlichnierste:93}.
+On the other hand, the prediction for $\eta_3$ appears to be quite
+stable and can be reliably determined as $\eta_3=0.47\pm 0.03$
+\cite{herrlichnierste:95}, \cite{nierste:95}.  One should emphasize
+however, that these conclusions have their firm basis only within the
+framework of a complete NLO analysis, as the one performed in
+\cite{herrlichnierste:93}, \cite{nierste:95}.  Fortunately the quantity
+$\eta_1$, for which a high precision seems difficult to achieve, plays
+a less important role in the phenomenology of indirect CP violation.
+
+Finally, we turn to a brief discussion of $\eta_2$ \cite{burasjaminweisz:90},
+representing the short-distance QCD effects of the top-quark
+contribution. For central parameter values, in particular
+$\Lms^{(4)}=0.325 GeV$ and $m_t(m_t)=170 GeV$, and for $\mu_t=m_t(m_t)$
+the numerical value is
+\begin{equation}\label{eta2num}
+\eta_2=0.574
+\end{equation}
+Varying the QCD scale within
+$\Lms^{(4)}=(0.325\pm 0.110) GeV$ results in a
+$\pm 0.5\%$ change in $\eta_2$. The dependence on $m_t(m_t)$ is even
+smaller, only $\pm 0.3\%$ for $m_t(m_t)=(170\pm 15)GeV$.
+It is worthwhile to compare the NLO results with the leading log
+approximation. Using the same input as before yields a central value of
+$\eta^{LO}_2=0.612$, about $7\%$ larger as the NLO result (\ref{eta2num}).
+However, what is even more important than the difference in central
+values is the quite striking reduction of scale uncertainty when going
+from the leading log approximation to the full NLO treatment.
+Recall that the $\mu_t$-dependence in $\eta_2$ has to cancel the
+scale dependence of the function $S_0(x_t(\mu_t))$. Allowing for a
+typical variation of the renormalization scale $\mu_t={\cal O}(m_t)$
+from $100 GeV$ to $300 GeV$ results in a sizable change in
+$S_0(x_t(\mu_t)) \eta^{LO}_2$ of $\pm 9\%$. In fact, in leading order
+the $\mu_t$-dependence of $\eta_2$ has even the wrong sign, re-inforcing
+the scale dependence present in $S_0(x_t(\mu_t))$ instead of
+reducing it. The large sensitivity to the unphysical parameter $\mu_t$
+is essentially eliminated (to $\pm 0.4\%$) for $\eta_2 S_0(x_t)$ at
+NLO, a quite remarkable improvement of the theoretical accuracy. The
+situation here is similar to the case of the top-quark dominated
+rare K and B decays discussed in sections
+\ref{sec:HeffRareKB}, \ref{sec:Kpnn} and \ref{sec:BXnnBmm}.
+For a further illustration of the reduction in scale uncertainty see
+the discussion of the analogous case of $\eta_{2B}$ in section
+\ref{sec:HeffBBbar:Num}.
+\\
+The dependence of $\eta_2$ on the charm and bottom threshold scales
+$\mu_c={\cal O}(m_c)$ and  $\mu_b={\cal O}(m_b)$ is also extremely
+weak. Taking $1GeV\leq\mu_c\leq 3GeV$ and $3GeV\leq\mu_b\leq 9GeV$
+results in a variation of $\eta_2$ by merely $\pm 0.26\%$ and
+$\pm 0.06\%$, respectively.
+\\
+In summary, the NLO result for $\eta_2 S_0(x_t)$ is, by contrast to the
+leading logarithmic approximation, essentially free from theoretical
+uncertainties. Furthermore, $\eta_2$ is also rather insensitive to the
+input parameters $\Lms$ and $m_t$. The top
+contribution plays the dominant role for indirect CP violation in the
+neutral kaon system. The considerable improvement in the theoretical
+analysis of the short-distance QCD factor $\eta_2$ brought about by
+the next-to-leading order calculation is therefore particularly
+satisfying.
