@@ -28,12 +28,19 @@ To compute the Wilson Coefficients at some scale mu to LO type in your notebook
 a1 = value_of_alpha_strong_at_weak_scale;
 loop_alpha = 1;
 z = ComputeZ[mu,a1,loop_alpha];
-ReduceOrder[z,LO]
+ReduceOrder[z,"LO"]
 
 y = ComputeY[z,mu,a1,loop_alpha];
-ReduceOrder[y,LO]
+ReduceOrder[y,"LO"]
 
 ```
+
+## Tests
+========
+
+In the file **test.nb** several results presented in the Reference below are correctly 
+reproduced and checked. In particular LO and NLO evaluations of the Wilson Coefficients
+in Tables X, XII, XIII, XVIII, XIX and XX.
 
 ## References
 =============
