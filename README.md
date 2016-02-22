@@ -11,7 +11,7 @@ A Mathematica library to compute the running of the Wilson coefficients for the 
  * Add the following line to your Mathematica notebook file
 
 ```
-<<"/path/to/WiCHam/WiCHam.m"
+Get["/path/to/WiCHam/WiCHam.m"]
 ```
 
 ## Documentation
@@ -34,6 +34,8 @@ y = ComputeY[z,mu,a1,loop_alpha];
 ReduceOrder[y,"LO"]
 
 ```
+
+The notebook file **work.nb** is ready for a calculation, just use it!
 
 ## Tests
 ========

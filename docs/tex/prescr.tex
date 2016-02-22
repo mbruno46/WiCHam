@@ -5,14 +5,23 @@ of the running of the Wilson Coefficients, which are
 not described nor mentioned in the original paper 
 by Buras et al.
 
-\subsection{LO prescription}
+\subsection{LO vs. NLO prescription}
 
 \begin{itemize}
-\item $C_1 \,, C_2$ \\
+\item $C_1 \,, C_2$: the $O(1)$ terms correspond to the leading order (0 and 1 for $C_1$ and $C_2$ respectively), 
+while the $O(\as)$ terms are the NLO corrections.\\
 
-\item $C_3 \ldots C_6$ \\
+\item $C_3 \ldots C_6$: in this case the $O(\as)$ terms appear already at LO, since at typical weak scales
+the top quark can be integrated out and generate a tree-level graph from a QCD-penguin diagram. Hence all 
+$\mt$ depedent functions, such as $B_0$, $C_0$, $D_0$ and $E_0$ have to be taken already at LO. At NLO 
+the effects of the other quarks travelling in the penguin loop are summarized in the constant terms 
+$-2/3$ and $-4/9$ which therefore give the $O(\as)$ NLO corrections. Note that the effects of these two constants
+amount to the redefinitions of $D_0$ and $E_0$ into $\tilde D_0$ and $\tilde E_0$. \\
 
-\item $C_7 \ldots C_{10}$ \\
+\item $C_7 \ldots C_{10}$: similarly to QCD-penguin diagrams also for QED penguins the top quark can be integrated out
+and generate LO contributions at $O(\as)$ with $\mt$-dependent functions. The same constants given above account 
+for the NLO effects.\\
+
 \end{itemize}
 
 Let us consider now the RG evolution matrices.
@@ -30,8 +39,9 @@ U(\mu,m)= \overbrace{U^{(0)}(\mu,m)}^\text{LO} +
 
 The quark threshold matching matrices at leading order correspond to the 
 identity matrix only, while at NLO to the full formula given in the previous sections.
-However note that the prescription for the $z_i$ coefficients at the charm threshold 
-(recall the functions \code{Fs} and \code{Fse}) is at leading order.
+Note that the prescription for the $z_i$ coefficients at the charm threshold 
+(recall the functions \code{Fs} and \code{Fse}) is at NLO, or in other words 
+$z_i(\mc)=0$ for $i=3 \ldots 10$ at leading order.
 
 \subsection{Apparent divergence in the $10 \times 10$ $R$ matrix}
 

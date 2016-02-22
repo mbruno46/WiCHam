@@ -1,0 +1,59 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1554,         50]
+NotebookOptionsPosition[      1325,         37]
+NotebookOutlinePosition[      1658,         52]
+CellTagsIndexPosition[      1615,         49]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"LOAD", " ", "THE", " ", "WiCHam", " ", "LIBRARY"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Get", "[", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<WiCHam.m\>\""}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.663705577130755*^9, 3.663705586601634*^9}, {
+   3.663705639273131*^9, 3.663705645838262*^9}, {3.6637057155827713`*^9, 
+   3.663705734596671*^9}, {3.6637060667932253`*^9, 3.663706136410486*^9}, {
+   3.663706695691234*^9, 3.66370669991467*^9}, {3.663706783195222*^9, 
+   3.663706800588265*^9}, {3.664896366149435*^9, 3.664896374388317*^9}, 
+   3.664896826705871*^9, {3.66489691638447*^9, 3.66489692373002*^9}, {
+   3.6648969687480783`*^9, 3.664896984847355*^9}}]
+},
+WindowSize->{1364, 691},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 763, 15, 55, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
