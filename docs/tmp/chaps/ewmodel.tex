@@ -1,0 +1,431 @@
+\section{Standard Electroweak Model}
+         \label{sec:sewm}
+\subsection{Particles and Interactions}
+            \label{sec:sewm:particles}
+Throughout this review we will work in the context of the three
+generation model of quarks and leptons based on the gauge group
+$SU(3)\otimes SU(2)_L\otimes U(1)_Y $ spontaneously broken down
+ to $SU(3)\otimes U(1)_Q$.
+Here $Y$ and $Q$ denote the weak hypercharge and the electric charge
+generators, respectively. $SU(3)$ stands for $QCD$ which will be discussed
+in more detail in the following section. Here we would like to recall certain
+features of the electroweak part of the Standard Model which will be
+important for our considerations.
+
+The left-handed leptons and quarks are put in $ SU(2)_L $ doublets
+\begin{equation}\label{2.31}
+\left(\begin{array}{c}
+\nu_e \\
+e^-
+\end{array}\right)_L\qquad
+\left(\begin{array}{c}
+\nu_\mu \\
+\mu^-
+\end{array}\right)_L\qquad
+\left(\begin{array}{c}
+\nu_\tau \\
+\tau^-
+\end{array}\right)_L
+\end{equation}
+\begin{equation}\label{2.66}
+\left(\begin{array}{c}
+u \\
+d^\prime
+\end{array}\right)_L\qquad
+\left(\begin{array}{c}
+c \\
+s^\prime
+\end{array}\right)_L\qquad
+\left(\begin{array}{c}
+t \\
+b^\prime
+\end{array}\right)_L       
+\end{equation}
+with the corresponding right-handed fields transforming as singlets
+under $ SU(2)_L $. The primes are discussed below.
+The relevant electroweak charges $Q$, $Y$ and the third component of
+the weak isospin $T_3$ are collected in table~\ref{tab:ewcharges}.
+
+\begin{table}[htb]
+\caption[]{Electroweak charges $Q$, $Y$ and the third component of
+the weak isospin $T_3$ for quarks and leptons in the Standard Model.
+\label{tab:ewcharges}}
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|c|}
+ & $\nu^e_L$ & $ e^-_L$ & $ e^-_R$ & $u_L$ & $d_L$ & $u_R$ & $d_R$ \\
+\hline
+$Q$ & 0 & $-1$ & $-1$ & 2/3 & $-1/3$ & 2/3 & $-1/3$ \\
+\hline
+$T_3$ &1/2 & $-1/2$ & 0 & 1/2 & $-1/2$ & 0 & 0 \\
+\hline
+$Y$ & $-1$ & $-1$ & $-2$ & 1/3 & 1/3 & 4/3 & $-2/3$
+\end{tabular}
+\end{center}
+\end{table}
+
+The electroweak interactions of quarks and leptons are mediated by
+the massive weak gauge bosons $W^\pm$ and $Z^o$ and by the photon $A$.
+These interactions are summarized by the Lagrangian
+\begin{equation}\label{3}
+{\cal L}_{int}={\cal L}_{\rm CC}+{\cal L}_{\rm NC}
+\end{equation}
+where
+\begin{equation}\label{4}
+{\cal L}_{\rm CC}=\frac{g_2}{2 \sqrt{2}}(J^+_\mu W^{+\mu}+J^-_\mu W^{-\mu})
+\end{equation}
+describes the {\it charged current} interactions and
+\begin{equation}\label{5}
+{\cal L}_{\rm NC}=
+ e J^{em}_\mu A^{\mu}+ \frac{g_2}{2 \cos \Theta_W} J^o_\mu Z^\mu
+\end{equation}
+the {\it neutral current} interactions. Here $e$ is the QED coupling constant,
+$g_2$ is the $SU(2)_L$ coupling constant and $\Theta_W$ is the Weinberg
+angle. The currents are given as follows
+\begin{equation}\label{6}
+J^+_\mu=
+(\bar{u} d')_{V-A} +
+(\bar{c} s')_{V-A} +
+(\bar{t} b')_{V-A} +
+(\bar{\nu}_e e)_{V-A} +
+(\bar{\nu}_\mu \mu)_{V-A} +
+(\bar{\nu}_\tau \tau)_{V-A}
+\end{equation}
+
+\begin{equation}\label{7}
+J^{em}_\mu=\sum_f {Q_f \bar f \gamma_\mu f}
+\end{equation}
+\begin{equation}\label{8}
+J^o_\mu=\sum_f \bar f \gamma_\mu (v_f-a_f\gamma_5) f
+\end{equation}
+\begin{equation}\label{9}
+v_f=T^f_3-2 Q_f \sin^2\Theta_W
+\qquad
+a_f=T^f_3
+\end{equation}
+where $Q_f$ and $T^f_3$ denote the charge and the third component of the
+weak isospin of the left-handed fermion $f_L$.
+
+
+In our discussion of weak decays an important role is played by
+the Fermi constant:
+\begin{equation}\label{2.100}
+\frac{G_F}{\sqrt{2}}=\frac{g^2_2}{8 M^2_W}
+\end{equation}
+which has the value
+\begin{equation}\label{2.98}
+G_F=1.16639\cdot 10^{-5}\gev^{-2}
+\end{equation}
+Other values of the relevant parameters will be collected in appendix
+\ref{app:numinput}. 
+
+The interactions between the gauge bosons are standard and can be
+found in any textbook on gauge theories.
+
+The primes in (\ref{2.66}) indicate that the weak eigenstates 
+$(d^\prime,s^\prime,b^\prime)$ are not equal to the corresponding
+mass eigenstates $(d,s,b)$, but are rather linear combinations of
+the latter. This is expressed through the relation
+\begin{equation}\label{2.67}
+\left(\begin{array}{c}
+d^\prime \\ s^\prime \\ b^\prime
+\end{array}\right)=
+\left(\begin{array}{ccc}
+V_{ud}&V_{us}&V_{ub}\\
+V_{cd}&V_{cs}&V_{cb}\\
+V_{td}&V_{ts}&V_{tb}
+\end{array}\right)
+\left(\begin{array}{c}
+d \\ s \\ b
+\end{array}\right)
+\end{equation}
+where the unitary matrix connecting theses two sets of states is the
+Cabibbo-Kobayashi-Maskawa (CKM) matrix.  Many parametrizations of this
+matrix have been proposed in the literature.  We will use in this
+review two parametrizations:  the standard parametrization
+recommended by the particle data group and the Wolfenstein
+parametrization.
+
+\subsection{Standard Parametrization}
+            \label{sec:sewm:stdparam}
+Let us introduce the notation
+$c_{ij}=cos\theta_{ij}$ and $s_{ij}=sin\theta_{ij}$ with $i$ and $j$
+being generation labels ($i,j=1,2,3$). The standard parametrization is
+then given as follows \cite{particledata:94}
+\begin{equation}\label{2.72}
+V=
+\left(\begin{array}{ccc}
+c_{12}c_{13}&s_{12}c_{13}&s_{13}e^{-i\delta}\\ -s_{12}c_{23}
+-c_{12}s_{23}s_{13}e^{i\delta}&c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta}&
+s_{23}c_{13}\\ s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta}&-s_{23}c_{12}
+-s_{12}c_{23}s_{13}e^{i\delta}&c_{23}c_{13}
+\end{array}\right)
+\end{equation}
+where $\delta$ is the phase necessary for CP violation. $c_{ij}$ and
+$s_{ij}$ can all be chosen to be positive and $\delta$ may vary in the
+range $0\le\delta\le 2\pi$. However the measurements
+of CP violation in K decays force $\delta$ to be in the range
+ $0<\delta<\pi$. 
+
+The extensive phenomenology of the last years 
+has shown that
+$s_{13}$ and $s_{23}$ are small numbers: $\ord(10^{-3})$ and ${\cal
+O}(10^{-2})$,
+respectively. Consequently to an excellent accuracy $c_{13}=c_{23}=1$
+and the four independent parameters are given as follows
+\begin{equation}\label{2.73}
+s_{12}=| V_{us}|, \quad s_{13}=| V_{ub}|, \quad s_{23}=|
+V_{cb}|, \quad \delta
+\end{equation}
+with the phase $\delta$ extracted from CP violating transitions or 
+loop processes sensitive to $| V_{td}|$. The latter fact is based
+on the observation that
+ for $0\le\delta\le\pi$, as required by the analysis of CP violation,
+there is a one--to--one correspondence between $\delta$ and $|V_{td}|$
+given by
+\begin{equation}\label{10}
+| V_{td}|=\sqrt{a^2+b^2-2 a b \cos\delta},
+\qquad
+a=| V_{cd} V_{cb}|,
+\qquad
+b=| V_{ud} V_{ub}|
+\end{equation} 
+
+\subsection{Wolfenstein Parameterization Beyond Leading Order}
+            \label{sec:sewm:wolfparam}
+We will also use the Wolfenstein parametrization
+\cite{wolfenstein:83}.
+It is an approximate parametrization of the CKM matrix in which
+each element is expanded as a power series in the small parameter
+$\lambda=| V_{us}|=0.22$
+\begin{equation}\label{2.75} 
+V=
+\left(\begin{array}{ccc}
+1-{\lambda^2\over 2}&\lambda&A\lambda^3(\varrho-i\eta)\\ -\lambda&
+1-{\lambda^2\over 2}&A\lambda^2\\ A\lambda^3(1-\varrho-i\eta)&-A\lambda^2&
+1\end{array}\right)
++\ord(\lambda^4)
+\end{equation}
+and the set (\ref{2.73}) is replaced by
+\begin{equation}\label{2.76}
+\lambda, \qquad A, \qquad \varrho, \qquad \eta \, .
+\end{equation}
+The Wolfenstein parameterization
+has several nice features. In particular it offers in conjunction with the
+unitarity triangle a very transparent geometrical
+representation of the structure of the CKM matrix and allows to derive
+several analytic results to be discussed below. This turns out to be very
+useful in the phenomenology of rare decays and of CP violation.
+
+When using the Wolfenstein parametrization one should remember that it
+is an approximation and that in certain situations neglecting
+$\ord(\lambda^4)$ terms may give wrong results. The question then
+arises how to find $\ord(\lambda^4)$ and higher order terms ?  The
+point is that since \eqn{2.75} is only an approximation the {\em exact}
+definiton of $\lambda$ is not unique by terms of the neglected order
+$\ord(\lambda^4)$. This is the reason why in different papers in the
+literature different $\ord(\lambda^4)$ terms can be found. They simply
+correspond to different definitons of the expansion parameter
+$\lambda$.  Obviously the physics does not depend on this choice.  Here
+it suffices to find an expansion in $\lambda$ which allows for simple
+relations between the parameters (\ref{2.73}) and (\ref{2.76}).  This
+will also restore the unitarity of the CKM matrix which in the
+Wolfenstein parametrization as given in (\ref{2.75}) is not satisfied
+exactly.
+
+To this end
+we go back to (\ref{2.72}) and we impose the relations \cite{burasetal:94b}
+\begin{equation}\label{2.77} 
+s_{12}=\lambda
+\qquad
+s_{23}=A \lambda^2
+\qquad
+s_{13} e^{-i\delta}=A \lambda^3 (\varrho-i \eta)
+\end{equation}
+to {\it  all orders} in $\lambda$. In view of the comments made above
+this can certainly be done. It follows that
+\begin{equation}\label{2.84} 
+\varrho=\frac{s_{13}}{s_{12}s_{23}}\cos\delta
+\qquad
+\eta=\frac{s_{13}}{s_{12}s_{23}}\sin\delta
+\end{equation}
+We observe that (\ref{2.77}) and (\ref{2.84}) represent simply
+the change of variables from (\ref{2.73}) to (\ref{2.76}).
+Making this change of variables in the standard parametrization 
+(\ref{2.72}) we find the CKM matrix as a function of 
+$(\lambda,A,\varrho,\eta)$ which satisfies unitarity exactly!
+We also note that in view of $c_{13}=1-\ord(\lambda^6)$ the relations
+between $s_{ij}$ and $| V_{ij}|$ in (\ref{2.73}) are 
+satisfied to high accuracy. The relations in (\ref{2.84}) have
+been first used in \cite{schmidtlerschubert:92}.
+However, the improved treatment of the unitarity
+triangle presented below goes beyond the analysis of these authors.
+
+The procedure outlined above gives automatically the corrections to the
+Wolfenstein parametrization in (\ref{2.75}).  Indeed expressing
+(\ref{2.72}) in terms of Wolfenstein parameters using (\ref{2.77})
+and then expanding in powers of $\lambda$ we recover the
+matrix in (\ref{2.75}) and in addition find explicit corrections of
+$\ord(\lambda^4)$ and higher order terms. $V_{ub}$ remains unchanged. The
+corrections to $V_{us}$ and $V_{cb}$ appear only at $\ord(\lambda^7)$ and
+$\ord(\lambda^8)$, respectively.  For many practical purposes the
+corrections to the real parts can also be neglected.
+The essential corrections to the imaginary parts are:
+\begin{equation}\label{2.83g}
+\Delta V_{cd}=-iA^2 \lambda^5\eta
+\qquad
+\Delta V_{ts}=-iA\lambda^4\eta 
+\end{equation}
+These two corrections have to be
+taken into account in the discussion of CP violation.
+On the other hand the imaginary part of $V_{cs}$ which in our expansion
+in $\lambda$ appears only at $\ord(\lambda^6)$ can be fully neglected. 
+
+In order to improve the accuracy of the unitarity triangle discussed
+below we will also include the $\ord(\lambda^5)$ correction to $V_{td}$
+which gives
+\begin{equation}\label{2.83d}
+ V_{td}= A\lambda^3 (1-\bar\varrho-i\bar\eta) 
+\end{equation}
+with
+\begin{equation}\label{2.88d}
+\bar\varrho=\varrho (1-\frac{\lambda^2}{2})
+\qquad
+\bar\eta=\eta (1-\frac{\lambda^2}{2}).
+\end{equation}
+%
+In order to derive analytic results we need accurate explicit expressions
+for $\lambda_i=V_{id}^{}V_{is}^*$ where $i=c,t$. We have
+\begin{equation}\label{2.51}
+ Im\lambda_t= -Im\lambda_c=\eta A^2\lambda^5 
+\end{equation}
+\begin{equation}\label{2.52}
+ Re\lambda_c=-\lambda (1-\frac{\lambda^2}{2})
+\end{equation}
+\begin{equation}\label{2.53}
+ Re\lambda_t= -(1-\frac{\lambda^2}{2}) A^2\lambda^5 (1-\bar\varrho) 
+\end{equation}
+Expressions (\ref{2.51}) and (\ref{2.52}) represent to an accuracy of
+0.2\% the exact formulae obtained using (\ref{2.72}). The expression
+(\ref{2.53}) deviates by at most 2\% from the exact formula in the
+full range of parameters considered. 
+In order to keep the analytic
+expressions in the phenomenological applications in a transparent form
+we have dropped a small $\ord(\lambda^7)$ term in deriving (\ref{2.53}).
+After inserting the expressions (\ref{2.51})--(\ref{2.53}) in exact
+formulae for quantities of interest, further expansion in $\lambda$
+should not be made. 
+
+\subsection{Unitarity Triangle Beyond Leading Order}
+            \label{sec:sewm:utriag}
+The unitarity of the CKM matrix provides us with several relations
+of which
+\begin{equation}\label{2.87h}
+V_{ud}^{}V_{ub}^* + V_{cd}^{}V_{cb}^* + V_{td}^{}V_{tb}^* =0
+\end{equation}
+is the most useful one.
+In the complex plane the relation (\ref{2.87h}) can be represented as
+a triangle, the so-called ``unitarity--triangle'' (UT).
+Phenomenologically this triangle is very interesting as it involves
+simultaneously the elements $V_{ub}$, $V_{cb}$ and $V_{td}$ which are
+under extensive discussion at present.
+
+In the usual analyses of the unitarity triangle only terms ${\cal
+O}(\lambda^3)$ are kept in (\ref{2.87h}) \cite{burasharlander:92},
+\cite{nir:74}, \cite{harrisrosner:92}, \cite{schmidtlerschubert:92},
+\cite{dibdunietzgilman:90}, \cite{alilondon:95}. It is however
+straightforward to include the next-to-leading $\ord(\lambda^5)$
+terms \cite{burasetal:94b}. We note first that
+\begin{equation}\label{2.88a}
+V_{cd}^{}V_{cb}^*=-A\lambda^3+\ord(\lambda^7).
+\end{equation}
+%
+Thus to an excellent accuracy $V_{cd}^{}V_{cb}^*$ is real with
+$| V_{cd}^{}V_{cb}^*|=A\lambda^3$.
+Keeping $\ord(\lambda^5)$ corrections and rescaling all terms in
+(\ref{2.87h})
+by $A \lambda^3$ 
+we find
+\begin{equation}\label{2.88b}
+ \frac{1}{A\lambda^3}V_{ud}^{}V_{ub}^*
+=\bar\varrho+i\bar\eta
+\qquad,
+\qquad
+ \frac{1}{A\lambda^3}V_{td}^{}V_{tb}^*
+=1-(\bar\varrho+i\bar\eta)
+\end{equation}
+with $\bar\varrho$ and $\bar\eta$ defined in (\ref{2.88d}). 
+Thus we can represent (\ref{2.87h}) as the unitarity triangle 
+in the complex $(\bar\varrho,\bar\eta)$
+plane. This is  shown in fig.~\ref{fig:triangle}.
+ The length of the side $CB$ which lies
+on the real axis equals unity when eq.~(\ref{2.87h}) is rescaled by
+$V_{cd}^{}V_{cb}^*$. We observe that beyond the leading order
+in $\lambda$ the point A {\it does not} correspond to  $(\varrho,\eta)$ but to
+ $(\bar\varrho,\bar\eta)$.
+Clearly within 3\% accuracy $\bar\varrho=\varrho$ and $\bar\eta=\eta$.
+Yet in the distant future the accuracy of experimental results and
+theoretical calculations may improve considerably so that the more
+accurate formulation given here will be appropriate.
+
+\begin{figure}[htb]
+\vspace{0.05in}
+\centerline{
+% adjust actual size of fig. in text here
+\epsfysize=1.5in
+\epsffile{ps/triangle.ps}
+% use this if rotation of fig. is needed
+% \rotate[r]{
+% \epsffile{ps/triangle.ps}
+% }
+}
+\vspace{0.05in}
+\caption[]{\small\sl
+Unitarity triangle in the complex $(\bar\varrho,\bar\eta)$ plane.
+\label{fig:triangle}}
+\end{figure}
+ 
+Using simple trigonometry one can calculate $\sin(2\phi_i$), $\phi_i=
+\alpha, \beta, \gamma$, in terms of $(\bar\varrho,\bar\eta)$ with the result:
+\begin{equation}\label{2.89}
+\sin(2\alpha)=\frac{2\bar\eta(\bar\eta^2+\bar\varrho^2-\bar\varrho)}
+  {(\bar\varrho^2+\bar\eta^2)((1-\bar\varrho)^2
+  +\bar\eta^2)}  
+\end{equation}
+\begin{equation}\label{2.90}
+\sin(2\beta)=\frac{2\bar\eta(1-\bar\varrho)}{(1-\bar\varrho)^2 + \bar\eta^2}
+\end{equation}
+ \begin{equation}\label{2.91}
+\sin(2\gamma)=\frac{2\bar\varrho\bar\eta}{\bar\varrho^2+\bar\eta^2}=
+\frac{2\varrho\eta}{\varrho^2+\eta^2}
+\end{equation}
+%
+The lengths $CA$ and $BA$ in the
+rescaled triangle of fig.~\ref{fig:triangle} to be denoted by $R_b$ and $R_t$,
+respectively, are given by
+%
+\begin{equation}\label{2.94}
+R_b \equiv \frac{| V_{ud}^{}V^*_{ub}|}{| V_{cd}^{}V^*_{cb}|}
+= \sqrt{\bar\varrho^2 +\bar\eta^2}
+= (1-\frac{\lambda^2}{2})\frac{1}{\lambda}
+\left| \frac{V_{ub}}{V_{cb}} \right|
+\end{equation}
+\begin{equation}\label{2.95}
+R_t \equiv \frac{| V_{td}^{}V^*_{tb}|}{| V_{cd}^{}V^*_{cb}|} =
+ \sqrt{(1-\bar\varrho)^2 +\bar\eta^2}
+=\frac{1}{\lambda} \left| \frac{V_{td}}{V_{cb}} \right|
+\end{equation}
+The expressions for $R_b$ and $R_t$ given here in terms of
+$(\bar\varrho, \bar\eta)$ 
+are excellent approximations. Clearly $R_b$ and $R_t$
+can also be determined by measuring two of the angles $\phi_i$:
+\begin{equation}\label{2.96}
+R_b=\frac{\sin(\beta)}{\sin(\alpha)}=
+\frac{\sin(\alpha+\gamma)}{\sin(\alpha)}=
+\frac{\sin(\beta)}{\sin(\gamma+\beta)}
+\end{equation}
+\begin{equation}\label{2.97}
+R_t=\frac{\sin(\gamma)}{\sin(\alpha)}=
+\frac{\sin(\alpha+\beta)}{\sin(\alpha)}=
+\frac{\sin(\gamma)}{\sin(\gamma+\beta)}
+\end{equation}
+

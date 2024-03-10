@@ -1,0 +1,249 @@
+
+In this section we describe the most important functions of this library:
+those to compute the Wilson Coefficients at any given energy scale $\mu$ 
+between $1 \gev$ and $\mz$.
+
+\subsection{Definition of the Wilson Coefficients}
+
+\code{C1[a]}\\
+\code{C2[a,ae]}\\
+\code{C3[a,mt,MW,ae]}\\
+\code{C4[a,mt,MW]}\\
+\code{C5[a,mt,MW]}\\
+\code{C6[a,mt,MW]}\\
+\code{C7[mt,MW,ae]}\\
+\code{C8}\\
+\code{C9[mt,MW,ae]}\\
+\code{C10}
+
+\begin{itemize}
+\item \code{a}: value of $\as$
+\item \code{mt}: value of the top quark mass
+\item \code{MW}: value of the W boson mass
+\item \code{ae}: value of $\aem$
+\end{itemize}
+
+The Wilson Coefficients at the weak scale are
+\begin{eqnarray}
+C_1(\mw) &=&     \frac{11}{2} \; \frac{\as(\mw)}{4\pi} \, ,
+\label{eq:CMw1} \\
+C_2(\mw) &=& 1 - \frac{11}{6} \; \frac{\as(\mw)}{4\pi}
+               - \frac{35}{18} \; \frac{\aem}{4\pi} \, ,
+\label{eq:CMw2} \\
+C_3(\mw) &=& -\frac{\as(\mw)}{24\pi} \widetilde{E}_0(x_t)
+             +\frac{\aem}{6\pi} \frac{1}{\sin^2\theta_W}
+             \left[ 2 B_0(x_t) + C_0(x_t) \right] \, , 
+\label{eq:CMw3} \\
+C_4(\mw) &=& \frac{\as(\mw)}{8\pi} \widetilde{E}_0(x_t) \, ,
+\label{eq:CMw4} \\
+C_5(\mw) &=& -\frac{\as(\mw)}{24\pi} \widetilde{E}_0(x_t) \, ,
+\label{eq:CMw5} \\
+C_6(\mw) &=& \frac{\as(\mw)}{8\pi} \widetilde{E}_0(x_t) \, ,
+\label{eq:CMw6} \\
+C_7(\mw) &=& \frac{\aem}{6\pi} \left[ 4 C_0(x_t) + \widetilde{D}_0(x_t)
+\right]\, ,
+\label{eq:CMw7} \\
+C_8(\mw) &=& 0 \, 
+\label{eq:CMw8} \\
+C_9(\mw) &=& \frac{\aem}{6\pi} \left[ 4 C_0(x_t) + \widetilde{D}_0(x_t) +
+             \frac{1}{\sin^2\theta_W} (10 B_0(x_t) - 4 C_0(x_t)) \right] \, ,
+\label{eq:CMw9} \\
+C_{10}(\mw) &=& 0 \, ,
+\label{eq:CMw10} \\
+x_t = \frac{m_t^2}{\mw^2} \, .
+\label{eq:xt}
+\end{eqnarray}
+with the QED-related auxiliary functions 
+\begin{eqnarray}
+B_0(x) &=& \frac{1}{4} \left[ \frac{x}{1-x} + \frac{x \ln x}{(x-1)^2}
+\right]\, , \label{eq:Bxt} \\
+C_0(x) &=& \frac{x}{8} \left[ \frac{x-6}{x-1} + \frac{3 x + 2}{(x-1)^2}
+\ln x \right]\, ,
+\label{eq:Cxt} \\
+D_0(x) &=& -\frac{4}{9} \ln x + \frac{-19 x^3 + 25 x^2}{36 (x-1)^3} +
+         \frac{x^2 (5 x^2 - 2 x - 6)}{18 (x-1)^4} \ln x \, ,
+\label{eq:Dxt} \\
+\widetilde{D}_0(x_t) &=& D_0(x_t) - \frac{4}{9} \, .
+\label{eq:Dxttilde} 
+\end{eqnarray}
+and the QCD-related ones
+\begin{eqnarray}
+E_0(x) &=& -\frac{2}{3} \ln x + \frac{x (18 -11 x - x^2)}{12 (1-x)^3} +
+          \frac{x^2 (15 - 16 x  + 4 x^2)}{6 (1-x)^4} \ln x \, ,
+\label{eq:Ext} \\
+\widetilde{E}_0(x_t) &=& E_0(x_t) - \frac{2}{3}
+\label{eq:Exttilde}
+\end{eqnarray}
+
+\subsection{Evolution of the Wilson Coefficients}
+
+\code{ComputeZ[mu,initAlphaMZ,loop,MZ,aem,init12]}
+
+\begin{itemize}
+\item \code{mu}: mass scale at which the coefficients $v_i$ are computed
+\item \code{initAlphaMZ}: initial value of $\as$ at the electroweak scale
+\item \code{loop}: number of loops of $\as$. Accepted values are 1,2,3,4.
+\item \code{MZ}: energy scale corresponding to \code{initAlphaMZ}. Default is \code{MZ}.
+\item \code{ae}: value of $\aem$. Default is 1/129.
+\item \code{init12}: bi-dimensional vector containing the values of the Wilson Coefficients $C_1$ and $C_2$ 
+at the weak scale. Default corresponds to the results presented in the previous subsection.
+\end{itemize}
+
+The function returns the vector $\vec z(\mu)$ by taking into account
+possible quark thresholds. If $\mu>\mb$
+
+\begin{equation}
+z_1(\mw) = C_1(\mw) \, ,
+\qquad
+z_2(\mw) = C_2(\mw) \, .
+\label{eq:zMw12}
+\end{equation}
+
+\begin{equation}
+\left( \begin{array}{ll} z_1(\mc) \\ z_2(\mc) \end{array} \right) =
+\hU_5(\mu,\mw) \;
+\left( \begin{array}{ll} z_1(\mw) \\ z_2(\mw) \end{array} \right) \, ,
+\label{eq:zmc12}
+\end{equation}
+
+whereas if $\mu=\mb$
+
+\begin{equation}
+\left( \begin{array}{ll} z_1(\mc) \\ z_2(\mc) \end{array} \right) =
+\hM(\mb) \; \hU_5(\mb,\mw) \;
+\left( \begin{array}{ll} z_1(\mw) \\ z_2(\mw) \end{array} \right) \, ,
+\label{eq:zmc12}
+\end{equation}
+
+If $\mu<\mb$ 
+
+\begin{equation}
+\left( \begin{array}{ll} z_1(\mc) \\ z_2(\mc) \end{array} \right) =
+\hU_4(\mu,\mb) \; \hM(\mb) \; \hU_5(\mb,\mw) \;
+\left( \begin{array}{ll} z_1(\mw) \\ z_2(\mw) \end{array} \right) \, ,
+\label{eq:zmc12}
+\end{equation}
+
+whereas if $\mu=\mc$ 
+
+\begin{equation}
+\left( \begin{array}{ll} z_1(\mc) \\ z_2(\mc) \end{array} \right) =
+\hU_4(\mc,\mb) \; \hM(\mb) \; \hU_5(\mb,\mw) \;
+\left( \begin{array}{ll} z_1(\mw) \\ z_2(\mw) \end{array} \right) \, ,
+\label{eq:zmc12}
+\end{equation}
+
+\begin{equation}
+\vec{z}^{\rm }(\mc) =
+\left( \begin{array}{c}
+z_1^{\rm }(\mc) \\ z_2^{\rm }(\mc) \\
+\as/(36\pi) z_2^{\rm }(\mc) \\
+-\as/(12 \pi) z_2^{\rm }(\mc) \\
+\as/(36\pi) z_2^{\rm }(\mc) \\
+-\as/(12 \pi) z_2^{\rm }(\mc) \\
+\aem/(6\pi) F_{\rm e}^{\rm }(\mc) \\  0  \\
+\aem/(6\pi) F_{\rm e}^{\rm }(\mc) \\  0
+\end{array} \right) \, ,
+\label{eq:zmc:1010}
+\end{equation}
+with
+\begin{equation}
+F_{\rm e}^{\rm }(\mc) =
+-\frac{4}{9} \; \left( 3 z_1(\mc) + z_2(\mc) \right) \, .
+\label{eq:Femc}
+\end{equation}
+
+Finally if $\mu<\mc$
+
+\begin{equation}
+\vec{z}(\mu) = \hU_3(\mu,\mc) \vec{z}(\mc) \, .
+\label{eq:WCz}
+\end{equation}
+
+\hrulefill
+
+\code{ComputeY[z,mu,initAlphaMZ,loop,MZ,aem,init]}
+
+\begin{itemize}
+\item \code{z}: 10 dimensional vector containg the values of the Wilson coefficients $z_i(\mu)$
+\item \code{mu}: mass scale at which the coefficients $v_i$ are computed
+\item \code{initAlphaMZ}: initial value of $\as$ at the electroweak scale
+\item \code{loop}: number of loops of $\as$. Accepted values are 1,2,3,4.
+\item \code{MZ}: energy scale corresponding to \code{initAlphaMZ}. Default is \code{MZ}.
+\item \code{ae}: value of $\aem$. Default is 1/129.
+\item \code{init}: ten dimensional vector containing the values of the Wilson Coefficients $C_i$ at the
+weak scale. Default corresponds to the results presented in the previous subsection.
+\end{itemize}
+
+\begin{equation}
+y_i(\mu) = v_i(\mu) - z_i(\mu) \, .
+\label{eq:WCy}
+\end{equation}
+
+\hrulefill
+
+\code{ComputeV[mu,initAlphaMZ,loop,MZ,aem,init]}
+
+\begin{itemize}
+\item \code{mu}: mass scale at which the coefficients $v_i$ are computed
+\item \code{initAlphaMZ}: initial value of $\as$ at the electroweak scale
+\item \code{loop}: number of loops of $\as$. Accepted values are 1,2,3,4.
+\item \code{MZ}: energy scale corresponding to \code{initAlphaMZ}. Default is \code{MZ}.
+\item \code{ae}: value of $\aem$. Default is 1/129.
+\item \code{init}: ten dimensional vector containing the values of the Wilson Coefficients $C_i$ at the
+weak scale. Default corresponds to the results presented in the previous subsection.
+\end{itemize}
+
+The functions return the vector $\vec v(\mu)$ by taking into account 
+possible quark thresholds. If $\mu>\mb$
+
+\begin{equation}
+\vec{v}(\mu) =
+\hU_5(\mu,\mw) \vec{C}(\mw) \, ,
+\label{eq:WCv}
+\end{equation}
+
+whereas if $\mu=\mb$
+
+\begin{equation}
+\vec{v}(\mu) =
+\hM(\mb) \hU_5(\mb,\mw) \vec{C}(\mw) \, ,
+\label{eq:WCv}
+\end{equation}
+
+If $\mu<\mb$
+\begin{equation}
+\vec{v}(\mu) =
+\hU_4(\mu,\mb) \hM(\mb) \hU_5(\mb,\mw) \vec{C}(\mw) \, ,
+\label{eq:WCv}
+\end{equation}
+
+whereas if $\mu=\mc$
+
+\begin{equation}
+\vec{v}(\mu) =
+\hM(\mc) \hU_4(\mc,\mb) \hM(\mb) \hU_5(\mb,\mw) \vec{C}(\mw) \, ,
+\label{eq:WCv}
+\end{equation}
+
+Finally if $\mu<\mc$
+
+\begin{equation}
+\vec{v}(\mu) =
+\hU_3(\mu,\mc) \hM(\mc) \hU_4(\mc,\mb) \hM(\mb) \hU_5(\mb,\mw)
+\vec{C}(\mw) \, ,
+\label{eq:WCv}
+\end{equation}
+
+\subsection{LO and NLO prescriptions}
+
+\code{ReduceOrder[expr,order]}
+
+\begin{itemize}
+\item \code{expr}: expression of the Wilson Coefficients $y_i$ and $z_i$
+\item \code{order}: accepted values are the strings ''LO'' and ''NLO''.
+\end{itemize}
+
+This function takes as input the full expression of the Wilson Coefficients 
+$y_i$ and $z_i$ and reduce it to the desired order.
+

@@ -1,0 +1,114 @@
+
+Here we give a detailed explanation of the various 
+subtleties which one encounters in the implementation
+of the running of the Wilson Coefficients, which are 
+not described nor mentioned in the original paper 
+by Buras et al.
+
+\subsection{LO vs. NLO prescription}
+
+\begin{itemize}
+\item $C_1 \,, C_2$: the $O(1)$ terms correspond to the leading order (0 and 1 for $C_1$ and $C_2$ respectively), 
+while the $O(\as)$ terms are the NLO corrections.\\
+
+\item $C_3 \ldots C_6$: in this case the $O(\as)$ terms appear already at LO, since at typical weak scales
+the top quark can be integrated out and generate a tree-level graph from a QCD-penguin diagram. Hence all 
+$\mt$ depedent functions, such as $B_0$, $C_0$, $D_0$ and $E_0$ have to be taken already at LO. At NLO 
+the effects of the other quarks travelling in the penguin loop are summarized in the constant terms 
+$-2/3$ and $-4/9$ which therefore give the $O(\as)$ NLO corrections. Note that the effects of these two constants
+amount to the redefinitions of $D_0$ and $E_0$ into $\tilde D_0$ and $\tilde E_0$. \\
+
+\item $C_7 \ldots C_{10}$: similarly to QCD-penguin diagrams also for QED penguins the top quark can be integrated out
+and generate LO contributions at $O(\as)$ with $\mt$-dependent functions. The same constants given above account 
+for the NLO effects.\\
+
+\end{itemize}
+
+Let us consider now the RG evolution matrices.
+
+\begin{equation}
+U(\mu,m)= \overbrace{U^{(0)}(\mu,m)}^\text{LO} + 
+\overbrace{ {1 \over 4\pi} \Big[ \as(\mu) J U^{(0)}(\mu,m) - \as(m) U^{(0)}(\mu,m) J \Big] }^\text{NLO}
+\end{equation}
+ 
+\begin{equation}
+\hR(m_1,m_2) \equiv -\frac{2\pi}{\beta_0} \; \hV \; \left(
+\overbrace{\hK^{(0)}(m_1,m_2)}^\text{LO} +
+\overbrace{\frac{1}{4\pi} \sum_{i=1}^{3} \hK_i^{(1)}(m_1,m_2)}^\text{NLO} \right) \hV^{-1}
+\end{equation}
+
+The quark threshold matching matrices at leading order correspond to the 
+identity matrix only, while at NLO to the full formula given in the previous sections.
+Note that the prescription for the $z_i$ coefficients at the charm threshold 
+(recall the functions \code{Fs} and \code{Fse}) is at NLO, or in other words 
+$z_i(\mc)=0$ for $i=3 \ldots 10$ at leading order.
+
+\subsection{Apparent divergence in the $10 \times 10$ $R$ matrix}
+
+The $10 \times 10$ case, with full QCD+QED, leads to an apparent
+divergence in the matrix $K_1^{(1)}$ (off-diagonal components)
+
+\begin{equation}
+\left( \hK_1^{(1)}(m_1,m_2) \right)_{ij} =
+\Bigg\lbrace
+\begin{array}{ll}
+\frac{M^{(1)}_{ij}}{a_i - a_j}
+\left[ \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_j} -
+       \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i} \right] & i \not= j \\
+M^{(1)}_{ii} \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i}
+             \ln\frac{\as(m_1)}{\as(m_2)}             & i=j
+\end{array} 
+\end{equation}
+
+due to the presence of two couples of identical eigenvalues of $\gs$. 
+However one can easily verify that the divergence cancels 
+by substituting $a^i = a^j + \varepsilon$ in both numerator and denominator, 
+and by expanding around $\varepsilon =0$
+\begin{equation}
+\frac{x^{a_j} - x^{a_i}}{a_i - a_j} = x^{a_j} \frac{1 - x^\varepsilon}{\varepsilon} 
+ = x^{a_j} \frac{1 - (1 + \varepsilon \log x + O(\varepsilon^2))}{\varepsilon} = 
+- x^{a_j} \log x
+\end{equation}
+In fact, the same type of calculation leads to the diagonal element of $K_1^{(1)}$,
+which can be re-expressed as
+\begin{equation}
+\left( \hK_1^{(1)}(m_1,m_2) \right)_{ij} =
+\Bigg\lbrace
+\begin{array}{ll}
+\frac{M^{(1)}_{ij}}{a_i - a_j}
+\left[ \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_j} -
+       \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i} \right] & \mathbf{a_i \not= a_j} \\
+M^{(1)}_{ii} \left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i}
+             \ln\frac{\as(m_1)}{\as(m_2)}             & \mathbf{ a_i=a_j}
+\end{array} 
+\end{equation}
+
+
+\subsection{Apparent divergence in the $N_f=3$ case}
+
+The divergence appearing in the limit $N_f=3$ looks similar to the case above, since
+it arises from the fact that two eigenvalues differ exactly by 1 and therefore
+the combination $a_i -a_j -1$, present in various denominators, vanishes.
+
+By performing the same type of expansions described above one can check that for pure QCD
+such a divergence cancels in the combination
+\[ \as(\mu) J U^{(0)}(\mu,m) - \as(m) U^{(0)}(\mu,m) J \]
+while in the QED part it cancels automatically inside the matrix $K^{(0)}$
+\begin{equation}
+(\hK^{(0)}(m_1,m_2))_{ij} = \frac{\hM^{(0)}_{ij}}{a_i - a_j - 1}
+\left[
+\left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_j} \frac{1}{\as(m_1)} -
+\left( \frac{\as(m_2)}{\as(m_1)} \right)^{a_i} \frac{1}{\as(m_2)}
+\right] 
+\label{eq:K0}
+\end{equation}
+and in the difference
+\begin{equation}
+K_1^{(1)} - \as(m_2) \; \hK^{(0)} \; H + \,\as(m_1) \; H \; \hK^{(0)}
+\end{equation}
+
+In the code we implemented the substitution $N_f \to N_f + \varepsilon$ both in the 
+$U_0$ and $J$ matrices and the limit $\varepsilon \to 0$ is taken by calling the functions 
+\code{U} and \code{R}, or alternatively \code{FullU}. 
+Only in the definition of $K^{(0)}$ we hard-coded the solution to the entire expansion
+

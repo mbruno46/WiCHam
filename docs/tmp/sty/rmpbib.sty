@@ -1,0 +1,53 @@
+% rmpbib.sty
+% hacked together by Bodo Huckestein <bodo@mickey.mpi-hd.mpg.de>
+% if used together with rmp.bst produces labels like (Knuth, 1982),
+% with RevTeX 3.0 it indents references correctly,
+% adds command \shortcite{key} to produce (1982),
+% code lifted from RevTeX and other places
+\def\bibcite#1#2{\global\@namedef{b@#1}{#2}}
+\def\@cite#1#2{({#1\if@tempswa , #2\fi})} %
+\def\@BIBLABEL#1{{}} %
+\def\@biblabel#1{{}} %
+\def\references{%
+\ifpreprintsty
+\newpage
+\hbox to\hsize{\hss\large \refname\hss}%
+\else
+\vskip24pt
+\hrule width\hsize\relax
+\vskip 1.6cm
+\fi
+\list{\@biblabel{\arabic{enumiv}}}%
+{\labelwidth0pt \labelsep1em %
+\itemindent-1em %
+\ifdim\baselinestretch pt>1 pt %
+\parsep  4pt\relax %
+\else %
+\parsep  0pt\relax %
+\fi
+\itemsep\parsep %
+\usecounter{enumiv}%
+\let\p@enumiv\@empty
+\def\theenumiv{\arabic{enumiv}}%
+}%
+\let\newblock\relax %
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax
+\ifpreprintsty\else\small\fi
+}
+%
+%  Code taken from aaai.sty.
+%
+% don't box citations, add space between multiple citations, separate with ;
+\def\@citex[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do
+    {\@citea\def\@citea{; }\@ifundefined
+       {b@\@citeb}{{\bf ?}\@warning
+       {Citation `\@citeb' on page \thepage \space undefined}}%
+{\csname b@\@citeb\endcsname}}}{#1}}
+% Allow short (name-less) citations, when used in
+% conjunction with a bibliography style that creates labels like
+%       \citename{<names>, }<year>
+\let\@internalcite\cite
+\def\cite{\def\citename##1{##1}\@internalcite}
+\def\shortcite{\def\citename##1{}\@internalcite}

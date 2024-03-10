@@ -1,0 +1,443 @@
+\section{$\eps_K$, $B^0$-$\bar B^0$ Mixing and the Unitarity Triangle}
+        \label{sec:epsBBUT}
+\subsection{Basic Formula for $\eps_K$}
+            \label{subsec:epsformula}
+The indirect CP violation in $K \to \pi\pi$ is described by the well
+known parameter $\eps_K$. The general formula for $\eps_K$ is given as
+follows
+\begin{equation}
+\eps_K = \frac{\exp(i \pi/4)}{\sqrt{2} \Delta M_K} \,
+\left( \IM M_{12} + 2 \xi \RE M_{12} \right)
+\label{eq:epsdef}
+\end{equation}
+where
+\begin{equation}
+\xi = \frac{\IM A_0}{\RE A_0}
+\label{eq:xi}
+\end{equation}
+with $A_0 \equiv A(K \to (\pi\pi)_{I=0})$ and $\Delta M_K$ being
+the $K_L$-$K_S$ mass difference. The off-diagonal element $M_{12}$ in
+the neutral $K$-meson mass matrix represents the $K^0$-$\bar K^0$
+mixing. It is given by
+\begin{equation}
+2 m_K M^*_{12} = \langle \bar K^0| \Heff(\Delta S=2) |K^0\rangle
+\label{eq:M12Kdef}
+\end{equation}
+where $\Heff(\Delta S=2)$ is the effective hamiltonian of eq.\
+\eqn{hds2}. Defining the renormalization group invariant parameter
+$B_K$ by
+\begin{equation}
+B_K = B_K(\mu) \left[ \as^{(3)}(\mu) \right]^{-2/9} \,
+\left[ 1 + \frac{\as^{(3)}(\mu)}{4\pi} J_3 \right]
+\label{eq:BKrenorm}
+\end{equation}
+\begin{equation}
+\langle \bar K^0| (\bar s d)_{V-A} (\bar s d)_{V-A} |K^0\rangle
+\equiv \frac{8}{3} B_K(\mu) F_K^2 m_K^2
+\label{eq:KbarK}
+\end{equation}
+and using \eqn{hds2} we find
+\begin{equation}
+M_{12} = \frac{G_F^2}{12 \pi^2} F_K^2 B_K m_K \mw^2
+\left[ {\lambda_c^*}^2 \eta_1 S_0(x_c) + {\lambda_t^*}^2 \eta_2 S_0(x_t) +
+2 {\lambda_c^*} {\lambda_t^*} \eta_3 S_0(x_c, x_t) \right]
+\label{eq:M12K}
+\end{equation}
+where the functions $S_0(x_i)$ and $S_0(x_i, x_j)$ are those of eq.\
+\eqn{s0c}--\eqn{s0ct}. $F_K$ is the $K$-meson decay constant and $m_K$
+the $K$-meson mass. The coefficient $J_3$ is given in \eqn{zd0} and the
+QCD factors $\eta_i$ have been discussed in section
+\ref{sec:HeffKKbar}. Their numerical values are
+\begin{equation}
+\eta_1 = 1.38 
+\qquad
+\eta_2 = 0.57
+\qquad
+\eta_3 = 0.47 \, .
+\label{eq:etaknum}
+\end{equation}
+The last term in \eqn{eq:epsdef} constitutes at
+most a 2\,\% correction to $\eps_K$ and consequently can be neglected
+in view of other uncertainties, in particular those connected with
+$B_K$.  Inserting \eqn{eq:M12K} into \eqn{eq:epsdef} we find
+\begin{equation}
+\eps_K = C_{\eps} B_K \IM\lambda_t \left\{
+\RE\lambda_c \left[ \eta_1 S_0(x_c) - \eta_3 S_0(x_c, x_t) \right] -
+\RE\lambda_t \eta_2 S_0(x_t) \right\} \exp(i \pi/4)
+\label{eq:epsformula}
+\end{equation}
+where we have used the unitarity relation $\IM\lambda_c^* = {\rm
+Im}\lambda_t$ and we have neglected $\RE\lambda_t/\RE\lambda_c
+= \ord(\lambda^4)$ in evaluating $\IM(\lambda_c^* \lambda_t^*)$.
+The numerical constant $C_\eps$ is given by
+\begin{equation}
+C_\eps = \frac{G_F^2 F_K^2 m_K \mw^2}{6 \sqrt{2} \pi^2 \Delta M_K}
+       = 3.78 \cdot 10^4 \, .
+\label{eq:Ceps}
+\end{equation}
+Using the standard parametrization of \eqn{2.72} to evaluate ${\rm
+Im}\lambda_i$ and $\RE\lambda_i$, setting the values for $s_{12}$,
+$s_{13}$, $s_{23}$ and $\mt$ in accordance with appendix
+\ref{app:numinput} and taking a value for $B_K$ (see below) one can
+determine the phase $\delta$ by comparing \eqn{eq:epsformula} with the
+experimental value for $\eps_K$.
+
+Once $\delta$ has been determined in this manner one can find the
+corresponding point $(\bar\varrho,\bar\eta)$ by using \eqn{2.84} and
+\eqn{2.88d}. Actually for a given set ($s_{12}$, $s_{13}$, $s_{23}$,
+$\mt$, $B_K$) there are two solutions for $\delta$ and consequently two
+solutions for $(\bar\varrho,\bar\eta)$. In order to see this clearly it is
+useful to use the Wolfenstein parametrization in which ${\rm
+Im}\lambda_t$, $\RE\lambda_c$ and $\RE\lambda_t$ are given to
+a very good approximation by \eqn{2.51}--\eqn{2.53}. We then find that
+\eqn{eq:epsformula} and the experimental value for $\eps_K$ specify a
+hyperbola in the $(\bar\varrho,\bar\eta)$ plane given by
+\begin{equation}
+\bar\eta \left\{ (1 - \bar\varrho) A^2 \eta_2 S_0(x_t) + P_0(\eps)
+\right\} A^2 B_K = 0.226 \, .
+\label{eq:hyperbola}
+\end{equation}
+where
+\begin{equation}
+P_0(\eps) =
+\left[ \eta_3 S_0(x_c, x_t) - \eta_1 x_c \right] \frac{1}{\lambda^4} \, .
+\label{eq:p0eps}
+\end{equation}
+The hyperbola \eqn{eq:hyperbola} intersects the circle given by
+\eqn{2.94} in two points which correspond to the two solutions for
+$\delta$ mentioned earlier.
+
+The position of the hyperbola \eqn{eq:hyperbola} in the
+$(\bar\varrho,\bar\eta)$ plane depends on $\mt$, $|V_{cb}|=A \lambda^2$
+and $B_K$. With decreasing $\mt$, $|V_{cb}|$ and $B_K$ the
+$\eps_K$-hyperbola moves away from the origin of the
+$(\bar\varrho,\bar\eta)$ plane. When the hyperbola and the circle
+\eqn{2.94} touch each other lower bounds consistent with $\eps_K^{\rm
+exp}$ for $\mt$, $|V_{cb}|$, $|V_{ub}/V_{cb}|$ and $B_K$ can be found.
+The lower bound on $\mt$ is discussed in \cite{buras:93}.
+Corresponding results for $|V_{ub}/V_{cb}|$ and $B_K$ are shown in
+fig.\ \ref{fig:ut:vubcbmin} and \ref{fig:ut:bkmin}, respectively.
+They will be discussed below.
+\\
+Moreover approximate analytic expressions for these bounds can be
+derived. One has
+\begin{eqnarray}
+(\mt)_{\rm min} &=& \mw \left[ \frac{1}{2 A^2} \left( \frac{1}{A^2 B_K
+R_b} - 1.4 \right) \right]^{0.658}
+\label{eq:mtmin} \\
+|V_{ub}/V_{cb}|_{\rm min} &=&
+\frac{\lambda}{1-\lambda^2/2} \,
+\left[ A^2 B_K \left( 2 x_t^{0.76} A^2 + 1.4 \right) \right]^{-1}
+\label{eq:Vubcbmin} \\
+(B_K)_{\rm min} &=& \left[ A^2 R_b \left( 2 x_t^{0.76} A^2 + 1.4 \right)
+                    \right]^{-1}
+\label{eq:BKmin}
+\end{eqnarray}
+
+Concerning the parameter $B_K$, the analyses of \cite{sharpe:94},
+\cite{ishizuka:93} ($B_K=0.83\pm 0.03$) using the lattice method and of
+\cite{bijnenspardes:95} using a somewhat modified form of the $1/N$
+approach of \cite{bardeenetal:88}, \cite{gerard:90} give results in the
+ball park of the $1/N$ result $B_K=0.70\pm 0.10$ obtained some time ago
+in \cite{bardeenetal:88}, \cite{gerard:90}. In particular the analysis
+of \cite{bijnenspardes:95} seems to have explained the difference
+between these values for $B_K$ and the lower values obtained using the
+QCD Hadronic Duality approach \cite{pichderaf:85}, \cite{pradesetal:91}
+($B_K=0.39\pm 0.10$) or using SU(3) symmetry and PCAC ($B_K=1/3$)
+\cite{donoghueetal:82}. These higher values of $B_K$ are also found in
+the most recent lattice analysis \cite{crisafullietal:95}
+($B_K=0.86 \pm 0.15$) and in the lattice calculations of Bernard and
+Soni ($B_K=0.78 \pm 0.11$) and the JLQCD group ($B_K=0.67 \pm 0.07$)
+with the quoted values obtained on the basis on the review by
+\cite{soni:95}. In our numerical analysis we will use
+\begin{equation}
+B_K = 0.75 \pm 0.15 \, .
+\label{eq:BKnum}
+\end{equation}
+
+\subsection{Basic Formula for $B^0$-$\bar B^0$ Mixing}
+            \label{subsec:BBformula}
+The $B^0$-$\bar B^0$ mixing is usually described by
+\begin{equation}
+x_{d,s} \equiv \frac{(\Delta M)_{B_{d,s}}}{\Gamma_{B_{d,s}}} =
+\frac{2 |M_{12}|_{B_{d,s}}}{\Gamma_{B_{d,s}}}
+\label{eq:xdsdef}
+\end{equation}
+where $(\Delta M)_{B_{d,s}}$ is the mass difference between the mass
+eigenstates in the $B_d^0-\bar B_d^0$ system and the $B_s^0-\bar B_s^0$
+system, respectively, and $\Gamma_{B_{d,s}} = 1/\tau_{B_{d,s}}$ with
+$\tau_{B_{d,s}}$ being the corresponding lifetimes. The off-diagonal
+term $M_{12}$ in \eqn{eq:xdsdef} is given by
+\begin{equation}
+2 m_B |M_{12}| = |\langle \bar B^0| \Heff(\Delta B=2) |B^0\rangle|
+\label{eq:M12Bdef}
+\end{equation}
+where $\Heff(\Delta B=2)$ is the effective hamiltonian of
+\eqn{hdb2}. Defining the renormalization group invariant parameter $B_B$ by
+\begin{equation}
+B_B = B_B(\mu) \left[ \as^{(5)}(\mu) \right]^{-6/23} \,
+\left[ 1 + \frac{\as^{(5)}(\mu)}{4\pi} J_5 \right]
+\label{eq:BBrenorm}
+\end{equation}
+\begin{equation}
+\langle \bar B^0| (\bar b d)_{V-A} (\bar b d)_{V-A} |B^0\rangle
+\equiv \frac{8}{3} B_B(\mu) F_B^2 m_B^2
+\label{eq:BbarB}
+\end{equation}
+and using \eqn{hdb2} we find
+\begin{equation}
+x_{d,s} = \tau_{B_{d,s}} \frac{G_F^2}{6 \pi^2} \eta_B m_{B_{d,s}} (
+B_{B_{d,s}} F_{B_{d,s}}^2 ) \mw^2 S_0(x_t) |V_{t(d,s)}|^2
+\label{eq:xds}
+\end{equation}
+with the QCD factor $\eta_B$ discussed in section \ref{sec:HeffBBbar}
+and given by $\eta_B=0.55$.
+
+The measurement of $B_d^0$-$\bar B_d^0$ mixing allows then to determine
+$|V_{td}|$ or $R_t$ of \eqn{2.95}
+\begin{equation}
+|V_{td}| = A \lambda^3 R_t
+\qquad
+\qquad
+R_t = 1.52 \frac{R_0}{\sqrt{S_0(x_t)}}
+\label{eq:VtdRt}
+\end{equation}
+where
+\begin{equation}
+R_0 = 
+\left[ \frac{0.040}{|V_{cb}|} \right]
+\left[ \frac{200\mev}{ \sqrt{B_{B_d}} F_{B_d} } \right]
+\left[ \frac{x_d}{0.75}       \right]^{0.5} 
+\left[ \frac{1.6\,ps}{\tau_B} \right]^{0.5}
+\left[ \frac{0.55}{\eta_B}    \right]^{0.5} \, .
+\label{eq:R0}
+\end{equation}
+which gives setting $\eta_B = 0.55$
+\begin{equation}
+|V_{td}| = 8.56 \cdot 10^{-3}
+\left[ \frac{170\gev}{\bar m_t(m_t)} \right]^{0.76} 
+\left[ \frac{200\mev}{ \sqrt{B_{B_d}} F_{B_d} } \right]
+\left[ \frac{x_d}{0.75}             \right]^{0.5} 
+\left[ \frac{1.6\,ps}{\tau_B}       \right]^{0.5} \, .
+\label{eq:Vtdnum}
+\end{equation}
+
+There is a vast literature on the lattice calculations of $F_B$. The
+most recent results are somewhat lower than quoted a few years ago.
+Based on a review by \cite{sachrajda:94}, the recent extensive study by
+\cite{duncanetal:94} and the analyses in \cite{bernardetal:94},
+\cite{drapermcneile:94} we conclude that $F_{B_d}=(180\pm40)\mev$. This
+together with the earlier result of the European Collaboration
+\cite{abadaetal:92} for $B_B$, gives $F_{B_d}\sqrt{B_{B_d}}=194\pm
+45\mev$. A reduction of the error in this important quantity is
+desirable. These results for $F_B$ are compatible with the results
+obtained using QCD sum rules (e.g. \cite{baganetal:92},
+\cite{neubert:92}). An interesting upper bound $F_{B_d}<195\mev$ using
+QCD dispersion relations has also recently been obtained
+\cite{boydetal:94}. In our numerical analysis we will use
+\begin{equation}
+\sqrt{B_{B_d}} F_{B_d} = (200 \pm 40)\mev \, .
+\label{eq:Fbnum}
+\end{equation}
+
+The accuracy of the determination of $R_t$ can be considerably improved
+by measuring simultaneously the $B_s^0$-$\bar B_s^0$ mixing described by
+$x_s$. We have
+\begin{equation}
+R_t = \frac{1}{\sqrt{R_{ds}}} \sqrt{\frac{x_d}{x_s}} \frac{1}{\lambda}
+\sqrt{1 - \lambda^2 (1 - 2 \varrho)}
+\qquad
+R_{ds} = \frac{\tau_{B_d}}{\tau_{B_s}} \frac{m_{B_d}}{m_{B_s}}
+\left[ \frac{F_{B_d} \sqrt{B_{B_d}}}{F_{B_s} \sqrt{B_{B_s}}} \right]^2 \, .
+\label{eq:Rt}
+\end{equation}
+Note that $\mt$ and $|V_{cb}|$ have been eliminated in this way and that
+$R_{ds}$ depends only on $SU(3)$-flavour breaking effects which contain
+much smaller theoretical uncertainties than the hadronic matrix elements
+in $x_d$ and $x_s$ separately.
+Provided $x_d/x_s$ has been accurately measured a determination of
+$R_t$ within $\pm 10\%$ should be possible. Indeed the most recent
+lattice results \cite{duncanetal:94}, \cite{baxteretal:94} give
+$F_{B_s}/F_{B_d} = 1.22\pm0.04$. A similar result $F_{B_s}/F_{B_d} =
+1.16\pm0.05$ has been obtained using QCD sum rules \cite{narison:94}.
+It would be useful to know $B_{B_s}/B_{B_d}$ with a similar precision.
+For $B_{B_s}=B_{B_d}$ we find using the lattice result $R_{ds} =
+0.66 \pm 0.07$.
+
+\subsection{$\sin(2\beta)$ from $\eps_K$ and $B^0$-$\bar B^0$ Mixing}
+           \label{subsec:sin2bepskBB}
+Combining \eqn{eq:hyperbola} and \eqn{eq:xds} one can derive an analytic
+formula for $\sin(2\beta)$ \cite{burasetal:94b}
+\begin{equation}
+\sin(2\beta) = \frac{1}{1.16 A^2 \eta_2 R_0^2}
+\left[ \frac{0.226}{A^2 B_K} - \bar\eta P_0(\eps) \right] \, .
+\label{eq:sin2b}
+\end{equation}
+$P_0(\eps)$ is weakly dependent on $\mt$ and for $155\gev \le \mt \le
+185\gev$ one has $P_0(\eps) \approx 0.31 \pm 0.02$. As $\bar\eta \le
+0.45$ for $|V_{ub}/V_{cb}| \le 0.1$ the first term in parenthesis is
+generally by a factor of 2--3 larger than the second term. Since this
+dominant term is independent of $\mt$, the values for $\sin(2\beta)$
+extracted from $\eps_K$ and $B^0$-$\bar B^0$ mixing show only a weak
+dependence on $\mt$ as stressed in particular in \cite{rosner:00}.
+
+Since in addition $A^2 R_0^2$ is independent of $|V_{cb}|$, the dominant
+uncertainty in this determination of $\sin(2\beta)$ resides in $A^2 B_K$
+in the first term in the parenthesis and in $F_{B_d} \sqrt{B_{B_d}}$
+contained in $R_0^2$.
+
+\subsection{Phenomenological Analysis}
+           \label{subsec:phenoUT}
+We will now combine the analyses of $\eps_K$ and of $B^0_d-\bar B^0_d$
+mixing to obtain allowed ranges for several quantities of interest. We
+consider two sets of input parameters, which are collected in the
+appendix. The first set represents the present situation. The second
+set can be considered as a ``future vision'' in which the errors on
+various input parameters have been decreased. It is plausible that such
+errors will be achieved at the end of this decade, although one cannot
+guarantee that the central values will remain. In table
+\ref{tab:predictions} we show the results for $\delta$, $\IM\lambda_t$,
+$\sin 2\alpha$, $\sin 2\beta$, $\sin \gamma$, $|V_{td}|$ and $x_s$.
+They correspond to the two sets of parameters in question, with and
+without the constraint from $B^0_d-\bar B^0_d$ mixing. The results for
+$\IM\lambda_t$ and $|V_{td}|$ will play an important role in the
+phenomenology of rare decays and CP violation.  For completeness we
+also show the expectations for $\sin 2\alpha$, $\sin 2\beta$ and
+$\sin\gamma$ which enter various CP asymmetries in B-decays. As already
+discussed in detail in \cite{burasetal:94b}, $\sin 2\alpha$ cannot be
+predicted accurately this way.  On the other hand $\sin 2\beta$ and
+$\sin\gamma$ are more constrained and the resulting ranges for these
+quantities indicate that large CP asymmetries should be observed in a
+variety of B-decays.
+
+\begin{table}[htb]
+\caption[]{
+Predictions for various quantities using present and future input
+parameter ranges given in appendix \ref{app:numinput}.
+${\rm Im}\lambda_t$ and $|V_{td}|$ are given
+in units of $10^{-4}$ and $10^{-3}$, respectively. $\delta$ is in degrees.
+\label{tab:predictions}}
+\begin{center}
+\begin{tabular}{|c|r|r|r|r|}
+& \multicolumn{2}{c|}{no   $x_d$ constraint} &
+  \multicolumn{2}{c|}{with $x_d$ constraint} \\
+\hline
+& \multicolumn{1}{c|}{Present} & \multicolumn{1}{c|}{Future} &
+  \multicolumn{1}{c|}{Present} & \multicolumn{1}{c|}{Future} \\
+\hline
+$\delta$                     & 37.7 -- 160.0 & 57.4 -- 144.9
+                             & 37.7 -- 140.2 & 58.5 -- 93.3 \\
+${\rm Im}\lambda_t$              & 0.64 -- 1.75 & 0.82 -- 1.50
+                             & 0.87 -- 1.75 & 1.12 -- 1.50 \\
+$|V_{td}| $                  & 6.7 -- 13.5 & 7.7 -- 12.1
+                             & 6.7 -- 11.9 & 7.8 -- 9.3 \\
+$x_s$                        &  --  &  -- 
+                             & 11.1 -- 47.0 & 19.6 -- 29.6 \\
+$\sin 2\alpha$               & --0.86 -- 1.00 & --0.323 -- 1.00
+                             & --0.86 -- 1.00 & --0.30 -- 0.73 \\
+$\sin 2\beta$                & 0.21 -- 0.80 & 0.34 -- 0.73
+                             & 0.34 -- 0.80 & 0.57 -- 0.73 \\
+$\sin\gamma$                 & 0.34 -- 1.00 & 0.58 -- 1.00
+                             & 0.61 -- 1.00 & 0.85 -- 1.00 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[hbt]
+\vspace{0.10in}
+\centerline{
+\epsfysize=5in
+\rotate[r]{
+\epsffile{ps/mtImLtAll_xd.ps}
+} }
+\vspace{0.08in}
+\caption[]{
+Present (left) and future (right) allowed ranges for $\IM(\lambda_t)$.
+The ranges have been obtained by fitting $\eps_K$ in \eqn{eq:epsformula} to 
+the experimental value. Input parameter ranges are given in appendix
+\ref{app:numinput}. The impact of the additional constraint coming from
+$x_d$ is illustrated by the dashed lines. With the $x_d$ constraint
+imposed the solution $\pi/2 < \delta < \pi$ is completely eliminated
+for the future scenario.
+\label{fig:ut:imtimltxd}}
+\end{figure}
+
+In fig.\ \ref{fig:ut:imtimltxd} we show $\IM\lambda_t$ as a function of
+$\mt$. In fig.\ \ref{fig:ut:vubcbmin} the lower bound on
+$|V_{ub}/V_{cb}|$ resulting from the $\eps_K$-constraint is shown as a
+function of $|V_{cb}|$ for various values of $B_K$. To this end we have
+set $\mt=185\gev$.  For lower values of $\mt$ the lower bound on
+$|V_{ub}/V_{cb}|$ is stronger.  A similar analysis has been made by
+\cite{herrlichnierste:95}. The latter work and the plot in
+fig.\ \ref{fig:ut:vubcbmin} demonstrate clearly the impact of the
+$\eps_K$ constraint on the allowed values of $|V_{ub}/V_{cb} |$ and
+$|V_{cb}|$.  Simultaneously small values of $|V_{ub}/V_{cb} |$ and $|
+V_{cb}|$, although still consistent with tree-level decays, are not
+allowed by the size of the indirect CP violation observed in $K \to
+\pi\pi$.  Another representation of this behaviour is shown in
+fig.\ \ref{fig:ut:bkmin} where we plot the minimal value of $B_{K}$
+consistent with the experimental value of $\eps_K$ as a function of
+$V_{cb}$ for different $|V_{ub}/V_{cb} |$ and $\mt < 185\gev$.
+
+\begin{figure}[hbt]
+\vspace{0.10in}
+\centerline{
+\epsfysize=5in
+\rotate[r]{
+\epsffile{ps/vubcbmin.ps}
+} }
+\vspace{0.08in}
+\caption[]{
+$|V_{ub}/V_{cb}|_{\rm min}$ for $\mt \le 185\gev$ and various choices
+of $B_K$.
+\label{fig:ut:vubcbmin}}
+\end{figure}
+
+\begin{figure}[hbt]
+\vspace{0.10in}
+\centerline{
+\epsfysize=5in
+\rotate[r]{
+\epsffile{ps/bkmin.ps}
+} }
+\vspace{0.08in}
+\caption[]{
+$(B_K)_{\rm min}$ of eq.\ \eqn{eq:BKmin} for $\mt \le 185\gev$ and
+various choices of $|V_{ub}/V_{cb}|$.
+\label{fig:ut:bkmin}}
+\end{figure}
+
+Finally in fig.\ \ref{fig:ut:rhoeta} we show the allowed ranges in the
+$(\bar\rho,\bar\eta)$ plane obtained using the information from
+$V_{cb}$, $|V_{ub}/V_{cb}|$, $\eps_K$ and $B^0_d-\bar B^0_d$ mixing.
+In this plot we also show the impact of a future measurement of
+$B^0_s-\bar B^0_s$ mixing with $x_s=10$, $15$, $25$, $40$, which by
+means of the formula (\ref{eq:Rt}) gives an important measurement of
+the side $R_t$ of the unitarity triangle. Whereas at present a broad
+range in the $(\bar\rho,\bar\eta)$ plane is allowed, the situation
+might change in the future allowing only the values $0 \le \bar \rho
+\le 0.2$ and $0.30 \le \bar \eta \le 0.40$.  This results in smaller
+ranges for various quantities of interest as explicitly seen in table
+\ref{tab:predictions}.
+
+\begin{figure}[hbt]
+\vspace{0.10in}
+\centerline{
+\epsfysize=5in
+\rotate[r]{
+\epsffile{ps/rhoeta.ps}
+} }
+\vspace{0.08in}
+\caption[]{
+Present (a) and future (b) allowed ranges for the upper corner A
+of the UT using data from $K^0-\bar K^0$-, $B^0-\bar B^0$-mixing
+and tree-level $B$-decays. Input parameter ranges are given in appendix
+\ref{app:numinput}.
+The solid lines correspond to $(R_t)_{\rm max}$ from eq.\eqn{eq:Rt}
+using $R_{ds}=0.66$ and $x_s \ge 10, 15, 25$ and $40$, respectively.
+\label{fig:ut:rhoeta}}
+\end{figure}
+
+Other analyses of the unitarity triangle can be found in
+\cite{pecceiwang:95}, \cite{ciuchini:95}, \cite{herrlichnierste:95},
+\cite{alilondon:95}.

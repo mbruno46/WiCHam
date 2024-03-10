@@ -1,0 +1,595 @@
+\section{The Effective $\Delta F=1$ Hamiltonian: Inclusion of QCD Penguin
+         Operators}
+         \label{sec:HeffdF1:66}
+In section \ref{sec:HeffdF1:22} we have restricted ourselves 
+to current-current operators when considering
+QCD corrections to the effective $\Delta F=1$ ($F=B, C, S$)
+hamiltonian for weak decays.
+
+As already mentioned in section \ref{sec:basicform:rg:pop} e.g.\ for
+the $\dS$ case the special flavour structure of $Q_{2} = \left( \bar s
+u \right)_{\rm V-A} \left( \bar u d \right)_{\rm V-A}$ allows not only
+for QCD corrections of the current-current type as in
+fig.\ \ref{fig:1loopeff}\,(a)--(c) from which the by now well known
+second current-current operator $Q_1$ is created.  For a complete
+treatment of QCD corrections all possible ways of attaching a gluon to
+the initial weak $\Delta F=1$ transition operator $Q_2$ have to be
+taken into account. Therefore attaching gluons to $Q_2$ in the form of
+diagrams (d.1) and (d.2) in fig.\ \ref{fig:1loopeff}, generates a
+completely new set of four-quark operators, the so-called QCD penguin
+operators, usually denoted as $Q_3, \ldots, Q_6$\footnote{Obviously,
+whether or not it is possible to form a closed fermion loop as in a
+type-1 insertion or to connect the two currents to yield a continuous
+fermion line as required for a type-2 insertion strongly depends on the
+flavour structure of the operator considered. E.g.\ for $Q_2$ only the
+type-2 penguin diagram contributes. This feature can be exploited
+to obtain NLO anomalous dimension matrices in the NDR scheme 
+without the necessity of calculating closed fermion loops with $\gamma_5$
+\cite{burasetal:92b}, \cite{burasetal:92c}.}. This procedure is often
+referred to as inserting $Q_2$ into type--1 and type--2 penguin
+diagrams.
+
+
+The $\dS$ effective hamiltonian for $\Kpipi$ at scales $\mu < \mc$ then
+reads
+\begin{equation}
+\Heff(\dS) = \frac{G_F}{\sqrt{2}} \V{us}^* \V{ud}^{} \sum_{i=1}^{6}
+\left( z_i(\mu) + \tau \; y_i(\mu) \right) Q_i \, ,
+\label{eq:HeffKpp}
+\end{equation}
+with
+\begin{equation}
+\tau = -\frac{\V{ts}^*\V{td}^{}}{\V{us}^*\V{ud}^{}} \, .
+\label{eq:tauKpp}
+\end{equation}
+The set of four-quark operators $\vec{Q}(\mu)$ and Wilson coefficients
+$\vec{z}(\mu)$ and $\vec{y}(\mu)$ will be discussed one by one in
+the subsections below.
+
+\subsection{Operators}
+            \label{sec:HeffdF1:66:op}
+The basis of four-quark operators for the $\dS$ effective hamiltonian
+in \eqn{eq:HeffKpp} is given in explicit form by
+\begin{eqnarray}
+Q_{1} & = & \left( \bar s_{i} u_{j}  \right)_{\rm V-A}
+            \left( \bar u_{j}  d_{i} \right)_{\rm V-A}
+\, , \nn \\
+Q_{2} & = & \left( \bar s u \right)_{\rm V-A}
+            \left( \bar u d \right)_{\rm V-A}
+\, , \nn \\
+Q_{3} & = & \left( \bar s d \right)_{\rm V-A}
+   \sum_{q} \left( \bar q q \right)_{\rm V-A}
+\, , \label{eq:Kppbasis} \\
+Q_{4} & = & \left( \bar s_{i} d_{j}  \right)_{\rm V-A}
+   \sum_{q} \left( \bar q_{j}  q_{i} \right)_{\rm V-A}
+\, , \nn \\
+Q_{5} & = & \left( \bar s d \right)_{\rm V-A}
+   \sum_{q} \left( \bar q q \right)_{\rm V+A}
+\, , \nn \\
+Q_{6} & = & \left( \bar s_{i} d_{j}  \right)_{\rm V-A}
+   \sum_{q} \left( \bar q_{j}  q_{i} \right)_{\rm V+A}
+\, . \nn
+\end{eqnarray}
+As already mentioned, this basis closes under QCD renormalization.  
+
+For $\mu < \mc$ the sums over active quark flavours in \eqn{eq:Kppbasis}
+run over $u$, $d$ and $s$.  However, when  $\mb > \mu > \mc$ is
+considered also $q=c$ has to be included. Moreover, in this case two
+additional current--current operators have to be taken into account
+\begin{equation}
+Q_1^c = \left(\bar s_i c_j  \right)_{\rm V-A}
+        \left(\bar c_j  d_i \right)_{\rm V-A}
+\, , \qquad
+Q_2^c = \left(\bar s c \right)_{\rm V-A}
+        \left(\bar c d \right)_{\rm V-A} \, .
+\label{eq:KppQ12c}
+\end{equation}
+and the effective hamiltonian takes the form
+\begin{equation}
+\Heff(\dS) = \frac{G_F}{\sqrt{2}} \V{us}^* \V{ud}^{} 
+\left[(1-\tau) \sum_{i=1}^{2} z_i(\mu) (Q_i-Q^c_i) +
+\tau \; \sum_{i=1}^{6} v_i(\mu)  Q_i \right]
+\label{eq:HeffKppc}
+\end{equation}
+
+\subsection{Wilson Coefficients}
+            \label{sec:HeffdF1:66:wc}
+For the Wilson coefficients $y_i(\mu)$ and $z_i(\mu)$ in
+eq.~\eqn{eq:HeffKpp} one has
+\begin{equation}
+y_i(\mu) = v_i(\mu) - z_i(\mu) \, .
+\label{eq:WCy}
+\end{equation}
+The coefficients $z_i$ and $v_i$ are the components of the six
+dimensional column vectors $\vec{v}(\mu)$ and $\vec{z}(\mu)$. Their
+RG evolution is given by
+\begin{equation}
+\vec{v}(\mu) =
+\hU_3(\mu,\mc) \hM(\mc) \hU_4(\mc,\mb) \hM(\mb) \hU_5(\mb,\mw)
+\vec{C}(\mw) \, ,
+\label{eq:WCv}
+\end{equation}
+\begin{equation}
+\vec{z}(\mu) = \hU_3(\mu,\mc) \vec{z}(\mc) \, .
+\label{eq:WCz}
+\end{equation}
+Here $\hU_f(m_1,m_2)$ denotes the full NLO evolution matrix for
+$f$ active flavours. $\hM(m_i)$ is the matching matrix at quark
+threshold $m_i$ given in eq.\ \eqn{mdrt}.  These two matrices will be
+discussed in more detail in subsections~\ref{sec:HeffdF1:66:rge} and
+\ref{sec:HeffdF1:66:Mm}, respectively.
+
+The initial values $\vC(\mw)$ necessary for the RG evolution of
+$\vv(\mu)$ in eq.~\eqn{eq:WCv} can be found according to the procedure
+of matching the effective (fig.\ \ref{fig:1loopeff}) onto the full
+theory (fig.\ \ref{fig:1loopful}) as summarized in
+section~\ref{sec:basicform:wc}.  For the NDR scheme one obtains
+\cite{burasetal:92a}
+\begin{eqnarray}
+C_1(\mw) &=&     \frac{11}{2} \; \frac{\as(\mw)}{4\pi} \, ,
+\label{eq:CMw1QCD} \\
+C_2(\mw) &=& 1 - \frac{11}{6} \; \frac{\as(\mw)}{4\pi} \, ,
+\label{eq:CMw2QCD} \\
+C_3(\mw) &=& -\frac{\as(\mw)}{24\pi} \widetilde{E}_0(x_t) \, ,
+\label{eq:CMw3QCD} \\
+C_4(\mw) &=& \frac{\as(\mw)}{8\pi} \widetilde{E}_0(x_t) \, ,
+\label{eq:CMw4QCD} \\
+C_5(\mw) &=& -\frac{\as(\mw)}{24\pi} \widetilde{E}_0(x_t) \, ,
+\label{eq:CMw5QCD} \\
+C_6(\mw) &=& \frac{\as(\mw)}{8\pi} \widetilde{E}_0(x_t) \, ,
+\label{eq:CMw6QCD}
+\end{eqnarray}
+where
+\begin{eqnarray}
+E_0(x) &=& -\frac{2}{3} \ln x + \frac{x (18 -11 x - x^2)}{12 (1-x)^3} +
+          \frac{x^2 (15 - 16 x  + 4 x^2)}{6 (1-x)^4} \ln x \, ,
+\label{eq:Ext} \\
+\widetilde{E}_0(x_t) &=& E_0(x_t) - \frac{2}{3}
+\label{eq:Exttilde}
+\end{eqnarray}
+with
+\begin{equation}
+x_t = \frac{m_t^2}{\mw^2} \, .
+\label{eq:xt}
+\end{equation}
+Here $E_0(x)$ results from the evaluation of the gluon penguin diagrams.
+
+The initial values $\vec{C}(\mw)$ in the HV scheme can be found in
+\cite{burasetal:92a}.
+
+In order to calculate the initial conditions $\vec{z}(\mc)$ for
+$z_i(\mu)$ in eq.~\eqn{eq:WCz} one has to consider the difference
+$Q_2^u - Q_2^c$ of $Q_2$-type current-current operators
+as can be seen explicitly in \eqn{eq:HeffKppc}. Due to the GIM
+mechanism the coefficients $z_i(\mu)$ of penguin operators $Q_i$,
+$i\not=1,2$ are zero in 5- and 4-flavour theories. The evolution for
+scales $\mu > \mc$ involves then only the current-current operators
+$Q^u_i-Q^c_i$, $i=1, 2$,  with initial conditions at
+scale $\mu = \mw$
+\begin{equation}
+z_1(\mw) = C_1(\mw) \, ,
+\qquad
+z_2(\mw) = C_2(\mw) \, .
+\label{eq:zMw12}
+\end{equation}
+$Q_{1,2}^u\equiv Q_{1,2}$ and $Q_{1,2}^c$ do not mix with each other under
+renormalization. We then find
+\begin{equation}
+\left( \begin{array}{ll} z_1(\mc) \\ z_2(\mc) \end{array} \right) =
+\hU_4(\mc,\mb) \; \hM(\mb) \; \hU_5(\mb,\mw) \;
+\left( \begin{array}{ll} z_1(\mw) \\ z_2(\mw) \end{array} \right) \, ,
+\label{eq:zmc12}
+\end{equation}
+where this time the evolution matrices $\hU_{4,5}$ contain only the $2
+\times 2$ anomalous dimension submatrices describing the mixing between
+current-current operators. The matching matrix $\hM(\mb)$ is then also
+only the corresponding $2 \times 2$ submatrix of the full $6 \times 6$
+matrix in \eqn{eq:MmKpp}. For the particular case of \eqn{eq:zmc12} it
+simplifies to a unit matrix. When the charm quark is integrated out the
+operators $Q_{1,2}^c$ disappear from the effective hamiltonian and the
+coefficients $z_i(\mu)$, $i\not=1,2$ for penguin operators become
+non-zero. In order to calculate $z_i(\mc)$ for penguin operators a
+proper matching between effective 4- and 3-quark theories,
+that is between \eqn{eq:HeffKppc} and \eqn{eq:HeffKpp}, has to be
+made. For the 3-quark theory one obtains in the NDR scheme
+\cite{burasetal:92d}
+\begin{equation}
+\vec{z}^{\rm }(\mc) =
+\left( \begin{array}{c}
+z_1^{\rm }(\mc) \\ z_2^{\rm }(\mc) \\
+-\as/(24\pi) F_{\rm s}^{\rm }(\mc) \\ \as/(8\pi) F_{\rm s}^{\rm }(\mc) \\ 
+-\as/(24\pi) F_{\rm s}^{\rm }(\mc) \\ \as/(8\pi) F_{\rm s}^{\rm }(\mc)
+\end{array} \right) \, ,
+\label{eq:zmc}
+\end{equation}
+where 
+\begin{equation}
+F_{\rm s}^{\rm }(\mc) =
+-\frac{2}{3} \; z_2(\mc)
+\label{eq:Fsmc}
+\end{equation}
+In the HV scheme $z_{1,2}$ are modified and one has $F_{\rm s}^{\rm }(\mc)
+= 0$ or $z_i(\mc) = 0$ for $i\not=1,2$.
+
+\subsection{Renormalization Group Evolution and Anomalous Dimension Matrices}
+            \label{sec:HeffdF1:66:rge}
+The general RG evolution matrix $\hU(m_1,m_2)$ from scale $m_2$ down to
+$m_1 < m_2$ reads in pure QCD
+\begin{equation}
+\hU(m_1,m_2) \equiv T_g \exp
+\int_{g(m_2)}^{g(m_1)} \!\! dg' \; \frac{\hg_{\rm s}^T(g'^2)}{\beta(g')} \, ,
+\label{eq:UgeneralQCD}
+\end{equation}
+with $\hg_{\rm s}(g^2)$ being the full $6\times 6$ QCD anomalous dimension
+matrix for $Q_1, \ldots, Q_6$.
+
+For the case at hand it can be expanded in terms of $\as$ as follows
+\begin{equation}
+\hg_{\rm s}(g^2) = \frac{\as}{4\pi} \gs + \frac{\as^2}{(4\pi)^2} \gss
+                   + \cdots \, .
+\label{eq:gsexpKpp}
+\end{equation}
+Explicit expressions for $\gs$ and $\gss$ will be given below.
+
+Using eq.\ \eqn{eq:gsexpKpp} the general QCD evolution matrix
+$\hU(m_1,m_2)$ of eq.~\eqn{eq:UgeneralQCD} can be written as in \eqn{u0jj}
+\cite{burasetal:92a}.
+\begin{equation}
+\hU(m_1,m_2) = 
+\left( 1 + \frac{\as(m_1)}{4\pi} \hJ \right)
+\hU^{(0)}(m_1,m_2)
+\left( 1 - \frac{\as(m_2)}{4\pi} \hJ \right) \, ,
+\label{eq:UQCDKpp}
+\end{equation}
+where $\hU^{(0)}(m_1,m_2)$ denotes the evolution matrix in the leading
+logarithmic approximation and $\hJ$ summarizes the next-to-leading
+correction to this evolution. Therefore, the full matrix $\hU(m_1,m_2)$
+sums logarithms $(\as t)^n$ and $\as (\as t)^n$ with $t=\ln(m_2^2/m_1^2)$.
+Explicit expressions for $\hU^{(0)}(m_1,m_2)$ and $\hJ$ are given in
+eqs.~\eqn{u0vd}--\eqn{jvs}.
+
+The LO anomalous dimension matrix $\gs$ of eq.\ \eqn{eq:gsexpKpp} has
+the explicit form \cite{gaillard:74}, \cite{altarelli:74},
+\cite{vainshtein:77}, \cite{gilman:79}, \cite{guberina:80}
+\begin{equation}
+\gs = 
+\left(
+\begin{array}{cccccc}
+{{-6}\over N} & 6 & 0 & 0 & 0 & 0 \\ \svs
+6 & {{-6}\over N} & {{-2}\over {3 N}} & {2\over 3} & {{-2}\over {3 N}} &\
+  {2\over 3} \\ \svs
+0 & 0 & {{-22}\over {3 N}} & {{22}\over 3} & {{-4}\over {3 N}} & {4\over 3}
+\\ \svs
+0 & 0 & 6 - {{2 f}\over {3 N}} & {{-6}\over N} + {{2 f}\over 3} & {{-2\
+  f}\over {3 N}} & {{2 f}\over 3} \\ \svs
+0 & 0 & 0 & 0 & {6\over N} & -6  \\ \svs
+0 & 0 & {{-2 f}\over {3 N}} & {{2 f}\over 3} & {{-2 f}\over {3 N}} & {{-6\
+  \left( -1 + {N^2} \right) }\over N} + {{2 f}\over 3}
+\end{array}
+\right)
+\label{eq:gs0Kpp}
+\end{equation}
+The NLO anomalous dimension matrix $\gss$ of eq.\ \eqn{eq:gsexpKpp}
+reads in the NDR scheme \cite{burasetal:92a}, \cite{ciuchini:93}
+\begin{equation}
+\gssndr\bigl|_{N=3} =
+\left(
+\begin{array}{cccccc}
+-{{21}\over 2} - {{2\,f}\over 9} & {7\over 2} + {{2\,f}\over 3} & {{79}\over\
+  9} & -{7\over 3} & -{{65}\over 9} & -{{7}\over{3}} \\ \mvs
+{7\over 2} + {{2\,f}\over 3} & -{{21}\over 2} - {{2\,f}\over 9} &\
+  -{{202}\over {243}} & {{1354}\over {81}} & -{{1192}\over {243}} &
+{904 \over 81} \\ \mvs
+0 & 0 & -{{5911}\over {486}} + {{71\,f}\over 9} & {{5983}\over {162}} +\
+  {f\over 3} & -{{2384}\over {243}} - {{71\,f}\over 9} &
+{1808 \over 81} - {f \over 3} \\ \mvs
+0 & 0 & {{379}\over {18}} + {{56\,f}\over {243}} & -{{91}\over 6} +\
+  {{808\,f}\over {81}} & -{{130}\over 9} - {{502\,f}\over {243}} &
+-{14 \over 3} + {{646\,f} \over 81} \\ \mvs
+0 & 0 & {{-61\,f}\over 9} & {{-11\,f}\over 3} & {{71}\over 3} + {{61\,f}\over\
+  9} & -99 + {{11\,f} \over 3} \\ \mvs
+0 & 0 & {{-682\,f}\over {243}} & {{106\,f}\over {81}} & -{{225}\over 2} +\
+  {{1676\,f}\over {243}} & -{1343 \over 6} + {{1348\,f} \over 81}
+\end{array}
+\right)
+\label{eq:gs1ndrN3Kpp}
+\end{equation}
+In \eqn{eq:gs0Kpp} and \eqn{eq:gs1ndrN3Kpp} $f$ denotes the number of
+active quark flavours at a certain scale $\mu$. The corresponding
+results for $\gss$ in the HV scheme can either be obtained by direct
+calculation or by using the relation \eqn{gpgs}. They can be found in
+\cite{burasetal:92a}, \cite{ciuchini:93} where also the $N$
+dependence of $\gss$ is given.
+
+\subsection{Quark Threshold Matching Matrix}
+            \label{sec:HeffdF1:66:Mm}
+As discussed in section~\ref{sec:basicform:wc:rgf} in general a 
+matching matrix $\hM(m)$ has to be included in the RG evolution at NLO when
+going from a $f$-flavour effective theory to a $(f-1)$-flavour
+effective theory at quark threshold $\mu = m$ \cite{burasetal:92a},
+\cite{burasetal:92d}.
+
+For the $\dS$ decay $\Kpipi$ in pure QCD one has \cite{burasetal:92a}
+\begin{equation}
+\hM(m) = 1 + \frac{\as(m)}{4\pi} \; \vardrs^T \, .
+\label{eq:MmKpp}
+\end{equation}
+At the quark thresholds $m=m_b$ and $m=m_c$ the matrix $\vardrs$ reads
+\begin{equation}
+\vardrs^T = -\, \frac{5}{9} P \, (0, 0, 0, 1, 0, 1)
+\label{eq:drsmbcKpp}
+\end{equation}
+with
+\begin{equation}
+P^T = (0,0,-\frac{1}{3},1,-\frac{1}{3},1) \, .
+\label{eq:PdrsKpp}
+\end{equation}
+
+\subsection{Numerical Results for the $\Kpipi$ Wilson Coefficients
+            in Pure QCD}
+            \label{sec:HeffdF1:66:numres}
+\begin{table}[htb]
+\caption[]{$\dS$ Wilson coefficients at $\mu=1\gev$ for $\mt=170\gev$.
+$y_1 = y_2 \equiv 0$.
+\label{tab:wc6smu1}}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+Scheme & LO & NDR & HV & LO & 
+NDR & HV & LO & NDR & HV \\
+\hline
+$z_1$ & --0.602 & --0.407 & --0.491 & --0.743 & 
+--0.506 & --0.636 & --0.901 & --0.622 & --0.836 \\
+$z_2$ & 1.323 & 1.204 & 1.260 & 1.423 & 
+1.270 & 1.362 & 1.541 & 1.352 & 1.515 \\
+\hline
+$z_3$ & 0.003 & 0.007 & 0.004 & 0.004 & 
+0.013 & 0.007 & 0.006 & 0.022 & 0.015 \\
+$z_4$ & --0.008 & --0.022 & --0.010 & --0.012 & 
+--0.034 & --0.016 & --0.016 & --0.058 & --0.029 \\
+$z_5$ & 0.003 & 0.006 & 0.003 & 0.004 & 
+0.007 & 0.004 & 0.005 & 0.009 & 0.005 \\
+$z_6$ & --0.009 & --0.021 & --0.009 & --0.013 & 
+--0.034 & --0.014 & --0.018 & --0.058 & --0.025 \\
+\hline
+$y_3$ & 0.029 & 0.023 & 0.026 & 0.036 & 
+0.031 & 0.036 & 0.045 & 0.040 & 0.048 \\
+$y_4$ & --0.051 & --0.046 & --0.048 & --0.060 & 
+--0.056 & --0.059 & --0.069 & --0.066 & --0.072 \\
+$y_5$ & 0.012 & 0.004 & 0.013 & 0.013 & 
+--0.001 & 0.016 & 0.014 & --0.013 & 0.020 \\
+$y_6$ & --0.084 & --0.076 & --0.070 & --0.111 & 
+--0.109 & --0.096 & --0.145 & --0.166 & --0.136 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{$\dS$ Wilson coefficients at $\mu=\mc=1.3\gev$ for
+$\mt=170\gev$ and $f=3$ effective flavours.
+$|z_3|,\ldots,|z_6|$ are numerically irrelevant relative to
+$|z_{1,2}|$. $y_1 = y_2 \equiv 0$.
+\label{tab:wc6smu13}}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+Scheme & LO & NDR & HV & LO & 
+NDR & HV & LO & NDR & HV \\
+\hline
+$z_1$ & --0.518 & --0.344 & --0.411 & --0.621 & 
+--0.412 & --0.504 & --0.727 & --0.487 & --0.614 \\
+$z_2$ & 1.266 & 1.166 & 1.207 & 1.336 & 
+1.208 & 1.269 & 1.411 & 1.258 & 1.346 \\
+\hline
+$y_3$ & 0.026 & 0.021 & 0.024 & 0.032 & 
+0.027 & 0.031 & 0.039 & 0.035 & 0.040 \\
+$y_4$ & --0.050 & --0.046 & --0.048 & --0.059 & 
+--0.056 & --0.058 & --0.068 & --0.067 & --0.070 \\
+$y_5$ & 0.013 & 0.007 & 0.013 & 0.015 & 
+0.005 & 0.016 & 0.016 & 0.001 & 0.018 \\
+$y_6$ & --0.075 & --0.067 & --0.062 & --0.095 & 
+--0.088 & --0.079 & --0.118 & --0.116 & --0.102 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{$\dS$ Wilson coefficients at $\mu=2\gev$ for
+$\mt=170\gev$. For $\mu > \mc$ the GIM mechanism gives $z_i \equiv 0$,
+$i=3,\ldots,6$. $y_1 = y_2 \equiv 0$.
+\label{tab:wc6smu2}}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(4)}=215\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(4)}=325\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(4)}=435\mev$} \\
+\hline
+Scheme & LO & NDR & HV & LO & 
+NDR & HV & LO & NDR & HV \\
+\hline
+$z_1$ & --0.411 & --0.266 & --0.318 & --0.477 & 
+--0.309 & --0.374 & --0.541 & --0.350 & --0.430 \\
+$z_2$ & 1.199 & 1.121 & 1.151 & 1.240 & 
+1.145 & 1.185 & 1.282 & 1.170 & 1.220 \\
+\hline
+$y_3$ & 0.019 & 0.019 & 0.018 & 0.023 & 
+0.023 & 0.022 & 0.027 & 0.027 & 0.026 \\
+$y_4$ & --0.040 & --0.046 & --0.039 & --0.046 & 
+--0.054 & --0.045 & --0.052 & --0.062 & --0.052 \\
+$y_5$ & 0.011 & 0.010 & 0.011 & 0.012 & 
+0.010 & 0.013 & 0.013 & 0.010 & 0.015 \\
+$y_6$ & --0.055 & --0.057 & --0.047 & --0.067 & 
+--0.070 & --0.056 & --0.078 & --0.085 & --0.067 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+Tables \ref{tab:wc6smu1}--\ref{tab:wc6smu2} give the $\dS$ Wilson
+coefficients for $Q_1,\ldots,Q_6$ in pure QCD.
+\\
+We observe a visible scheme dependence for all NLO Wilson coefficients.
+Notably we find $|y_6|$ to be smaller in the HV than in the NDR scheme.
+\\
+In addition all coefficients, especially $z_1$ and $y_3,\ldots,y_6$,
+show a strong dependence on $\Lms$.
+\\
+Next, at NLO the absolute values for $z_{1,2}$ and $y_i$ are suppressed
+relative to their LO results, except for $y_5$ in HV and $y_{4,6}$ in
+NDR for $\mu > \mc$. The latter behaviour is related to the effect of
+the matching matrix $M(\mc)$ absent for $\mu > \mc$.
+\\
+For $y_3,\ldots,y_5$ there is no visible $\mt$ dependence in the range
+$\mt = (170 \pm 15)\gev$. For $|y_6|$ there is a relative variation of
+$\ord(\pm 1.5\%)$ for in/decreasing $\mt$.
+\\
+Finally, a comment on the Wilson coefficients in the HV Scheme as
+presented here is appropriate. As we have mentioned in section
+\ref{sec:HeffdF1:22:wcrg}, the two-loop anomalous dimensions of the
+weak current in the HV scheme does not vanish. This peculiar feature of
+the HV scheme is also felt in $\gss$.  The diagonal terms in $\gss$
+aquire additional universal large $\ord(N^2)$ terms $(44/3)N^2$
+which are absent in the NDR scheme. These artificial terms can be
+removed by working with $\gss -2 \gamma^{(1)}_J$ instead of $\gss$.
+This procedure, adopted in this review and in \cite{burasetal:92d},
+corresponds effectively to a finite renormalization of operators which
+changes the coefficient of $\as/4\pi$ in $C^{HV}_2(\mw)$ from $- 13/2$
+to $- 7/6$. The Rome group \cite{ciuchini:93} has chosen not to make
+this additional finite renormalization and consequently their
+coefficients in the HV scheme differ from the HV coefficients presented
+here by a universal factor. They can be found by using
+\begin{equation}
+C^{\rm HV}_{\rm Rome}(\mu) =
+\left[ 1 -\frac{\as(\mu)}{4\pi} 4 C_F \right]
+C^{\rm HV}(\mu)
+\label{eq:Crome}
+\end{equation}
+Clearly this difference is compensated by the corresponding difference in the
+hadronic matrix elements of the operators $Q_i$.  
+
+\subsection{The $\dB$ Effective Hamiltonian in Pure QCD}
+            \label{sec:HeffdF1:66:dB1}
+An important application of the formalism developed in the previous
+subsections is for the case of $B$-meson decays.  The LO calculation
+can be found e.g.\ in \cite{ponce:81}, \cite{grinstein:89} where the
+importance of NLO calculations has already been pointed out.  This
+section can be viewed as the generalization of Grinstein's analysis
+beyond the LO approximation. We will focus on the $\Delta B=1$, $\Delta
+C = 0$ part of the effective hamiltonian which is of particular
+interest for the study of CP violation in decays to CP self-conjugate
+final states.  The part of the hamiltonian inducing $\Delta B=1$,
+$\Delta C = \pm 1$ transitions involves no penguin operators and has
+already been discussed in \ref{sec:HeffdF1:22}.
+
+At tree-level the effective hamiltonian of interest here is simply given by
+\begin{equation} 
+\Heff(\dB) = \frac{G_F}{\sqrt{2}} \sum_{q=u,c} \sum_{q'=d,s}
+              V^*_{qb} V^{}_{qq'}
+             \left(\bar b q  \right)_{\rm V-A}
+             \left(\bar q q' \right)_{\rm V-A} \, .
+\label{eq:HeffdB1:tree}
+\end{equation} 
+
+The cases $q'=d$ and $q'=s$ can be treated separately and have the same
+Wilson coefficients $C_i(\mu)$. Therefore we will restrict the
+discussion to $q'=d$ in the following.
+
+Using unitarity of the CKM matrix, $\xi_u + \xi_c + \xi_t = 0$ with
+$\xi_i = V^*_{ib} V^{}_{id}$, and the fact that $Q^u_{1,2}$ and
+$Q^c_{1,2}$ have the same initial conditions at
+$\mu=\mw$ one obtains for the effective $\dB$ hamiltonian at scales
+$\mu = \ord(\mb)$
+\begin{eqnarray} 
+\Heff(\dB) &=& \frac{G_F}{\sqrt{2}} \bigl\{
+   \xi_c \, \left[ C_1(\mu) Q_1^c(\mu) + C_2(\mu) Q_2^c(\mu) \right] +
+   \xi_u \, \left[ C_1(\mu) Q_1^u(\mu) + C_2(\mu) Q_2^u(\mu) \right] 
+\nn \\
+ & & - \xi_t \, \sum_{i=3}^{6} C_i(\mu) Q_i(\mu)
+\bigr\} \, .
+\label{eq:HeffdB1:66}
+\end{eqnarray} 
+Here
+\begin{eqnarray}
+Q^q_{1} & = & \left( \bar b_{i} q_{j}  \right)_{\rm V-A}
+            \left( \bar q_{j}  d_{i} \right)_{\rm V-A}
+\, , \nn \\
+Q^q_{2} & = & \left( \bar b q \right)_{\rm V-A}
+            \left( \bar q d \right)_{\rm V-A}
+\, , \nn \\
+Q_{3} & = & \left( \bar b d \right)_{\rm V-A}
+   \sum_{q} \left( \bar q q \right)_{\rm V-A}
+\, , \label{eq:dB1basis} \\
+Q_{4} & = & \left( \bar b_{i} d_{j}  \right)_{\rm V-A}
+   \sum_{q} \left( \bar q_{j}  q_{i} \right)_{\rm V-A}
+\, , \nn \\
+Q_{5} & = & \left( \bar b d \right)_{\rm V-A}
+   \sum_{q} \left( \bar q q \right)_{\rm V+A}
+\, , \nn \\
+Q_{6} & = & \left( \bar b_{i} d_{j}  \right)_{\rm V-A}
+   \sum_{q} \left( \bar q_{j}  q_{i} \right)_{\rm V+A}
+\, , \nn
+\end{eqnarray}
+where the summation runs over $q=u,d,s,c,b$. 
+
+The corresponding $\dB$ Wilson coefficients at scale $\mu = \ord(\mb)$
+are simply given by a truncated version of eq.\ \eqn{eq:WCv}
+\begin{equation}
+\vC(\mb) = \hU_5(\mb,\mw) \, \vC(\mw) \, .
+\label{eq:HeffdB1:66:wc}
+\end{equation}
+Here $\hU_5$ is the $6 \times 6$ RG evolution matrix of eq.\
+\eqn{eq:UQCDKpp} for $f=5$ active flavours. The initial conditions
+$\vC(\mw)$ are identical to those of \eqn{eq:CMw1QCD}--\eqn{eq:CMw6QCD}
+for the $\dS$ case.
+
+\subsection{Numerical Results for the $\dB$ Wilson Coefficients in Pure QCD}
+            \label{sec:HeffdF1:66:dB1num}
+\begin{table}[htb]
+\caption[]{$\dB$ Wilson coefficients at $\mu=\overline{m}_{\rm b}(\mb)=
+4.40\gev$ for $\mt=170\gev$.
+\label{tab:wc6b}}
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(5)}=140\mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(5)}=225\mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(5)}=310\mev$} \\
+\hline
+Scheme & LO & NDR & HV & LO & 
+NDR & HV & LO & NDR & HV \\
+\hline
+$C_1$ & --0.272 & --0.164 & --0.201 & --0.307 & 
+--0.184 & --0.227 & --0.337 & --0.202 & --0.250 \\
+$C_2$ & 1.120 & 1.068 & 1.087 & 1.139 & 
+1.078 & 1.101 & 1.155 & 1.087 & 1.113 \\
+\hline
+$C_3$ & 0.012 & 0.012 & 0.011 & 0.013 & 
+0.013 & 0.012 & 0.015 & 0.015 & 0.014 \\
+$C_4$ & --0.026 & --0.031 & --0.026 & --0.030 & 
+--0.035 & --0.029 & --0.032 & --0.038 & --0.032 \\
+$C_5$ & 0.008 & 0.008 & 0.008 & 0.009 & 
+0.009 & 0.009 & 0.009 & 0.009 & 0.010 \\
+$C_6$ & --0.033 & --0.035 & --0.029 & --0.038 & 
+--0.041 & --0.033 & --0.042 & --0.046 & --0.036 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+Table \ref{tab:wc6b} lists the $\dB$ Wilson coefficients for
+$Q_1^{u,c},Q_2^{u,c},Q_3,\ldots,Q_6$ in pure QCD.
+\\
+$C_1$, $C_4$ and $C_6$ show a $\ord(20\%)$ scheme dependence while
+this dependence is much weaker for the rest of the coefficients.
+\\
+Similarly to the $\dS$ case the numerical values for $\dB$ Wilson
+coefficients are sensitive to the value of $\Lms$ used to determine
+$\as$ for the RG evolution. The sensitivity is however less pronounced
+than in the $\dS$ case due to the higher value $\mu=\overline{m}_{\rm
+b}(\mb)$ of the renormalization scale.
+\\
+Finally, one finds no visible $\mt$ dependence in the range $\mt = (170
+\pm 15)\gev$.

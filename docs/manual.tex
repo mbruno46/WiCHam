@@ -1,0 +1,101 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{amsmath, amscd}
+\usepackage{booktabs}
+\usepackage[dvipsnames]{xcolor}
+
+\title{\textcolor{red}{Wi}lson \textcolor{red}{C}oefficient for the effective weak \textcolor{red}{Ham}iltonian}
+\author{Mattia Bruno}
+
+
+\newcommand{\gev}{\mathrm{GeV}}
+\newcommand{\mb}{m_{\mathrm b}}
+\newcommand{\mc}{m_{\mathrm c}}
+\newcommand{\mt}{m_{\mathrm t}}
+\newcommand{\mw}{M_{\mathrm W}}
+\newcommand{\mz}{M_{\mathrm Z}}
+
+\newcommand{\as}{\alpha_{\rm s}}
+\newcommand{\aem}{\alpha_{\rm e}}
+
+\newcommand{\hU}{U}
+\newcommand{\hR}{R}
+\newcommand{\hJ}{J}
+\newcommand{\hV}{V}
+\newcommand{\hK}{K}
+\newcommand{\hM}{M}
+
+\newcommand{\gs}{\gamma_{\rm s}^{(0)}}
+\newcommand{\gem}{\gamma_{\rm e}^{(0)}}
+\newcommand{\gss}{\gamma_{\rm s}^{(1)}}
+\newcommand{\gse}{\gamma_{\rm se}^{(1)}}
+
+\newcommand{\gst}{\gamma_{\rm s}^{(0) T}}
+\newcommand{\gemt}{\gamma_{\rm e}^{(0) T}}
+\newcommand{\gsst}{\gamma_{\rm s}^{(1) T}}
+\newcommand{\gset}{\gamma_{\rm se}^{(1) T}}
+
+\newcommand{\hJe}{J_{\rm e}}
+\newcommand{\hJs}{J_{\rm s}}
+\newcommand{\hJse}{J_{\rm se}}
+\newcommand{\vardre}{\delta r_{\rm e}}
+\newcommand{\vardrs}{\delta r_{\rm s}}
+
+\newcommand{\code}[1]{\noindent\textcolor{RedOrange}{\texttt{#1}}}
+
+\begin{document}
+\maketitle
+
+This library is a Mathematica implementation of the Wilson Coefficients 
+for the $\Delta F=1$ Weak Hamiltonian computed in \textit{Buras et al.} 
+\texttt{arXiv:hep-ph/95123801}.
+The goal for this library is to provide the user with a simple-to-use 
+series of functions which automatically evaluate the Wilson Coefficients 
+at a given mass scale $\mu$ and order in $\as$.
+
+This library contains also all the basic blocks used in the evolution of the 
+Wilson Coefficients, from the strong coupling constant coded up to 4 loops to the 
+evolution matrices $U$. Starting from this basic functions it is possible to 
+evaluate the Wilson Coefficients for all transitions related to the effective
+hamiltonian written below.\\
+
+The documentation is organized as follows. The colored text represents 
+Mathematica code and each function is described according to this structure:
+
+\hrulefill
+
+\code{function[variable1,variable2, \ldots]}\\
+\begin{itemize}
+\item \code{variable1}: explanation
+\item \code{variable2}: explanation
+\end{itemize}
+
+Additional comments and explanations go here together with
+equations to define and describe what \code{function} does.
+
+\newpage
+\section{A brief theoretical introduction}
+\input{tex/theory.tex}
+
+\newpage
+\section{Computation of the Wilson Coefficients}
+\input{tex/wc.tex}
+
+\newpage
+\section{Basic QCD Functions and input parameters}
+\input{tex/params.tex}
+
+\newpage
+\section{Examples}
+\input{tex/example.tex}
+
+\newpage
+\section{Anomalous Dimension Matrices}
+\input{tex/admat.tex}
+
+\section{Renormalization Group Functions}
+\input{tex/rg.tex}
+
+\section{Prescriptions}
+\input{tex/prescr.tex}
+
+\end{document}

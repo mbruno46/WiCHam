@@ -1,0 +1,710 @@
+\section{The Effective Hamiltonian for $B\to X_{\lowercase{s}}\gamma$} 
+         \label{sec:Heff:BXsgamma}
+The effective hamiltonian for $B\to X_s\gamma$ at scales $\mu=O(\mb)$
+is given by
+\begin{equation}
+\Heff(b\to s\gamma) = - \frac{G_F}{\sqrt{2}} V_{ts}^* V^{}_{tb}
+\left[ \sum_{i=1}^6 C_i(\mu) Q_i(\mu) + C_{7\gamma}(\mu) Q_{7\gamma}(\mu)
++C_{8G}(\mu) Q_{8G}(\mu) \right]
+\label{eq:HeffBXsgamma}
+\end{equation}
+where in view of $|V_{us}^*V_{ub}^{} / V_{ts}^* V_{tb}^{}| < 0.02$
+we have neglected the term proportional to $V_{us}^*V_{ub}^{}$.
+
+\subsection{Operators}
+         \label{sec:Heff:BXsgamma:ops}
+The complete list of operators is given as follows
+\begin{eqnarray}
+Q_1    & = & (\bar{s}_{i}  c_{j})_{V-A}
+           (\bar{c}_{j}  b_{i})_{V-A}        \nn \\
+Q_2    & = & (\bar{s} c)_{V-A}  (\bar{c} b)_{V-A}      \nn \\
+Q_3    & = & (\bar{s} b)_{V-A}\sum_q(\bar{q}q)_{V-A}   \nn \\
+Q_4    & = & (\bar{s}_{i}  b_{j})_{V-A} \sum_q (\bar{q}_{j}
+          q_{i})_{V-A}     \nn \\
+Q_5    & = & (\bar{s} b)_{V-A}\sum_q(\bar{q}q)_{V+A}
+             \label{eq:BXsgamma:ops} \\
+Q_6    & = & (\bar{s}_{i}  b_{j})_{V-A}
+   \sum_q  (\bar{q}_{j}  q_{i})_{V+A}        \nn \\
+Q_{7\gamma}    & = & \frac{e}{8\pi^2} \mb \bar{s}_i \sigma^{\mu\nu}
+          (1+\gamma_5) b_i F_{\mu\nu}             \nn \\
+Q_{8G}    & = & \frac{g}{8\pi^2} \mb \bar{s}_i \sigma^{\mu\nu}
+   (1+\gamma_5)T^a_{ij} b_j G^a_{\mu\nu}  \nn
+\end{eqnarray}
+The current-current operators $Q_{1,2}$ and the QCD penguin operators
+$Q_3,\ldots,Q_6$ have been already contained in the usual $\Delta B=1$
+hamiltonian presented in section \ref{sec:HeffdF1:66:dB1}. The new
+operators $Q_{7\gamma}$ and $Q_{8G}$ specific for $b\to s\gamma$ and
+$b\to s g$ transitions carry the name of magnetic penguin operators.
+They originate from the mass-insertion on the external b-quark line in
+the QCD and QED penguin diagrams of fig.\ \ref{fig:oporig}\,(d),
+respectively. In view of $\ms \ll \mb$ we do not include the corresponding
+contributions from mass-insertions on the external s-quark line.
+
+\subsection{Wilson Coefficients}
+         \label{sec:Heff:BXsgamma:wc}
+A very peculiar feature of the renormalization group analysis of the
+set of operators in (\ref{eq:BXsgamma:ops}) is that the mixing under
+(infinite) renormalization between the set $Q_1,\ldots,Q_6$ and the
+operators $Q_{7\gamma},Q_{8G}$ vanishes at the one-loop level.
+Consequently in order to calculate the coefficients $C_{7\gamma}(\mu)$
+and $C_{8G}(\mu)$ in the leading logarithmic approximation, two-loop
+calculations of ${\cal{O}}(e g^2_s)$ and ${\cal{O}}(g^3_s)$ are
+necessary. The corresponding NLO analysis requires the evaluation of
+the mixing in question at the three-loop level. In view of this new
+feature it is useful to include additional couplings in the definition
+of $Q_{7\gamma}$ and $Q_{8G}$ as done in (\ref{eq:BXsgamma:ops}).  In
+this manner the entries in the anomalous dimension matrix representing
+the mixing between $Q_1,\ldots,Q_6$ and $Q_{7\gamma},Q_{8G}$ at the
+two-loop level are $O(g_s^2)$ and enter the anomalous dimension matrix
+$\gamma^{(0)}_s$. Correspondingly the three-loop mixing between these
+two sets of operators enters the matrix $\gamma^{(1)}_s$.
+
+The mixing under renormalization in the sector $Q_{7\gamma},Q_{8G}$
+proceeds in the usual manner and the corresponding entries in
+$\gamma^{(0)}_s $ and $\gamma^{(1)}_s$ result from one-loop and 
+two-loop calculations, respectively.
+
+At present, the coefficients $C_{7\gamma}$ and $C_{8G}$ are only known
+in the leading logarithmic approximation. Consequently we are in the
+position to give here only their values in this approximation.
+The work on NLO corrections to $C_{7\gamma}$ and $C_{8G}$ is in
+progress and we will summarize below what is already known about
+these corrections.
+
+The peculiar feature of this decay mentioned above caused that the
+first fully correct calculation of the leading  anomalous dimension
+matrix has been obtained only in 1993 \cite{CFMRS:93}, \cite{CFRS:94}.
+It is instructive to clarify this right at the beginning. We follow
+here \cite{BMMP:94}.
+
+The point is that the mixing between the sets $Q_1,\ldots,Q_6$ and
+$Q_{7\gamma},Q_{8G}$ in $\gamma^{(0)}_s$ resulting from two-loop
+diagrams is generally regularization scheme dependent. This is
+certainly disturbing because the matrix $\gamma^{(0)}_s$, being the
+first term in the expansion for $\gamma_s$, is usually scheme
+independent.  There is a simple way to circumvent this difficulty
+\cite{BMMP:94}.
+
+As noticed in \cite{CFMRS:93}, \cite{CFRS:94} the regularization scheme
+dependence of $\gamma^{(0)}_s$ in the case of $b\to s\gamma$ and
+$b\to s g$ is signaled in the one-loop matrix elements of $Q_1,\ldots,Q_6$
+for on-shell photons or gluons.  They vanish in any 4-dimensional
+regularization scheme and in the HV scheme but some of them are
+non-zero in the NDR scheme.  One has
+\begin{equation}
+\langle Q_i \rangle_{\rm one-loop}^\gamma =
+y_i \, \langle Q_{7\gamma} \rangle_{\rm tree},
+\qquad i=1,\ldots,6
+\label{eq:defy}
+\end{equation}
+and
+\begin{equation}
+\langle Q_i\rangle_{\rm one-loop}^G =
+z_i \, \langle Q_{8G} \rangle_{\rm tree},
+\qquad i=1,\ldots,6.
+\end{equation}
+
+In the HV scheme all the $y_i$'s and $z_i$'s vanish, while in the NDR
+scheme $\vec{y} = (0,0,0,0,-\frac{1}{3},-1)$ and $\vec{z} =
+(0,0,0,0,1,0)$.  This regularization scheme dependence is canceled by a
+corresponding regularization scheme dependence in $\gamma_s^{(0)}$
+as first demonstrated in \cite{CFMRS:93}, \cite{CFRS:94}. It should be
+stressed that the numbers $y_i$ and $z_i$ come from divergent, i.e.
+purely short-distance parts of the one-loop integrals. So no reference
+to the spectator-model or to any other model for the matrix elements is
+necessary here.
+
+In view of all this  it is convenient in the leading order to introduce
+the so-called ``effective coefficients'' \cite{BMMP:94} for the
+operators $Q_{7\gamma}$ and $Q_{8G}$ which are regularization scheme
+independent. They are given as follows:
+\begin{equation} \label{eq:defc7eff}
+C^{(0)eff}_{7\gamma}(\mu) =
+C^{(0)}_{7\gamma}(\mu) + \sum_{i=1}^6 y_i C^{(0)}_i(\mu).
+\end{equation}
+and 
+\begin{equation}
+C^{(0)eff}_{8G}(\mu) = C^{(0)}_{8G}(\mu) + \sum_{i=1}^6 z_i C^{(0)}_i(\mu)
+\end{equation}
+One can then introduce a scheme-independent vector
+\begin{equation} 
+\vec{C}^{(0)eff}(\mu) = \left( C^{(0)}_1(\mu),\ldots, C^{(0)}_6(\mu), 
+C^{(0)eff}_{7\gamma}(\mu),C^{(0)eff}_{8G}(\mu) \right) \, .
+\end{equation}
+From the RGE for $\vec{C}^{(0)}(\mu)$ it is straightforward
+to derive the RGE for $\vec{C}^{(0)eff}(\mu)$. It has the form
+\begin{equation} \label{RGEeff}
+\mu \frac{d}{d \mu} C^{(0)eff}_i(\mu) = 
+\frac{\as}{4\pi} \gamma^{(0)eff}_{ji} C^{(0)eff}_j(\mu)
+\end{equation}
+where
+\begin{equation} \label{def.geff}
+\gamma^{(0)eff}_{ji} = \left\{ \begin{array}{ccl}
+\gamma^{(0)}_{j7} +
+\sum_{k=1}^6 y_k\gamma^{(0)}_{jk} -y_j\gamma^{(0)}_{77} -z_j\gamma^{(0)}_{87}
+&\quad& $i=7$,\ $j=1,\ldots,6$ \\
+\gamma^{(0)}_{j8} +
+\sum_{k=1}^6 z_k\gamma^{(0)}_{jk} -z_j\gamma^{(0)}_{88}
+&\quad& $i=8$,\ $j=1,\ldots,6$ \\
+\gamma^{(0)}_{ji} &\quad& \mbox{otherwise.}
+\end{array}
+\right.
+\end{equation}
+The matrix $\gamma^{(0)eff}$ is a scheme-independent quantity.
+It equals the matrix which one would directly obtain from two-loop
+diagrams in the HV scheme.  In order to simplify the notation we will
+omit the label ``eff'' in the expressions for the elements of this
+effective one loop anomalous dimension matrix given below and keep it
+only in the Wilson coefficients of the operators $Q_{7\gamma}$ and
+$Q_{8G}$.
+
+This discussion clarifies why it took so long to find the correct
+leading anomalous dimension matrix for the $\bsg$ decay
+\cite{CFMRS:93}, \cite{CFRS:94}. All previous calculations \cite{Grin},
+\cite{cella:90a}, \cite{misiak:93}, \cite{Yao1}, \cite{Yao2} of the
+leading order QCD corrections to $\bsg$ used the NDR scheme setting
+unfortunately $z_i$ and $y_i$ to zero, or not including all operators
+or making other mistakes.
+The discrepancy between the calculation of \cite{grigjanis:88} (DRED
+scheme) and \cite{Grin} (NDR scheme) has been clarified by
+\cite{misiak:94b}.
+
+\subsection{Renormalization Group Evolution and Anomalous Dimension Matrices}
+         \label{sec:Heff:BXsgamma:RGE}
+The coefficients $C_i(\mu)$ in (\ref{eq:HeffBXsgamma}) can be calculated
+by using
+\begin{equation}
+\vec C(\mu)= U_5(\mu,\mw)\vec C(\mw)
+\end{equation}
+Here $ U_5(\mu,\mw)$ is the $8\times 8$ evolution matrix which is
+given in general terms in \eqn{u0jj} with $\gamma$ being this
+time an $8\times 8$ anomalous dimension matrix. In the leading order
+$U_5(\mu,\mw)$ is to be replaced by $U_5^{(0)}(\mu,\mw)$ and
+the initial conditions by $\vec C^{(0)}(\mw)$ given by \cite{Grin}
+\begin{equation}\label{c2}
+C^{(0)}_2(\mw) = 1                               
+\end{equation}
+\begin{equation}\label{c7}
+C^{(0)}_{7\gamma} (\mw) = \frac{3 x_t^3-2 x_t^2}{4(x_t-1)^4}\ln x_t + 
+   \frac{-8 x_t^3 - 5 x_t^2 + 7 x_t}{24(x_t-1)^3}
+   \equiv -\frac{1}{2} D'_0(x_t)
+\end{equation}
+\begin{equation}\label{c8}
+C^{(0)}_{8G}(\mw) = \frac{-3 x_t^2}{4(x_t-1)^4}\ln x_t +
+   \frac{-x_t^3 + 5 x_t^2 + 2 x_t}{8(x_t-1)^3}                               
+   \equiv -\frac{1}{2} E'_0(x_t)
+\end{equation}
+with all remaining coefficients being zero at $\mu=\mw$. The functions
+$D'_0(x_t)$ and $E'_0(x_t)$ are sometimes used in the literature. The
+$6 \times 6$ submatrix of $\gamma^{(0)}_s$ involving the operators
+$Q_1,\ldots,Q_6$ is given in \eqn{eq:gs0Kpp}. Here we only give the
+remaining non-vanishing entries of $\gamma^{(0)}_s$
+\cite{CFMRS:93}, \cite{CFRS:94}.
+
+Denoting for simplicity $\gamma_{ij} \equiv (\gamma_s)_{ij}$, the elements
+$\gamma^{(0)}_{i7}$ with $i=1,\ldots,6$ are:
+\begin{eqnarray}
+\gamma^{(0)}_{17} = 0, &\qquad&  \gamma^{(0)}_{27} =
+\frac{104}{27} C_F
+\label{eq:g0127} \\
+\gamma^{(0)}_{37} = -\frac{116}{27} C_F
+ &\qquad&  \gamma^{(0)}_{47}  = \left(\frac{104}{27} u -\frac{58}{27}d
+\right) C_F
+\label{eq:g0347} \\
+\gamma^{(0)}_{57} = \frac{8}{3} C_F &\qquad&
+\gamma^{(0)}_{67} = \left( \frac{50}{27}d -\frac{112}{27}u \right) C_F
+\label{eq:g0567}
+\end{eqnarray}
+The elements $\gamma^{(0)}_{i8}$ with $i=1,\ldots,6$ are:
+\begin{eqnarray}
+\gamma^{(0)}_{18} = 3, &\quad& \gamma^{(0)}_{28} =
+\frac{11}{9} N-\frac{29}{9}\frac{1}{N}
+\label{eq:g0128} \\
+\gamma^{(0)}_{38} = \frac{22}{9} N-\frac{58}{9}\frac{1}{N}+3 f
+ &\quad& \gamma^{(0)}_{48}  = 
+6+\left(\frac{11}{9} N -\frac{29}{9}\frac{1}{N}\right) f
+\label{eq:g0348} \\
+\gamma^{(0)}_{58} = -2 N+\frac{4}{N} -3 f  &\quad&
+\gamma^{(0)}_{68} = -4-\left( \frac{16}{9} N -
+\frac{25}{9}\frac{1}{N}\right) f
+\label{eq:g0568}
+\end{eqnarray}
+
+Finally the $2\times 2$ one-loop anomalous dimension matrix in the
+sector $Q_{7\gamma},Q_{8G}$ is given by \cite{Grin}
+\begin{eqnarray}
+\gamma^{(0)}_{77} = 8 C_F
+&\qquad&
+\gamma^{(0)}_{78} = 0
+\label{gammaB0} \\
+\gamma^{(0)}_{87} = -\frac{8}{3} C_F
+&\qquad&
+\gamma^{(0)}_{88} = 16 C_F - 4 N
+\nn
+\end{eqnarray}
+
+As we discussed above, the first correct calculation of the two-loop
+mixing between $Q_1,\ldots,Q_6$ and $Q_{7\gamma}$, $Q_{8G}$ has been
+presented in \cite{CFMRS:93}, \cite{CFRS:94} and confirmed subsequently
+in \cite{CCRV:94a}, \cite{CCRV:94b}, \cite{misiak:94}.  In order to
+extend these calculations beyond the leading order one would have to
+calculate $\gamma_s^{(1)}$ (see (\ref{gg01})) and $O(\as)$ corrections to
+the initial conditions in (\ref{c7}) and (\ref{c8}). We summarize below
+the present status of this NLO calculation.
+
+The $6\times 6$ two-loop submatrix of $\gamma^{(1)}_s$ involving
+the operators $Q_1,\ldots,Q_6$ is given in eq. \eqn{eq:gs1ndrN3Kpp}.
+The two-loop generalization of (\ref{gammaB0}) has been calculated only
+last year \cite{misiakmuenz:95}. It is given for both NDR and HV
+schemes as follows
+\begin{eqnarray}
+\gamma^{(1)}_{77} &=& 
+   C_F \left(\frac{548}{9} N - 16 C_F - \frac{56}{9} f \right)
+\nn \\
+\gamma^{(1)}_{78} &=& 0
+\label{gammaB1} \\
+\gamma^{(1)}_{87} &=& 
+   C_F \left(-\frac{404}{27} N +\frac{32}{3} C_F +\frac{56}{27} f \right)
+\nn \\
+\gamma^{(1)}_{88} &=& -\frac{458}{9} -\frac{12}{N^2}+ \frac{214}{9} N^2 +
+   \frac{56}{9} \frac{f}{N} - \frac{13}{9} f N
+\nn
+\end{eqnarray}
+
+The generalization of \eqn{eq:g0127}--\eqn{eq:g0568} to next-to-leading
+order requires three loop calculations which have not been done yet.
+The $O(\as)$ corrections to $C_{7\gamma}(\mw)$ and $C_{8G}(\mw)$ have
+been considered in \cite{Yao1}.
+
+\subsection{Results for the Wilson Coefficients}
+         \label{sec:Heff:BXsgamma:wcres}
+The leading order results for the Wilson Coefficients of all operators
+entering the effective hamiltonian in (\ref{eq:HeffBXsgamma}) can be written
+in an analytic form. They are \cite{BMMP:94}
+\begin{eqnarray}
+\label{coeffs}
+C_j^{(0)}(\mu)    & = & \sum_{i=1}^8 k_{ji} \eta^{a_i}
+  \qquad (j=1,\ldots,6)  \\
+\label{C7eff}
+C_{7\gamma}^{(0)eff}(\mu) & = & 
+\eta^\frac{16}{23} C_{7\gamma}^{(0)}(\mw) + \frac{8}{3}
+   \left(\eta^\frac{14}{23} - \eta^\frac{16}{23}\right) C_{8G}^{(0)}(\mw) +
+    C_2^{(0)}(\mw)\sum_{i=1}^8 h_i \eta^{a_i},
+\label{C7Geff}
+\\
+C_{8G}^{(0)eff}(\mu) & = & 
+\eta^\frac{14}{23} C_{8G}^{(0)}(\mw) 
+   + C_2^{(0)}(\mw) \sum_{i=1}^8 \bar h_i \eta^{a_i},
+\end{eqnarray}
+with
+\begin{eqnarray}
+\eta & = & \frac{\as(\mw)}{\as(\mu)}, 
+\end{eqnarray}
+and $C_{7\gamma}^{(0)}(\mw)$
+and $ C_{8G}^{(0)}(\mw)$ given in (\ref{c7}) and (\ref{c8}),
+respectively. The numbers $a_i$, $k_{ji}$, $h_i$ and $\bar h_i$ are
+given in table \ref{tab:akh}.
+
+\begin{table}[htb]
+\caption[]{
+\label{tab:akh}}
+\begin{center}
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|}
+$i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+$a_i $&$ \frac{14}{23} $&$ \frac{16}{23} $&$ \frac{6}{23} $&$
+-\frac{12}{23} $&$
+0.4086 $&$ -0.4230 $&$ -0.8994 $&$ 0.1456 $\\
+$k_{1i} $&$ 0 $&$ 0 $&$ \frac{1}{2} $&$ - \frac{1}{2} $&$
+0 $&$ 0 $&$ 0 $&$ 0 $\\
+$k_{2i} $&$ 0 $&$ 0 $&$ \frac{1}{2} $&$  \frac{1}{2} $&$
+0 $&$ 0 $&$ 0 $&$ 0 $\\
+$k_{3i} $&$ 0 $&$ 0 $&$ - \frac{1}{14} $&$  \frac{1}{6} $&$
+0.0510 $&$ - 0.1403 $&$ - 0.0113 $&$ 0.0054 $\\
+$k_{4i} $&$ 0 $&$ 0 $&$ - \frac{1}{14} $&$  - \frac{1}{6} $&$
+0.0984 $&$ 0.1214 $&$ 0.0156 $&$ 0.0026 $\\
+$k_{5i} $&$ 0 $&$ 0 $&$ 0 $&$  0 $&$
+- 0.0397 $&$ 0.0117 $&$ - 0.0025 $&$ 0.0304 $\\
+$k_{6i} $&$ 0 $&$ 0 $&$ 0 $&$  0 $&$
+0.0335 $&$ 0.0239 $&$ - 0.0462 $&$ -0.0112 $\\
+$h_i $&$ 2.2996 $&$ - 1.0880 $&$ - \frac{3}{7} $&$ -
+\frac{1}{14} $&$ -0.6494 $&$ -0.0380 $&$ -0.0185 $&$ -0.0057 $\\
+$\bar h_i $&$ 0.8623 $&$ 0 $&$ 0 $&$ 0
+ $&$ -0.9135 $&$ 0.0873 $&$ -0.0571 $&$ 0.0209 $\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Numerical Analysis}
+         \label{sec:Heff:BXsgamma:num}
+The decay $B \to X_s \gamma$ is the only decay in our review for which
+the complete NLO corrections are not available. In presenting the
+numerical values for the Wilson coefficients a few remarks on the choice
+of $\as$ should therefore be made. In the leading order the leading
+order expression for $\as$ should be used. The question then is what to
+use for $\Lambda_{\rm QCD}$ in this expression. In other decays for
+which NLO corrections were available this was not important because LO
+results were secondary. We have therefore simply inserted our standard
+$\Lms$ values into the LO formula for $\as$. This procedure gives
+$\as^{(5)}(\mz)=0.126, 0.136, 0.144$ for $\Lms^{(5)}=140\mev,
+225\mev, 310\mev$, respectively. In view of these high values of
+$\as^{(5)}(\mz)$ we will proceed here differently. Following
+\cite{BMMP:94} we will use $\as^{(5)}(\mz)=0.110, 0.117, 0.124$ as
+in our NLO calculations , but we will evolve $\as(\mu)$ to $\mu \approx
+\ord(\mb)$ using the leading order expressions. In short, we will use
+\begin{equation} 
+\as(\mu) = \frac{\as(\mz)}{1 - \beta_0 \as(\mz)/2\pi \, \ln(\mz/\mu)} \, .
+\label{eq:asmumz}
+\end{equation} 
+This discussion shows again the importance of the complete NLO
+calculation for this decay.
+
+Before starting the discussion of the numerical values for the
+coefficients $C^{(0)eff}_{7\gamma}$ and $C^{(0)eff}_{8G}$, let us
+illustrate the relative numerical importance of the three terms in
+expression (\ref{C7eff}) for $C^{(0)eff}_{7\gamma}$. 
+
+For instance, for $\mt = 170\gev$, $\mu = 5\gev$ and $\as^{(5)}(\mz)
+=0.117$ one obtains
+\begin{eqnarray}
+C^{(0)eff}_{7\gamma}(\mu) &=&
+0.698 \; C^{(0)}_{7\gamma}(\mw) +
+0.086 \; C^{(0)}_{8G}(\mw) - 0.156 \; C^{(0)}_2(\mw)
+\nn\\
+ &=& 0.698 \; (-0.193) + 0.086 \; (-0.096) - 0.156 = -0.299 \, .
+\label{eq:C7geffnum}
+\end{eqnarray}
+
+In the absence of QCD we would have $C^{(0)eff}_{7\gamma}(\mu) =
+C^{(0)}_{7\gamma}(\mw)$ (in that case one has $\eta = 1$). Therefore, the
+dominant term in the above expression (the one proportional to
+$C^{(0)}_2(\mw)$) is the additive QCD correction that causes the
+enormous QCD enhancement of the $\bsg$ rate \cite{Bert}, \cite{Desh}.
+It originates solely from the two-loop diagrams. On the other hand, the
+multiplicative QCD correction (the factor 0.698 above) tends to
+suppress the rate, but fails in the competition with the additive
+contributions.
+
+In the case of $C^{(0)eff}_{8G}$ a similar enhancement is observed
+\begin{eqnarray}
+C^{(0)eff}_{8G}(\mu) &=&
+0.730 \; C^{(0)}_{8G}(\mw) - 0.073 \; C^{(0)}_2(\mw)
+\nn \\
+ &=& 0.730 \; (-0.096) - 0.073 = -0.143 \, .
+\label{eq:C8Geffnum}
+\end{eqnarray}
+
+In table \ref{tab:c78effnum} we give the values of
+$C^{(0)eff}_{7\gamma}$ and $C^{(0)eff}_{8G}$ for different values of
+$\mu$ and $\as^{(5)}(\mz)$. To this end \eqn{eq:asmumz} has been used.
+A strong $\mu$-dependence of both coefficients is observed.  We will
+return to this dependence in section \ref{sec:Heff:Bsgamma}.
+
+\begin{table}[htb]
+\caption[]{Wilson coefficients $C^{(0)eff}_{7\gamma}$ and $C^{(0)eff}_{8G}$
+for $\mt = 170 \gev$ and various values of $\as^{(5)}(\mz)$ and $\mu$.
+\label{tab:c78effnum}}
+\begin{center}
+\begin{tabular}{|c||c|c||c|c||c|c|}
+& \multicolumn{2}{c||}{$\as^{(5)}(\mz) = 0.110$} &
+  \multicolumn{2}{c||}{$\as^{(5)}(\mz) = 0.117$} &
+  \multicolumn{2}{c| }{$\as^{(5)}(\mz) = 0.124$} \\
+\hline
+$\mu [\gev]$ & 
+$C^{(0)eff}_{7\gamma}$ & $C^{(0)eff}_{8G}$ &
+$C^{(0)eff}_{7\gamma}$ & $C^{(0)eff}_{8G}$ &
+$C^{(0)eff}_{7\gamma}$ & $C^{(0)eff}_{8G}$ \\
+\hline
+ 2.5 & --0.323 & --0.153 & --0.334 & --0.157 & --0.346 & --0.162 \\
+ 5.0 & --0.291 & --0.140 & --0.299 & --0.143 & --0.307 & --0.147 \\
+ 7.5 & --0.275 & --0.133 & --0.281 & --0.136 & --0.287 & --0.139 \\
+10.0 & --0.263 & --0.129 & --0.268 & --0.131 & --0.274 & --0.133
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{The Effective Hamiltonian for $B\to X_{\lowercase{s}}
+         \lowercase{e}^+\lowercase{e}^-$}
+         \label{sec:Heff:BXsee}
+The effective hamiltonian for $B\to X_s e^+e^-$ at scales $\mu=O(\mb)$
+is given by
+\begin{eqnarray} \label{eq:Heff2atmu}
+\Heff(b\to s e^+e^-) &=&
+\Heff(b\to s\gamma)  - \\
+& & \frac{G_F}{\sqrt{2}} V_{ts}^* V_{tb}^{} \left[ C_{9V}(\mu) Q_{9V}(\mu)+
+C_{10A}(\mu) Q_{10A}(\mu) \right]
+\nn
+\end{eqnarray}
+where again we have neglected the term proportional to $V_{us}^*V_{ub}^{}$
+and $\Heff(b\to s\gamma)$ is given in (\ref{eq:HeffBXsgamma}).
+
+\subsection{Operators}
+         \label{sec:Heff:BXsee:ops}
+In addition to the operators relevant for $B\to X_s\gamma$,
+there are two new operators
+\begin{equation}\label{Q9V}
+Q_{9V}    = (\bar{s} b)_{V-A}  (\bar{e}e)_V         
+\qquad
+Q_{10A}  =  (\bar{s} b)_{V-A}  (\bar{e}e)_A
+\end{equation}
+where $V$ and $A$ refer to $\gamma_{\mu}$ and $ \gamma_{\mu}\gamma_5$,
+respectively.
+
+They originate in the $Z^0$- and $\gamma$-penguin diagrams
+with external $\bar{e}e$ of fig.\ \ref{fig:oporig}\,(f) and from the
+corresponding box diagrams.
+\subsection{Wilson Coefficients}
+         \label{sec:Heff:BXsee:wc}
+The coefficient $C_{10A}(\mu)$ is given by
+\begin{equation} \label{C10}
+C_{10A}(\mw) =  \frac{\aem}{2\pi} \Ctilde_{10}(\mw), \qquad
+\Ctilde_{10}(\mw) = - \frac{Y_0(x_t)}{\sin^2\Theta_W}
+\end{equation}
+with $Y_0(x)$ given in \eqn{eq:yz0}. Since $Q_{10A}$ does not renormalize
+under QCD, its coefficient does not depend on $\mu\approx {\cal
+O}(\mb)$. The only renormalization scale dependence in (\ref{C10})
+enters through the definition of the top quark mass. We will return to
+this issue in section \ref{sec:Heff:BXsee:nlo:num}.
+
+The coefficient $C_{9V}(\mu)$ has been calculated over the last years
+with increasing precision by several groups \cite{grinstein:89a},
+\cite{GDSN:89}, \cite{cellaetal:91}, \cite{misiak:93} culminating in two
+complete next-to-leading QCD calculations \cite{misiak:94},
+\cite{burasmuenz:95} which agree with each other.
+
+In order to calculate the coefficient $C_{9V}$ including
+next-to-leading order corrections we have to perform in principle a
+two-loop renormalization group analysis for the full set of operators
+contributing to (\ref{eq:Heff2atmu}). However, $Q_{10A}$ is not
+renormalized and the dimension five operators $Q_{7\gamma}$ and
+$Q_{8G}$ have no impact on $C_{9V}$. Consequently only a set of seven
+operators, $Q_1,\ldots,Q_6$ and $Q_{9V}$, has to be considered. This is
+precisely the case of the decay $\kpiee$ discussed in \cite{burasetal:94a}
+and in section \ref{sec:HeffKpe}, except for an appropriate change of quark
+flavours and the fact that now $\mu\approx {\cal O}(\mb)$ instead of
+$\mu\approx {\cal O}(1\gev)$. Since the NLO analysis of $\kpiee$ has
+already been presented in section \ref{sec:HeffKpe} we will only give the
+final result for $C_{9V}(\mu)$. Because of the one step evolution from
+$\mu=\mw$ down to $\mu=\mb$ without any thresholds in between it is
+possible to find an analytic formula for $C_{9V}(\mu)$. Defining
+$\tilde C_{9}$ by
+\begin{equation} \label{C9}
+C_{9V}(\mu) = \frac{\aem}{2\pi} \Ctilde_9(\mu) 
+\end{equation}
+one finds \cite{burasmuenz:95} in the NDR scheme
+\begin{equation}\label{C9tilde}
+\Ctilde_9^{NDR}(\mu)  =  
+P_0^{NDR} + \frac{Y_0(x_t)}{\sin^2\Theta_W} -4 Z_0(x_t) +
+P_E E_0(x_t)
+\end{equation}
+with
+\begin{eqnarray}
+\label{P0NDR}
+P_0^{NDR} & = & \frac{\pi}{\as(\mw)} (-0.1875+ \sum_{i=1}^8 p_i
+\eta^{a_i+1}) \nn \\ 
+          &   & + 1.2468 +  \sum_{i=1}^8 \eta^{a_i} \lbrack
+r^{NDR}_i+s_i \eta \rbrack \\ 
+\label{PE}
+P_E & = & 0.1405 +\sum_{i=1}^8 q_i\eta^{a_i+1}  \, .
+\end{eqnarray}
+The functions $Y_0(x)$ and $Z_0(x)$ are defined by
+\begin{equation}
+Y_0(x) = C_0(x) - B_0(x)
+\qquad
+Z_0(x) = C_0(x) + \frac{1}{4} D_0(x)
+\label{eq:yz0}
+\end{equation}
+with $B_0(x)$, $C_0(x)$ and $D_0(x)$ given in \eqn{eq:Bxt},
+\eqn{eq:Cxt} and \eqn{eq:Dxt}, respectively. $E_0(x)$ is given in
+eq.\ \eqn{eq:Ext}. The powers $a_i$ are the same as in table
+\ref{tab:akh}.  The coefficients $p_i$, $r^{NDR}_i$, $s_i$, and $q_i$
+can be found in table \ref{tab:prsq}.  $P_E$ is ${\cal O}(10^{-2})$ and
+consequently the last term in (\ref{C9tilde}) can be neglected. We keep
+it however in our numerical analysis. These results agree with
+\cite{misiak:94}.
+
+\begin{table}[htb]
+\caption[]{
+\label{tab:prsq}}
+\begin{center}
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|}
+$i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+$p_i $&$ 0, $&$ 0, $&$ -\frac{80}{203}, $&$  \frac{8}{33}, $&$
+0.0433 $&$  0.1384 $&$ 0.1648 $&$ - 0.0073 $\\
+$r^{NDR}_{i} $&$ 0 $&$ 0 $&$ 0.8966 $&$ - 0.1960 $&$
+- 0.2011 $&$ 0.1328 $&$ - 0.0292 $&$ - 0.1858 $\\
+$s_i $&$ 0 $&$ 0 $&$ - 0.2009 $&$  -0.3579 $&$
+0.0490 $&$ - 0.3616 $&$ -0.3554 $&$ 0.0072 $\\
+$q_i $&$ 0 $&$ 0 $&$ 0 $&$  0 $&$
+0.0318 $&$ 0.0918 $&$ - 0.2700 $&$ 0.0059 $\\
+\svs
+$r^{HV}_{i} $&$ 0 $&$ 0 $&$ -0.1193 $&$ 0.1003 $&$
+- 0.0473 $&$ 0.2323 $&$ - 0.0133 $&$ - 0.1799 $
+\end{tabular}
+\end{center}
+\end{table}
+
+In the HV scheme only the coefficients $r_i$ are changed. 
+They are given on the last line of table \ref{tab:prsq}.
+Equivalently we can write
+\begin{equation} \label{P0HV}
+P_0^{k} = P_0^{NDR} + \xi_{k} \frac{4}{9} \left( 3 C_1^{(0)} +
+C_2^{(0)} - C_3^{(0)} -3 C_4^{(0)} \right)
+\end{equation}
+with
+\begin{equation} \label{xi}
+\xi_k = \left\{
+\begin{array}{rl}
+0  &\quad k=\mbox{NDR} \\
+-1 &\quad k=\mbox{HV}
+\end{array} \, .
+\right.
+\end{equation}
+We note that
+\begin{eqnarray}
+\label{sums1}
+\sum_{i=1}^8 p_i = 0.1875, &\quad& \sum_{i=1}^8 q_i = -
+0.1405, \\
+\label{sums2}
+\sum_{i=1}^8 (r_i^k + s_i) = - 1.2468 + \frac{4}{9} (1 +
+\xi_k), &\quad& \sum_{i=1}^8 p_i (a_i + 1) = - \frac{16}{69}.
+\end{eqnarray}
+In this way for $\eta=1$ one finds $P_E=0$, $P_0^{NDR} = 4/9$ and
+$P_0^{HV} = 0$ in accordance with the initial conditions at $\mu=\mw$.
+ Moreover, the second relation in (\ref{sums2})
+assures the correct large logarithm in $P_0^{NDR}$, i.e.\ $8/9\, \ln
+(\mw/\mu)$. 
+
+The special feature of $C_{9V}(\mu)$ compared to the coefficients
+of the remaining operators contributing to $B\to X_s e^+e^-$ is the
+large logarithm represented by $1/\as$ in $P_0$ in
+(\ref{P0NDR}). Consequently the renormalization group improved
+perturbation theory for $C_{9V}$ has the structure $ {\cal O}(1/\as) +
+{\cal O}(1) + {\cal O}(\as)+ \ldots$, whereas the corresponding series
+for the remaining coefficients is $ {\cal O}(1) + {\cal O}(\as)+
+\ldots$\,. Therefore in order to find the next-to-leading ${\cal O}(1)$
+term in the branching ratio for $B\to X_s e^+e^-$, the full two-loop
+renormalization group analysis has to be performed in order to find
+$C_{9V}$, but the coefficients of the remaining operators should be
+taken in the leading logarithmic approximation. This is gratifying
+because the coefficient of the magnetic operator $Q_{7\gamma}$ is known
+only in the leading logarithmic approximation.
+
+\subsection{Numerical Results}
+         \label{sec:Heff:BXsee:num}
+In our numerical analysis we will use the two-loop expression for
+$\as$ and the parameters collected in the appendix. Our
+presentation follows closely the one given in \cite{burasmuenz:95}. 
+
+In table \ref{tab:p0C9} we show the constant $P_0$ in (\ref{P0NDR}) for
+different $\mu$ and $\Lms$, in the leading order corresponding to the
+first term in (\ref{P0NDR}) and for the NDR and HV schemes as given by
+(\ref{P0NDR}) and (\ref{P0HV}), respectively. In table \ref{tab:BXsee:C9} we
+show the corresponding values for $\Ctilde_9(\mu)$. To this end
+we set $\mt= 170 \gev$. 
+
+\begin{table}[htb]
+\caption[]{The coefficient $P_0$ of $\widetilde C_9$ for various values
+of $\Lms^{(5)}$ and $\mu$.
+\label{tab:p0C9}}
+\begin{center}
+\begin{tabular}{|c||c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(5)} = 140 \mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(5)} = 225 \mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(5)} = 310 \mev$} \\
+\hline
+$\mu [\gev]$ & LO & NDR & HV & LO & NDR & HV & LO & NDR & HV \\
+\hline
+2.5 & 2.053 & 2.928 & 2.797 & 1.933 & 2.846 & 2.759 & 1.835 & 2.775 &
+2.727 \\
+5.0 & 1.852 & 2.625 & 2.404 & 1.788 & 2.591 & 2.395 & 1.736 & 2.562 &
+2.388 \\
+7.5 & 1.675 & 2.391 & 2.127 & 1.632 & 2.373 & 2.127 & 1.597 & 2.358 &
+2.128 \\
+10.0 & 1.526 & 2.204 & 1.912 & 1.494 & 2.194 & 1.917 & 1.469 & 2.185 &
+1.921
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\caption[]{Wilson coefficient $\widetilde C_9$ for $\mt = 170 \gev$ and
+various values of $\Lms^{(5)}$ and $\mu$.
+\label{tab:BXsee:C9}}
+\begin{center}
+\begin{tabular}{|c||c|c|c||c|c|c||c|c|c|}
+& \multicolumn{3}{c||}{$\Lms^{(5)} = 140 \mev$} &
+  \multicolumn{3}{c||}{$\Lms^{(5)} = 225 \mev$} &
+  \multicolumn{3}{c| }{$\Lms^{(5)} = 310 \mev$} \\
+\hline
+$\mu [\gev]$ & LO & NDR & HV & LO & NDR & HV & LO & NDR & HV \\
+\hline
+2.5 & 2.053 & 4.493 & 4.361 & 1.933 & 4.410 & 4.323 & 1.835 & 4.338 &
+4.290 \\
+5.0 & 1.852 & 4.191 & 3.970 & 1.788 & 4.156 & 3.961 & 1.736 & 4.127 &
+3.954 \\
+7.5 & 1.675 & 3.958 & 3.694 & 1.632 & 3.940 & 3.694 & 1.597 & 3.924 &
+3.695 \\
+10.0 & 1.526 & 3.772 & 3.480 & 1.494 & 3.761 & 3.485 & 1.469 & 3.752 &
+3.488
+\end{tabular}
+\end{center}
+\end{table}
+
+\noindent
+We observe:
+\begin{itemize}
+\item
+The NLO corrections to $P_0$ enhance this constant relatively to the
+LO result by roughly 45\% and 35\% in the NDR and HV schemes,
+respectively. This enhancement is analogous to the one found in the
+case of $\kpiee$.
+\item
+In calculating $P_0$ in the LO we have used $\as(\mu)$ at one-loop
+level. Had we used the two-loop expression for $\as(\mu)$ we
+would find for $\mu=5 \gev$ and $\Lms^{(5)} = 225 \mev$ the value $P_0^{LO}
+\approx 1.98$. Consequently the NLO corrections would have smaller
+impact. Ref.~\cite{grinstein:89a} including the next-to-leading term $4/9$
+would find $P_0$ values roughly 20\% smaller than $P_0^{NDR}$ given in
+table \ref{tab:p0C9}.
+\item
+It is tempting to compare $P_0$ in table \ref{tab:p0C9} with that found in
+the absence of QCD corrections. In the limit $\as \to 0$ we
+find $P_0^{NDR} = 8/9 \, \ln(\mw/\mu) + 4/9$ and $P_0^{HV} = 8/9\,
+\ln(\mw/\mu)$ which for $\mu = 5 \gev$ give $P_0^{NDR} = 2.91$ and
+$P_0^{HV} = 2.46$. Comparing these values with table~\ref{tab:p0C9} we
+conclude that the QCD suppression of $P_0$ present in the leading order
+approximation is considerably weakened in the NDR treatment of
+$\gamma_5$ after the inclusion of NLO corrections. It is essentially
+removed for $\mu > 5 \gev$ in the HV scheme.
+\item
+The NLO corrections to $\Ctilde_9$ which include also the
+$\mt$-dependent contributions are large as seen in table
+\ref{tab:BXsee:C9}. The results in HV and NDR schemes are by more than
+a factor of two larger than the leading order result $\Ctilde_9 =
+P_0^{LO}$ which consistently should not include $\mt$-contributions.
+This demonstrates very clearly the necessity of NLO calculations which
+allow a consistent inclusion of the important $\mt$-contributions. For
+the same set of parameters the authors of \cite{grinstein:89a}
+would find $\Ctilde_9$ to be smaller than $\Ctilde_9^{NDR}$ by
+10--15\%.
+\item
+The $\Lms$ dependence of $\Ctilde_9$ is rather weak.  On the other
+hand its $\mu$ dependence is sizable ($\sim 15\%$ in the range of $\mu$
+considered) although smaller than in the case of the coefficients
+$C_{7\gamma}$ and $C_{8G}$ given in table \ref{tab:c78effnum}.  We also
+find that the $\mt$ dependence of $\Ctilde_9$ is rather weak. Varying
+$\mt$ between $150 \gev$ and $190 \gev$ changes $\Ctilde_9$ by at most
+10\%. This weak $\mt$ dependence of $\Ctilde_9$ originates in the
+partial cancelation of $\mt$ dependences between $Y_0(x_t)$ and
+$Z_0(x_t)$ in (\ref{C9tilde}) as already seen in the case of $\kpiee$
+in fig.\ \ref{fig:kpiee:mty7VA}. Finally, the difference between
+$\Ctilde_9^{NDR}$ and $\Ctilde_9^{HV}$ is small and amounts to roughly 5\%.
+\item
+The dominant $\mt$-dependence in this decay originates in the $\mt$
+dependence of $\tilde C_{10}(\mw)$. In fact, as can be seen in section
+\ref{sec:HeffKpe} $\tilde C_{10}(\mw)=2\pi y_{7A}/\aem$ with $y_{7A}$
+present in $K_L \to \pi^0 e^+ e^-$. The $\mt$ dependence of $y_{7A}$ is
+shown in fig.\ \ref{fig:kpiee:mty7VA}.
+\end{itemize}

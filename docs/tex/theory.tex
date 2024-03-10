@@ -1,0 +1,83 @@
+
+By integrating out the weak bosons from the standard model we obtain an 
+effective theory, called weak effective hamiltonian. 
+As an effective theory it loses the property of being renormalizable,
+meaning that at each order in perturbation theory a new (finite) set of couplings and operators
+is needed to properly cancel the remaining divergences. Nevertheless, if we work at a fixed 
+order the theory is finite and in the following we will concentrate only 
+on the leading order effective theory.
+
+Composite operators in the effective theory are expected to mix under renormalization, unless
+there is a symmetry protecting them. This mixing can be generically expressed through a 
+$Z$-factor matrix, which can be perturbatively expanded in terms of the so-called 
+anomalous dimension matrices. Once they are known, the operators or alternatively the Wilson Coefficients
+can be run to low energies and the implementation provided in this library includes effects
+up to $O(\as)$ and $O(\aem)$.
+
+The Wilson Coefficients are obtained by comparing 
+(order by order in perturbation theory) amplitudes computed in the standard model
+against amplitudes computed in the effective theory. Obviously amplitudes are scheme-independent
+but the two parts of the calculation, the Wilson Coefficients and the low-energy matrix elements, 
+individually depend on the scheme. 
+
+\subsection{The $\Delta F=1$ Hamiltonian}
+
+We are interested here in weak decays where either the strange or the bottom quantum numbers 
+are violated by one unit. In general these processes can be described by a single effective
+hamiltonian
+
+\begin{equation}
+H_W = \frac{G_F}{\sqrt{2}}V_{us}^*V_{ud}\sum_{i=1}^{10} \bigl[z_i(\mu) + \tau y_i(\mu)\bigr] Q_i(\mu).
+\label{eq:H_W}
+\end{equation}
+
+The 10-operator basis is given below. The scope of this library is to provide the user
+with a few easy-to-use Mathematica functions to immediately compute the (renormalized) 
+coefficients $z_i$ and $y_i$ at a given renormalization scale $\mu$. The matrix elements 
+$Q_i$ must be computed in the same scheme to obtain consistent result at the end.
+
+\leftline{\bf Current-Current Operators}
+
+\begin{eqnarray}
+Q_{1} = \left( \bar s_{i} u_{j}  \right)_{\rm V-A}
+            \left( \bar u_{j}  d_{i} \right)_{\rm V-A}
+&\qquad&
+Q_{2} = \left( \bar s u \right)_{\rm V-A}
+            \left( \bar u d \right)_{\rm V-A}
+\label{eq:Q12}
+\end{eqnarray}
+
+\leftline{\bf QCD-Penguins Operators}
+
+\begin{eqnarray}
+Q_{3} = \left( \bar s d \right)_{\rm V-A}
+   \sum_{q} \left( \bar q q \right)_{\rm V-A}
+&\qquad&
+Q_{4} = \left( \bar s_{i} d_{j}  \right)_{\rm V-A}
+   \sum_{q} \left( \bar q_{j}  q_{i} \right)_{\rm V-A}
+\label{eq:Q34} \\
+Q_{5} = \left( \bar s d \right)_{\rm V-A}
+   \sum_{q} \left( \bar q q \right)_{\rm V+A}
+&\qquad&
+Q_{6} = \left( \bar s_{i} d_{j}  \right)_{\rm V-A}
+   \sum_{q} \left( \bar q_{j}  q_{i} \right)_{\rm V+A}
+\label{eq:Q56}
+\end{eqnarray}
+
+\leftline{\bf Electroweak-Penguins Operators}
+
+\begin{eqnarray}
+Q_{7} = \frac{3}{2} \left( \bar s d \right)_{\rm V-A}
+         \sum_{q} e_{q} \left( \bar q q \right)_{\rm V+A}
+&\qquad&
+Q_{8} = \frac{3}{2} \left( \bar s_{i} d_{j} \right)_{\rm V-A}
+         \sum_{q} e_{q} \left( \bar q_{j}  q_{i}\right)_{\rm V+A}
+\label{eq:Q78} \\
+Q_{9} = \frac{3}{2} \left( \bar s d \right)_{\rm V-A}
+         \sum_{q} e_{q} \left( \bar q q \right)_{\rm V-A}
+&\qquad&
+Q_{10} = \frac{3}{2} \left( \bar s_{i} d_{j} \right)_{\rm V-A}
+         \sum_{q} e_{q} \left( \bar q_{j}  q_{i}\right)_{\rm V-A}
+\label{eq:Q910}
+\end{eqnarray}
+
