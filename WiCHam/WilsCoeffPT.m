@@ -1,27 +1,6 @@
 (* ::Package:: *)
 
 (* ::Section:: *)
-(*Wilson Coeffcients*)
-
-
-SinThetaW2=0.23;
-C1[a_]:=11/2*a/(4 \[Pi])*NLO;
-C2[a_,ae_]:=1-11/6*a/(4 \[Pi])*NLO-35/18*ae/(4*Pi)*NLO;
-E0[x_]:=-(2/3)*Log[x]+(x*(18-11*x-x^2))/(12*(1-x)^3)+(x^2*(15-16*x+4*x^2))/(6*(1-x)^4)*Log[x];
-B0[x_]:=0.25*(x/(1-x)+x*Log[x]/(x-1)^2);
-C0[x_]:=x/8*((x-6)/(x-1)+(3*x+2)*Log[x]/(x-1)^2);
-C3[a_,mt_,MW_,ae_]:=-(a/(24 \[Pi]))*(E0[mt^2/MW^2]-2/3*NLO)+ae/(6*Pi*SinThetaW2)*(2*B0[mt^2/MW^2]+C0[mt^2/MW^2]);
-C4[a_,mt_,MW_]:=a/(8 \[Pi])*(E0[mt^2/MW^2]-2/3*NLO);
-C5[a_,mt_,MW_]:=-(a/(24 \[Pi]))*(E0[mt^2/MW^2]-2/3*NLO);
-C6[a_,mt_,MW_]:=C4[a,mt,MW];
-D0[x_]:=-4/9*Log[x]+(25*x^2-19*x^3)/36/(x-1)^3+x^2*Log[x]*(5*x^2-2*x-6)/18/(x-1)^4;
-C7[mt_,MW_,ae_]:=ae/(6*Pi)*(4*C0[mt^2/MW^2]+D0[mt^2/MW^2]-4/9*NLO);
-C8=0;
-C9[mt_,MW_,ae_]:=ae/(6*Pi)*(4*C0[mt^2/MW^2]+D0[mt^2/MW^2]-4/9*NLO+(10*B0[mt^2/MW^2]-4*C0[mt^2/MW^2])/SinThetaW2);
-C10=0;
-
-
-(* ::Section:: *)
 (*Computation of z and y coefficients*)
 
 
@@ -49,7 +28,7 @@ z12=Umat.z12;Return[Fs[0,z12]]];
 Umat=FullU[as*aref,as*alphas[mcharm,Lam,3,4,loop],ae*aem,beta0[3,4],gammas0[3,4,2],gammae0[3,4,2,2],MM,JJ];
 z12=Umat.z12;
 aref=alphas[mcharm,Lam,3,4,loop];
-z=FseMat[as*aref,ae*aem].z12;
+z=Fse[as*aref,z12,ae*aem];
 If[mu==mcharm,Return[z]];
 (* Matching 4 to 3 flavor theories*)
 Lam=FindLambda[aref,mcharm,3,3,loop];

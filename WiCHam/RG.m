@@ -71,6 +71,14 @@ Fe=-4/9*(3*z1+z2);
 Transpose[{{z1,z2,NLO*a/(36*Pi)*z2,-NLO*a/(12*Pi)*z2,NLO*a/(36*Pi)*z2,-NLO*a/(12*Pi)*z2,NLO*aw/(6*Pi)*Fe,0,NLO*aw/(6*Pi)*Fe,0}}]];
 
 
+FseMat[a_,aem_]:=Module[{Fe,res,f1,f2},
+f1=NLO*a/(36*Pi);
+f2=-NLO*a/(12*Pi);
+Fe=NLO*aem/(6*Pi)*(-4/9);
+res={{1,0},{0,1},{0,f1},{0,f2},{0,f1},{0,f2},{Fe*3,Fe*1},{0,0},{Fe*3,Fe*1},{0,0}};
+Return[res]];
+
+
 ReduceOrder[expr_,order_:"LO"]:=Module[{tmp,expr2},
 expr2=Normal[Series[expr,{NLO,0,1}]];
 If[order=="LO",expr2=expr2/.{NLO->0}];
