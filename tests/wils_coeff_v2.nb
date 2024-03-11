@@ -1,0 +1,216 @@
+In[13]:= (* LOAD THE WiCHam LIBRARY *)
+Get[NotebookDirectory[]<>"../WiCHam.m"]
+During evaluation of In[13]:= WiCHam library written by Mattia Bruno, February 2016
+Parameters
+In[91]:= MW
+MZ
+mtop
+mbottom
+mcharm
+alphaQED=1/129;
+Out[91]= 80.2
+Out[92]= 91.3964
+Out[93]= 170
+Out[94]= 4.4
+Out[95]= 1.3
+Table X
+In[142]:= (* TABLE X, LO *)
+Lam4=0.325;
+loop=1;
+mu=1;
+Lam5=FindLambda[alphas[mbottom,Lam4,3,4,loop],mbottom,3,5,loop];z=ReduceOrder[ComputeZ[mu,alphas[MW,Lam5,3,5,loop],loop,MW,0],"LO"];
+z//MatrixForm
+v=ReduceOrder[ComputeV[mu,alphas[MW,Lam5,3,5,loop],loop,MW,0],"LO"];
+y=v-z;
+y//MatrixForm
+Out[146]//MatrixForm= (-0.742949
+1.42251
+0.00429497
+-0.0117089
+0.0037539
+-0.0124895
+0.
+0.
+0.
+0.
+
+)
+Out[149]//MatrixForm= (0.
+0.
+0.0363267
+-0.0598403
+0.0131931
+-0.111105
+0.
+0.
+0.
+0.
+
+)
+In[150]:= (* TABLE X, NLO *)
+Lam4=0.325;
+loop=2;
+mu=1;
+Lam5=FindLambda[alphas[mbottom,Lam4,3,4,loop],mbottom,3,5,loop];z=ReduceOrder[ComputeZ[mu,alphas[MW,Lam5,3,5,loop],loop,MW,0],"NLO"];
+z//MatrixForm
+v=ReduceOrder[ComputeV[mu,alphas[MW,Lam5,3,5,loop],loop,MW,0],"NLO"];
+y=v-z;
+y//MatrixForm
+Out[154]//MatrixForm= (-0.50595
+1.26986
+0.0124686
+-0.0344088
+0.00752316
+-0.0343106
+0.
+0.
+0.
+0.
+
+)
+Out[157]//MatrixForm= (1.11022*10^-16
+2.22045*10^-16
+0.0306774
+-0.0559911
+-0.00073347
+-0.109302
+0.
+0.
+0.
+0.
+
+)
+Table XVIII
+In[113]:= (* TABLE XVIII, LO *)
+Lam4=0.325;
+loop=1;
+mu=1;
+Lam5=FindLambda[alphas[mbottom,Lam4,3,4,loop],mbottom,3,5,loop];z=ReduceOrder[ComputeZ[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"LO"];
+z[[1;;6]]//MatrixForm
+z[[7;;10]]/alphaQED//MatrixForm
+v=ReduceOrder[ComputeV[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"LO"];
+y=v-z;
+y[[3;;6]]//MatrixForm
+y[[7;;10]]/alphaQED//MatrixForm
+Out[117]//MatrixForm= (-0.748308
+1.43277
+0.00432494
+-0.0117906
+0.00378013
+-0.0125767
+
+)
+Out[118]//MatrixForm= (0.00777977
+0.000658187
+0.00820381
+-0.000616707
+
+)
+Out[121]//MatrixForm= (0.0381087
+-0.0615291
+0.0134495
+-0.112937
+
+)
+Out[122]//MatrixForm= (0.0355819
+0.158194
+-1.58483
+0.800166
+
+)
+In[123]:= (* TABLE XVIII, NLO *)
+Lam4=0.325;
+loop=2;
+mu=1;
+Lam5=FindLambda[alphas[mbottom,Lam4,3,4,loop],mbottom,3,5,loop];z=ReduceOrder[ComputeZ[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"NLO"];
+z[[1;;6]]//MatrixForm
+z[[7;;10]]/alphaQED//MatrixForm
+v=ReduceOrder[ComputeV[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"NLO"];
+y=v-z;
+y[[3;;6]]//MatrixForm
+y[[7;;10]]/alphaQED//MatrixForm
+Out[127]//MatrixForm= (-0.509051
+1.27799
+0.012565
+-0.0346763
+0.00758129
+-0.0345758
+
+)
+Out[128]//MatrixForm= (0.0112285
+0.0142793
+0.0183816
+-0.00835854
+
+)
+Out[131]//MatrixForm= (0.0323488
+-0.0575718
+-0.000545869
+-0.110964
+
+)
+Out[132]//MatrixForm= (-0.0314865
+0.171882
+-1.57562
+0.689744
+
+)
+Table XX
+In[105]:= (* TABLE XX, LO *)
+Lam4=0.325;
+loop=1;
+mu=2;
+Lam5=FindLambda[alphas[mbottom,Lam4,3,4,loop],mbottom,3,5,loop];z=ReduceOrder[ComputeZ[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"LO"];
+z//MatrixForm
+v=ReduceOrder[ComputeV[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"LO"];
+v[[3;;6]]//MatrixForm
+v[[7;;10]]/alphaQED//MatrixForm
+Out[109]//MatrixForm= (-0.480389
+1.24797
+0
+0
+0
+0
+
+)
+Out[111]//MatrixForm= (0.0245217
+-0.047195
+0.0124332
+-0.0675399
+
+)
+Out[112]//MatrixForm= (0.0368846
+0.0839859
+-1.39302
+0.513087
+
+)
+(* TABLE XX, NLO *)
+Lam4=0.215;
+loop=2;
+mu=2;
+Lam5=FindLambda[alphas[mbottom,Lam4,3,4,loop],mbottom,3,5,loop];z=ReduceOrder[ComputeZ[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"NLO"];
+z//MatrixForm
+v=ReduceOrder[ComputeV[mu,alphas[MW,Lam5,3,5,loop],loop,MW],"NLO"];
+v[[3;;6]]//MatrixForm
+v[[7;;10]]/alphaQED//MatrixForm
+Out[101]//MatrixForm= (-0.267716
+1.12676
+0
+0
+0
+0
+
+)
+Out[103]//MatrixForm= (0.0199491
+-0.0465299
+0.0100565
+-0.0581022
+
+)
+Out[104]//MatrixForm= (-0.0229427
+0.0761938
+-1.36049
+0.355775
+
+)
