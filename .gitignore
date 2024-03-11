@@ -1,0 +1,5 @@
+docs/*
+
+!docs/manual.tex
+!docs/manual.pdf
+!docs/tex
