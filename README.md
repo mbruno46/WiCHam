@@ -1,10 +1,18 @@
 # WiCHam
-========
 
 A Mathematica library to compute the running of the Wilson coefficients for the Weak Hamiltonian
 
+- **Documentation:** https://mbruno46.github.io/WiCHam/doc/manual.pdf
+- **Examples:** [tests](./tests)
+- **Source code:** https://github.com/mbruno46/WiCHam/
+- **Bug reports:** https://github.com/mbruno46/WiCHam/issues
+
+## Main Reference
+
+If you use this library in your publication cite 
+[Weak decays beyond leading logarithms](http://inspirehep.net/record/403867)
+
 ## Setup 
-========
 
  * Download the git repository and place the directory WiCHam in your home
 
@@ -14,13 +22,7 @@ A Mathematica library to compute the running of the Wilson coefficients for the 
 Get["/path/to/WiCHam/WiCHam.m"]
 ```
 
-## Documentation
-================
-
-The functions contained in this library are documented in the file **docs/manual.pdf**
-
-## Usage
-========
+## Example
 
 To compute the Wilson Coefficients at some scale mu to LO type in your notebook
 
@@ -32,19 +34,13 @@ ReduceOrder[z,"LO"]
 
 y = ComputeY[z,mu,a1,loop_alpha];
 ReduceOrder[y,"LO"]
-
 ```
 
-The notebook file **work.nb** is ready for a calculation, just use it!
+The notebook file [work.nb](./work.nb) is ready for a calculation, just use it!
 
 ## Tests
-========
 
-In the file **test.nb** several results presented in the Reference below are correctly 
+Several results presented in the main Reference above are correctly 
 reproduced and checked. In particular LO and NLO evaluations of the Wilson Coefficients
-in Tables X, XII, XIII, XVIII, XIX and XX.
+in Tables X, XVIII and XX.
 
-## References
-=============
-
-[Weak decays beyond leading logarithms](http://inspirehep.net/record/403867)
