@@ -33,7 +33,6 @@ If[init12=={0,0},z12={C1[as*initAlphaMZ],C2[as*initAlphaMZ,ae*aem]},z12=init12];
 (* above bottom *)
 If[mu>=mbottom,
 Umat=FullU[as*initAlphaMZ,as*alphas[mu,Lam,3,5,loop],ae*aem,beta0[3,5],gammas0[3,5,2,2],gammae0[3,5,2,2],MM,JJ];
-Print[Umat];
 z12=Umat . z12;
 Return[Fs[0,z12]]];
 (* below bottom *)
