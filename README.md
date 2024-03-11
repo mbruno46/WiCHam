@@ -2,15 +2,20 @@
 
 A Mathematica library to compute the running of the Wilson coefficients for the Weak Hamiltonian
 
-- **Documentation:** https://mbruno46.github.io/WiCHam/doc/manual.pdf
+- [**Documentation**](./docs/manual.pdf)
 - **Examples:** [tests](./tests)
-- **Source code:** https://github.com/mbruno46/WiCHam/
+- [**Source code**](.//WiCHam)
 - **Bug reports:** https://github.com/mbruno46/WiCHam/issues
 
-## Main Reference
+## Citation
 
-If you use this library in your publication cite 
-[Weak decays beyond leading logarithms](http://inspirehep.net/record/403867)
+This library implements the results derived in [Weak decays beyond leading logarithms](http://inspirehep.net/record/403867).
+
+If you use this library in your publication cite this article.
+
+## Authors
+
+Mattia Bruno, Copyright (c) 2016-2024
 
 ## Setup 
 
