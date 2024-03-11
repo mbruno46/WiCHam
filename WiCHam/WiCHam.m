@@ -10,4 +10,5 @@ Get["RG.m"]
 Get["WilsCoeff.m"]
 Get["RI2MS.m"]
 
-Print["WiCHam library written by Mattia Bruno, (C) 2016 - 2024"]
+Print["WiCHam library"]
+Print["Mattia Bruno, Copyright (c) 2016 - 2024, MIT License"]
